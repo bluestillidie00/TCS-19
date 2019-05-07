@@ -1,0 +1,14 @@
+﻿<properties>
+	<record id="image_borders" left="10" right="10" top="30" bottom="5"/>
+	<record id="image_slices" left="4" right="4" top="4" bottom="4"/>
+	<integer id="text_top_inset" value="10"/>
+	<integer id="text_bottom_inset" value="0"/>
+	<integer id="text_left_inset" value="10"/>
+	<integer id="text_right_inset" value="10"/>
+	<record id="font_spec">
+		<flags id="font" value="title"/> 
+		<colour id="colr" name="accent"/> 
+	</record>
+	<colour id="red_replacement" name="twitter_box"/>
+	<colour id="green_replacement" name="twitter_border"/>
+</properties>

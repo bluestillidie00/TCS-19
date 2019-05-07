@@ -1,0 +1,60 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<container   id="phit">
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2" horizontal_gap="0" />
+
+		<container class="subsection_box" appearance="boxes/subsection/standard/left/paper" red_replacement="tcs_dark_box">
+			<translation id="title" translation_id="382243" type="use" value="Conversation History[COMMENT: person history section title; history of conversations the person has had]" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+			
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="table" id="phxx" layout="-2,-3,-2" mode="fill_rows,keyboard,select_rows,show_bullets" default_sort_column="date" select_event="tbLs">
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<!-- Title of box -->
+					<list id="headings">
+						<record alignment="left,centre_y">
+							<translation id="text" translation_id="230120" type="use" value="Date" />
+						</record>
+						<record alignment="left,centre_y">
+							<translation id="text" translation_id="450777" type="use" value="To[COMMENT: the subject of a conversion; who a comment is directed towards]" />
+						</record>
+						<record alignment="left,centre_y">
+							<translation id="text" translation_id="229400" type="use" value="Type" />
+						</record>
+					</list>
+
+					<record id="default_properties">
+						<flags id="alignment" value="left,centre_y" />
+					</record>
+
+					<list id="column_widget_properties">
+						<record index="1" spec="text" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record id="date" index="0" sort_ascending="false" left="5" />
+						<record id="pert" index="1" sort_disabled="false" />
+						<record id="type" index="2" sort_disabled="false" />
+					</list>
+
+				</widget>
+			</container>
+
+		</container>
+
+		<container class="bordered_box" appearance="boxes/bordered/standard/right/paper">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="conversation_panel" id="nmCv" is_toned_conversation="false" read_only="true" hidden="true" />
+			<widget class="team_meeting_conversation_panel" id="tMcp" is_toned_conversation="false" read_only="true" hidden="true" />
+		</container>
+	</container>
+
+</panel>

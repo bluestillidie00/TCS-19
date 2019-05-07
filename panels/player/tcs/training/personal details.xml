@@ -1,0 +1,156 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- CONTAINER HOLDING PLAYER PICTURE  + KIT ICON -->
+	<container width="280">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" offset="0" gap="0" />
+
+		<!-- CONTAINER HOLDING KIT ICON, USED TO HELP MANOUVER THE KIT ICON -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2,-15,10,5" offset="0" gap="0" />
+
+			<!-- KIT ICON -->
+			<widget id="cKit" class="kit_icon" image_alignment="centre" height="130" scale_picture="false" kit_zoom_level="2" priority="1">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Pers" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</list>
+				</record>
+			</widget>
+		</container>
+
+		<!-- PROFILE PICTURE -->
+		<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="right,bottom">
+			<record id="object_property">
+				<list id="get_properties">
+					<record get_property="fcgn" />
+					<record get_property="Pfke" />
+					<record get_property="prpc" set_property="valu" />
+				</list>
+			</record>
+		</widget> 
+	</container>
+
+	<!-- INFORMATION -->
+	<container class="horizontal_adaptive_container" offset="0" inset="0" gap="12" >
+
+		<!-- BADGES AND ADDITIONAL INFORMATION -->
+		<widget class="vertical_divider" width="3"/> 
+
+		<!-- FIRST SET OF INFORMATION -->
+		<container default_width="150" minimum_width="150" priority="1" >
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+			<!-- AGE -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
+
+				<!-- LABEL -->
+				<widget class="label" auto_size="vertical" font="title1" colour="secondary">
+					<translation id="text" type="use"  translation_id="227770" value="Age" />          
+				</widget>
+
+				<!-- AGE -->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<widget class="editable_client_object_property_panel" id="age " height="22" auto_size="horizontal" colour="secondary">
+						<record id="widget_info" class="formatted_label" alignment="left,centre_y" height="22" auto_size="horizontal" size="large" >
+							<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+						</record>
+						<record id="widget_edit_info" width="0" height="0"/>
+						<record id="object_property" get_property="Page" />
+					</widget>
+
+					<!-- DoB -->
+					<widget class="editable_client_object_property_panel" id="dobl" auto_size="vertical" colour="secondary" size="small">
+						<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="vertical" auto_size_minimum_height="20" format="([%date#1-short])" colour="faded text"/>
+						<record id="widget_properties" height="24"/>
+						<record id="object_property" get_property="Pdob" />
+					</widget>
+					<!-- END OF AGE + DOB -->
+				</container>
+			</container>
+
+			<!-- PERSONALITY -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
+				<record id="default_properties" auto_size="vertical" colour="secondary"/>
+				<widget class="label" id="PPs:" font="title1" >
+					<record id="object_property" get_property="PPst" name="true" />
+				</widget>
+				<widget class="personality_label" id="PPst" >
+					<record id="object_property" get_property="PPst" />
+				</widget>
+			</container>
+
+			<!-- PREFERRED FOOT -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
+				<record id="default_properties" auto_size="vertical" colour="secondary"/>
+				<widget class="label" font="title1" >
+					<record id="object_property" get_property="Pfot" name="true" />
+				</widget>
+				<widget class="foot_label" id="Pfot" >
+					<record id="object_property" get_property="Pfot" />
+				</widget>
+			</container>	
+
+			<!-- SQUAD STATUS -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
+				<record id="default_properties" auto_size="vertical" colour="secondary"/>
+				<widget class="label" id="wxyz" font="title1" >
+					<translation id="text"  type="use"  translation_id="227783"  value="Squad Status" />
+				</widget> 
+				<widget class="squad_status_label" id="Pcex">
+					<record id="object_property" get_property="Pccs" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- DIVIDER -->
+		<widget class="vertical_divider" width="3"/> 
+
+		<!-- PLAYER TRAITS -->
+		<container id="botc" default_width="150" minimum_width="150" priority="1" >
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-2" />
+			<record id="default_properties" auto_size="vertical" colour="secondary"/>
+			<widget class="label" font="title1">
+				<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+			</widget>
+			<container class="scrolling_box">
+				<widget class="preferred_moves_panel" file="player/tcs/training/player traits" id="pfmp" auto_size="vertical">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+			</container>
+		</container>
+		
+		<widget class="vertical_divider" width="3"/> 
+		
+		<!-- PLAYER SCOUT REPORT -->
+		<container class="player_scout_reports_panel" file="none" default_width="-1">
+
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+			<record id="object_property" get_property="objt" set_property="objt" />
+
+			<!-- PROS AND CONS -->
+			<container >
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+
+				<widget class="player_scout_reports_panel" id="tcspc" file="player/tcs/training/tcs pros cons">
+				</widget> 
+			</container>			
+		</container>
+
+	</container>
+</panel>

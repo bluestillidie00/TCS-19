@@ -1,0 +1,38 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" layout="-1" offset="0" />
+
+		<!-- Right panel - Achievements filtered by selected clubs in left panel -->
+		<container class="bordered_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- Filter tabs -->
+			<container>
+
+				<list id="items">
+					<record id="-1">
+						<translation id="name" translation_id="232843" type="use" value="Overall" />
+					</record>								
+				</list>
+				<flags id="selection" value="-1" />
+			</container>
+
+			<!-- List of achievements -->
+			<container class="scrolling_box" id="achl">
+				<container id="lndM">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- Filled in code using 'player history achievement item panel' -->
+				</container>
+			</container>
+
+			<!-- Biography panel-->
+			<container class="person_history_biography_panel" id="biog" hidden="true" />
+		</container>
+
+	</container>
+</panel>

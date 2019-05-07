@@ -1,0 +1,7 @@
+<properties>
+
+	<record id="image_borders" left="15" right="15" top="4" bottom="4"/>
+
+	<record id="image_slices" left="2" right="2" top="2" bottom="2"/>
+	
+</properties>

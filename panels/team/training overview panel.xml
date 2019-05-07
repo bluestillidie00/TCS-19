@@ -1,0 +1,78 @@
+<panel>
+	<layout class="vertical_arrange" vertical_layout="120,350,-1" vertical_gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" /> 
+
+	<!--tactics and tactical data-->
+	<widget class="tactic_slot_tab_container" id="prep" file="team/tcs/training tactic tab" />
+
+	<!--weekly schedule-->
+	<container class="bordered_box" id="body" appearance="boxes/bordered/standard/bottom/paper" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="46,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+				<widget class="text" auto_size="vertical" alignment="left,bottom" font="label">
+					<translation id="text" translation_id="339927" type="use" value="This week[Comment: Training panel; label for the current week in the calendar]" />
+				</widget>
+				<widget class="text" size="large" id="schT" colour="text" style="bold" font="title" />
+			</container>
+
+			<container class="training_schedule_week_widget" id="pwTw" file="widgets/training schedule week widget intensity">
+				<boolean id="shortened" value="false" />
+				<boolean id="should_force_refresh" value="false" />
+				<integer id="intensity_display_style" value="0" />
+				<string id="draggable" value="true" />
+				<string id="session_description_column" value="true" />
+				<string id="schedule_session_widget_file" value="widgets/training schedule large session widget" />
+				<string id="schedule_header_file" value="widgets/training schedule day month header" />
+				<record id="object_property">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</container>
+		</container>
+
+		<widget class="link_button" auto_size="all" section="ttcP">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="8,5" />
+			<translation id="text" translation_id="466488" type="use" value="Training Calendar[COMMENT: Training Overview calendar link]" />
+		</widget>
+	</container>
+
+	<!--selectable panels-->
+<container class="horizontal_adaptive_container" inset="0" offset="0">
+
+		<container class="vertical_adaptive_container" mode="dont_distribute" inset="0" offset="0" minimum_width="600" default_width="-2" priority="2">
+
+			<container class="horizontal_adaptive_container" mode="distribute_equally" inset="0" offset="0" default_height="-3" minimum_height="350" priority="1">
+
+				<container class="client_object_viewer_selector_panel" id="cos2" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="2">
+					<integer id="default_widget" value="ttHp" />
+				</container>
+
+				<container class="client_object_viewer_selector_panel" id="cos3" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="3">
+					<integer id="default_widget" value="CTPP" />
+				</container>
+			</container>
+
+			<container class="horizontal_adaptive_container" id="row2" mode="distribute_equally" inset="0" offset="0" default_height="-2" minimum_height="250" priority="2">
+
+				<container class="client_object_viewer_selector_panel" id="cos6" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="1">
+					<integer id="default_widget" value="tMpr" />
+				</container>
+
+				<container class="client_object_viewer_selector_panel" id="cos5" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="2">
+					<integer id="default_widget" value="tsBr" />
+				</container>
+			</container>
+		</container>
+
+
+
+	</container>
+
+
+</panel>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="plain_box">
+    <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+    <container height="20">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      <widget class="text" auto_size="all" font="title" colour="accent" alignment="centre_y">
+        <translation id="text" translation_id="344664" type="use" value="Last 5 Games" />
+      </widget>
+    </container>
+
+    <!-- Separator -->
+    <widget class="picture" file="dividers/standard/horizontal/line" priority="3" image_alignment="centre" height="5"/>
+
+    <widget class="text" id="nofr" size="11" alignment="centre">
+      <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+    </widget>
+
+    <container id="form">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <!--form-->
+        <widget class="form_graph_panel" id="FrmG" show_labels="falsea">
+          <layout class="stick_to_sides_attachment" alignment="horizontal" />
+          <record id="object_property">
+            <integer id="get_property" value="Pfrm" />
+          </record>
+        </widget>
+      </container>
+
+      <widget class="player_form_summary_panel" file="player/selector/player form average" late_loading="true">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+
+    </container>
+
+  </container>
+</panel>

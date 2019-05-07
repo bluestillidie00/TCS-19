@@ -1,0 +1,11 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+
+  	<real id="font_size_small" value="9" /> 
+  	<real id="font_size_normal" value="16" /> 
+  	<real id="font_size_large" value="22" />
+
+  	<string id="capitalisation" value="upper case" />
+  	<integer id="extra_spacing" value="0.2" />
+	
+</record>

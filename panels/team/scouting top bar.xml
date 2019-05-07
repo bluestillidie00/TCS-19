@@ -1,0 +1,393 @@
+<panel height="70">
+	<boolean id="should_force_refresh" value="true" />
+	<colour id="budget_info_positive_colour" name="positive" />
+	<colour id="budget_info_zero_colour" name="text" />
+	<colour id="budget_info_negative_colour" name="negative" />
+	<colour id="scouting_package_highlight_colour" name="positive" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="bordered_box" appearance="boxes/bordered/no margin/paper" red_replacement="primary">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="3,0,3,0" />
+
+		<container class="horizontal_adaptive_container" mode="distribute_equally" inset="0" offset="0" gap="0">
+
+			<!--Scouting responsibility-->
+			<container class="plain_box" minimum_width="232" id="scrc" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="widget_popup_button" id="srpb" widget_type="client_object_viewer_xml_panel" popup_alignment="left,bottom" offset_y="2" appearance="buttons/custom/over state only/button" >
+					<layout class="stick_to_sides_attachment" alignment="right,extend" inset="10" />
+					<record id="widget_properties" file="team/team container scout responsibility popup" width="400" />
+					<record id="modal_popup_properties" file="modal popup panel auto sized" />
+					<record id="secondary_icon_properties" red_replacement="secondary"/>
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" file="icons/custom/icon box/staff" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+
+					<container wants_mouse_events="false">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<!-- Linked header -->
+							<widget class="text" font="label" colour="secondary" auto_size="vertical" alignment="left,centre_y" wants_mouse_events="false">
+								<translation id="text" translation_id="420803" type="use" value="Scouting Responsibility[COMMENT: FR 11179 - title for buttons to change who is responsible for organising scouting at the club]" />
+							</widget>
+
+							<widget class="text" id="srpn" auto_size="vertical" colour="secondary" style="semi_bold" size="large" alignment="left,centre_y" wants_mouse_events="false" />
+
+							<widget class="client_object_property_panel" id="srpj" property="Pcjo" height="20" size="small" colour="secondary" alignment="left,top" auto_size="vertical" wants_mouse_events="false" />
+
+						</container>
+
+						<!-- divider -->
+						<widget class="vertical_divider" width="1" />
+
+					</container>
+
+				</container>
+			</container>
+
+
+
+			<!--Scouting focus-->
+			<container class="plain_box" minimum_width="232" id="scfc" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="widget_popup_button" id="sfpb" widget_type="scouting_focus_popup" popup_alignment="left,bottom" offset_y="2" appearance="buttons/custom/over state only/button">
+					<layout class="stick_to_sides_attachment" alignment="right,extend" inset="10" />
+					<record id="widget_properties" width="800" height="400" />
+					<record id="secondary_icon_properties" red_replacement="secondary"/>
+				</widget>
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" file="icons/custom/icon box/focus" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" wants_mouse_events="false" />
+					<container wants_mouse_events="false">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<string id="skin_style" value="title link" />
+
+							<!-- Linked header -->
+							<widget class="text" auto_size="vertical" font="label" colour="secondary" alignment="left,centre_y" wants_mouse_events="false">
+								<translation id="text" translation_id="443659" type="use" value="Scouting Focus[COMMENT: FR 21760, title label text for the user to set the scouting focus]" />
+							</widget>
+
+							<widget class="text" id="sfoc" auto_size="vertical" colour="secondary" style="semi_bold" alignment="left,centre_y" size="large" wants_mouse_events="false" />
+
+							<widget class="text" id="sfod" auto_size="vertical" multiline="true" colour="secondary" size="small" alignment="left,top" auto_size_maximum_height="33" wants_mouse_events="false" />
+
+						</container>
+
+						<!-- divider -->
+						<widget class="vertical_divider" width="1" />
+
+					</container>
+				</container>
+			</container>
+
+			<!--Assignments-->
+			<container class="plain_box" minimum_width="232" id="assc" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<widget class="picture" file="icons/custom/icon box/focus" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<string id="skin_style" value="title link" />
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="0" vertical_alignment="top" vertical_inset="0" />
+
+							<!-- Linked header -->
+							<widget class="link_button" section="tstp" auto_size="all" alignment="left,centre_y" colour="secondary" font="label" red_replacement="secondary">
+								<translation id="text" translation_id="251956" type="use" value="Assignments[COMMENT - team screen section; Scouting; title; current assignments]" />
+							</widget>
+						</container>
+
+						<widget class="text" id="nbaS" auto_size="vertical" colour="secondary" style="semi_bold" size="large" alignment="left,centre_y" />
+
+						<widget class="text" id="nbaW" auto_size="vertical" colour="secondary" size="small" alignment="left,top" />
+
+					</container>
+					<!-- divider -->
+					<widget class="vertical_divider" width="1" />
+				</container>
+			</container>
+
+			<!--Scouting package-->
+			<container class="plain_box" minimum_width="232" id="scpc" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="widget_popup_button" id="sppb" widget_type="property_list_viewer_xml_panel" popup_alignment="left,bottom" offset_y="2" appearance="buttons/custom/over state only/button">
+					<layout class="stick_to_sides_attachment" alignment="right,extend" inset="10" />
+					<record id="widget_properties" file="team/scouting package popup" width="940" />
+					<record id="secondary_icon_properties" red_replacement="secondary"/>
+				</widget>
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" id="spic" file="icons/custom/icon box/package" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" wants_mouse_events="false" />
+
+					<container wants_mouse_events="false">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="text" auto_size="vertical" font="label" alignment="left,centre_y" colour="secondary" wants_mouse_events="false">
+								<translation id="text" translation_id="447588" type="use" value="Senior Package[COMMENT: FR 21759 scouting package]" />
+							</widget>
+
+							<widget class="text" auto_size="vertical" id="spnm" colour="secondary" style="semi_bold" size="large" alignment="left,centre_y" wants_mouse_events="false" auto_size_maximum_height="40" />
+
+							<widget class="text" auto_size="vertical" id="sptw" colour="secondary" size="small" alignment="left,top" wants_mouse_events="false" />
+
+						</container>
+
+						<!-- divider -->
+						<widget class="vertical_divider" width="1" />
+					</container>
+
+				</container>
+			</container>
+
+			<!--Recruitment team-->
+			<container class="plain_box" minimum_width="232" id="rtec" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<widget class="picture" file="icons/custom/icon box/staff" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<string id="skin_style" value="title link" />
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="0" vertical_alignment="top" vertical_inset="0" />
+
+							<!-- Linked header -->
+							<widget class="link_button" section="tcSS" auto_size="all" colour="secondary" font="label" red_replacement="secondary">
+								<translation id="text" translation_id="437040" type="use" value="Recruitment Team[COMMENT: FR]" />
+							</widget>
+						</container>
+
+						<widget class="text" id="nbme" auto_size="vertical" colour="secondary" style="semi_bold" size="large" alignment="left,centre_y" />
+
+						<widget class="text" id="nbas" auto_size="vertical" colour="secondary" size="small" alignment="left,top" />
+
+					</container>
+
+					<!-- divider -->
+					<widget class="vertical_divider" width="1" />
+				</container>
+			</container>
+
+			<!--Scouting budget-->
+			<container class="plain_box" minimum_width="232" id="scbc" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="widget_popup_button" id="sbat" widget_type="client_object_viewer_xml_panel" file="modal popup panel auto sized" popup_alignment="right,bottom" offset_y="2" appearance="buttons/custom/over state only/button">
+					<layout class="stick_to_sides_attachment" alignment="right,extend" inset="10" />
+					<record id="widget_properties" file="club/popup scouting budget adjustment panel" width="500" />
+					<record id="secondary_icon_properties" red_replacement="secondary"/>
+				</widget>
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" file="icons/custom/icon box/scouting" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" wants_mouse_events="false" />
+					<container wants_mouse_events="false">
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<string id="skin_style" value="title link" />
+
+						<container wants_mouse_events="false">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="0" vertical_alignment="top" vertical_inset="0" />
+
+							<!-- Linked header -->
+							<widget class="text" font="label" colour="secondary" auto_size="all" alignment="left,centre_y" wants_mouse_events="false">
+								<translation id="text" translation_id="443667" type="use" value="Scouting Budget[COMMENT: FR 21760 ; scouting centre]" />
+							</widget>
+						</container>
+
+						<widget class="text" id="sbtt" auto_size="vertical" colour="secondary" style="semi_bold" size="large" alignment="left,centre_y" wants_mouse_events="false" />
+
+						<widget class="text" id="sbrt" auto_size="vertical" colour="secondary" size="small" alignment="left,top" wants_mouse_events="false" />
+					</container>
+				</container>
+
+			</container>
+
+			<!--Transfers-->
+			<container class="plain_box" minimum_width="232" id="trac" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<widget class="picture" file="icons/26px/transfer" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="50" />
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<string id="skin_style" value="title link" />
+
+						<!-- Linked header -->
+						<widget class="link_button" section="trcn" auto_size="all" colour="secondary" font="label">
+							<translation id="text" translation_id="227743" type="use" value="Transfers" />
+						</widget>
+
+						<container height="22">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+							<widget class="text" auto_size="all" colour="secondary" style="semi_bold" alignment="left,centre_y">
+								<translation id="text" translation_id="257343" type="use" value="Incoming[COMMENT: transfer direction filter text]" />
+							</widget>
+
+							<widget class="picture" file="icons/16px/transfer in" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="20" />
+
+							<widget class="text" id="trin" auto_size="horizontal" colour="positive" style="semi_bold" alignment="left,centre_y" />
+
+						</container>
+
+						<container height="22">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+							<widget class="text" auto_size="all" colour="text" style="semi_bold" alignment="left,centre_y">
+								<translation id="text" translation_id="257344" type="use" value="Outgoing[COMMENT: transfer direction filter text]" />
+							</widget>
+
+							<widget class="picture" file="icons/16px/transfer out" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="20" />
+
+							<widget class="text" id="trou" auto_size="horizontal" colour="negative" style="semi_bold" alignment="left,centre_y" />
+
+						</container>
+
+					</container>
+					<!-- divider -->
+					<widget class="vertical_divider" width="1" />
+				</container>
+			</container>
+
+
+			<!--Coaching team-->
+			<container class="plain_box" minimum_width="232" id="coac" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<widget class="team_staff_subteam_overview_panel" id="coat" link="true" file="team/team staff subteam overview compact">
+					</widget>
+					<!-- divider -->
+					<widget class="vertical_divider" width="1" />
+				</container>
+			</container>
+
+
+			<!--Scouting team-->
+			<container class="plain_box" minimum_width="232" id="scoc" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<widget class="team_staff_subteam_overview_panel" id="scot" link="true" file="team/team staff subteam overview compact">
+					</widget>
+					<!-- divider -->
+					<widget class="vertical_divider" width="1" />
+				</container>
+			</container>
+
+
+			<!--Medical team-->
+			<container class="plain_box" minimum_width="232" id="medc" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<widget class="team_staff_subteam_overview_panel" id="medt" link="true" file="team/team staff subteam overview compact">
+					</widget>
+
+				</container>
+			</container>
+
+
+			<!--Transfer budget-->
+			<container class="plain_box" minimum_width="230" id="trbc" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<!-- divider -->
+					<widget class="vertical_divider" width="1" />
+
+					<widget class="widget_popup_button" id="bact" widget_type="client_object_viewer_xml_panel" file="modal popup panel auto sized" popup_alignment="right,bottom" offset_y="2" appearance="buttons/custom/over state only/button">
+
+						<record id="widget_properties" file="club/popup budget adjustment panel" width="500" />
+						<record id="secondary_icon_properties" red_replacement="secondary"/>
+					</widget>
+
+				</container>
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+
+
+					<widget class="picture" file="icons/custom/icon box/budget" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+
+					<container wants_mouse_events="false">
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<string id="skin_style" value="title link" />
+
+						<!-- Linked header -->
+						<widget class="text" auto_size="vertical" font="label" colour="secondary" alignment="left,centre_y" wants_mouse_events="false">
+							<translation id="text" translation_id="383268" type="use" value="Budgets[COMMENT: Finances panel]" />
+						</widget>
+
+						<container height="22" wants_mouse_events="false">
+							<attachment_group class="horizontal_arrange" horizontal_layout="-1,70,10" horizontal_offset="0" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+							<widget class="text" auto_size="vertical" colour="secondary" alignment="left,centre_y" wants_mouse_events="false" multiline="false">
+								<translation id="text" translation_id="242603" type="use" value="Transfer Budget" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="3" />
+							</widget>
+
+							<widget class="button" id="tbva" auto_size="vertical" colour="positive" style="semi_bold" alignment="centre" wants_mouse_events="false" appearance="labels/standard/label" red_replacement="box_background"/>
+
+							<container width="10"/><!-- spacer -->
+
+						</container>
+
+						<container height="22" wants_mouse_events="false">
+							<attachment_group class="horizontal_arrange" horizontal_layout="-1,85,10" horizontal_offset="0" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+							<widget class="text" auto_size="vertical" colour="secondary" alignment="left,centre_y" wants_mouse_events="false" multiline="false">
+								<translation id="text" translation_id="242605" type="use" value="Wage Budget" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="3" />
+							</widget>
+
+							<widget class="button" id="wbva" auto_size="vertical" colour="negative" style="semi_bold" alignment="centre" wants_mouse_events="false" appearance="labels/standard/label" red_replacement="box_background"/>
+
+							<container width="10"/><!-- spacer -->
+
+						</container>
+
+					</container>
+
+				</container>
+			</container>
+
+		</container>
+	</container>
+</panel>

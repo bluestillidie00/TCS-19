@@ -1,0 +1,55 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+  <container>
+    <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="vertical" inset="0"/>
+    <layout class="arrange_horizontal_attachment"  layout="-1,300" offset="0"/>
+
+    <container class="scrolling_box" wants_mouse_events="false">
+      <container id="scGC" offset="0">
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+        <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+      </container>
+    </container>
+    <!--righthand sidebar-->
+    <container id="SBar">
+      <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0" />
+      <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="top" inset="0" />
+      <container height="648">
+
+        <!--Ass Man summany-->
+        <container class="subsection_box" red_replacement="tcs_dark_box" id="asmS">
+          <layout class="arrange_vertical_attachment" alignment="top,extend" gap="8" offset="20" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="12" />
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+
+          <container height="55" embed_in_frame="true">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="8,0" />
+            <widget class="text" id="assF" spec="text" alignment="left,centre_y" font="title" colour="text" red_replacement="text" multiline="true"/>
+          </container>
+
+          <!--social group pros/cons-->
+          <container id="tmPc">
+            <layout class="arrange_vertical_attachment" alignment="top" gap="4" offset="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+          </container>
+        </container>
+
+        <!--Player Summary-->
+        <container class="team_hierarchy_player_details_panel" id="tmHD" hidden="true" IsSo="true">
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+        </container>
+
+
+        <widget class="icon_button" width="36" height="30" id="cPSb" hidden="true" icon="icons/16px/cross">
+          <event id="click_event" event_id="cLPD" />
+          <layout class="stick_to_sides_attachment" alignment="top" inset="4" />
+          <layout class="stick_to_sides_attachment" alignment="right" inset="4" />
+        </widget>
+      </container>
+    </container>
+  </container>
+</panel>

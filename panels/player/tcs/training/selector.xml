@@ -1,0 +1,16 @@
+<panel>
+	<container class="bordered_box" id="SUBP">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<widget class="popup_button" id="popv" auto_size="horizontal" height="20" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="12,8" />
+	</widget>
+					<widget class="player_training_information" file="player/tcs/training/training report" id="tstr">
+				<translation id="title"  translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
+					</widget>
+					<widget class="player_training_information" file="player/tcs/training/medical report" id="tsmr">
+						<translation id="title" translation_id="293309" type="use" value="Board Confidence" />
+					</widget>
+</panel>

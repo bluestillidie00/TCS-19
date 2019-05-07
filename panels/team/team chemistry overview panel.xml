@@ -1,0 +1,165 @@
+﻿<panel>
+<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
+	<boolean id="should_force_refresh" value="true" />
+	<colour id="minor_issue_colour" name="blue 500" />
+	<colour id="major_issue_colour" name="red 300" />
+	<colour id="supporters_colour" name="red 300" />
+	<colour id="supporters_increase_colour" name="red 500" />
+	<colour id="supporters_decrease_colour" name="red 900" />
+	<colour id="opposers_colour" name="blue 300" />
+	<colour id="opposers_increase_colour" name="blue 500" />
+	<colour id="opposers_decrease_colour" name="blue 900" />
+	<flags id="support_increase_icon" value="icons/16px/up" />
+	<flags id="support_decrease_icon" value="icons/16px/down" />
+	<flags id="support_no_change_icon" value="" />
+
+<container>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container id="sgsT" height="80">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="200, -1, 200" offset="10" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="client_object_viewer_xml_panel" file="person/person details panel small" id="StDt" />
+
+			<container class="plain_box" appearance="boxes/custom/speech bubble/left/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<container class="scrolling_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					<widget class="text" id="StQt" auto_size="vertical" multiline="true" colour="white" />
+				</container>
+			</container>
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+
+				<widget class="link_button" auto_size="all" section="TeMt" alignment="left,centre_y" colour="secondary" red_replacement="secondary">
+					<translation id="text" translation_id="440401" type="use" value="Hold Team Meeting[COMMENT: FR 21243; button text for triggering interaction]" />
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+		</container>
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-2, -3" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<!--club support details-->
+		<container class="club_chemistry_support_panel" id="clbS" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="280, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<container>
+				<layout class="arrange_vertical_attachment" layout="220, -1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<!--Top Influencers-->
+				<container class="subsection_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+
+					<widget class="link_button_title" section="tHie" embed_in_frame="true">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						<translation id="text" translation_id="450796" type="use" value="Top Influencers[COMMENT: Team Dynamics: Top Influencers in the squad]" />
+						<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10" />
+						<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8" />
+					</widget>
+					<container id="infC">
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+					</container>
+				</container>
+				<!--Social Groups-->
+				<container class="subsection_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="link_button_title" section="tHSg" embed_in_frame="true">
+						<translation id="text" translation_id="447592" type="use" value="Social Groups[COMMENT: Team Dynamics: Social Groups within the squad]" />
+						<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10" />
+						<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8" />
+					</widget>
+
+					<container class="scrolling_box">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" />
+						<container id="scSG">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="8" />
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="6" gap="8" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+						</container>
+					</container>
+				</container>
+			</container>
+			<!--Issues-->
+			<container class="subsection_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<translation id="title" translation_id="450797" type="use" value="Issues[COMMENT:Team Dynamics: Team player issues]" />
+
+				<!--issues table-->
+				<container id="IssC">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<widget class="table" id="TbIs" bottom="25" mode="" layout="-1,120,-3,80,80,80" row_spacing="0" row_height="50">
+						<record id="default_properties" alignment="left,centre_y" />
+
+						<!--small inset from sides of table-->
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="false" />
+							<record index="1" sort_disabled="false" />
+							<record index="2" sort_disabled="false" />
+							<record index="3" sort_disabled="false" />
+							<record index="4" sort_disabled="false" />
+							<record index="5" sort_disabled="false" />
+						</list>
+
+						<list id="column_widget_properties">
+							<record index="5" alignment="centre" get_side="left,centre_y" set_side="right,centre_y" show_button_appearance="false" allow_hover_to_open="true" secondary_icon_enabled="false">
+								<record id="widget_properties" class="property_list_viewer_xml_panel" file="team/team chemistry overview promises popup"/>
+								<record id="modal_popup_properties" file="modal popup panel auto sized" attempt_to_reposition="true" darkened="false"/>
+							</record>
+						</list>
+						
+						<list id="headings">
+							<record alignment="left,centre_y" column="0">
+								<translation id="text" translation_id="450798" type="use" value="Severity[COMMENT: Dynamics Overview - Player Issue Severity]" />
+							</record>
+							<record alignment="left,centre_y" column="1">
+								<translation id="text" translation_id="298220" type="use" value="Player[COMMENT: transfer list, player column, header]" />
+							</record>
+							<record alignment="left,centre_y" column="2">
+								<translation id="text" translation_id="433441" type="use" value="Issue[COMMENT: title for a panel indicating a particular unhappiness or grievance a player or players have]" />
+							</record>
+							<record alignment="left,centre_y" column="3">
+								<translation id="text" translation_id="450799" type="use" value="Agrees[COMMENT:Team Dynamics: header for players supporting another player with an issue]" />
+							</record>
+							<record alignment="left,centre_y" column="4">
+								<translation id="text" translation_id="450800" type="use" value="Disagrees[COMMENT:Team Dynamics: header for players opposing another player with an issue]" />
+							</record>
+							<record alignment="left,centre_y" column="5">
+								<translation id="text" translation_id="320154" type="use" value="Promises[COMMENT: player status panel; panel header title for a section listing all promises a manager has made to a player]" />
+							</record>
+						</list>
+
+					</widget>
+
+				</container>
+				<container id="nIsC">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<widget class="label" alignment="centre">
+						<translation id="text" translation_id="450801" type="use" value="There are currently no player issues within the team.[COMMENT: Team Dynamic Overview - Message to display when there are no player issues]" />
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+	</container>
+</panel>

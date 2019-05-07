@@ -1,0 +1,67 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+	<container>
+<layout class="horizontal_arrange" horizontal_layout="375,-1" horizontal_gap="0" />
+
+		<widget id="dpan" class="team_international_form_detail_panel">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+		</widget>
+
+		<container class="subsection_box" appearance="boxes/subsection/standard/right/paper">
+			<translation id="text" translation_id="319546" type="use" value="International Match Reports[COMMENT: Title for international match reports panel]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="client_object_list_table" id="tpan" select_event="slpf" mode="show_bullets, fill_rows, stripe_rows, select_rows, dont_allow_empty_selection">
+
+				<list id="default_sort_column">
+					<integer value="PIfd" />
+					<integer id="Pers" />
+				</list>
+
+				<list id="column_widget_properties">
+					<record index="10" alignment="centre" />
+				</list>
+
+				<record id="viewed_property_ids">
+					<record id="PIps" />
+					<!--Position played-->
+					<record id="PImi" />
+					<!--Match incident (cards, injury etc)-->
+					<record id="Pnms" />
+					<!--Player name-->
+					<record id="PtmT" />
+					<!--Club squad-->
+					<record id="PInn" />
+					<!--Nation-->
+					<record id="PInt" />
+					<!--National team type played for (U19 etc)-->
+					<record id="PIsc" />
+					<!--Score-->
+					<record id="PIop" />
+					<!--Opposition-->
+					<record id="PIfd" />
+					<!--Fixture date-->
+					<record id="PImp" width="35" />
+					<!--Minutes played-->
+					<record id="PIsb" />
+					<!--Substituted-->
+					<record id="PIra" width="55" />
+					<!--Rating-->
+					<record id="PIgo" />
+					<!--Goals-->
+				</record>
+			</widget>
+		</container>
+
+
+	</container>
+
+	<!-- panel for empty state-->
+	<container class="empty_state" id="lnop" header_widget="BShe" hidden="false">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="319559" type="use" value="None of your players have taken part in an international match recently.[COMMENT: Text for when no players are available for international match reports]" />
+		</widget>
+	</container>
+</panel>

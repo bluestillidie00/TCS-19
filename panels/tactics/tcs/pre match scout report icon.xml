@@ -1,0 +1,60 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- CONTAINER HOLDING KIT -->
+	<container  >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_right="0" number_inset_top="-3" number_height="90" />
+
+<!-- CONTAINER HOLDING PLAYER PICTURE -->
+		<container>
+		<!-- INSET CODE USED TO MAKE THE PLAYER PICTURE SMALLER -->
+			<layout class="stick_to_sides_attachment" alignment="all" inset="25" apply_to_children="true"/>
+
+			<!-- PLAYER PICTURE -->
+			<widget class="object_portrait_picture" id="pict" scale_picture="true" >
+			<!-- LAYOUT CLASSES BELOW USED TO MOVE THE PLAYER PICTURE -->
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="35" />
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+		</container>
+
+		<!-- SCOUTING ICONS -->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="70" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="-10" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+			<record id="default_properties" image_alignment="centre" hidden="true" width="32" height="32" />
+
+			<widget class="picture" id="PTgs" file="icons/16px/goal" />
+			<widget class="picture" id="PTas" file="icons/16px/assist" />
+			<widget class="picture" id="PTrt" file="icons/16px/key player" />
+			<widget class="picture" id="PNba" file="icons/16px/yellow card" />
+			<widget class="picture" id="PHNO" file="icons/16px/debut" />
+		</container>
+	</container>
+
+	<!-- CONTAINER HOLDING NAME AND ROLE -->
+	<container class="bordered_box" id="nmcN" appearance="boxes/custom/tactics kit/paper">
+		<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container class="bordered_box" id="bcIM" appearance="boxes/custom/solid/rounded/paper" red_replacement="teal 900" height="35">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="1" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
+
+			<!-- PLAYER NAME -->
+			<widget class="text" id="name" colour="text" size="8" alignment="centre,can_scale" auto_size="vertical" multiline="false" style="semi_bold"/>
+
+			<!-- PLAYER ROLE -->
+			<widget class="tactical_role_label" id="role" abbt="false" size="xsmall" auto_size="vertical" alignment="centre,can_scale" colour="faded white"/>
+		</container>
+	</container>
+</panel>

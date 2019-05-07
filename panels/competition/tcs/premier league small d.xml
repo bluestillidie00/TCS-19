@@ -1,0 +1,29 @@
+<panel>
+	<layout class="vertical_arrange" vertical_layout="150,-1" vertical_gap="5" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+		<!-- News image -->
+		<container id="dynI" height="150">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-5" apply_to_children="true" />
+		</container>
+
+		<container class="plain_box" appearance="tcs/websites/epl/small" red_replacement="epl_dark" />
+	</container>
+
+	<!-- News item -->
+	<container class="plain_box">
+		<layout class="arrange_vertical_attachment" alignment="top, extend" gap="1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container >
+			<layout class="fit_children_attachment" alignment="vertical, extend" offset="0" gap="0" />
+			<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+
+			<!-- ITEM TITLE-->
+			<widget class="text" id="titl" font="premiersansb" auto_size="vertical" size="12"  colour="text" />
+		</container>
+	</container>
+</panel>

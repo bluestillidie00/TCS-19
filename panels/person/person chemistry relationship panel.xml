@@ -1,0 +1,216 @@
+﻿<panel>
+	<!--very close relationship colour-->
+	<colour id="pVgC" name="green 500" />
+	<!--close relationship colour-->
+	<colour id="pgCl" name="green 300" />
+	<!--aquaintance relationship colour-->
+	<colour id="pACl" name="green 100" />
+	<!--contact relationship colour-->
+	<colour id="pCTr" name="blue 300" />
+	<!--rival relationship colour-->
+	<colour id="prVr" name="red 100" />
+	<!--adversary relationship colour-->
+	<colour id="pAdv" name="red 300" />
+	<!--distant relationship colour-->
+	<colour id="pCds" name="red 500" />
+
+	<layout class="arrange_vertical_attachment" layout="135,-1" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--Header box-->
+	<container  class="bordered_box" appearance="tcs/boxes/header/paper" height="135" >
+		<layout class="arrange_horizontal_attachment" layout="210, -2, -3, -2" offset="8" gap="25" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!-- CONTAINER HOLDING LOGO/PLAYER PIC/NATION -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" offset="0" gap="0" />
+
+			<!-- PLAYER CLUB -->
+			<widget class="object_portrait_picture" id="pclB" transparency="0.7" image_alignment="left" scale_picture="true" wants_mouse_events="true">
+				<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+			</widget>
+
+			<!-- NATION -->
+			<widget class="object_portrait_picture" id="npiB" transparency="0.7" image_alignment="right" scale_picture="true" wants_mouse_events="true">
+				<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+			</widget>
+
+			<!-- PLAYER PIC -->
+			<widget class="picture" id="prop" width="130" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,middle">
+				<record id="object_property">
+					<list id="get_properties">
+						<!--Facegen data request-->
+						<record get_property="fcgn" />
+						<!--Fake name request-->
+						<record get_property="Pfke" />
+						<record get_property="prpc" set_property="valu" />
+					</list>
+				</record>
+			</widget>
+		</container>
+
+
+
+		<!--relationship-->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="picture" id="hrcP" height="48" width="48" file="icons/48px/relationship" image_alignment="centre" scale_picture="true"  keep_aspect_ratio="true" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+				<widget class="label" auto_size="all" alignment="left,centre_y" colour="secondary" font="label">
+					<translation id="text" translation_id="447541" type="use" value="Relationship[COMMENT: player Relationships panel; panel header title for player relationship with manager]" />
+				</widget>
+
+				<container height="24">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="label" id="relL" auto_size="horizontal"  colour="secondary"  alignment="left,centre_y" font="value"/>
+
+					<widget class="picture" id="hrcl" width="16" hidden="true" file="icons/16px/up" image_alignment="centre" scale_picture="true" />
+				</container>
+			</container>
+		</container>
+		<!--Opinion-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+			<widget class="label" id="opHd" auto_size="all"  colour="secondary"  alignment="left,centre_y" font="label">
+				<translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
+			</widget>
+
+			<widget class="label" id="opiL" auto_size="all"  colour="secondary"  alignment="left,centre_y" font="value" />
+
+		</container>
+		<!--morale-->
+		<container id="mrlC">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+			<widget class="label" auto_size="all" alignment="left,centre_y"  colour="secondary"  font="label">
+				<translation id="text" translation_id="227839" type="use" value="Morale" />
+			</widget>
+
+			<widget class="morale_label" id="resL" auto_size="all"  colour="secondary" alignment="left,centre_y" font="value" >
+				<record id="object_property">
+					<integer id="get_property" value="Pmor" />
+				</record>
+			</widget>
+
+		</container>
+	</container>
+
+	<!--body-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<!--Squad Hierarchy-->
+		<container id="plHr" width="300">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<container class="team_hierarchy_player_details_panel" id="pHrc" file="team/team hierarchy player details basic panel" />
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<!--Happiness and plans-->
+			<container class="bordered_box" >
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<translation id="title" translation_id="447598" type="use" value="Happiness &amp; Plans[COMMENT: Player Relationships panel; panel header title for a section listing the happiness and plans of a player, please retain the ampersand code within the string, it's there as this is XML and therefore doesn't support the use of the character itself]" />
+
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="person_happiness_panel" id="phap" file="person/person happiness relationships">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+			</container>
+			<!--Favoured Personnel + Promises-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<!--Favoured Personnel-->
+				<container class="subsection_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<translation id="title" translation_id="247454" type="use" value="Favoured Personnel" />
+					<!--favoured personnel table-->
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8,0" />
+						<widget class="table" id="tabl" layout="-2,-2,-1,-1,-1" auto_size_rows="true">
+							<list id="headings">
+								<record index="0" alignment="left,centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="229689" type="use" value="Name" />
+								</record>
+								<record index="1" alignment="left,centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="447597" type="use" value="Reason[COMMENT: table heading; reason for relationship]" />
+								</record>
+								<record index="2" alignment="left,centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="248033" type="use" value="Nationality[COMMENT - Hall of fame section]" />
+								</record>
+								<record index="3" alignment="left,centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="323297" type="use" value="Club[COMMENT: Person table type name]" />
+								</record>
+								<record index="4" alignment="left,centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="227964" type="use" value="Job" />
+								</record>
+							</list>
+
+							<list id="column_table_properties">
+								<record index="0" sort_disabled="true" auto_hide_priority="1" />
+								<record index="1" sort_disabled="true" auto_hide_priority="1" />
+								<record index="2" sort_disabled="true" auto_hide_priority="1" minimum_width="300" />
+								<record index="3" sort_disabled="true" auto_hide_priority="1" minimum_width="180" />
+								<record index="4" sort_disabled="true" auto_hide_priority="1" minimum_width="90" />
+							</list>
+
+							<list id="column_widget_properties">
+								<record index="1" alignment="left,centre_y" />
+							</list>
+						</widget>
+
+						<widget class="text" id="favs" alignment="left" spec="text" auto_size="vertical">
+							<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+						</widget>
+
+					</container>
+				</container>
+				<!--Promises-->
+				<container class="subsection_box" id="prms" >
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<translation id="text" translation_id="320154" type="use" value="Promises[COMMENT: player status panel; panel header title for a section listing all promises a manager has made to a player]" />
+
+					<container class="scrolling_box">
+						<container id="prmC">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						</container>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

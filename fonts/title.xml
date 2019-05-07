@@ -1,0 +1,26 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+	<real id="font_size_small" value="8" />
+	<real id="font_size_normal" value="9" />
+	<real id="font_size_large" value="10" />
+	<real id="font_size_xlarge" value="11.5" />
+	<real id="font_size_xxlarge" value="16" />
+
+	<string id="capitalisation" value="upper case" />
+	
+	 
+	<integer id="fill_colour_red" value="255"/>
+	<integer id="fill_colour_green" value="255"/>
+	<integer id="fill_colour_blue" value="255"/>
+	<integer id="fill_colour_alpha" value="255"/>
+	
+		<integer id="gradient_upper_colour_red" value="255"/>
+	<integer id="gradient_upper_colour_green" value="255"/>
+	<integer id="gradient_upper_colour_blue" value="255"/>
+	<integer id="gradient_upper_colour_alpha" value="255"/>
+	
+	<integer id="gradient_lower_colour_red" value="255"/>
+	<integer id="gradient_lower_colour_green" value="255"/>
+	<integer id="gradient_lower_colour_blue" value="255"/>
+	<integer id="gradient_lower_colour_alpha" value="255"/>
+</record>

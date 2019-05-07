@@ -1,0 +1,36 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" >
+<!-- 		<record id="auto_size_restrictions">
+			<string id="type" value="value" />
+			<integer id="value" value="575" />
+			<string id="limit_type" value="maximum" />
+			<string id="orientation" value="vertical" />
+		</record> -->
+	</layout>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container class="spacer" height="35" />
+
+	<container class="pitch_with_tactics" id="pitc" name="pitch" >
+		<real id="pitch_perspective" value="0.000" />
+		<string id="icon_flags" value="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity" />
+		<string id="show_extra_details_buttons" value="true" />
+		<string id="pitch_draw_grass" value="true" />
+		<string id="player_icon_file" value="tactics/tcs/tactics/player icon" />
+		<string id="pitch_base_appearance" value="" />
+		<string id="pitch_pattern" value="tcs" />
+		<integer id="pitch_vertical_padding" value="0" />
+		
+		<string id="vertical" value="true" />
+		<integer id="pitch_player_icon_text_size" value="5" />
+		<string id="pitch_alignment" value="can_scale" />
+		<real id="maximum_player_size" value="0.220000" />
+		<string id="pitch_line_colour" value="white" />
+		<string id="3958779584" value="tactics normal run" />
+		<string id="3958779616" value="tactics darkened run" />
+		<string id="3958779648" value="tactics dragged run" />
+		<integer id="pitch_touchline_width_percentage" value="20" />
+		<integer id="line_width" value="1" />
+	</container>
+	
+</panel>

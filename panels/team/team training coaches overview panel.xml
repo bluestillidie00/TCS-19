@@ -1,0 +1,184 @@
+﻿<panel>
+	<record id="cnvs">
+		<list id="mENT">
+			<record class="bordered_box" appearance="tcs/boxes/header/paper" id="at01" entity_layout_id="at01" />
+			<record class="link_appearance_button" auto_size="none" alignment="centre_x,centre_y,left" id="stfS" entity_layout_id="at0F" editor_group_id="at01"  red_replacement="secondary" colour="secondary">
+				<string id="click_event" value="gtss" />
+				<translation id="text" translation_id="227996" type="use" value="Staff Search" />
+			</record>
+			<record class="button" alignment="left" id="edtB" entity_layout_id="at0G" editor_group_id="at01" >
+				<string id="click_event" value="oEDT" />
+				<translation id="text" translation_id="466575" type="use" value="Edit Coach Assignments...[COMMENT: FR 24728 - Training Screen Revamp - UI - Coaches]" />
+			</record>
+			<record class="link_button" auto_size="none" appearance="buttons/link/title/button" alignment="centre_y,left" id="cchT" entity_layout_id="at0H" editor_group_id="at01"  colour="secondary" red_replacement="secondary">
+				<string id="section" value="tcsc" />
+				<integer id="size" value="9" />
+				<integer id="font" value="title1" />
+				<translation id="text" translation_id="388030" type="use" value="Coaching Team[COMMENT: FR 8158, Staff UI revamp, displays details of a team's staff/personnel make-up]" />
+			</record>
+			<record class="text" alignment="left,top" id="coac" entity_layout_id="at0I" editor_group_id="at01" colour="secondary">
+				<string id="style" value="bold" />
+				<integer id="size" value="12" />
+			</record>
+			<record class="team_staff_little_guys_panel" file="team/team staff little guys icons only" id="ltlP" entity_layout_id="at0J" editor_group_id="at01">
+				<string id="type" value="CSsf" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="text" alignment="centre_y,left" id="at0K" entity_layout_id="at0K" editor_group_id="at01" colour="secondary"/>
+			<record class="container" id="at02" entity_layout_id="at02" />
+			<record class="container" id="at0;" entity_layout_id="at0;" editor_group_id="at02" />
+			<record class="bordered_box" editor_group_id="at0;" entity_layout_id="at08" id="at08" />
+			<record class="bordered_box" editor_group_id="at0;" entity_layout_id="at05" id="at05" />
+			<record class="bordered_box" id="at03" entity_layout_id="at03" editor_group_id="at0;" />
+			<record class="icon_button" id="dfiB" entity_layout_id="at0L" editor_group_id="at03" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y">
+				<string id="icon_colour" value="accent" />
+				<string id="colour" value="accent" />
+				<string id="style" value="bold" />
+				<integer id="size" value="12" />
+				<string id="show_button_appearance" value="false" />
+				<translation id="text" translation_id="229304" type="use" value="Defending[COMMENT - training category]" />
+				<string id="icon" value="icons/16px/training defending" />
+			</record>
+			<record class="training_category_coach_overview_widget" id="DfTc" entity_layout_id="at00" editor_group_id="at03">
+				<integer id="training_category" value="5" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at03" entity_layout_id="at04" id="DfTa">
+				<integer id="training_category" value="4" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="icon_button" editor_group_id="at05" entity_layout_id="at0M" id="psIb" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y">
+				<string id="icon_colour" value="accent" />
+				<string id="colour" value="accent" />
+				<string id="style" value="bold" />
+				<integer id="size" value="12" />
+				<string id="show_button_appearance" value="false" />
+        <translation id="text" translation_id="232851" type="use" value="Possession" />
+				<string id="icon" value="icons/16px/training technical" />
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at05" entity_layout_id="at06" id="PsTc">
+				<integer id="training_category" value="6" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at05" entity_layout_id="at07" id="PsTa">
+				<integer id="training_category" value="7" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="icon_button" editor_group_id="at08" entity_layout_id="at0N" id="atib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y">
+				<string id="icon_colour" value="accent" />
+				<string id="colour" value="accent" />
+				<string id="style" value="bold" />
+				<integer id="size" value="12" />
+				<string id="show_button_appearance" value="false" />
+				<translation id="text" translation_id="229305" type="use" value="Attacking[COMMENT - training category]" />
+				<string id="icon" value="icons/16px/training attacking" />
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at08" entity_layout_id="at09" id="atTc">
+				<integer id="training_category" value="8" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at08" entity_layout_id="at0:" id="atTa">
+				<integer id="training_category" value="9" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="container" editor_group_id="at02" entity_layout_id="at0&lt;" id="at0&lt;" />
+			<record class="container" editor_group_id="at0&lt;" entity_layout_id="at0=" id="at0=" />
+			<record class="icon_button" editor_group_id="at0=" entity_layout_id="at0Q" id="spib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" hidden="true">
+				<string id="icon_colour" value="accent" />
+				<string id="colour" value="accent" />
+				<string id="style" value="bold" />
+				<integer id="size" value="12" />
+				<string id="show_button_appearance" value="false" />
+				<string id="text" value="Set Pieces" />
+				<string id="icon" value="icons/16px/training attacking"  />
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at0=" entity_layout_id="at0&gt;" id="SpSp">
+				<integer id="training_category" value="10" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at0=" entity_layout_id="at0?" id="at0?">
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="bordered_box" editor_group_id="at0&lt;" entity_layout_id="at0@" id="at0@" />
+			<record class="icon_button" editor_group_id="at0@" entity_layout_id="at0P" id="ftib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y">
+				<string id="icon_colour" value="accent" />
+				<string id="colour" value="accent" />
+				<string id="style" value="bold" />
+				<integer id="size" value="12" />
+				<string id="show_button_appearance" value="false" />
+				<translation id="text" translation_id="258723" type="use" value="Fitness[COMMENT - staff coaching style - staff profile page]" />
+				<string id="icon" value="icons/16px/training physical" />
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at0@" entity_layout_id="at0A" id="FtSt">
+				<integer id="training_category" value="0" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at0@" entity_layout_id="at0B" id="FtQi">
+				<integer id="training_category" value="1" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="bordered_box" editor_group_id="at0&lt;" entity_layout_id="at0C" id="at0C" />
+			<record class="icon_button" editor_group_id="at0C" entity_layout_id="at0O" id="gkib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y">
+				<string id="icon_colour" value="accent" />
+				<string id="colour" value="accent" />
+				<string id="style" value="bold" />
+				<integer id="size" value="12" />
+				<string id="show_button_appearance" value="false" />
+				<translation id="text" translation_id="258722" type="use" value="Goalkeeping[COMMENT - staff coaching style - staff profile page]" />
+				<string id="icon" value="icons/16px/training goalkeeping" />
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at0C" entity_layout_id="at0D" id="gkSS">
+				<integer id="training_category" value="2" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+			<record class="training_category_coach_overview_widget" editor_group_id="at0C" entity_layout_id="at0E" id="gkHD">
+				<integer id="training_category" value="3" />
+				<record id="dbrp">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+			</record>
+		</list>
+		<list id="stts">
+			<record class="container" id="st01" file="team/team training coach overview layout">
+				<list id="stEN" />
+			</record>
+		</list>
+	</record>
+</panel>

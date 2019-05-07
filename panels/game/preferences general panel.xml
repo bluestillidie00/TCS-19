@@ -1,0 +1,268 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+	<container >
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container id="main">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<!-- General -->
+					<widget class="subsection_box">
+						<translation id="title" translation_id="329984" type="use" value="General[COMMENT: preferences: General settings section title]" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="game_settings_viewer_panel" id="set1">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="4" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="current_language" />
+								<symbol value="current_db_language" />
+							</list>
+						</widget>
+
+						<container height="35">
+							<layout class="stick_to_sides_attachment" alignment="top" inset="3" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" gap="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="3" />
+
+							<container height="1"/>
+
+							<widget class="button" click_event="mnLN" auto_size="vertical">
+								<translation id="text" translation_id="433931" type="use" value="Publish Languages" />
+							</widget>
+						</container>
+
+						<widget class="game_settings_viewer_panel" id="set2">
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="4" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="selected_currency" />
+								<symbol value="wage_string_type" />
+							</list>
+						</widget>
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" apply_to_children="true" />
+							<widget class="link_button" id="MoFo" auto_size="all">
+								<translation id="hint" translation_id="329825" type="use" value="Click to view more format settings[COMMENT: general preferences; hint text for More Format Settings option]" />
+								<translation id="text" translation_id="330244" type="use" value="More Format Settings[COMMENT: general preferences; user can click to display more format settings which are hidden by default]" />
+							</widget>
+						</container>
+
+						<widget class="game_settings_viewer_panel" id="set3">
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="skin" />
+							</list>
+						</widget>
+
+						<container>
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="3" />
+
+							<widget class="label" auto_size="vertical">
+								<translation id="text" translation_id="330793" type="use" value="Window Mode &amp; Resolution[COMMENT: game preferences; options to control and customise the resolution and display of the game]" />
+							</widget>
+							<widget class="display_mode_popup_button" id="mode" auto_size="vertical" />
+						</container>
+
+						<widget class="game_settings_viewer_panel" id="set4">
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="enable_retina_preference" />
+								<symbol value="ui_zoom_level" />
+							</list>
+						</widget>
+
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" apply_to_children="true" />
+							<widget class="link_button" id="MoUI" auto_size="all">
+								<translation id="hint" translation_id="333727" type="use" value="Click to view more interface settings[COMMENT: general preferences; hint text for More Interface Settings option]" />
+								<translation id="text" translation_id="333934" type="use" value="More Interface Settings[COMMENT: general preferences; user can click to display more UI settings which are hidden by default]" />
+							</widget>
+						</container>
+					</widget>
+
+					<!-- Match -->
+					<widget class="subsection_box" id="cura">
+						<translation id="title" translation_id="330228" type="use" value="Match[COMMENT: preferences: Match (3D match view) settings section title]" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<container height="28">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<widget class="label">
+								<translation id="text" translation_id="348427" type="use" value="This PC's 3D Graphics Capability[COMMENT: game preferences; label text indicating the user's capacity to accomodate the 3D match display]" />
+							</widget>
+							<widget class="graphical_level_stars_label" stars_type="3" />
+						</container>
+
+						<container height="30" id="SOUN">
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+
+							<widget class="game_settings_viewer_panel" id="setZ">
+								<record id="table_properties">
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="play_sounds" />
+								</list>
+							</widget>
+							<widget class="game_settings_viewer_panel" id="set!">
+								<!--<layout class="fit_children_attachment" alignment="vertical" offset="0" />-->
+								<record id="table_properties">
+									<integer id="row_spacing" value="5" />
+									<string id="layout" value="-1,-2" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="sound_volume" />
+								</list>
+							</widget>
+						</container>
+
+						<widget class="game_settings_viewer_panel" id="set2">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="graphical_detail" />
+							</list>
+						</widget>
+
+						<widget class="preferences_profile_panel" id="genm" file="game/preferences profile panel match overview" />
+
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" apply_to_children="true" />
+							<widget class="link_button" id="MoMa" auto_size="all">
+								<translation id="hint" translation_id="329826" type="use" value="Click to view more match settings[COMMENT: general preferences; hint text for More Match Settings option]" />
+								<translation id="text" translation_id="330246" type="use" value="More Match Settings[COMMENT: general preferences; user can click to display more match settings which are hidden by default]" />
+							</widget>
+						</container>
+					</widget>
+
+					<widget class="bordered_box" id="curC">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="game_settings_viewer_panel" id="set2">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="enable_interest_based_advertising" />
+							</list>
+						</widget>
+					</widget>
+
+				</container>
+			</container>
+
+			<container class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="subsection_box" id="cura">
+						<translation id="title" translation_id="330420" type="use" value="Saving[COMMENT: scout report panel box heading]" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="game_settings_viewer_panel" id="set2">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="use_auto_saves" />
+								<symbol value="auto_save_interval" />
+								<symbol value="auto_save_mode" />
+								<symbol value="use_auto_save_mode_for_manual_save" />
+							</list>
+						</widget>
+					</widget>
+
+					<!--Social Networks-->
+					<widget class="subsection_box" id="curB" height="330">
+						<translation id="title" translation_id="312758" type="use" value="Social Networks" />
+
+						<!-- hide if game tells us-->
+						<attachment class="get_global_attachment" get_property="SnHd" set_property="hidn" skip_if_null="true"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<widget class="preferences_profile_panel" id="gens" file="game/preferences profile panel social network" />
+					</widget>
+
+					<widget class="subsection_box" height="250" >
+						<translation id="title" type="use" translation_id="297464" value="Support Us" />
+						<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_gap="0" />
+
+						<!-- TCS TWITTER -->
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="3" horizontal_inset="0" />
+								<widget class="picture" height="150" width="150" image_alignment="centre_x, bottom" scale_picture="true" keep_aspect_ratio="true" file="tcs/preferences/tcs"/>
+								<widget class="text" auto_size="vertical" value="Follow the TCS Twitter Page!" alignment="centre_x, top" colour="text" size="large"/>
+							</container>
+							<widget class="button" id="ttwi" appearance="">
+								<record id="click_event" event_id="OURL" url="https://twitter.com/TCSSkin" />
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							</widget>
+						</container>
+
+						<!-- WTS TWITTER -->
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="3" horizontal_inset="0" />
+								<widget class="picture" height="150" width="150" image_alignment="centre_x, bottom" scale_picture="true" keep_aspect_ratio="true" file="tcs/preferences/wts"/>
+								<widget class="text" auto_size="vertical" value="Follow WorkTheSpace on Twitter!" alignment="centre_x, top" colour="text" size="large"/>
+							</container>
+							<widget class="button" id="jtwi" appearance="">
+								<record id="click_event" event_id="OURL" url="https://twitter.com/WorkTheSpace" />
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							</widget>
+						</container>			
+
+						<!-- PAYPAL -->
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="3" horizontal_inset="0" />
+								<widget class="picture" height="150" width="150" image_alignment="centre_x, bottom" scale_picture="true" keep_aspect_ratio="true" file="tcs/preferences/paypal"/>
+								<widget class="text" auto_size="vertical" value="Want to say thanks? Considering donating on Paypal!" alignment="centre_x, top" colour="text" size="large"/>
+							</container>
+							<widget class="button" id="ttwi" appearance="">
+								<record id="click_event" event_id="OURL" url="https://www.paypal.me/tcsskin" />
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							</widget>
+						</container>
+
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<widget class="preferences_button_panel" />
+	</container>
+</panel>

@@ -1,0 +1,55 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+
+	<!-- PLAYER KIT -->
+	<container>
+		<!-- WE'VE USED THIS LAYOUT FOR AETHSTETIC REASONS, THE 12px SPACER AT THE BOTTOM OF THE CONTAINER LIFTS THE BOTTOM OF THE KIT UP SO IT DOESN'T HANG BELOW THE PLAYER ROLE CONTAINER -->
+		<layout class="vertical_arrange" vertical_layout="-1,22" vertical_gap="0" />
+
+		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_top="0" number_height="60">
+		</widget>
+
+		<container />
+	</container>
+
+
+	<!-- PLAYER NAME AND ROLE -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+		<!-- SPACER ~ USED TO HOLD THE PLAYER INFORMATION AT THE BOTTOM -->
+		<container />
+
+		<!-- CONTAINER HOLDING PLAYER INFORMATION -->
+		<container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" red_replacement="teal 900" height="30">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+			<!-- PLAYER NAME -->
+			<widget class="label" id="name" size="8" alignment="centre,can_scale"  auto_size="vertical" font="player icon" >
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" /> 			
+			</widget>
+
+			<!--debug role/duty-->
+			<container  height="14">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="2" do_not_size="true"/>
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+				<layout class="fit_children_attachment" alignment="horizontal, fill" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<!--condition-->
+				<widget class="pie_condition_label" id="cond" file="widgets/pie condition no label" width="15">
+					<integer id="mode" value="2"/>
+				</widget>
+
+				<!--rating-->
+				<widget class="match_rating_label_formatted" id="avra" size="8" auto_size="horizontal" alignment="centre,can_scale" format="[%fraction#1-2.1]" />
+			</container>
+
+			<container height="1"/>
+
+		</container>
+	</container>
+
+
+</panel>

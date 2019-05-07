@@ -1,0 +1,81 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="3"/>
+	<boolean id="should_force_refresh" value="true"/>
+	<colour id="asking_price_set_colour" name="secondary"/>
+	<colour id="asking_price_not_set_colour" name="secondary"/>
+
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="200,400,-1" horizontal_gap="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+			
+			<!-- player pic -->
+			<widget class="object_portrait_picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="80" />
+			<container class="player_status_all_button" id="plsf" >
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" /> 
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" /> 
+			</container>
+
+		</container>
+
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="2" offset="1"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1, -1, -1" gap="2" offset="0"/>
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+
+				<!-- wage -->
+				<container class="plain_box" appearance="boxes/custom/transfer offer/value/subtle/paper">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<widget class="text" alignment="left,centre_y" auto_size="vertical" font="label" size="small" colour="secondary">
+						<translation id="text" translation_id="227799" type="use" value="Wage"/>
+					</widget>
+					<widget class="text" id="plwg" alignment="left,centre_y,can_scale" multiline="false" font="value" colour="secondary" auto_size="vertical"/>
+
+				</container>
+
+				<!-- value -->
+				<container class="plain_box" appearance="boxes/custom/transfer offer/value/subtle/paper">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<widget class="text" alignment="left,centre_y" auto_size="vertical" font="label" size="small" colour="secondary">
+						<translation id="text" translation_id="227806" type="use" value="Value"/>
+					</widget>
+					<widget class="text" id="plvl" alignment="left,centre_y,can_scale" multiline="false" font="value" colour="secondary" auto_size="vertical"/>
+
+				</container>
+
+				<!-- asking price -->
+				<container class="plain_box" appearance="boxes/custom/transfer offer/asking/subtle/paper">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<widget class="label" alignment="left,centre_y" auto_size="vertical" font="label" size="small" colour="secondary">
+						<translation id="text" translation_id="227778" type="use" value="Asking Price"/>
+						<translation id="hint" translation_id="227778" type="use" value="Asking Price"/>
+					</widget>
+					<widget class="text" id="plas" alignment="left,centre_y,can_scale" multiline="false" font="value" colour="secondary" auto_size="vertical"/>
+
+				</container>
+			</container>
+
+
+		</container>
+
+
+
+      <container class="horizontal_adaptive_container" inset="0" offset="0" gap="8">
+        <widget class="transfer_offer_player_transfer_status_panel" id="ptsc" minimum_width="160" default_width="-1" auto_hide_priority="1"/>
+        <widget class="transfer_offer_interest_panel" id="ptin" minimum_width="160" default_width="-1" auto_hide_priority="2"/>
+        <widget class="transfer_offer_player_contract_expiry_panel" id="cexc" minimum_width="160" default_width="-1" auto_hide_priority="3"/>
+      </container>
+	</container>
+
+</panel>

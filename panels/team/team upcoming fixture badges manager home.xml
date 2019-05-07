@@ -1,0 +1,116 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4"/>
+
+	<!--stadium picture
+	<widget class="stadium_picture" id="STAp" image_alignment="centre_x,top" scale_picture="true" keep_aspect_ratio="true">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>-->
+
+	<!--container for the team badges-->
+	<!-- <string id="skin_style" value="contrast box" /> -->
+	<container id="tbdg">
+		<attachment_group class="horizontal_arrange" horizontal_layout="200,-1,200" horizontal_offset="6" vertical_inset="30" horizontal_gap="0"/>
+
+		<!-- HOME TEAM -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!-- HOME TEAM LOGO -->			
+			<container>
+				<!-- LOGO STUCK IN CONTAINER TO MAKE RESIZING EASIER WITH INSETS -->
+				<layout class="stick_to_sides_attachment" alignment="all" inset="7" apply_to_children="true" />
+
+				<!--HOME TEAM LOGO -->
+				<widget class="object_portrait_picture" id="htpi" image_alignment="right" scale_picture="true" keep_aspect_ratio="true" inset="0">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Hhme" />
+								<integer id="set_property" value="Shwn" />
+							</record>
+							<record>
+								<integer id="get_property" value="home" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!-- HOME TEAM KIT -->
+			<widget class="kit_picture" id="T_hk" scale_picture="true" keep_aspect_ratio="true" image_alignment="left" >
+				<boolean id="aull" value="true"/>
+				<record id="object_property">
+					<list id="get_properties">
+						<record id="object_property" get_property="hkID" set_property="ktid" />
+						<record id="object_property" get_property="home" set_property="Ttea" />
+					</list>
+				</record>
+			</widget>
+
+			<!-- HOME NO OPPONENT -->
+			<widget class="label" id="nopp" size="48" alignment="centre" hidden="true">
+				<translation id="text" translation_id="364192" type="use" value="?[COMMENT:upcoming fixture info panel; placeholder used for when match opposition isn't known yet, keep to single character where possible]" />
+				<record id="object_property">
+					<integer id="get_property" value="Hhme" />
+					<integer id="set_property" value="hidn" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- SPACER -->
+		<container/>
+
+		<!-- AWAY TEAM -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!-- AWAY TEAM LOGO -->			
+			<container>
+				<!-- LOGO STUCK IN CONTAINER TO MAKE RESIZING EASIER WITH INSETS -->
+				<layout class="stick_to_sides_attachment" alignment="all" inset="7" apply_to_children="true" />
+
+				<!--AWAY TEAM LOGO -->
+				<widget class="object_portrait_picture" id="atpi" image_alignment="left" scale_picture="true" keep_aspect_ratio="true" inset="0">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Hawy" />
+								<integer id="set_property" value="Shwn" />
+							</record>
+							<record>
+								<integer id="get_property" value="away" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!-- AWAY TEAM KIT -->
+			<widget class="kit_picture" id="T_ak" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
+				<boolean id="aull" value="true"/>
+				<record id="object_property">
+					<list id="get_properties">
+						<record id="object_property" get_property="akID" set_property="ktid" />
+						<record id="object_property" get_property="away" set_property="Ttea" />
+					</list>
+				</record>
+			</widget>
+
+			<!-- AWAY NO OPPOENENT -->
+			<widget class="label" id="nopp" size="48" alignment="centre" hidden="true">
+				<translation id="text" translation_id="364192" type="use" value="?[COMMENT:upcoming fixture info panel; placeholder used for when match opposition isn't known yet, keep to single character where possible]" />
+				<record id="object_property">
+					<integer id="get_property" value="Hawy" />
+					<integer id="set_property" value="hidn" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+</panel>

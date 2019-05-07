@@ -1,0 +1,21 @@
+<record>
+	<string id="file_name" value="GT-America-Standard-Black.ttf"/>
+	
+	<string id="capitalisation" value="upper case" />
+			
+		<integer id="fill_colour_red" value="12"/>
+	<integer id="fill_colour_green" value="12"/>
+	<integer id="fill_colour_blue" value="12"/>
+	<integer id="fill_colour_alpha" value="255"/>
+	
+		<integer id="gradient_upper_colour_red" value="12"/>
+	<integer id="gradient_upper_colour_green" value="12"/>
+	<integer id="gradient_upper_colour_blue" value="12"/>
+	<integer id="gradient_upper_colour_alpha" value="255"/>
+	
+	<integer id="gradient_lower_colour_red" value="12"/>
+	<integer id="gradient_lower_colour_green" value="12"/>
+	<integer id="gradient_lower_colour_blue" value="12"/>
+	<integer id="gradient_lower_colour_alpha" value="255"/>
+	
+</record>

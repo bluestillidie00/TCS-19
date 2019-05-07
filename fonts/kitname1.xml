@@ -1,0 +1,35 @@
+<record>
+	<string id="file_name" value="GT-America-Standard-Black.ttf"/>
+	
+	<string id="capitalisation" value="upper case" />
+	
+	<integer id="extra_spacing" value="1.3"/>
+	
+		<list id="shadows">
+		<record>
+			<integer id="x_offset" value="2"/>
+			<integer id="y_offset" value="2"/>
+			<integer id="blur_radius" value="0"/>
+			<integer id="colour_red" value="0"/>
+			<integer id="colour_green" value="0"/>
+			<integer id="colour_blue" value="0"/>
+			<integer id="colour_alpha" value="30"/>
+		</record>
+	</list>
+			
+		<integer id="fill_colour_red" value="255"/>
+	<integer id="fill_colour_green" value="255"/>
+	<integer id="fill_colour_blue" value="255"/>
+	<integer id="fill_colour_alpha" value="255"/>
+	
+		<integer id="gradient_upper_colour_red" value="255"/>
+	<integer id="gradient_upper_colour_green" value="255"/>
+	<integer id="gradient_upper_colour_blue" value="255"/>
+	<integer id="gradient_upper_colour_alpha" value="255"/>
+	
+	<integer id="gradient_lower_colour_red" value="255"/>
+	<integer id="gradient_lower_colour_green" value="255"/>
+	<integer id="gradient_lower_colour_blue" value="255"/>
+	<integer id="gradient_lower_colour_alpha" value="255"/>
+	
+</record>

@@ -1,0 +1,20 @@
+<!-- image properties -->
+<properties>
+	<record id="image_borders" left="4" right="4" top="30" bottom="4"/>
+	<record id="image_slices" left="8" right="8" top="45" bottom="8"/>
+
+	<integer id="text_top_inset" value="10"/>
+	<integer id="text_bottom_inset" value="0"/>
+	<integer id="text_left_inset" value="12"/>
+	<integer id="text_right_inset" value="12"/>
+
+	<record id="font_spec">
+		<flags id="font" value="title"/> 
+		<colour id="colr" name="accent"/> 
+		<flags id="size" value="medium"/> 
+	</record>
+
+	<colour id="red_replacement" name="box_background"/>
+	<colour id="green_replacement" name="pitch_box_background"/>
+	<colour id="blue_replacement" name="black"/>
+</properties>

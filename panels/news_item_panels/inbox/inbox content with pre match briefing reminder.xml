@@ -1,0 +1,219 @@
+﻿<panel>
+  <layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+  <container id="atMc">
+    <attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+    <container class="inner_box" height="280" id="ctan">
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <widget class="text" font="title" alignment="left" auto_size="vertical">
+        <translation id="text" translation_id="450768" type="use" value="Current Tactic Analysis[COMMENT: title of subsection; showing the current tactic's analysis in terms of areas of strenghts, weaknesses and partnership]" />
+      </widget>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" layout="-1,-1, -1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+          <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+
+          <container class="team_tactics_overview_panel" file="none" width="206">
+            <layout class="centre_in_parent_attachment" alignment="all" offset="0" apply_to_children="true" />
+
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+
+            <container class="tactics_overview_panel" id="TacO" file="none" width="140" height="230">
+
+              <layout class="arrange_vertical_attachment" layout="25,-1" offset="0" gap="5" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+              <widget class="text" alignment="centre" font="title" colour="pitch good area">
+                <translation id="text" translation_id="450769" type="use" value="Strengths[COMMENT analysis title; showing the major strengths of the tactics on the pitch]" />
+              </widget>
+
+              <widget class="pitch_with_tactics" id="pitc"
+                      player_icon_file=""
+                      icon_flags="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity"
+                      pitch_vertical_padding="0"
+                      vertical="true"
+                      pitch_player_icon_text_size="5"
+                      pitch_alignment="can_scale"
+                      maximum_player_size="0.22"
+                      pitch_line_colour="text"
+                      ncol="tactics normal run"
+                      dcol="tactics darkened run"
+                      gcol="tactics dragged run"
+                      pitch_draw_grass="false"
+                      pitch_base_appearance=""
+                      pitch_pattern="ui circles"
+                      pitch_touchline_width_percentage="20"
+                      icon_layout_state_id="st07"
+                      line_width="1.4"
+                      draw_analysis_overlay="true"
+                      analysis_mode="1"
+                      pitch_perspective="0.100000" />
+
+            </container>
+          </container>
+        </container>
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+          <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+
+          <container class="team_tactics_overview_panel" file="none" width="206">
+            <layout class="centre_in_parent_attachment" alignment="all" offset="0" apply_to_children="true" />
+
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+
+            <container class="tactics_overview_panel" file="none" id="TacO" width="140" height="230">
+
+              <layout class="arrange_vertical_attachment" layout="25,-1" offset="0" gap="5" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+              <widget class="text" alignment="centre" font="title" colour="pitch serious problems">
+                <translation id="text" translation_id="450770" type="use" value="Weaknesses[COMMENT analysis title; showing the major weakness of the tactics on the pitch]" />
+              </widget>
+
+
+              <widget class="pitch_with_tactics" id="pitc" player_icon_file="" icon_flags="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity" pitch_vertical_padding="0" vertical="true" pitch_player_icon_text_size="5" pitch_alignment="can_scale" maximum_player_size="0.22" pitch_line_colour="text" ncol="tactics normal run" dcol="tactics darkened run" gcol="tactics dragged run" pitch_draw_grass="false" pitch_base_appearance="" pitch_pattern="ui circles" pitch_touchline_width_percentage="20" icon_layout_state_id="st07" line_width="1/4" draw_analysis_overlay="true" analysis_mode="2" pitch_perspective="0.100000"/>
+
+            </container>
+
+          </container>
+        </container>
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+          <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+
+          <container class="team_tactics_overview_panel" file="none" width="206">
+            <layout class="centre_in_parent_attachment" alignment="all" offset="0" apply_to_children="true" />
+
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+
+            <container class="tactics_overview_panel" file="none" id="TacO" width="140" height="230">
+
+              <layout class="arrange_vertical_attachment" layout="25,-1" offset="0" gap="5" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+              <widget class="text" alignment="centre" font="title">
+                <translation id="text" translation_id="450771" type="use" value="Partnerships[COMMENT: Tactical analysis email; showing strong and weak partnerships between players on the pitch]" />
+              </widget>
+
+
+              <widget class="pitch_with_tactics" id="pitc"  player_icon_file="tactics/tactics icon info panel briefing inbox" icon_flags="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity" pitch_vertical_padding="0" vertical="true" pitch_player_icon_text_size="5" pitch_alignment="can_scale" maximum_player_size="0.22" pitch_line_colour="text" ncol="tactics normal run" dcol="tactics darkened run" gcol="tactics dragged run" pitch_draw_grass="false" pitch_base_appearance="" pitch_pattern="ui circles" pitch_touchline_width_percentage="20" icon_layout_state_id="st08" line_width="1.4" draw_analysis_overlay="true" analysis_mode="3" pitch_perspective="0.100000"/>
+
+            </container>
+
+          </container>
+        </container>
+      </container>
+    </container>
+
+
+    <container class="team_tactics_overview_panel" file="none">
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </list>
+      </record>
+
+      <container class="tactics_overview_panel" file="none" id="TacO" height="180">
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <container class="tactics_recent_match_analysis_panel" id="anLy" file="none" height="180">
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+          <container class="inner_box">
+            <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+            <widget class="text" alignment="left" font="title" auto_size="vertical">
+              <translation id="text" translation_id="450754" type="use" value="Recent Matches Analysis[COMMENT: Match Analysis Tab Title - Multiple recent Matches analysis]" />
+            </widget>
+
+            <container>
+              <layout class="arrange_horizontal_attachment" layout="-1,-1" />
+              <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+              <container class="inner_box">
+                <layout class="arrange_vertical_attachment" layout="20,20,-1" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+                <widget class="icon_button" show_button_appearance="false" alignment="left,centre_y" font="title" size="large" colour="positive" icon_colour="positive" icon="icons/16px/thumbs up">
+                  <translation id="text" translation_id="450772" type="use" value="Biggest Positive[COMMENT: Recent match analysis; showing the major strength of the team]" />
+                </widget>
+
+                <widget class="text" id="mSrt" font="title" colour="positive" alignment="left,centre_y">
+
+                </widget>
+
+                <widget class="text" id="mSrn">
+
+                </widget>
+              </container>
+
+              <container class="inner_box">
+                <layout class="arrange_vertical_attachment" layout="20,20,-1" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+                <widget class="icon_button" show_button_appearance="false" alignment="left,centre_y" font="title" size="large" colour="negative" icon_colour="negative" icon="icons/16px/thumbs down">
+                  <translation id="text" translation_id="450773" type="use" value="Biggest Negative[COMMENT: Recent match analysis; showing the major weakness of the team]" />
+                </widget>
+
+                <widget class="text" id="mWkt" font="title" colour="negative">
+
+                </widget>
+
+                <widget class="text" id="mWkn">
+
+                </widget>
+              </container>
+            </container>
+          </container>
+
+        </container>
+      </container>
+
+    </container>
+
+
+  </container>
+
+
+</panel>

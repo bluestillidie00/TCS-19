@@ -1,0 +1,28 @@
+<panel >
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+	<!-- COLOUR DECLERATIONS -->
+	<colour name="dark_article" red="42" green="44" blue="46" />
+	<colour name="dark_article_border" red="37" green="39" blue="41" />
+	<colour name="dark_article_shadow" red="25" green="27" blue="29" />
+
+	<container class="bordered_box" id="wcon" appearance="tcs/sky sports/article" red_replacement="dark_article" blue_replacement="dark_article_border" green_replacement="dark_article_shadow" >
+		<layout class="vertical_arrange" vertical_layout="175,-1" />
+
+		<!-- DYNAMIC IMAGES -->	
+		<container id="dynI" >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		</container>
+
+<!-- NEWS HEADLINES-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="2"/>
+
+			<!-- ARTICLE CATEGORY -->
+			<widget class="text" id="brif" font="title1" size="small" style="bold" multiline="true" auto_size="vertical" colour="blue 300"/>
+
+			<!-- STORY HEADLINE -->
+			<widget class="text" id="titl" size="14" font="skysports" multiline="true" alignment="left, middle" colour="text" />
+		</container>
+	</container>
+</panel>

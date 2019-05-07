@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<panel>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+		
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" auto_size="horizontal">
+						<translation id="text" translation_id="247605" type="use" value="Career Stats" />
+
+			</widget>
+		</container>
+		
+		
+  <widget class="table" id="phst" layout="20,2,53,-1,35,35" mode="fill_rows, stripe_rows" fixed_size_rows="false">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+    <!--boolean id="all_content_same_height" value="false"/-->
+    <integer id="row_spacing" value="2"/>
+    <integer id="column_spacing" value="4"/>
+
+    <list id="headings">
+      <record index="0" alignment="centre_x,centre_y"/>
+    </list>
+    <list id="column_display_properties">
+      <record index="0" sort_disabled="false" />
+      <record index="1" sort_disabled="true" />
+      <record index="2" sort_disabled="true" />
+      <record index="3" sort_disabled="true" />
+      <record index="4" sort_disabled="false" />
+      <record index="5" sort_disabled="false" />
+    </list>
+    <list id="column_properties">
+      <record index="0" alignment="centre" style="vertical" height="53"/>
+      <record index="1" alignment="centre" style="vertical"/>
+      <record index="2" alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="53" image_alignment="centre"/>
+      <record index="4" alignment="centre" spec="text,large" style="light_bold"/>
+      <record index="5" alignment="centre" spec="text,large" style="light_bold"/>
+    </list>
+  </widget>
+
+</panel>

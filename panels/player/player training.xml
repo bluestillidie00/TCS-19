@@ -1,0 +1,151 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
+
+	<container>
+		<layout class="vertical_arrange" vertical_layout="190,-1" vertical_gap="0" />
+
+		<!-- TCS HEADER AND PERFORMNACE -->
+		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" >
+
+			<!-- PLAYER INFORMATION -->
+			<container class="bordered_box" appearance="tcs/boxes/header/paper" default_width="-1" minimum_width="820" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<widget class="player_personal_details_panel" file="player/tcs/training/personal details" id="ppdp">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+			
+			
+						<!-- TRAINING PERFORMANCE -->
+			<container class="bordered_box" default_width="300" minimum_width="251" priority="2">
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+				<widget class="player_training_performance_panel" file="player/wannachup/wannachup player attribute analyser panel" id="paAn">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+			</container>
+
+			<!-- TRAINING PERFORMANCE -->
+			<container class="bordered_box" default_width="300" minimum_width="251" priority="1">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+				<widget class="player_training_performance_panel" file="player/tcs/training/training performance" id="ptpp">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+<!-- BUTTON UNDERNEARTH REPORT -->
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" />
+					<widget class="icon_button" icon="icons/16px/speech bubble" id="ptbn" click_event="ptev" auto_size="all">
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+					<widget class="icon_button" icon="icons/16px/speech bubble" id="ctbn" click_event="ctev" auto_size="all">
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+				</container>
+			</container>
+
+
+
+		</container>
+
+		<container>
+			<layout class="horizontal_arrange" horizontal_layout="-1,-2,-1" horizontal_gap="0" />
+
+	<!-- Column Left -->
+			<container class="vertical_adaptive_container" >
+				<widget class="player_training_information" file="player/wannachup/wannachup player training information" default_height="-1" minimum_height="500" priority="1" id="ptst">
+				</widget>
+			</container>
+			<!-- Middle Column -->
+
+			<container class="vertical_adaptive_container" >
+
+					<!--attributes-->
+					<container class="subsection_box" default_height="450" minimum_height="450" priority="1" id="plap">
+						<translation id="title" translation_id="229822" type="use" value="Attributes" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="player_attributes_panel" show_attribute_offsets="true" file="player/player attributes training panel" id="patt">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+								</list>
+							</record>
+						</widget>
+					</container>
+
+				<!-- Season stats-->
+				<container class="bordered_box" default_height="-1" minimum_height="250" priority="2" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- Hide this panel if player is in inactive league-->
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<record id="object_property" get_property="Pila" set_property="hidn"/>
+							</list>
+						</record>
+					</widget>
+					<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- Show this panel if player is in inactive league-->
+								<record id="object_property" get_property="Pila" set_property="Shwn"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+
+			</container>
+			<!-- Right Column -->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="470,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<!--Familiarity-->
+				<container class="bordered_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<widget class="label" font="title" auto_size="vertical">
+						<translation id="text" translation_id="380859" type="use" value="Tactical Familiarity[COMMENT: how to system; help string, title]" />
+					</widget>
+					<container class="scrolling_box">
+						<widget class="player_tactical_familiarity_panel">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+				</container>
+				<!-- Medical Report -->
+				<container class="tabbed_container" id="main" appearance="boxes/bordered/standard/paper" minimum_width="500" default_width="800" default_item="tsmr" save_session_state="true" save_default_state="true">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<record id="default_properties" late_loading="true">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</record>
+				
+					<widget class="player_training_information" file="player/tcs/training/training report" id="tstr">
+						<translation id="title" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
+					</widget>
+					<widget class="player_training_information" file="player/tcs/training/medical report" id="tsmr">
+						<translation id="title" translation_id="447586" type="use" value="Medical Report[COMMENT: Panel title for when viewing medical report]" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+
+
+
+</panel>

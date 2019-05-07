@@ -1,0 +1,26 @@
+<panel >
+	<layout class="vertical_arrange" vertical_layout="200,-1" vertical_gap="0" />
+	<!-- THIS IS THE 'MEDIUM' NEWS PANEL, IT FEATURES THE DYNAMIC IMAGE ON TOP OF A PINK AND PURPLE DESIGN -->
+	<!-- THE LAYOUT CODE ABOVE ARRANGES THE PANEL VERTICALLY, WITH A 200px DYNAMIC IMAGE, THEN THE INFORMATION BELOW -->
+
+	<!-- DYNAMIC IMAGE -->
+	<container id="dynI" height="205">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true" />
+	</container>
+
+	<!-- BOX OF INFORMATION BELOW -->
+	<container class="plain_box" appearance="tcs/websites/epl/medium" red_replacement="epl_pin" green_replacement="epl_pur">
+		<layout class="arrange_vertical_attachment" alignment="top, extend" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+			<!-- Story title -->
+			<widget class="text" id="titl" auto_size="vertical" size="16" font="premiersansb" colour="white" />
+		</container>
+
+		<!-- Full news text -->
+		<widget class="text" id="news" size="12" colour="white" font="premiersans" />
+	</container>
+</panel>

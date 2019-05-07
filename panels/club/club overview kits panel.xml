@@ -1,0 +1,58 @@
+<panel>
+	<!-- DIFFERENT KIND OF CODING USED HERE. SEE CODE BELOW FROM SI FOR EXPLAINATIONS -->
+	<!-- We are limiting the extend width here so our licensed kit images remain at most their maximum height of 256 so they aren't scaled -->
+	<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="10" gap="10" >
+		<record id="auto_size_restrictions">
+			<string id="type" value="value" />
+			<integer id="value" value="256" />
+			<string id="limit_type" value="maximum" />
+			<string id="orientation" value="vertical" />
+		</record>
+	</layout>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!-- We are using a spacer here so we can limit our images size, but still remain centered in our parent -->
+	<!-- ~~~~ CODE BELOW COMMENTED OUT, NOT NEEDED DUE TO LABELS BEING COMMENTED OUT BELOW -->
+	<!-- <widget class="spacer" height="1" /> -->
+
+	<!-- CONTAINER HOLDING KITS -->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+		<!-- DEFAULT PROPERTIES ~ USED SO WE DON'T HAVE TO DEFINE THE SAME PROPERTIES TIME AND TIME AGAIN -->
+		<record id="default_properties" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" aull="true">
+			<record id="object_property">
+				<integer id="get_property" value="Tftm" />
+				<integer id="set_property" value="Ttea" />
+			</record>
+		</record>
+
+		<!-- KITS BELOW -->
+		<widget class="kit_picture" id="T_hk" kit_id="0" />
+		<widget class="kit_picture" id="T_ak" kit_id="1" />
+		<widget class="kit_picture" id="T_tk" kit_id="2" />
+	</container>
+
+	<!-- LABELS 
+	<container height="26">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+		<container class="plain_box" id="hLco" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+			<widget class="label" id="T_th"  alignment="centre" auto_size="horizontal">
+				<translation id="text" translation_id="256675" type="use" value="Home[COMMENT: team_information_panel; Home Kit Graphic Title]" />
+			</widget>
+		</container>
+		<container class="plain_box" id="aLco" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+			<widget class="label" id="T_ta"  alignment="centre" auto_size="horizontal">
+				<translation id="text" translation_id="256676" type="use" value="Away[COMMENT: team_information_panel; Away Kit Graphic Title]" />
+			</widget>
+		</container>
+		<container class="plain_box" id="tLco" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+			<widget class="label" id="T_tl" alignment="centre" auto_size="horizontal">
+				<translation id="text" translation_id="256677" type="use" value="Third[COMMENT: team_information_panel; Third Kit Graphic Title]" />
+			</widget>
+		</container> 
+	</container> -->
+</panel>

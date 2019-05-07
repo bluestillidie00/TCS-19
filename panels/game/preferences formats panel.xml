@@ -1,0 +1,111 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+	<container >
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="scrolling_box" save_session_state="true">
+			<widget class="container">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container class="scrolling_box">
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+						<!-- General -->
+						<widget class="subsection_box">
+							<translation id="title" translation_id="348113" type="use" value="General[COMMENT: preferences: most important settings section (short) name]" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+							<widget class="game_settings_viewer_panel" id="set1">
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<record id="table_properties">
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="current_language" />
+									<symbol value="selected_currency" />
+									<symbol value="wage_string_type" />
+									<symbol value="current_temperature" />
+									<symbol value="height_scale" />
+									<symbol value="weight_scale" />
+									<symbol value="short_distance_scale" />
+									<symbol value="long_distance_scale" />
+									<symbol value="odds_format" />
+								</list>
+							</widget>
+						</widget>
+					</container>
+				</container>
+
+				<container class="scrolling_box">
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!-- Date -->
+						<widget class="subsection_box" id="cura">
+							<translation id="title" translation_id="329883" type="use" value="Date[COMMENT: preferences: date formats settings section title]" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+							<widget class="game_settings_viewer_panel" id="set2">
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<record id="table_properties">
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="date_format" />
+									<symbol value="date_separator" />
+								</list>
+							</widget>
+						</widget>
+
+						<!-- Finances -->
+						<widget class="subsection_box" id="cura">
+							<translation id="title" translation_id="316566" type="use" value="Finances[COMMENT: Link to club finances]" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+							<widget class="game_settings_viewer_panel" id="set3">
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<record id="table_properties">
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="positive_currency_format" />
+									<symbol value="negative_currency_format" />
+								</list>
+							</widget>
+						</widget>
+
+						<!-- Numeric -->
+						<widget class="subsection_box" id="cura">
+							<translation id="title" translation_id="330280" type="use" value="Numeric[COMMENT: preferences: numeric formats settings section title]" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+							<widget class="game_settings_viewer_panel" id="set4">
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<record id="table_properties">
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="decimal_symbol" />
+									<symbol value="digit_grouping_symbol" />
+								</list>
+							</widget>
+						</widget>
+					</container>
+				</container>
+			</widget>
+		</widget>
+
+		<widget class="preferences_button_panel" />
+	</container>
+</panel>

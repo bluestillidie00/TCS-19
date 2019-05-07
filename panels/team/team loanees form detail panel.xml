@@ -1,0 +1,283 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="bordered_box" red_replacement="tcs_dark_box" appearance="boxes/bordered/standard/right/paper">
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <container id="cont" hidden="true">
+      <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="10" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <container>
+        <layout class="arrange_vertical_attachment" layout="120,-12,-10,-13,2,-20" offset="0" gap="8" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <!-- International stats row -->
+        <container class="inner_titled_box" id="title">
+            <layout class="arrange_horizontal_attachment" layout="70,-1" offset="0" gap="6"/>
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+            
+            <!-- Profile picture -->
+            <widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+              <record id="object_property">
+                <list id="get_properties">
+                <!--Facegen data request-->
+                <record get_property="fcgn" />
+                <!--Fake name request-->
+                <record get_property="Pfke" />
+                <record get_property="prpc" set_property="valu" />
+               </list>
+              </record>
+            </widget>
+          
+          <container>
+            <layout class="arrange_vertical_attachment" layout="-5, -4, -4, -4" offset="0" gap="2"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+            <!-- Team name -->
+            <widget class="team_button" spec="text" size="small" id="nnat" shpc="false" style="semi_bold" display_format="3">
+              <record id="object_property">
+                <integer id="get_property" value="Pcte" />
+              </record>
+            </widget>
+           
+            <!--apps-->
+            <widget class="label" spec="text" size="small" id="tapp" colour="faded text">    
+            </widget>
+       
+            <!--goals-->
+            <widget class="label" spec="text" size="small" id="tgoa" colour="faded text">
+            </widget>
+
+            <!--average rating-->
+            <widget class="label" spec="text" size="small" id="avgr" colour="faded text">
+            </widget>
+
+          </container>
+        </container> 
+        
+        <!-- Match result row -->
+        <container id="row3">
+          <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="5" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+          
+          <container>
+            <layout class="arrange_horizontal_attachment" layout="-3,-2,-3" gap="0" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+            <!-- Team A (Can be got from player object) -->
+            <container>
+              <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+              <!-- National flag -->
+              <widget class="object_portrait_picture" id="logA" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+                <record id="object_property">
+                  <integer id="get_property" value="PCcl" />
+                </record>
+              </widget>
+
+              <!-- Team name -->
+              <widget class="team_button" spec="text" size="small" id="namA" colour="faded text" auto_size="vertical" alignment="centre" display_format="3" icon_enabled="false">
+                <record id="object_property">
+                  <integer id="get_property" value="PCcl" />
+                </record>
+              </widget>
+            </container>
+            <!-- Score -->
+            <widget class="fixture_full_result_text" id="scor" spec="text" size="18" alignment="centre" format="[%scoreline#1-home_away]" style="bold" reverse_teams="false" />
+            <!-- Team B (Must come from stats in code) -->
+            <container>
+              <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+              <!-- National flag -->
+              <widget class="object_portrait_picture" id="logB" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+                <record id="object_property">
+                  <integer id="get_property" value="PCop" />
+                </record>
+              </widget>
+
+              <!-- Opposition name -->
+              <widget class="team_button" spec="text" size="small" id="namB" colour="faded text" auto_size="vertical" alignment="centre" display_format="3" icon_enabled="false">
+                <record id="object_property">
+                  <integer id="get_property" value="PCop" />
+                </record>
+              </widget>
+            </container>
+          </container>
+          <!-- Match type -->
+          <widget class="text" id="matt" spec="text"  multiline="true" alignment="centre_x,bottom" auto_size="vertical" auto_size_maximum_height="33" font="title" />
+
+        </container>
+
+        <!-- Match description row -->
+        <container id="row2">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <widget class="text" id="desc" alignment="centre_x,top" size="9" colour="faded text"/>
+        </container>
+
+		  <container>
+			  <layout class="arrange_vertical_attachment" alignment="fill" gap="0" offset="0" />
+			  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			  <!-- Stats row 1 -->
+        <container id="row4">
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+          <!-- Minutes played -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="number_label" id="mins" spec="text" size="xlarge" alignment="centre_x,bottom" style="bold" />
+            <widget class="label" spec="text" auto_size="vertical" alignment="centre_x,top" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="319539" type="use" value="mins played[COMMENT: label for the number of minutes played by a person in a match]" />
+            </widget>
+          </container>
+          <!-- Goals -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="number_label" id="goal" spec="text" size="xlarge" alignment="centre_x,bottom" style="bold" />
+            <widget class="label" spec="text" auto_size="vertical" alignment="centre_x,top" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="319540" type="use" value="goals scored[COMMENT: label for the number of goals scroed by a player in a match]" />
+            </widget>
+          </container>
+          <!-- Rating -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="dashed_number_label" id="rate" spec="text" size="xlarge" alignment="centre_x,bottom" style="bold" />
+            <widget class="label" spec="text" auto_size="vertical" alignment="centre_x,top" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="319541" type="use" value="match rating[COMMENT: label for the rating of a player in a match]" />
+            </widget>
+          </container>
+        </container>
+
+        <!-- Stats row 2 -->
+        <container id="row5">
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+          <!-- Condition -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="percentage_label" id="cond" spec="text" size="xlarge" alignment="centre_x,bottom" style="bold" />
+            <widget class="label" spec="text" auto_size="vertical" alignment="centre_x,top" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="319544" type="use" value="condition[COMMENT: label for the condition of a player in a match]" />
+            </widget>
+          </container>
+          <!-- Assists  -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="number_label" id="asst" spec="text" size="xlarge" alignment="centre_x,bottom" style="bold" />
+            <widget class="label" spec="text" auto_size="vertical" alignment="centre_x,top" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="319543" type="use" value="assists[COMMENT: label for the number of assists by a player in a match]" />
+            </widget>
+          </container>
+          <!-- Distance run -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="label" id="kpas" spec="text" size="xlarge" alignment="centre_x,bottom" style="bold" />
+            <widget class="label" spec="text" auto_size="vertical" alignment="centre_x,top" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="322129" type="use" value="key passes[COMMENT: label for the number of key passes by a player in a match]" />
+            </widget>
+          </container>
+        </container>
+
+		  </container>
+
+        <widget class="horizontal_divider" />
+        
+        <!-- Stats bars -->
+        <container id="row6">
+          <layout class="arrange_vertical_attachment" layout="-5,-2,-5,-2,-5,-2,-5,-2" offset="0" gap="4" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+          <container>
+            <layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+            <widget class="label" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="249416" type="use" value="Passes[COMMENT: player stat: passes table label]" />
+            </widget>
+            <widget class="label" id="lpas" alignment="right" style="semi_bold"/>
+          </container>
+          <widget class="horizontal_percentage_bar" id="bpas" label_width="0" />
+
+
+          <container>
+            <layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+            <widget class="label" font="label" size="small" colour="faded text">
+              <translation id="text" translation_id="249417" type="use" value="Tackles[COMMENT: player stat: tackles table label]" />
+            </widget>
+            <widget class="label" id="ltak" alignment="right" style="semi_bold" />
+          </container>
+          <widget class="horizontal_percentage_bar" id="btak" label_width="0" />
+          
+          <container>
+            <layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+            <!-- Labels for shots and saves (selected based on whether the player is a goalkeeper or not) -->
+            <container>
+              <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+              <widget class="label" id="held" font="label" size="small" colour="faded text">
+                <translation id="text" translation_id="322136" type="use" value="Saves Held[COMMENT: match stats; saves held]" />
+              </widget>
+              <widget class="label" id="head" font="label" size="small" colour="faded text">
+               <translation id="text" translation_id="388156" type="use" value="Headers Attempted[COMMENT - match analysis screen, event type on chalkboard; TP - changed from Aerial Challenges attempted, id 376389]" />
+            </widget>
+            </container>
+            <widget class="label" id="lhed" alignment="right" style="semi_bold"/>
+          </container>
+          <widget class="horizontal_percentage_bar" id="bhed" label_width="0" />
+          
+          <container>
+            <layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+            <!-- Labels for shots and saves (selected based on whether the player is a goalkeeper or not) -->
+            <container>
+              <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+              <widget class="label" id="shtt" font="label" size="small" colour="faded text">
+                <translation id="text" translation_id="247381" type="use" value="Shots" />
+              </widget>
+              <widget class="label" id="savt" hidden="true" font="label" size="small" colour="faded text">
+                <translation id="text" translation_id="382623" type="use" value="Shots Faced[COMMENT: goalkeeper stats; total amount of shots that the goalkeeper faced during a competition]" />
+              </widget>
+            </container>
+            <widget class="label" id="lsht" alignment="right" style="semi_bold"/>
+          </container>
+          <widget class="horizontal_percentage_bar" id="bsht" label_width="0" />
+        </container>
+      </container>
+
+      <!--Button to go to match details-->
+      <container id="row8">
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+        <layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+        <!--buttons to go to personal details-->
+        <widget class="link_appearance_button" id="vmde">
+          <translation id="text" translation_id="319545" type="use" value="View Match Details[COMMENT: international match reports button; button text which when clicked takes the user to the match details screen]" />
+        </widget>
+      </container>
+    </container>
+  </container>
+</panel>

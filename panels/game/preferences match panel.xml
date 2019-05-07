@@ -1,0 +1,183 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+	<container>
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="scrolling_box" save_session_state="true">
+			<widget class="container">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container class="scrolling_box">
+					<!--<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" />-->
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!-- 3D -->
+						<widget class="subsection_box" id="3dpn">
+							<translation id="title" translation_id="329630" type="use" value="3D[COMMENT: preferences: game settings section title]" />
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<container>
+								<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" offset="0" />
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+								<widget class="label">
+									<translation id="text" translation_id="348427" type="use" value="This PC's 3D Graphics Capability[COMMENT: game preferences; label text indicating the user's capacity to accomodate the 3D match display]" />
+								</widget>
+								<widget class="graphical_level_stars_label" stars_type="3" />
+							</container>
+							<widget class="game_settings_viewer_panel" id="set2">
+
+								<record id="table_properties">
+									<flags id="mode" value="" />
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="graphical_detail" />
+									<symbol value="render_quality" />
+									<symbol value="mesh_detail" />
+									<symbol value="shadow_quality" />
+									<symbol value="texture_quality" />
+									<symbol value="anti_aliasing" />
+									<symbol value="crowd_quality" />
+								</list>
+							</widget>
+							<container>
+								<layout class="arrange_horizontal_attachment" layout="-2,-1,-1" offset="0" />
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+							</container>
+						</widget>
+
+						<!-- In-match -->
+						<widget class="subsection_box">
+							<translation id="title" translation_id="348158" type="use" value="In-match[COMMENT: preferences: game settings section title]" />
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<container>
+								<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+								<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+								<widget class="game_settings_viewer_panel" id="set2">
+									<record id="table_properties">
+										<flags id="mode" value="" />
+										<integer id="row_spacing" value="5" />
+									</record>
+									<list id="viewed_property_ids">
+										<symbol value="play_sounds" />
+									</list>
+								</widget>
+								<widget class="game_settings_viewer_panel" id="set2">
+									<record id="table_properties">
+										<flags id="mode" value="" />
+										<integer id="row_spacing" value="5" />
+										<string id="layout" value="-1,-2" />
+									</record>
+									<list id="viewed_property_ids">
+										<symbol value="sound_volume" />
+									</list>
+								</widget>
+							</container>
+							<widget class="game_settings_viewer_panel" id="set4">
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<record id="table_properties">
+									<flags id="mode" value="" />
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="show_popup_in_between_match_highlights" />
+									<symbol value="show_split_time" />
+									<symbol value="enable_flashing_text" />
+									<symbol value="use_plain_commentary_colours" />
+									<symbol value="show_player_condition_in_match" />
+									<symbol value="show_pre_match_intro" />
+									<symbol value="use_debug_incident_text" />
+									<symbol value="debug_match_auto_highlight_players" />
+									<symbol value="debug_match_scenarios_disallow_all_goals" />
+									<symbol value="debug_match_scenarios_dodgy_keepers" />
+									<symbol value="debug_match_scenarios_send_off_keeper" />
+									<symbol value="debug_match_scenarios_send_off_player" />
+									<symbol value="debug_match_scenarios_short_halves" />
+									<symbol value="debug_match_scenarios_injure_keeper" />
+									<symbol value="debug_match_scenarios_injure_player" />
+									<symbol value="debug_match_scenarios_injure_just_human" />
+									<symbol value="debug_match_scenarios_enable_flares" />
+									<symbol value="debug_match_scenarios_instant_pen" />
+									<symbol value="debug_match_scenarios_abba" />
+									<symbol value="debug_match_scenario_all_fouls_are_pens" />
+									<symbol value="debug_match_scenarios_slight_injure_player" />
+									<symbol value="debug_match_scenario_uses_var" />
+									<symbol value="debug_match_scenario_uses_var_stand" />
+									<symbol value="debug_match_scenarios_bad_decisions" />
+									<symbol value="debug_match_scenarios_show_offsides" />
+									<symbol value="debug_match_has_hawkeye" />
+	                <symbol value="debug_match_disable_ball_error" />
+                  <symbol value="debug_match_all_female_cast"/>
+								</list>
+							</widget>
+
+						</widget>
+					</container>
+				</container>
+
+				<container class="scrolling_box">
+					<!--<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" />-->
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!-- Highlights -->
+						<widget class="subsection_box" id="cura">
+							<translation id="title" translation_id="348124" type="use" value="Highlights[COMMENT: preferences: game settings section title]" />
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="preferences_profile_panel" file="game/preferences profile panel match" />
+						</widget>
+
+						<!-- Processing -->
+						<widget class="subsection_box" id="cura">
+							<translation id="title" translation_id="330383" type="use" value="Processing[COMMENT: preferences: game settings section title]" />
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="game_settings_viewer_panel" id="set4">
+								<record id="table_properties">
+									<flags id="mode" value="" />
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="match_scheduling_mode" />
+								</list>
+							</widget>
+							<widget class="spacer" height="10" />
+							<widget class="game_settings_viewer_panel" id="set4">
+								<record id="table_properties">
+									<flags id="mode" value="" />
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="skip_match_day_experience" />
+									<symbol value="processing_mode" />
+									<symbol value="remote_match_acceleration_enabled" />
+									<symbol value="remote_match_acceleration_host" />
+									<symbol value="remote_match_acceleration_port" />
+									<symbol value="view_match_result_only" />
+									<symbol value="match_stats_total_size"/>
+								</list>
+							</widget>
+						</widget>
+
+					</container>
+				</container>
+			</widget>
+		</widget>
+
+		<widget class="preferences_button_panel" />
+	</container>
+</panel>

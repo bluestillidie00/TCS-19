@@ -1,0 +1,47 @@
+<panel>
+	<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" offset="0" />
+
+	<container id="funk" class="inner_box" appearance="boxes/inner/no margin/paper" height="100" width="130">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="2" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-9,-5" offset="2" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="object_portrait_picture" id="pict" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+
+			<widget class="text" id="bsnm" alignment="centre" size="13" colour="white" style="bold"/>
+		</container>
+
+		<container class="bordered_box" id="nmcn" cached="true" rthr="68" appearance="boxes/custom/solid/rounded/paper" height="42">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0" do_not_size="true"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="2" gap="0"/>
+
+			<widget class="text" id="name" font="tcsfont_u" size="small" colour="match text" alignment="centre,can_scale" auto_size="vertical" multiline="false" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" />
+			</widget>
+
+			<!--debug role/duty-->
+				<container id="rodu" height="10">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" do_not_size="true"/>
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+				<layout class="fit_children_attachment" alignment="horizontal, fill" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<widget class="tactical_role_label" id="role" abbt="true" font="tcsfont_u" size="xsmall" colour="white" auto_size="horizontal"/>
+				<widget class="label" size="xsmall" colour="white" font="titlebar_sub" auto_size="horizontal">
+					<translation id="text" translation_id="233089" type="use" value="-" />
+				</widget>
+				<widget class="tactical_role_label" id="duty" abbt="true" size="xsmall" font="tcsfont_u" colour="white" auto_size="horizontal"/>
+			</container>
+		</container>
+	</container>
+</panel>

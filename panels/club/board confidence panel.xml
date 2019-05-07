@@ -1,0 +1,88 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="subsection_box" id="cftb" height="120" red_replacement="tcs_dark_box">
+		<translation id="title" translation_id="247319" type="use" value="Job Security" />
+		<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" horizontal_inset="0" />
+
+		<widget class="text" id="summ" auto_size="vertical" />
+
+		<widget class="horizontal_percentage_bar" id="horb" height="10" alignment="centre" />
+	</container>
+
+	<container height="120">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+		<container class="subsection_box">
+			<translation id="title" translation_id="395264" type="use" value="Major Highlight[COMMENT: FR 11767, board confidence label bringing attention to their main positive of the manager's reign]" />
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+			<widget class="picture" id="mhpi" width="80" />
+			<widget class="text" id="mhtx" />
+		</container>
+
+		<container class="subsection_box">
+			<translation id="title" translation_id="395263" type="use" value="Major Criticism[COMMENT: FR 11767, board confidence label bringing attention to their main negative of the manager's reign]" />
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+			<widget class="picture" id="mcpi" width="80" />
+			<widget class="text" id="mctx" />
+		</container>
+
+	</container>
+
+	<container class="subsection_box">
+		<translation id="title" translation_id="247971" type="use" value="Summary" />
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="table" id="ctab" mode="fill_rows,stripe_rows,printable" fixed_size_rows="true" row_height="35" column_spacing="8" layout="300,300,-1">
+			<!--headings-->
+
+			<list id="column_table_properties">
+				<record id="text">
+					<record id="column_heading">
+						<translation id="text" translation_id="347977" type="use" value="Area[COMMENT: board confidence panel]" />
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="0" />
+					</record>
+				</record>
+				<record index="1" id="bar ">
+					<flags id="top" value="13" />
+					<flags id="bottom" value="12" />
+					<flags id="left" value="5" />
+					<flags id="right" value="5" />
+					<record id="column_heading">
+						<translation id="text" translation_id="230116" type="use" value="Confidence" />
+						<!-- don't add comment to this string-->
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="2" />
+					</record>
+				</record>
+				<record id="deta">
+					<boolean id="sort_disabled" value="true" />
+					<flags id="alignment" value="left,centre_y" />
+					<record id="column_heading">
+						<translation id="text" translation_id="230236" type="use" value="Description" />
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="2" />
+					</record>
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0"  alignment="left,centre_y" />
+				<record indx="1" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="true" />
+					<flags id="alignment" value="centre" />
+				</record>
+				<record indx="2" alignment="left,centre_y">
+				</record>
+			</list>
+
+		</widget>
+	</container>
+
+
+
+</panel>

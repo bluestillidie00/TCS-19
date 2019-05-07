@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel info_panel_type="1">
+
+	<!-- ALIGNS PANEL VERTICALLY -->
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="1" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- MATCH INFORMATION ~ ARRANGED INTO TWO HORIZONTAL COLUMNS -->
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+
+		<!-- CONTAINER HOLDING LEFT COLUMN OF INFORMATION ~ ARRANGED VERTICALLY-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- REFEREE -->
+			<widget class="referee_strictness_label" id="reff" spec="text" size="small" auto_size="vertical" colour="faded text">
+				<translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]" />
+			</widget>
+
+			<!-- ATTENDANCE -->
+			<widget class="label" id="attl" auto_size="vertical" />
+		</container>
+
+		<!-- CONTAINER HOLDING RIGHT COLUMN OF INFORMATION ~ ARRANGED VERTICALLY -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- DEFAULT PROPERTIES FOR COLUMN -->
+			<record id="default_properties" spec="text" size="small" alignment="right,centre_y" />
+
+			<!-- DATE -->
+			<widget class="date_cell" id="date" format="[%date#1-short] [%date#1-time]" colour="faded text" auto_size="vertical">
+				<record id="object_property">
+					<integer id="get_property" value="fxdt" />
+				</record>
+			</widget>
+
+			<!-- WEATHER FORECAST -->
+			<widget class="weather_forecast_label" id="weal" auto_size="vertical" colour="faded text"/>
+		</container>
+	</container>
+
+	<!-- COMPETITION LOGO -->
+	<widget class="object_portrait_picture" id="fxCo" scale_picture="true" height="25">
+		<boolean id="keep_aspect_ratio" value="true" />
+		<flags id="image_alignment" value="centre" />
+		<record id="object_property">
+			<integer id="get_property" value="fxCo" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+	
+	<!-- COMPETITION NAME -->
+	<widget class="fixture_name_text" id="fxnm" alignment="centre_x" size="small"  style="semi_bold" colour="white" auto_size="vertical">
+		<record id="object_property">
+			<integer id="get_property" value="FxNm" />
+		</record>
+	</widget>
+
+	<!-- STADIUM INFORMATION -->
+	<widget class="text" id="stad" alignment="centre_x" auto_size="vertical" multiline="false"/>
+
+	<!-- MATCH RESULT -->
+	<container class="inner_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- STADIUM PICTURE 
+		<widget class="stadium_picture" id="STEp"  transparency="0.7" image_alignment="top" >
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-10" />
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget> -->
+
+		<!-- OVERLAY 
+		<widget class="picture" file="boxes/match/stadium-overlay" transparency="1" image_alignment="top" >
+			<layout class="stick_to_sides_attachment" alignment="top"  inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="all"  inset="0" />
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget> -->
+
+		<container >
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!--  home incidents panel -->
+			<widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/tcs/review/tcs incidents left" />
+
+			<!--  away incidents panel -->
+			<widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/tcs/review/tcs incidents right" />
+		</container>
+	</container>
+</panel>

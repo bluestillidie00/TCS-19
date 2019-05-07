@@ -1,0 +1,346 @@
+<panel save_session_state="true">
+
+	<string id="title" value="Contract Offer Panel" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+	<container id="off">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+     <record id="default_properties" hidden="true" />
+
+		<container id="offe" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="20" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="ofpe" alignment="centre" spec="text" style="semi_bold, embossed" auto_size="vertical" size="11">
+				<translation id="text" translation_id="329223" type="use" value="You cannot make a contract offer for this person.[COMMENT: contract information; staff member can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="ofpl" alignment="centre" spec="text" style="semi_bold, embossed" auto_size="vertical" size="11">
+				<translation id="text" translation_id="317863" type="use" value="You cannot make a contract offer for this player." />
+			</widget>
+			<widget class="text" id="wait" auto_size="vertical" alignment="centre" size="10" />
+			<widget class="text" id="cown" auto_size="vertical" alignment="centre" size="10" />
+
+			<container class="empty_state_button_container">
+				<widget class="link_appearance_button" id="mano">
+					<translation id="text" translation_id="317865" type="use" value="Make an Offer[COMMENT: transfer offer panel; action to offer player out to clubs]" />
+				</widget>
+			</container>
+		</container>
+
+		<container id="out" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="oupe" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="329223" type="use" value="You cannot make a contract offer for this person.[COMMENT: contract information; staff member can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="oupl" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="317863" type="use" value="You cannot make a contract offer for this player." />
+			</widget>
+			<widget class="text" id="oure" auto_size="all" alignment="centre" size="10" />
+		</container>
+
+		<container id="ythc" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="ytpe" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="329223" type="use" value="You cannot make a contract offer for this person.[COMMENT: contract information; staff member can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="ytpl" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="317863" type="use" value="You cannot make a contract offer for this player." />
+			</widget>
+			<widget class="text" id="yepe" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="329224" type="use" value="This person has already agreed a contract offer with the club.[COMMENT: contract information; staff member can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="yepl" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="327295" type="use" value="This player has already agreed a contract offer with the club.[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+		</container>
+
+		<container id="loac" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="347832" type="use" value="You cannot make a contract offer for this player because he is on loan at your club.[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="347838" type="use" value="You will need to have a full transfer offer accepted first in order to be able to offer a contract to this player.[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+		</container>
+
+		<container id="ontr" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="317863" type="use" value="You cannot make a contract offer for this player." />
+			</widget>
+			<widget class="text" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="328528" type="use" value="This player is away on a trial day or about to be drafted in the MLS.[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+		</container>
+
+		<container id="pago" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="317863" type="use" value="You cannot make a contract offer for this player." />
+			</widget>
+			<widget class="text" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="390348" type="use" value="A percentage of this player is owned by an agent.[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+		</container>
+
+		<container id="rndc" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="rnda" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="394819" type="use" value="[%person#1-You] cannot make a contract offer for this player.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="rndo" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="394818" type="use" value="[%person#1-You] cannot make a contract offer for this person.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="rndb" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="436458" type="use" value="This player's contract renewal is handled by [%person#2] on behalf of [%club#1-short].[COMMENT: FR 14316, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="rndt" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="436459" type="use" value="This person's contract renewal is handled by [%person#2] on behalf of [%club#1-short].[COMMENT: FR 14316, contract information; can't be offered a contract]" />
+			</widget>
+		</container>
+
+		<container id="cafc" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="cacn" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="394818" type="use" value="[%person#1-You] cannot make a contract offer for this person.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="cacp" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="394819" type="use" value="[%person#1-You] cannot make a contract offer for this player.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="canr" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="394641" type="use" value="This person is contracted to our affiliate club.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="capr" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="394642" type="use" value="This player is contracted to our affiliate club.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+		</container>
+
+		<container id="lvcc" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="lvcn" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="394818" type="use" value="[%person#1-You] cannot make a contract offer for this person.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="lvcp" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="394819" type="use" value="[%person#1-You] cannot make a contract offer for this player.[COMMENT: FR 10141, contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="lvcr" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="443665" type="use" value="[%person#1-You] are leaving the club in the near future and are therefore unable enter into contract negotiations.[COMMENT:  contract information; can't be offered a contract]" />
+			</widget>
+		</container>
+
+		<container class="empty_state" id="codc" header_widget="codp" body_widget="codr">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<widget class="text" id="codp">
+				<translation id="text" translation_id="420712" type="use" value="Waiting for contract talks to commence.[COMMENT: shown when waiting for contract promises to be agreed]" />
+			</widget>
+
+			<widget class="text" id="codr">
+				<translation id="text" translation_id="420713" type="use" value="[%person#1-You] have agreed upon contract promises.[COMMENT: shown when waiting for contract promises to be agreed]" />
+			</widget>
+		</container>
+
+		<container id="huma" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	
+			<!--explanatory text-->
+			<widget class="text" id="hnco" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="320414" type="use" value="You haven't been offered a contract at this time[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="hodc" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="382488" type="use" value="[%person#1-You] have a delayed contract offer outstanding[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="hmdc" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="382490" type="use" value="[%person#1-You] have multiple delayed contract offers outstanding[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="hjob" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="320415" type="use" value="You could either negotiate your contract with your board or look for alternative employement.[COMMENT: contract information; the user can neg. their contract with the board]" />
+			</widget>
+			<widget class="text" id="gjob" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="327249" type="use" value="You should look for employment.[COMMENT: contract information; tell the user to get a job]" />
+			</widget>
+
+			<container class="empty_state_button_container">
+				<widget class="link_appearance_button" id="intb">
+					<translation id="text" translation_id="349844" type="use" value="Request New Contract[COMMENT: FR 5715, trigger to ask board for a new contract]" />
+				</widget>
+
+				<widget class="link_appearance_button" id="viej">
+					<translation id="text" translation_id="320416" type="use" value="View Jobs[COMMENT: button text taking user to view currently available jobs]" />
+				</widget>
+			</container>
+		</container>
+
+		<container id="with" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="326983" type="use" value="You have offered a contract; you can withdraw or change this offer[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" alignment="centre" size="10" auto_size="vertical">
+				<translation id="text" translation_id="338226" type="use" value="This can be done via the 'Contract' actions menu.[COMMENT: contract information; the user can withdraw the contract, use top 10 matches as the location has changed, it's just Contracts now]" />
+			</widget>
+		</container>
+
+		<container id="cnot" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="320419" type="use" value="You have agreed the contract[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="320420" type="use" value="The person has accepted on the spot, therefore you are unable to withdraw the contract[COMMENT: contract information; the user can withdraw the contract]" />
+			</widget>
+		</container>
+
+		<!-- panel for boardover the transfer-->
+		<container id="btop" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="347357" type="use" value="The board have taken over negotiation of this player's contract.[COMMENT: contract information, board handles contract negotiations]" />
+			</widget>
+		</container>
+
+		<container id="wpla" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="wpaa" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="342172" type="use" value="[%person#1-You] have made a loan offer[COMMENT:contract information; can't be offered a contract, use top 10 matches]" />
+			</widget>
+			<widget class="text" id="wpab" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="342596" type="use" value="A message will appear in [%person#1-your] inbox when [%male#2] has accepted or rejected it.[COMMENT: contract information; the user can withdraw the contract, use top 10 matches]" />
+			</widget>
+		</container>
+
+		<container id="halo" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="loaa" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="342172" type="use" value="[%person#1-You] have made a loan offer[COMMENT:contract information; can't be offered a contract, use top 10 matches]" />
+			</widget>
+			<widget class="text" id="loab" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="342008" type="use" value="A message will appear in [%person#1-your] inbox when the offer has been accepted or rejected.[COMMENT: contract information; the user can withdraw the contract, use top 10 matches]" />
+			</widget>
+		</container>
+
+		<container id="halt" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" id="tria" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="342173" type="use" value="[%person#1-You] have made a trial offer[COMMENT:contract information; can't be offered a contract, use top 10 matches]" />
+			</widget>
+			<widget class="text" id="trib" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="342008" type="use" value="A message will appear in [%person#1-your] inbox when the offer has been accepted or rejected.[COMMENT: contract information; the user can withdraw the contract, use top 10 matches]" />
+			</widget>
+		</container>
+
+		<container id="hatr" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="320421" type="use" value="You have made a transfer offer[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="328529" type="use" value="A message will appear in your inbox when the offer has been accepted, rejected or negotiated.[COMMENT: contract information; the user can withdraw the contract]" />
+			</widget>
+		</container>
+
+		<container id="stok" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="320421" type="use" value="You have made a transfer offer[COMMENT:contract information; can't be offered a contract]" />
+			</widget>
+			<widget class="text" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="342385" type="use" value="The transfer will be completed when both clubs have confirmed the deal.[COMMENT: contract information; selling team accepted transfer]" />
+			</widget>
+		</container>
+
+		<container id="stac" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="317863" type="use" value="You cannot make a contract offer for this player." />
+			</widget>
+			<widget class="manager_text" auto_size="vertical" alignment="centre" size="10">
+				<translation id="text" translation_id="376621" type="use" value="The player has already accepted a contract offer. [%person#1-You] can still cancel the transfer via the Transfer Centre.[COMMENT FR 7490, information as to why user cannot negotiate with a player]." />
+			</widget>
+		</container>
+
+		<container id="exch" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="342401" type="use" value="You can only offer a contract to this player if you accept the part-exchange transfer offer first.[COMMENT:contract information; player is in part exchange transfer]" />
+			</widget>
+		</container>
+
+		<container id="impo" class="empty_state">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="329223" type="use" value="You cannot make a contract offer for this person.[COMMENT: contract information; staff member can't be offered a contract]" />
+			</widget>
+			<widget class="text" id="impr" auto_size="vertical" alignment="centre" size="10" />
+		</container>
+	</container>
+
+	<container class="contract_offer_panel" id="on" hidden="true" />
+
+	<container class="bordered_box" id="prob" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<container class="contract_promises_panel" id="prom" />
+	</container>
+</panel>

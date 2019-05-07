@@ -1,0 +1,202 @@
+﻿<panel height="730">
+	<layout class="arrange_vertical_attachment" layout="50, -1" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<string id="skin_style" value="subtle box" />
+
+	<!-- TOP SECTION -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="client_object_viewer_xml_panel">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" do_not_size="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+
+			<!-- TEAM LOGO -->
+			<widget class="object_portrait_picture" height="52" width="52" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+				</record>
+			</widget>	
+
+			<!-- TEAM NAME AND DIVISION -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />
+				<layout class="fit_children_attachment" alignment="horizontal" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+				<!-- TEAM NAME -->
+				<widget class="team_button" icon_enabled="false" mode="1" auto_size="all" style="semi_bold" alignment="left,centre_y">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+					</record>
+				</widget>
+
+				<!-- DIVISION POSITION -->
+				<widget class="division_position_button" display_format="1" size="8" auto_size="all" alignment="left,centre_y" colour="faded text">
+					<record id="object_property">
+						<integer id="get_property" value="Tpos" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!-- 2ND SECTION -->
+		<container class="client_object_viewer_xml_panel" id="fbin">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="10" do_not_size="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" gap="10"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- STADIUM NAME -->
+			<widget class="stadium_button" id="fxsd" icon_alignment="centre" alignment="centre" auto_size="horizontal" colour="text" style="bold" font="text">
+				<translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+				<record id="object_property">
+					<integer id="get_property" value="stad" />
+				</record>
+			</widget>
+
+			<!-- DIVIDER -->
+			<widget class="vertical_divider"/>
+
+			<!-- WEATHER INDICIATOR -->
+			<widget class="weather_indicator_panel" alignment="left,centre_y" width="60" file="match/weather indicator with temp">
+				<record id="object_property">
+					<integer id="get_property" value="FxWe" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+	<!-- SECTION WITH PITCH AND REPORT -->
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="520,-1" horizontal_gap="0" />
+
+		<!-- PITCH / MENTALITY / FLUIDITY -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<container >
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- MENTALITY AND TEAM FLUIDITY -->
+				<container class="bordered_box" appearance="boxes/bordered/standard/top left/paper" red_replacement="tcs_dark_box">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!-- MENTALITY -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="4" />
+
+						<!-- LABEL -->
+						<widget class="text" auto_size="vertical" font="label" colour="text">
+							<translation id="text" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="5" />
+						</widget>
+
+						<!-- MENTALITY -->
+						<widget class="mentality_label" id="ment" auto_size="vertical" font="semibold" colour="text" >
+							<record id="primary_icon_properties" red_replacement="text" />
+						</widget>
+					</container>
+
+					<!-- FLUIDITY -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="4" />
+
+						<!-- LABEL -->
+						<widget class="text" auto_size="vertical" font="label" colour="text">
+							<translation id="text" translation_id="465563" type="use" value="Team Fluidity[COMMENT: team tactical instruction, reference ID 364787, team shape is now team fluidity]" />
+						</widget>
+
+						<!-- FLUIDITY -->
+						<widget class="fluidity_label" id="flui" auto_size="vertical" font="semibold" colour="text">
+							<record id="primary_icon_properties" red_replacement="text" />
+						</widget>
+					</container>
+				</container>
+
+				<!-- ACTUAL PITCH -->
+				<container class="bordered_box" appearance="boxes/bordered/standard/bottom left/paper" red_replacement="pitch_box_background">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="30" apply_to_children="true"/> 
+						<widget class="object_portrait_picture" height="52" width="52" scale_picture="false" keep_aspect_ratio="true" image_alignment="centre" transparency="0.4">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+							</record>
+						</widget>
+					</container>
+
+					<widget class="pitch_with_tactics" id="ptpc"  player_icon_file="player icons/inbox pre match scout report" icon_flags="use_overview_icons,show_name,show_number,show_role_duty_labels,dont_colour_names,dont_fade_icons,show_preview_info_popup" line_width="1.4"  pitch_draw_goals="true">
+						<integer id="pitch_vertical_padding" value="5" />
+						<string id="pitch_draw_grass" value="true" />
+						<string id="pitch_base_appearance" value="" />
+						<string id="pitch_pattern" value="tcs" />
+						<integer id="pitch_alignment" value="centre_x,can_scale" />
+						<boolean id="vertical" value="true" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<!-- REPORT  / SUMMARY-->
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-5,-2" vertical_gap="0" />
+
+			<!-- REPORT -->
+			<container class="bordered_box" appearance="boxes/bordered/standard/right/paper" >
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+				<!-- CONTAINER HOLDING SCOUT REPORT LABEL -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize"/>
+
+					<!-- SCOUT REPORT LABEL -->
+					<widget class="link_button_title" id="scln" auto_size="all" alignment="left,centre_y" >
+						<translation id="text" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+					</widget>
+				</container>
+
+				<!-- TEAM PRO CON SUMMARY -->
+				<widget class="team_pro_con_summary_panel">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- MATCH PREPARTAION -->
+			<container class="inner_titled_box" id="mpcn">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<string id="skin_style" value="title link" />
+
+				<widget class="link_button" id="mpln" section="TeOv" auto_size="all" alignment="left,centre_y" embed_in_frame="true">
+					<translation id="text" translation_id="308600" type="use" value="Match Preparation[COMMENT - team screen section for match preparation]" />
+					<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10" />
+					<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8" />
+				</widget>
+
+				<container class="scrolling_box">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<widget class="text" id="mpds" auto_size="vertical" />
+				</container>
+
+				<widget class="match_training_focus_popup_button" id="mppo" height="30" />
+			</container>
+		</container>
+	</container>
+</panel>

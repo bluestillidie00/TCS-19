@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- STADUIM PICTURE --> 
+	<widget class="stadium_picture" id="STAp" image_alignment="centre_x,centre_y" scale_picture="true" keep_aspect_ratio="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+
+	<!-- STADIUM INFORMATION - HIDES BY DEFAULT BUT SHOWS WHEN HOVERED OVER -->
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!-- SPACER -->
+		<!-- <widget class="spacer"/> -->
+
+
+		<container class="plain_box" appearance="" default_width="200" >
+
+			<layout class="arrange_horizontal_attachment" alignment="fill" inset="10" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<!-- ANIMATION STUFF -->
+			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="100.0,0.0" end_value="100.0,0.0" duration="1.0" end_mode="hold_end" apply_to_mouse="false"/> 
+			<animation class="translate_animation" trigger_start="msen" trigger_end="msex" start_value="-100.0,0.0" end_value="-100.0,0.0" duration="0.01" end_mode="hold_auto_reverse" apply_to_mouse="false"/>
+			<animation class="fade_animation" trigger_start="msen" trigger_end="msex" start_value="0.0" end_value="1.0" duration="0.5" end_mode="hold_auto_reverse"/> 
+
+			<!-- LEFT SIDE CONTAINER -->
+			<container class="bordered_box" appearance="tcs/stadium overlay" red_replacement="black" >
+
+				<layout class="arrange_vertical_attachment" layout="60,-1,60" offset="10" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="30" apply_to_children="true"/>
+				<!-- STADIUM NAME -->
+				<widget class="client_object_label" spec="text,bold" width="100" id="namV" font="title" colour="white" multiline="true" size="15" alignment="centre_x,centre_y,can_scale">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+					</record>
+				</widget>
+
+				<!-- SPACER -->
+				<widget class="spacer" />
+
+				<container >
+					<attachment_group class="vertical_arrange" horizontal_alignment="top" horizontal_offset="0" vertical_inset="10" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+
+					<container height="40">
+						<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<!-- YEAR FOUNDED -->
+						<!--nation-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+							<widget class="label" id="SnaL" spec="text" size="small" alignment="centre_x,bottom" auto_size="vertical" font="label">
+								<record id="object_property">
+									<integer id="get_property" value="Snat" />
+									<boolean id="name" value="true"/>
+								</record>
+							</widget>
+							<widget class="nation_button" spec="text" id="SnaV" auto_size="vertical" icon_alignment="centre" alignment="centre" font="value">
+								<record id="object_property">
+									<integer id="get_property" value="Snat" />
+								</record>
+							</widget>
+						</container>
+
+						<!-- PRO STATUS -->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+							<widget class="label" id="ScpL" spec="text" alignment="centre_x,bottom" auto_size="vertical" font="label">
+								<record id="object_property">
+									<integer id="get_property" value="Scpy" />
+									<boolean id="name" value="true"/>
+								</record>
+							</widget>
+							<widget class="dashed_number_label" spec="text" size="large" style="bold" id="ScpV" alignment="centre_x,top" font="value">
+								<record id="object_property">
+									<integer id="get_property" value="Scpy" />
+								</record>
+							</widget>
+						</container>
+									<!--year built-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<widget class="label" id="SbdL" spec="text" alignment="centre_x,bottom" auto_size="vertical" font="label">
+					<record id="object_property">
+						<integer id="get_property" value="Sbdy" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="dashed_number_label" spec="text" size="large" style="bold" id="SbdV" alignment="centre_x,top" font="value">
+					<boolean id="NumF" value="0" />
+					<record id="object_property">
+						<integer id="get_property" value="Sbdy" />
+					</record>
+				</widget>
+			</container>
+
+			<!--stadium condition-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<widget class="label" id="SdcL" spec="text" alignment="centre_x,bottom" auto_size="vertical" font="label">
+					<record id="object_property">
+						<integer id="get_property" value="Sdcy" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="stadium_condition_label" spec="text" size="large" style="bold" id="SdcV" alignment="centre_x,top" font="value">
+					<list id="value_list">
+						<record min_value="0" max_value="1" colour="very good" />
+						<record min_value="2" max_value="5" colour="good" />
+						<record min_value="6" max_value="10" colour="text" />
+						<record min_value="11" max_value="15" colour="poor" />
+						<record min_value="16" max_value="20" colour="negative" />
+					</list>
+					<record id="object_property">
+						<integer id="get_property" value="Sdcy" />
+					</record>
+				</widget>
+			</container>
+
+					</container>
+					
+		
+
+
+				</container> 			
+
+
+
+
+
+			</container> 			
+
+
+
+
+		</container> 			
+
+		<!-- SPACER -->
+		<!-- <widget class="spacer"/> -->
+
+	</container> 
+
+	<!-- ANIMATION STUFF -->
+	<container class="container_with_mouse_events" propagate_mouse_events="true">
+		<attachment class="animation_relay_attachment" event_id="msen">
+			<record id="action_event">
+				<flags id="event_id" value="SliM" />
+				<integer id="evfl" value="7" />
+				<flags id="evtg" value="root" />
+			</record>
+		</attachment>
+		<attachment class="animation_relay_attachment" event_id="msex">
+			<record id="action_event">
+				<flags id="event_id" value="SloM" />
+				<integer id="evfl" value="7" />
+				<flags id="evtg" value="root" />
+			</record>
+		</attachment>
+	</container>
+
+</panel>

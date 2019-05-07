@@ -1,0 +1,5 @@
+﻿<properties>
+	<record id="image_borders" left="2" right="2" top="2" bottom="2"/>
+	<record id="image_slices" left="4" right="4" top="4" bottom="4"/>
+	<colour id="red_replacement" name="twitter_border"/>
+</properties>

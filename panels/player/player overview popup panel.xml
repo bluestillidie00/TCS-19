@@ -1,0 +1,90 @@
+<panel width="500">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<boolean id="suppress_update_after_selection" value="true"/>
+
+	<!-- Header with portrait & important info-->
+	<widget class="player_personal_details_panel" id="ppdp" file="player/tcs/popup/player details" height="250">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	<widget class="horizontal_divider" />
+
+	<container id="PoRl" height="50">
+		<layout class="arrange_horizontal_attachment" layout="250,1,-1,1,-1" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal,extend" inset="10"/>
+
+		<!-- Ability -->
+		<container class="client_object_viewer_selector_panel" id="cos1" file="player/wannachup/wannachup player ability selector panel popup" save_session_state="true">
+			<integer id="default_for_unemployed_managers" value="star"/>
+			<integer id="default_for_international_managers_other_team" value="star"/>
+			<integer id="default_for_everyone_else" value="star"/>
+			<integer id="default_for_versus_mode" value="star"/>
+		</container>
+
+		<widget class="vertical_divider"/>
+
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0" />
+			<widget class="label" id="PPs:" auto_size="vertical" colour="text"  font="title1"  alignment="bottom">
+				<record id="object_property" get_property="PPst" name="true" />
+			</widget>
+			<widget class="personality_label" id="PPst" auto_size="vertical" alignment="top">
+				<record id="object_property" get_property="PPst" />
+			</widget>
+		</container>
+
+		<widget class="vertical_divider"/>
+
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0" />
+			<widget class="label" id="wxyz" auto_size="vertical"  font="title1" colour="text" alignment="bottom">
+				<translation id="text"  type="use"  translation_id="227783"  value="Squad Status" />
+			</widget>
+			<widget class="squad_status_label" id="Pcex" auto_size="vertical" alignment="top">
+				<record id="object_property" get_property="Pccs" />
+			</widget>
+		</container>
+
+		<widget class="vertical_divider"/>
+	</container>
+
+	<widget class="horizontal_divider" />
+
+	<!-- Middle row of large panels -->
+	<container height="375">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="7" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<container class="client_object_viewer_selector_panel" id="pus1" file="player/tcs/player overview big selector panel" save_session_state="true">
+			<widget class="player_attributes_panel" id="patt" late_loading="true">
+				<translation id="title" translation_id="229822" type="use" value="Attributes"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+	</container>
+
+	<container height="125">
+		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<record id="default_properties" file="player/tcs/player overview small selector panel" save_session_state="true" />
+
+		<container class="client_object_viewer_selector_panel" id="pus2" >
+			<integer id="default_for_unemployed_managers" value="pscR"/>
+			<integer id="default_for_international_managers_other_team" value="pscR"/>
+			<integer id="default_for_everyone_else" value="pscR"/>
+			<integer id="default_for_versus_mode" value="pscR"/>
+		</container>
+
+
+		<container class="client_object_viewer_selector_panel" id="pus3">
+			<integer id="default_for_unemployed_managers" value="Phap"/>
+			<integer id="default_for_international_managers_other_team" value="Phap"/>
+			<integer id="default_for_everyone_else" value="Phap"/>
+			<integer id="default_for_versus_mode" value="Phap"/>
+		</container>
+	</container>
+
+</panel>

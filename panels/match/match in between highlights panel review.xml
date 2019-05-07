@@ -1,0 +1,167 @@
+﻿<panel>
+	<layout class="horizontal_arrange" horizontal_layout="-3,-2,-3" horizontal_gap="0" />
+
+	<!--home match stats-->
+	<container class="bordered_box" appearance="tcs/match/ibh/left/paper" id="hmts">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" />
+
+		<!-- NAME AND KIT -->
+		<container class="home_match_incidents_panel" id="Hnkp" file="match/tcs/review/team info_h" height="100">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+
+		<!-- TEAM STATS -->
+		<widget class="match_team_stats_panel" id="HMts" file="match/match team stats review" height="390" team_index="0">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!-- SELECTOR -->
+		<widget class="match_view_selector_panel" id="selA" pause_match_on_menu_opening="true" default_height="-1" default_item="hmtt" file="match/tcs/review/selector">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+			<widget class="match_formation_panel" id="hmtt" file="match/tcs/review/tcs formation" team_index="0" read_only="true">
+				<translation id="title" translation_id="230056" type="use" value="Tactics" />
+			</widget>			
+			<widget class="match_formation_panel" id="amtt" file="match/tcs/review/tcs formation" team_index="1" read_only="true">
+				<translation id="title" translation_id="230056" type="use" value="Tactics" />
+			</widget>				
+			<widget class="match_stats_panel" id="mtst" file="match/tcs/review/tcs match stats">
+				<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+			</widget>
+			<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+				<translation id="title" translation_id="247327" type="use" value="Action Zones" />
+				<colour id="ptlc" name="white" />
+			</widget>
+			<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+				<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+			</widget>		
+			<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+				<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+			</widget>
+			<widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+				<translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+			</widget>
+		</widget>
+	</container>
+
+	<!--match information-->
+	<container class="bordered_box" appearance="tcs/match/ibh/middle/paper" red_replacement="tcs_dark_box" id="hmts">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" />
+
+		<!-- MATCH INFO  -->
+		<container height="475">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" />
+
+			<!-- MATCH INFO SELECTOR -->
+			<widget class="match_view_selector_panel" id="ovws" save_session_state="true" save_default_state="true" pause_match_on_menu_opening="true" default_item="ovw1" file="match/tcs/review/selector">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				<widget class="match_info_panel" id="ovw1" file="match/tcs/review/tcs overview 1">
+					<translation id="title" type="use" value="Overview" />
+				</widget>	
+				<widget class="match_info_panel" id="ovw2" file="match/tcs/review/tcs overview 2">
+					<translation id="title" type="use" value="Overview 2" />
+				</widget>				
+				<widget class="match_info_panel" id="ovw3" file="match/tcs/review/tcs overview 3">
+					<translation id="title" type="use" value="Overview 3" />
+				</widget>	
+			</widget>
+		</container>
+
+		<!-- SELECTOR PANEL UNDERNEATH -->
+		<container default_height="-1" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="match_view_selector_panel" id="selb" save_session_state="true" save_default_state="true" pause_match_on_menu_opening="true" default_item="mltp" file="match/tcs/review/selector">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				<widget class="match_formation_panel" id="hmtt" file="match/tcs/review/tcs formation" team_index="0" read_only="true">
+					<translation id="title" translation_id="230056" type="use" value="Tactics" />
+				</widget>			
+				<widget class="match_formation_panel" id="amtt" file="match/tcs/review/tcs formation" team_index="1" read_only="true">
+					<translation id="title" translation_id="230056" type="use" value="Tactics" />
+				</widget>				
+				<widget class="match_stats_panel" id="mtst" file="match/tcs/review/tcs match stats">
+					<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+				</widget>
+				<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+					<translation id="title" translation_id="247327" type="use" value="Action Zones" />
+					<colour id="ptlc" name="white" />
+				</widget>
+				<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+					<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+				</widget>		
+				<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+					<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+				</widget>
+				<widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+					<translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+				</widget>
+			</widget>
+		</container>
+	</container>
+
+	<!-- AWAY MATCH STATS -->
+	<container class="bordered_box" appearance="tcs/match/ibh/right/paper" id="amts">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="1" vertical_gap="3" horizontal_inset="0" />
+
+		<!--name and kit-->
+		<container class="away_match_incidents_panel" id="Ankp" file="match/tcs/review/team info_a" height="100">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+
+		<!-- MATCH STATS -->
+		<widget class="match_team_stats_panel" id="AMts" file="match/match team stats review" height="390" team_index="1">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!-- SELECTOR -->
+		<widget class="match_view_selector_panel" id="selC" pause_match_on_menu_opening="true" default_height="-1" default_item="hmtt" file="match/tcs/review/selector">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+			<widget class="match_formation_panel" id="hmtt" file="match/tcs/review/tcs formation" team_index="0" read_only="true">
+				<translation id="title" translation_id="230056" type="use" value="Tactics" />
+			</widget>			
+			<widget class="match_formation_panel" id="amtt" file="match/tcs/review/tcs formation" team_index="1" read_only="true">
+				<translation id="title" translation_id="230056" type="use" value="Tactics" />
+			</widget>				
+			<widget class="match_stats_panel" id="mtst" file="match/tcs/review/tcs match stats">
+				<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+			</widget>
+			<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+				<translation id="title" translation_id="247327" type="use" value="Action Zones" />
+				<colour id="ptlc" name="white" />
+			</widget>
+			<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+				<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+			</widget>		
+			<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+				<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+			</widget>
+			<widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+				<translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+			</widget>
+		</widget>
+	</container>
+</panel>

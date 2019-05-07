@@ -1,0 +1,36 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+	<container class="bordered_box" appearance="tcs/websites/epl/large" red_replacement="epl_pur" id="wcon">
+		<layout class="arrange_horizontal_attachment" layout="432,-1" offset="1" gap="6"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container id="dynI" height="260">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true" />
+		</container>
+
+		<!-- News item -->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="6" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+
+			<!-- Main object -->
+			<widget class="text" id="brif" size="10" font="premiersansb" multiline="true" auto_size="vertical" colour="epl_pin"/>
+			
+			<!-- Story title (max 2 lines of text)-->
+			<widget class="text" id="titl" size="24" font="premiersansb" multiline="true" alignment="left, top" colour="white"/>
+
+			<!-- Related news -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="12" />
+				<attachment class="hide_empty_container_attachment" min_value="1"/>
+
+				<widget class="horizontal_divider" />
+
+				<!-- Related items, first is match link -->
+				<container class="competition_news_item_panel" file="competition/competition news item title only light text" related_news_index="0" matR="true" height="24"/>
+				<container class="competition_news_item_panel" file="competition/competition news item title only light text" related_news_index="1" height="24"/>
+			</container>
+		</container>
+	</container>
+</panel>

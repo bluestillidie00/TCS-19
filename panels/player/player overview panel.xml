@@ -1,0 +1,184 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/>
+
+	<container>
+		<layout class="vertical_arrange" vertical_layout="190,380,-1" vertical_gap="0" />
+
+		<!-- TOP -->
+		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" >
+
+			<!-- PLAYER INFORMATION -->
+			<container class="bordered_box" appearance="tcs/boxes/header/paper" minimum_width="1300" default_width="-1"  priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<widget class="player_personal_details_panel" file="player/tcs/tcs player personal details panel" id="ppdp">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+			<!-- SMALL PANEL ON TOP  -->
+			<container class="client_object_viewer_selector_panel" id="dua0" file="player/tcs/player overview small selector panel" save_session_state="true" default_width="450" minimum_width="251"  priority="2">
+				<integer id="default_for_unemployed_managers" value="teli"/>
+				<integer id="default_for_international_managers_other_team" value="teli"/>
+				<integer id="default_for_everyone_else" value="teli"/>
+				<integer id="default_for_versus_mode" value="teli"/>
+			</container>
+
+			<container class="client_object_viewer_selector_panel" id="dua1" file="player/tcs/player overview small selector panel" save_session_state="true" default_width="400" minimum_width="320"   priority="3">
+				<integer id="default_for_unemployed_managers" value="teli"/>
+				<integer id="default_for_international_managers_other_team" value="teli"/>
+				<integer id="default_for_everyone_else" value="teli"/>
+				<integer id="default_for_versus_mode" value="teli"/>
+			</container>
+		</container>
+
+
+		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" >
+
+			<container class="client_object_viewer_selector_panel" default_width="350" minimum_width="280" priority="2" file="player/tcs/player overview big selector panel" id="big0" >
+				<integer id="default_for_unemployed_managers" value="paAn"/>
+				<integer id="default_for_international_managers_other_team" value="paAn"/>
+				<integer id="default_for_everyone_else" value="paAn"/>
+				<integer id="default_for_versus_mode" value="paAn"/>
+			</container>
+
+			<container default_width="-1" minimum_width="1000" priority="1" >
+				<layout class="horizontal_arrange" horizontal_layout="-5,-2" horizontal_gap="0"/>
+				
+				<container class="bordered_box" appearance="boxes/bordered/no margin/left/paper" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<container class="horizontal_adaptive_container"  offset="0" inset="0" mode="distribute_equally" >
+			<record id="default_properties" file="player/tcs/player overview big selector panel" save_session_state="true" />
+
+			<container class="client_object_viewer_selector_panel" id="cos1" minimum_width="640" default_width="-2" priority="2">
+				<widget class="player_attributes_panel" file="player/tcs/player attributes panel" id="patt" late_loading="true">
+					<translation id="title" translation_id="229822" type="use" value="Attributes" />
+				</widget>
+				<!-- PLAYER INJURY HISTORY  FROM  MEDICAL REPORT ~ EDITED TO FIT BETTER-->
+				<widget class="player_injury_panel" file="player/tcs/tcs player injury panel" id="IPrw" late_loading="true">
+					<translation id="title" translation_id="447586" type="use" value="Medical Report" />
+				</widget>
+				<integer id="default_for_unemployed_managers" value="pat1"/>
+				<integer id="default_for_international_managers_other_team" value="pat1"/>
+				<integer id="default_for_everyone_else" value="pat1"/>
+				<integer id="default_for_versus_mode" value="pat1"/>
+			</container>
+			<!-- Default: Biography -->
+			<container class="client_object_viewer_selector_panel" id="cos2" minimum_width="330" default_width="-1" priority="3">
+				<integer id="default_for_unemployed_managers" value="phb1"/>
+				<integer id="default_for_international_managers_other_team" value="phb1"/>
+				<integer id="default_for_everyone_else" value="phb1"/>
+				<integer id="default_for_versus_mode" value="phb1"/>
+			</container>
+			<!-- Default: Comparison -->
+			<container class="client_object_viewer_selector_panel"  id="cos3" minimum_width="330" default_width="-1" priority="4">
+				<integer id="default_for_unemployed_managers" value="pscR"/>
+				<integer id="default_for_international_managers_other_team" value="pscR"/>
+				<integer id="default_for_everyone_else" value="pscR"/>
+				<integer id="default_for_versus_mode" value="pscR"/>
+			</container>
+		</container>
+				</container>
+
+				<container class="bordered_box" appearance="boxes/bordered/standard/right/paper" red_replacement="tcs_dark_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="player_positions_indicator_panel" id="ppi1" file="player/tcs/player positions indicator small horizontal" width="-1" priority="1">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+			</container>
+
+
+			<container class="client_object_viewer_selector_panel" default_width="350" minimum_width="280" priority="2" file="player/tcs/player overview big selector panel" id="big1" >
+				<integer id="default_for_unemployed_managers" value="pscR"/>
+				<integer id="default_for_international_managers_other_team" value="pscR"/>
+				<integer id="default_for_everyone_else" value="pscR"/>
+				<integer id="default_for_versus_mode" value="pscR"/>
+			</container>
+
+			<container class="client_object_viewer_selector_panel" default_width="350" minimum_width="320" priority="3" file="player/tcs/player overview big selector panel" id="big2" >
+				<integer id="default_for_unemployed_managers" value="tsCS"/>
+				<integer id="default_for_international_managers_other_team" value="tsCS"/>
+				<integer id="default_for_everyone_else" value="tsCS"/>
+				<integer id="default_for_versus_mode" value="tsCS"/>
+			</container>
+
+		</container>
+
+
+		<container >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<!-- Smaller panels -->
+			<container class="vertical_adaptive_container" offset="0" inset="0" gap="0" >
+				<!-- 4 small panels -->
+				<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" default_height="-1"  minimum_height="165" priority="3">
+					<record id="default_properties" file="player/tcs/player overview small selector panel" save_session_state="true" minimum_width="310" default_width="-1"  />
+					<container class="client_object_viewer_selector_panel" id="cos9" priority="1">
+						<integer id="default_for_unemployed_managers" value="pscR"/>
+						<integer id="default_for_international_managers_other_team" value="pscR"/>
+						<integer id="default_for_everyone_else" value="pTTS"/>
+						<integer id="default_for_versus_mode" value="pscR"/>
+					</container>
+					<container class="client_object_viewer_selector_panel" id="cosA" priority="2">
+						<integer id="default_for_unemployed_managers" value="pcon"/>
+						<integer id="default_for_international_managers_other_team" value="pcon"/>
+						<integer id="default_for_everyone_else" value="pcon"/>
+						<integer id="default_for_versus_mode" value="pcon"/>
+					</container>
+					<container class="client_object_viewer_selector_panel" id="cosB" priority="3">
+						<integer id="default_for_unemployed_managers" value="ptri"/>
+						<integer id="default_for_international_managers_other_team" value="ptri"/>
+						<integer id="default_for_everyone_else" value="ptri"/>
+						<integer id="default_for_versus_mode" value="ptri"/>
+					</container>
+					<container class="client_object_viewer_selector_panel" id="cosC" priority="4">
+						<integer id="default_for_unemployed_managers" value="pac1"/>
+						<integer id="default_for_international_managers_other_team" value="pac1"/>
+						<integer id="default_for_everyone_else" value="pac1"/>
+						<integer id="default_for_versus_mode" value="pac1"/>
+					</container>
+				</container>
+
+				<!-- 2 small panels and fitness-->
+				<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" default_height="-1"  minimum_height="165" priority="1">
+					<container class="client_object_viewer_selector_panel" id="cos7" file="player/tcs/player overview small selector panel" save_session_state="true" minimum_width="310" default_width="-1" priority="1" >
+						<integer id="default_for_unemployed_managers" value="Pfor"/>
+						<integer id="default_for_international_managers_other_team" value="Pfor"/>
+						<integer id="default_for_everyone_else" value="Pfor"/>
+						<integer id="default_for_versus_mode" value="Pfor"/>
+					</container>
+					<container class="client_object_viewer_selector_panel" id="cos8" file="player/tcs/player overview small selector panel" save_session_state="true" minimum_width="310" default_width="-1" priority="3">
+						<integer id="default_for_unemployed_managers" value="Pcrs"/>
+						<integer id="default_for_international_managers_other_team" value="Pcrs"/>
+						<integer id="default_for_everyone_else" value="Pcrs"/>
+						<integer id="default_for_versus_mode" value="Pcrs"/>
+					</container>
+					<!-- Season stats-->
+					<container class="bordered_box" width="650" priority="2" default_width="-2" >
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+							<record id="object_property">
+								<list id="get_properties">
+									<!-- Hide this panel if player is in inactive league-->
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<record id="object_property" get_property="Pila" set_property="hidn"/>
+								</list>
+							</record>
+						</widget>
+						<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+							<record id="object_property">
+								<list id="get_properties">
+									<!-- Show this panel if player is in inactive league-->
+									<record id="object_property" get_property="Pila" set_property="Shwn"/>
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</list>
+							</record>
+						</widget>
+					</container>
+
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

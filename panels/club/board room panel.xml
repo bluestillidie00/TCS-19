@@ -1,0 +1,209 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container id="cftb">
+		<translation id="title" translation_id="316546" type="use" value="Board Overview[COMMENT: Manager main/top menu: board confidence link when team name is not displayed]" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" offset="0" layout="-3,-5,-2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- Left Hand Side column -->
+			<container>
+
+				<!-- We have a scroll bar incase we have overflow -->
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<container class="vertical_adaptive_container" inset="0" offset="0">
+
+					<!-- Board Confidence -->
+					<widget class="subsection_box" id="boch" default_height="-3" minimum_height="160" priority="1">
+						<translation id="title" translation_id="308026" type="use" value="Board Confidence[COMMENT: heading; team_information_panel; chairman's confidence in the club]" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<container>
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+								<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+								<widget class="label" auto_size="all" spec="text" size="normal">
+									<translation id="text" translation_id="247319" type="use" value="Job Security" />
+								</widget>
+								<widget class="label" auto_size="vertical" id="valu" spec="text" size="normal" alignment="right" />
+							</container>
+
+							<widget class="horizontal_percentage_bar" height="10" id="hope" />
+
+							<widget class="spacer" height="5" />
+
+							<container class="scrolling_box">
+								<widget class="text" id="boco" spec="text" size="normal" auto_size="vertical" />
+							</container>
+						</container>
+
+						<widget class="horizontal_divider" />
+
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+
+							<widget class="link_appearance_button" id="vbow" click_event="vboc">
+								<translation id="text" translation_id="308027" type="use" value="View Board Confidence[COMMENT: heading; team_information_panel; chairman's confidence in the club]" />
+							</widget>
+
+						</container>
+					</widget>
+
+					<!-- Chairman Status -->
+					<widget class="subsection_box" priority="3">
+						<translation id="title" translation_id="394525" type="use" value="Owner Status[COMMENT: heading; team_information_panel; owner's confidence in the club]" />
+						<layout class="arrange_vertical_attachment" alignment="top" offset="3" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="text" auto_size="vertical" id="chst" spec="text" size="normal" />
+					</widget>
+
+					<!-- Scouting Status -->
+					<widget class="subsection_box" id="scot" priority="2" default_height="-2" minimum_height="95">
+
+						<translation id="title" translation_id="251917" type="use" value="Scouting[COMMENT: board_confidence_screen; title; limits to scouting area]" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+
+						<container class="scrolling_box">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+							<widget class="text" id="scop" spec="text" size="normal" auto_size="vertical" />
+						</container>
+
+
+						<widget class="link_appearance_button" click_event="vsco">
+							<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+							<translation id="text" translation_id="308028" type="use" value="View Scouting Assignments[COMMENT: a link to view scouting assignments]" />
+						</widget>
+					</widget>
+
+					<container class="subsection_box" id="fsrb" default_height="285" priority="4">
+						<translation id="title" translation_id="316690" type="use" value="Finance[COMMENT: team landmarks; embedded menu option to switch view to Financial landmarks achieved]" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+						<widget class="finances_short_wage_summary_panel" id="fsws" />
+					</container>
+				</container>
+			</container>
+
+			<!-- Right Hand Side Column -->
+			<container class="vertical_adaptive_container" inset="0" offset="0">
+
+				<!-- Budget Adjustment -->
+				<widget class="subsection_box" id="reqb">
+					<translation id="title" translation_id="256882" type="use" value="Budget Adjustment[COMMENT::dialog title; this will be used on the dialog where the manager will be able to choose how to adjust his financial budget]" />
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="budget_adjustment_panel" id="bapl" />
+
+					<widget class="spacer" height="10" />
+
+					<widget class="horizontal_divider" />
+
+					<!-- Action button at the bottom of the panel-->
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+						<widget class="link_appearance_button" click_event="vflp">
+							<translation id="text" translation_id="308029" type="use" value="View Finances[COMMENT: Links to the finance panel]" />
+						</widget>
+					</container>
+				</widget>
+
+				<!-- Board Request Status -->
+				<container class="horizontal_adaptive_container" default_height="-1" minimum_height="240" inset="0" offset="0">
+					<widget class="subsection_box" default_width="-1" minimum_width="570">
+						<translation id="title" translation_id="308030" type="use" value="Board Request Status[COMMENT::board request status; The current state of any projects current under way by the board]" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<!-- Either one or the other, not both-->
+						<widget class="table" layout="-1" id="brst" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows, stripe_rows" />
+						<widget class="label" id="brsn" hidden="true" alignment="centre">
+							<translation id="text" translation_id="454738" type="use" value="No pending board requests[COMMENT: For when you have no board request for your status, revision to ID 308031 as some were confused that this previously meant that they had never made a request]" />
+						</widget>
+
+						<!-- Action button at the bottom of the panel-->
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+							<widget class="popup_button" id="brBU" auto_size="all" fixed="true">
+								<translation id="text" translation_id="333910" type="use" value="Make Board Request[COMMENT: popup button to make a board request]" />
+							</widget>
+						</container>
+					</widget>
+
+					<!-- Affiliated clubs panel -->
+					<container class="subsection_box" id="affc" default_width="300">
+						<translation id="title" translation_id="316692" type="use" value="Affiliated Clubs[COMMENT: feederclub header-xml]" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+							<widget class="client_object_list_table" id="tfed" layout="-1, -1" mode="fill_rows, stripe_rows" hidden="true">
+								<record id="viewed_property_ids">
+									<record id="Cref" />
+									<record id="Cnat" width="-1" />
+								</record>
+							</widget>
+
+							<widget class="label" id="noaf" alignment="centre" hidden="true">
+								<translation id="text" translation_id="301277" type="use" value="No affiliated clubs.[COMMENT: label shown when a non-human team doesn't have any affiliated clubs (e.g. feeder clubs or parent clubs)]" />
+							</widget>
+
+						</container>
+						<!-- Action button at the bottom of the panel-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+
+							<widget class="link_appearance_button" id="vfil" click_event="vafp">
+								<translation id="text" translation_id="253615" type="use" value="View Affiliates[COMMENT - respond button on new feeder club news item to view the affiliates section]" />
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<widget class="subsection_box" id="fhss" default_height="250">
+					<translation id="title" translation_id="319443" type="use" value="Balance[COMMENT: boardroom overview; title of finance history panel]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="finance_history_panel" id="fhis" show_instant_hint="true">
+						<!-- Set graph type to cash balance -->
+						<flags id="fhty" value="bala" />
+					</widget>
+				</widget>
+			</container>
+			<!-- Staff Numbers -->
+			<widget class="subsection_box" priority="3">
+				<translation id="title" translation_id="229528" type="use" value="Staff" />
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+
+				<widget class="staff_numbers_table" id="scob">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				</widget>
+
+				<widget class="link_appearance_button" click_event="vsto">
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+					<translation id="text" translation_id="229528" type="use" value="Staff" />
+				</widget>
+			</widget>
+		</container>
+	</container>
+</panel>

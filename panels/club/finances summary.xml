@@ -1,0 +1,364 @@
+<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true" />
+
+	<!--Main container-->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<!--Financial data-->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,235" horizontal_offset="0" vertical_inset="0" />
+
+			<!--left hand side with graphs-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_layout="-4,-4,-6" vertical_offset="0" horizontal_inset="0" />
+
+				<!--balance-->
+				<container class="bordered_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container class="icon_box" icon="icons/custom/icon box/balance">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="label" auto_size="vertical" font="label" colour="accent">
+							<translation id="text" translation_id="383591" type="use" value="Overall Balance[COMMENT: Finances panel]" />
+						</widget>
+
+						<widget class="cash_cell" auto_size="vertical" alignment="left" id="obal" font="value"/>
+
+						<widget class="finance_history_panel" id="obag" finance_history_type="bala" show_instant_hint="true">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+					</container>
+				</container>
+
+				<!--profit loss-->
+				<container class="bordered_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container class="icon_box" icon="icons/custom/icon box/profitloss">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<container height="40">
+							<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1,-1" horizontal_alignment="none" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+								<widget class="label" auto_size="vertical" font="label" colour="accent">
+									<translation id="text" translation_id="383614" type="use" value="Profit / (Loss) This Month[COMMENT: Finances panel]" />
+								</widget>
+
+								<widget class="cash_cell" alignment="left" auto_size="vertical" id="pltm" font="value" />
+
+							</container>
+
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+								<widget class="label" auto_size="vertical" font="label" colour="accent">
+									<translation id="text" translation_id="232145" type="use" value="This Season" />
+								</widget>
+
+								<widget class="cash_cell" alignment="left" auto_size="vertical" id="plts" font="value" />
+
+							</container>
+
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+								<widget class="label" auto_size="vertical" font="label" colour="accent">
+									<translation id="text" translation_id="247212" type="use" value="Last Season" />
+								</widget>
+
+								<widget class="cash_cell" alignment="left" auto_size="vertical" id="plls" font="value" />
+							</container>
+						</container>
+
+						<widget class="finance_history_panel" id="plog" finance_history_type="prls" x_label_interval="5" y_label_interval="2" show_instant_hint="true">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+					</container>
+				</container>
+
+				<!--Income and Expenditure-->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" vertical_inset="0" />
+
+					<!--Income-->
+					<container class="bordered_box">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container class="icon_box" icon="icons/custom/icon box/income">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<widget class="label" font="label" colour="accent" auto_size="vertical">
+								<translation id="text" translation_id="383418" type="use" value="Income This Month[COMMENT: Finances panel]" />
+							</widget>
+
+							<widget class="cash_cell" id="incw" alignment="left" auto_size="vertical" font="value" />
+
+							<container>
+								<attachment_group class="vertical_arrange" vertical_layout="-6,-7" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+								<widget class="finance_history_panel" id="incg" finance_history_type="toti" x_label_interval="12" y_label_interval="2" show_instant_hint="true">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="objt" />
+												<integer id="set_property" value="objt" />
+											</record>
+										</list>
+									</record>
+								</widget>
+
+								<widget class="table" id="inct" layout="1,-1,100" row_height="20">
+									<list id="headings">
+										<record index="0" alignment="left,centre_y" column_span="3">
+											<translation id="text" translation_id="383267" type="use" value="Breakdown[COMMENT: Finances panel]" />
+										</record>
+									</list>
+									<list id="column_table_properties">
+										<record index="0" sort_disabled="true" />
+										<record index="1" id="bDes" sort_disabled="false" />
+										<record index="2" id="toto" sort_ascending="false" />
+									</list>
+									<list id="column_widget_properties">
+										<record index="1" colour="faded text" size="small" />
+										<record index="2" colour="faded text" size="small" alignment="right,centre_y" />
+									</list>
+									<!-- default sort -->
+									<!-- We sort highest value first, then use the actual item name for a secondary sort so we can have a deterministic sort when values are equal -->
+									<list id="default_sort_column">
+										<integer value="toto" />
+										<integer value="bDes" />
+									</list>
+								</widget>
+							</container>
+
+						</container>
+					</container>
+
+					<!--Expenditure-->
+					<container class="bordered_box">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container class="icon_box" icon="icons/custom/icon box/expenditure">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<widget class="label" font="label" colour="accent" auto_size="vertical">
+								<translation id="text" translation_id="383320" type="use" value="Expenditure This Month[COMMENT: Finances panel]" />
+							</widget>
+
+							<widget class="cash_cell" id="expw" alignment="left" auto_size="vertical" font="value" />
+
+							<container>
+								<attachment_group class="vertical_arrange" vertical_layout="-6,-7" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+								<widget class="finance_history_panel" id="expg" finance_history_type="tote" x_label_interval="12" y_label_interval="2" show_instant_hint="true">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="objt" />
+												<integer id="set_property" value="objt" />
+											</record>
+										</list>
+									</record>
+								</widget>
+
+								<widget class="table" id="expt" layout="1,-1,100" row_height="20">
+									<list id="headings">
+										<record index="0" alignment="left,centre_y" column_span="3">
+											<translation id="text" translation_id="383267" type="use" value="Breakdown[COMMENT: Finances panel]" />
+										</record>
+									</list>
+									<list id="column_table_properties">
+										<record index="0" sort_disabled="true" />
+										<record index="1" id="bDes" sort_disabled="false" locked="true"/>
+										<record index="2" id="toto" sort_ascending="false" />
+									</list>
+									<list id="column_widget_properties">
+										<record index="1" colour="faded text" size="small" />
+										<record index="2" colour="faded text" size="small" alignment="right,centre_y" />
+									</list>
+									<!-- default sort -->
+									<!-- We sort highest value first, then use the actual item name for a secondary sort so we can have a deterministic sort when values are equal -->
+									<list id="default_sort_column">
+										<integer value="toto" />
+										<integer value="bDes" />
+									</list>
+								</widget>
+							</container>
+
+						</container>
+
+					</container>
+
+				</container>
+
+			</container>
+
+			<!--right hand side panel-->
+			<container class="bordered_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="icon_box" icon="icons/custom/icon box/budget">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<!--Budgets-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="label" height="20" font="label" colour="accent">
+							<translation id="text" translation_id="383268" type="use" value="Budgets[COMMENT: Finances panel]" />
+						</widget>
+
+						<widget class="text" auto_size="vertical" id="bate" spec="text" size="normal" />
+
+					</container>
+
+					<!--Transfer Budget-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="text" id="tbla" auto_size="vertical" font="label" colour="accent" />
+
+						<widget class="cash_cell" id="tfbg" alignment="left" auto_size="vertical" font="value" />
+
+						<widget class="text" auto_size="vertical" font="text" size="small" colour="faded text" id="tbt1" />
+
+            <widget class="text" auto_size="vertical" font="text" size="small" colour="faded text" id="tbt3" />
+
+						<widget class="text" auto_size="vertical" font="text" size="small" colour="faded text" id="tbt2" />
+
+						<widget class="spacer" height="10" />
+
+						<widget class="horizontal_divider" />
+
+					</container>
+
+					<!--Wage Budget-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="text" id="wbla" auto_size="vertical" font="label" colour="accent" />
+						
+						<widget class="wage_label" id="wagl" alignment="left" auto_size="vertical" font="value" />
+
+						<widget class="text" auto_size="vertical" font="text" size="small" colour="faded text" id="wbt1" />
+
+						<widget class="text" auto_size="vertical" font="text" size="small" colour="faded text" id="wbt2" />
+
+						<widget class="text" auto_size="vertical" font="text" size="small" colour="faded text" id="wbt3" />
+
+						<widget class="spacer" height="10" />
+
+						<widget class="horizontal_divider" />
+
+					</container>
+
+					<!--Scouting budget-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="text" id="sbla" auto_size="vertical" font="label" colour="accent" >
+							<translation id="text" translation_id="443653" type="use" value="Scouting Budget[COMMENT:Scouting budget label]" />
+						</widget>
+
+						<widget class="cash_cell" id="scbg" alignment="left" auto_size="vertical" font="value" />
+
+						<widget class="spacer" height="10" />
+
+						<widget class="horizontal_divider" />
+
+					</container>
+
+					<!--Adjust Budgets-->
+					<container height="100">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+						<widget class="label" height="20" font="label" colour="accent">
+							<translation id="text" translation_id="383226" type="use" value="Adjust Budgets[COMMENT: finances summary panel button text]" />
+						</widget>
+
+						<widget class="widget_popup_button" id="bact" auto_size="vertical" popup_alignment="right,top" widget_type="client_object_viewer_xml_panel" appearance="buttons/standard/normal/button">
+							<record id="widget_properties" file="club/popup budget adjustment panel" width="500" />
+							<record id="modal_popup_properties" file="modal popup panel auto sized" />
+							<translation id="text" translation_id="383546" type="use" value="Make Budget Adjustment[COMMENT::dialog title; this will be used on the dialog where the manager will be able to choose how to adjust his financial budget]" />
+						</widget>
+
+						<widget class="board_request_popup_button_panel" id="brpu" file="none">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="top,horizontal" apply_to_children="true" inset="0" />
+
+							<widget class="popup_button" id="brBU" auto_size="vertical">
+								<translation id="text" translation_id="333910" type="use" value="Make Board Request[COMMENT: popup button to make a board request]" />
+							</widget>
+						</widget>
+
+					</container>
+
+				</container>
+			</container>
+
+		</container>
+
+		<!--FFP box that can be hidden if not relevant-->
+		<container class="subsection_box" id="ffpb" height="130">
+			<translation id="titl" translation_id="383324" type="use" value="Financial Fair Play Progress[COMMENT: finances screen label]" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container class="horizontal_adaptive_container" inset="0" offset="0" mode="distribute_equally" id="ffpc" height="100">
+				<!--FFP box 1-->
+				<container default_width="-1" minimum_width="420" id="ffp1">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+
+					<widget class="label" height="25" id="f1cn" font="value" />
+
+					<container height="55">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="8" />
+
+						<widget class="picture" id="f1ic" height="16" width="16" image_alignment="left,top" />
+
+						<widget class="text" auto_size="vertical" id="f1sl" font="text" size="small" />
+					</container>
+
+				</container>
+				<!--FFP box 2-->
+				<container default_width="-1" minimum_width="420" id="ffp2">
+					<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="8" />
+
+					<widget class="label" height="25" id="f2cn" font="value" />
+
+					<container height="55">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="8" />
+
+						<widget class="picture" id="f2ic" height="16" width="16" image_alignment="left,top" />
+
+						<widget class="text" auto_size="vertical" id="f2sl" font="text" size="small" />
+
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

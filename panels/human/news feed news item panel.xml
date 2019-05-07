@@ -1,0 +1,87 @@
+<panel>
+	<!-- THIS IS THE PANEL THATS DISPLAYED ON THE TWITTER PAGE WITH NEWS -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	<flags id="should_force_refresh" value="true"/>
+
+	<!-- CONTAINER HOLDING EVERYTHING -->
+	<container class="plain_box" appearance="tcs/websites/twitter/news">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- NEWS -->
+		<container height="230" id="NCnt">
+			<!-- CHANGED LAYOUT TO BE VERTICLE, HAVE INFORMATION THEN DYN IMAGE UNDERNEARTH -->
+			<layout class="vertical_arrange" vertical_layout="-1,160" />
+
+			<!-- TARGET, SOURCE, HEADLINE ETC -->
+			<container>
+				<layout class="vertical_arrange" vertical_layout="24,-1" vertical_gap="2" />
+
+				<!-- CONTAINER HOLDING SUBJECT AND SOURCE -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+					<!-- SUBJECT AND DATE SENT -->
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+						<!-- news subject object / date sent -->
+						<widget class="client_object_label" id="nmtx" font="label" colour="faded text" auto_size="horizontal" alignment="left,bottom"/>
+						<widget class="text" font="twitterb" colour="faded text" auto_size="horizontal" alignment="left,bottom">
+							<translation id="text" translation_id="233089" type="use" value="-"/>
+						</widget>
+						<widget class="text" id="dttx" font="twitterb" colour="faded text" alignment="left,bottom"/>
+					</container>
+
+					<!-- MEDIA SOURCE -->
+					<container class="bordered_box" appearance="boxes/custom/inbox attachment/media/source/paper" red_replacement="twitter_icon">
+						<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="4"/>
+						<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+						<!--Media Source-->
+						<widget class="object_portrait_picture_with_label_and_background" id="medi" file="widgets/object portrait picture media source"/>
+
+						<!-- STAR ICON -->
+						<widget class="icon_button" id="NStt" click_event="shfo" show_button_appearance="false" icon="icons/16px/settings" height="16" width="16" alignment="left" scale_picture="true" keep_aspect_ratio="true">
+							<record id="primary_icon_properties" red_replacement="white"/>
+						</widget>
+					</container>
+				</container>
+
+				<!-- HEADLINE AND POPUP -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top" />
+
+					<!-- headline -->
+					<widget class="button" id="sttx" appearance="none" colour="white" auto_size="vertical" font="twitterb" multiline="true" size="11.5" alignment="left,centre_y" click_event="shnp"/>
+
+					<!-- popup link -->
+					<widget class="button" appearance="none" colour="faded text" auto_size="vertical" click_event="shnp" alignment="left,centre_y">
+						<translation id="text" translation_id="412454" type="use" value="Read more...[COMMENT: FR 16824; news feed panel; link text to display news item popup]"/>
+					</widget>
+				</container>
+			</container>
+
+			<!-- DYNAMIC IMAGE -->
+			<container >
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+				<container id="imgc" width="270">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<!-- comp news image -->
+					<widget class="competition_news_image_panel" id="impl"/>
+				</container>
+
+				<!-- SPACER ~ TO KEEP THE IMAGE ON THE LEFT. -->
+				<container />
+			</container>
+		</container>
+
+		<container id="licn">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+			<!-- linked tweets go here -->
+		</container>
+	</container>
+</panel>

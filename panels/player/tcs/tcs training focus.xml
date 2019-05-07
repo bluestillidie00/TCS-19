@@ -1,0 +1,96 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container >
+		<!-- ARRANGES THE PANEL VERTICALLY SO I CAN ADD A LINKED HEADER -->
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="3"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- LINKED HEADER -->
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="PHst" section="PHst" auto_size="horizontal">
+				<translation id="text" type="use" value="Training Focus" />
+			</widget>
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<container>
+				<!-- ARRANGES THE THREE BUTTONS VERTICALLY -->
+				<attachment_group class="vertical_arrange" vertical_layout="45,45,-1,30" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- POSITION / ROLE / DUTY -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="centre,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+						<translation id="text" translation_id="363709" type="use" value="Position/Role/Duty[COMMENT: FR 8989 - Player position, role and duty]" />
+					</widget>
+
+					<widget class="individual_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itpu" alignment="left,centre_y" auto_size="vertical" />
+				</container>
+
+				<!-- ADDITIONAL FOCUS -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+						<translation id="text" translation_id="394317" type="use" value="Additional Focus[COMMENT - individual training popup menu; specific focus training]" />
+					</widget>
+
+					<widget class="individual_training_popup" show_table_legend="true" is_attribute_training="true" fixed="false" appearance="buttons/standard/normal/button" id="itat" alignment="left,centre_y" auto_size="vertical" />
+				</container>	
+
+				<!-- TRAITS -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+						<translation id="text"  type="use" value="Traits" />
+					</widget>
+
+					<widget class="preferred_move_popup_button" id="nPPM" appearance="buttons/standard/normal/button" alignment="left,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PmCo" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>		  
+
+					<widget class="preferred_move_label" id="ppML" alignment="left,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PTpm" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="button" hidden="true" click_event="PPMC" id="cPPM" alignment="left,centre_y" auto_size="all">
+						<translation id="text" translation_id="229828" type="use" value="Cancel" />
+					</widget>
+				</container>
+			</container>
+			
+				<widget class="horizontal_divider" height="3"/> 
+				
+			<widget class="player_training_performance_panel" file="player/player overview switcher/tcs/selector/big/training performance"  id="ptpp">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>		
+
+		</container>
+
+	</container>
+</panel>

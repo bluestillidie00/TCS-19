@@ -1,0 +1,32 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="60,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- icon -->
+		<container >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true"/>
+			<widget class="picture" id="pict" image_alignment="centre" scale_picture="false" keep_aspect_ratio="true" />
+		</container>
+
+
+		<!-- Button Text -->
+		<container >
+			<layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="text" id="titl" multiline="false"  font="fonts/main menu" colour="text" alignment="left" auto_size="vertical"/>
+
+			<widget class="text" id="desc" spec="text" font="fonts/main menu subtitle" colour="text" alignment="left" size="7.5" auto_size="vertical" multiline="false"/>
+		</container>
+	</container>
+
+	<!-- Button (spans across entire parent container) -->
+	<widget class="button" id="hnBT" appearance="buttons/custom/intro panel/button">
+	</widget>
+
+</panel>

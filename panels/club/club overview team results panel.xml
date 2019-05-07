@@ -1,0 +1,34 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" />
+
+	<container>
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="label" alignment="centre" id="nofi">
+			<translation id="text" translation_id="319451" type="use" value="No recent fixtures played.[COMMENT: club overview team results panel; text indicating that because no fixtures have been played, there is no expected screen content]" />
+		</widget>
+
+		<container id="fixt">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+			<record id="default_properties" file="match/result info panel" />
+
+			<container class="client_object_viewer_xml_panel" id="res0"/>
+			<container class="client_object_viewer_xml_panel" id="res1"/>
+			<container class="client_object_viewer_xml_panel" id="res2"/>
+			<container class="client_object_viewer_xml_panel" id="res3"/>
+			<container class="client_object_viewer_xml_panel" id="res4"/>
+		</container>
+
+	</container>
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_offset="0" vertical_inset="0" />
+
+		<widget class="link_appearance_button" id="vfre">
+			<translation id="text" translation_id="319452" type="use" value="View Fixtures/Results[COMMENT: club staff overview; button which when clicked takes you to the club's first team fixtures]" />
+		</widget>
+	</container>
+
+</panel>

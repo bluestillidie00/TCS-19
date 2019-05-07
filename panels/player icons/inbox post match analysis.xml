@@ -1,0 +1,75 @@
+<!-- THIS IS THE ICON THAT IS SHOWN ON THE INBOX ITEM POST MATCH ANALYSIS -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+	<!-- PLAYER KIT -->
+	<container>
+		<!-- WE'VE USED THIS LAYOUT FOR AETHSTETIC REASONS, THE 12px SPACER AT THE BOTTOM OF THE CONTAINER LIFTS THE BOTTOM OF THE KIT UP SO IT DOESN'T HANG BELOW THE PLAYER ROLE CONTAINER -->
+		<layout class="vertical_arrange" vertical_layout="-1,4" vertical_gap="0" />
+
+		<!-- THE KIT -->
+		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_top="0" number_height="80">
+		</widget>
+
+		<!-- SPACER -->
+		<container />
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="14" apply_to_children="true"/>
+
+		<!-- PLAYER PICTURE -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" >
+			<layout class="stick_to_sides_attachment" alignment="right" inset="-4" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="20" />
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+
+		<!-- ICONS (INJURY, STAR PLAYER ETC) -->
+		<container id="icoC" height="16" width="16" >
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="6" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+
+			<record id="default_properties" image_alignment="centre" hidden="true" width="16" height="16" />
+
+			<widget class="picture" id="PTgs" file="icons/tcs/goal" />
+			<widget class="picture" id="PTas" file="icons/16px/assist" />
+			<widget class="picture" id="PTrt" file="icons/16px/key player" />
+			<widget class="picture" id="PNba" file="icons/16px/yellow card" />
+			<widget class="picture" id="PHNO" file="icons/16px/debut" />
+		</container>
+
+	</container>
+
+	<!-- PLAYER NAME AND ROLE -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+		<!-- SPACER ~ USED TO HOLD THE PLAYER INFORMATION AT THE BOTTOM -->
+		<container />
+
+		<!-- CONTAINER HOLDING PLAYER INFORMATION -->
+		<container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" red_replacement="teal 900" height="20">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 			
+
+			<!-- FADING CONTAINER ~ ADJUST THE INTERVAL TO CHANGE HOW LONG BEFORE THE FADE -->
+			<container class="animated_wipe_cycle_fade_container" id="topc" interval="3">
+				<record id="default_properties"  size="7" alignment="centre,can_scale"  auto_size="vertical" font="player icon" />
+				
+				<!-- PLAYER NAME -->
+				<widget class="label" id="name" >
+					<layout class="stick_to_sides_attachment" alignment="top" inset="3" /> 			
+				</widget>
+
+				<!-- ROLE AND DUTY ~ TO REMOVE THE DUTY DELETE THE CODE BELOW, AND UNCOMMENT THE CODE BELOW THAT. -->
+				<widget class="dashed_number_label" id="avra" format="[%fraction#1-2.1]" >
+				<layout class="stick_to_sides_attachment" alignment="top" inset="3" /> 			
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>
