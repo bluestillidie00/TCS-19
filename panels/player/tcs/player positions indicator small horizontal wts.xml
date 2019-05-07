@@ -2,7 +2,7 @@
 
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-	<container>
+	<container class="bordered_box">
 
 		<!-- <record id="mask" alignment="vertical, left" top="0" bottom="-110" width="200" file="backgrounds/pattern" offset_x="-300" offset_y="50"/> -->
 

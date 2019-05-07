@@ -1,0 +1,18 @@
+<panel>
+	<container id="SUBP">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+	
+	<widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="buttons/custom/wannachup customise panel/button" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="left,top" inset="12,12" />
+	</widget>
+
+	<container class="client_object_viewer_xml_panel" id="tcs"  late_loading="false" file="player/wannachup player selector/player overview panel">
+		<translation id="title" type="use" value="TCS"/>
+	</container>
+	<container class="client_object_viewer_xml_panel" id="evo "  late_loading="false" file="player/wannachup player selector/wts player overview panel">
+		<translation id="title" type="use" value="TCS WorkTheSpace Edition"/>
+	</container>
+
+</panel>
