@@ -1,58 +1,43 @@
-<?xml version='1.0' encoding='utf-8'?>
 <panel>
+	<layout class="vertical_arrange" vertical_layout="-1,20" />
 
-  <layout class="arrange_vertical_attachment" layout="-1,40" />
-  <layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
+	<widget class="picture" id="picM" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x">
+		<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+			<list id="value">
+				<boolean value="false" />
+			</list>
+		</attachment>
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="fcgn" />
+					<!--Facegen data request-->
+				</record>
+				<record>
+					<integer id="get_property" value="Pfke" />
+					<!--Fake name request-->
+				</record>
+				<record>
+					<integer id="get_property" value="prpc" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</list>
+		</record>
+	</widget>
 
-  <widget class="picture" id="picM" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x">
-    <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
-      <list id="value">
-        <boolean value="false" />
-      </list>
-    </attachment>
+	<container id="info">
+		<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
 
-    <record id="object_property">
-      <list id="get_properties">
-        <record>
-          <integer id="get_property" value="fcgn" />
-          <!--Facegen data request-->
-        </record>
-        <record>
-          <integer id="get_property" value="Pfke" />
-          <!--Fake name request-->
-        </record>
-        <record>
-          <integer id="get_property" value="prpc" />
-          <integer id="set_property" value="valu" />
-        </record>
-      </list>
-    </record>
-  </widget>
+		<widget class="person_button" id="perM" style="semi_bold" alignment="centre_x, bottom">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="valu" />
+			</record>
+		</widget>
 
-  <container>
-    <layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+		<widget class="label" id="nofo" alignment="centre">
+			<translation id="text" translation_id="320493" type="use" value="None currently[COMMENT: text indicating that there is no person to view here currently (e.g. a manager, captain, vice captain etc.)]" />
+		</widget>
 
-    <container id="info">
-      <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
-      <layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
-
-      <widget class="person_button" id="perM" style="semi_bold" alignment="centre_x, bottom">
-        <record id="object_property">
-          <integer id="get_property" value="objt" />
-          <integer id="set_property" value="valu" />
-        </record>
-      </widget>
-      <widget class="nation_button" id="natM" colour="faded text" alignment="centre_x,top" icon_enabled="false" dspf="0">
-        <record id="object_property">
-          <integer id="get_property" value="Pnat" />
-          <integer id="set_property" value="valu" />
-        </record>
-      </widget>
-    </container>
-
-    <widget class="label" id="nofo" alignment="centre">
-      <translation id="text" translation_id="320493" type="use" value="None currently[COMMENT: text indicating that there is no person to view here currently (e.g. a manager, captain, vice captain etc.)]" />
-    </widget>
-
-  </container>
+	</container>
 </panel>

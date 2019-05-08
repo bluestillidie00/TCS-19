@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <panel>
-	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="1" vertical_gap="3" horizontal_inset="0" />
 
 	<container>
+		<!--LAYOUT CLASS BELOW SETS PANELS UP TO ARRANGE VERTICALLY (GOING FROM TOP TO BOTTOM -->
 		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="1" vertical_gap="3" horizontal_inset="0" />
 
-		<container class="vertical_adaptive_container" inset="0" offset="0" gap="5">
+		<container class="vertical_adaptive_container" inset="0" offset="0" gap="3">
 			<!-- MANAGER -->
-			<container default_height="130" priority="1">
+			<container default_height="110" priority="1">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 				<container id="manC">
@@ -44,7 +45,7 @@
 			<widget class="horizontal_divider"  priority="1" />
 
 			<!--CAPTAIN -->
-			<container default_height="130" priority="1">
+			<container default_height="110" priority="1">
 				<layout class="arrange_vertical_attachment" layout="15,-1" />
 				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
 
@@ -66,7 +67,7 @@
 			<widget class="horizontal_divider"  priority="2" />
 
 			<!-- VICE CAPTAIN -->
-			<container default_height="130" priority="2">
+			<container default_height="110" priority="2">
 				<layout class="arrange_vertical_attachment" layout="15,-1" />
 				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
 
@@ -88,7 +89,7 @@
 			<widget class="horizontal_divider"  priority="3" />
 
 			<!-- KEY PLAYER -->
-			<container default_height="130" priority="3">
+			<container default_height="110" priority="3">
 				<layout class="arrange_vertical_attachment" layout="15,-1" />
 				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
 
@@ -110,7 +111,7 @@
 			<widget class="horizontal_divider"  priority="4" />
 
 			<!--HOT PROSPECT -->
-			<container default_height="130" priority="4">
+			<container default_height="110" priority="3">
 				<layout class="arrange_vertical_attachment" layout="15,-1" />
 				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
 
@@ -123,18 +124,17 @@
 				<widget class="person_snapshot_club_overview_panel" id="HotP" file="club/tcs/club person snapshot club overview">
 				</widget>
 			</container>
-
 		</container>
 	</container>
+	
+	<!--  BUTTONS AT BOTTOM  -->
+		<container height="30">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
 
-	<container height="30" priority="1">
-		<layout class="arrange_vertical_attachment" alignment="centre_y,extend" offset="0" />
-		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
-
-		<widget class="button" id="vpla" auto_size="horizontal" appearance="buttons/link/button">
-			<translation id="text" translation_id="319449" type="use" value="View Players[COMMENT: club staff overview; button which when clicked takes you to the first team squad]" />
-		</widget>
-	</container>
-
+			<widget class="button" id="vpla" auto_size="horizontal" appearance="buttons/link/button">
+				<translation id="text" translation_id="319449" type="use" value="View Players[COMMENT: club staff overview; button which when clicked takes you to the first team squad]" />
+			</widget>
+		</container>
 </panel>
