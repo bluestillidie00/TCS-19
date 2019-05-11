@@ -1,0 +1,178 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+	<!-- BACKGROUND -->
+	<container class="plain_box"  appearance="tcs/boxes/backgrounds/50" />
+
+	<container>
+		<!-- BOTTOM, EXTEND USED SO WE DONT HAVE TO GIVE THE PITCH A HEIGHT ATTRIBUTE ~ INSETS USED FOR CONSISTENCY WITH REST OF SKIN -->
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="6" vertical_offset="6"/>
+
+		<!-- ACTUAL CONTAINER HOLDING INFORMATION -->
+		<container>
+			<layout class="horizontal_arrange" horizontal_layout="-3,-2,-3" horizontal_gap="0" />
+
+			<!-- HOME -->
+			<container id="hpco">
+				<layout class="vertical_arrange" vertical_layout="70,-1,80" vertical_gap="0" />
+
+				<!-- TEAM NAME -->
+				<container class="home_match_incidents_panel" id="hnkp" file="match/tcs/lineups/home team name" >
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+
+				<!-- PITCH ~ WEIRD LAYOUT WITH LOADS OF CONTAINERS USED TO MAKE UP FOR LOGO TRANSPARENCY NOT WORKING-->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<!-- LOGO -->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+						<!-- VERTICAL ARRANGE LAYOUT USED TO RESIZE LOGO -->
+						<container>
+							<layout class="vertical_arrange" vertical_layout="-1,190,-1" vertical_gap="0" />
+							<container />
+							<widget class="match_team_logo_picture" id="HtLG" team_index="0" width="80" transparency="0.6">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+							<container />
+						</container>
+
+						<!-- THIS COVERS THE TEAM LOGO BUT UNDERNEATH THE PITCH TO MAKE IT LOOK MORE TRANSPARENT -->
+						<container class="plain_box" appearance="tcs/match/lineups/botlef" red_replacement="pitch_box_background" />
+					</container>
+
+					<!-- PITCH -->
+					<widget class="pitch_with_tactics" id="hpwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
+						<string id="pitch_draw_grass" value="true" />
+						<string id="pitch_base_appearance" value="" />
+						<string id="pitch_pattern" value="tcs" />
+						<integer id="tactics_creator_index" value="2" />
+						<boolean id="pitch_dont_draw_indicators" value="true" />
+						<boolean id="pitch_show_captain" value="true" />
+						<integer id="pitch_vertical_padding" value="0"/>
+						<flags id="pitch_alignment" value="centre"/>
+						<real id="maximum_player_size" value="0.2"/>
+					</widget>
+				</container>	
+			</container>
+
+			<container class="bordered_box" appearance="tcs/match/lineups/mid">
+			</container>
+
+	<!-- AWAY -->
+			<container id="apco">
+				<layout class="vertical_arrange" vertical_layout="70,-1,80" vertical_gap="0" />
+
+				<!-- TEAM NAME -->
+				<container class="away_match_incidents_panel" id="ankp" file="match/tcs/lineups/away team name" >
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+
+				<!-- PITCH ~ WEIRD LAYOUT WITH LOADS OF CONTAINERS USED TO MAKE UP FOR LOGO TRANSPARENCY NOT WORKING-->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<!-- LOGO -->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+						<!-- VERTICAL ARRANGE LAYOUT USED TO RESIZE LOGO -->
+						<container>
+							<layout class="vertical_arrange" vertical_layout="-1,190,-1" vertical_gap="0" />
+							<container />
+							<widget class="match_team_logo_picture" id="AtLG" team_index="1" width="80" transparency="0.6">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+							<container />
+						</container>
+
+						<!-- THIS COVERS THE TEAM LOGO BUT UNDERNEATH THE PITCH TO MAKE IT LOOK MORE TRANSPARENT -->
+						<container class="plain_box" appearance="tcs/match/lineups/botrig" red_replacement="pitch_box_background" />
+					</container>
+
+					<!-- PITCH -->
+					<widget class="pitch_with_tactics" id="apwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
+						<string id="pitch_draw_grass" value="true" />
+						<string id="pitch_base_appearance" value="" />
+						<string id="pitch_pattern" value="tcs" />
+						<integer id="tactics_creator_index" value="2" />
+						<boolean id="pitch_dont_draw_indicators" value="true" />
+						<boolean id="pitch_show_captain" value="true" />
+						<integer id="pitch_vertical_padding" value="0"/>
+						<flags id="pitch_alignment" value="centre"/>
+						<real id="maximum_player_size" value="0.2"/>
+					</widget>
+				</container>	
+			</container>
+			
+			
+			
+			
+			
+			
+		</container>
+
+
+
+
+		<container height="150">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="subs_bench_panel" id="hsub" file="tactics/subs bench panel match preview lineups"/>
+
+				<container id="hptx">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal"  />
+
+					<widget class="spacer" height="10" />
+
+					<!--explanatory text-->
+					<widget class="text" alignment="centre" auto_size="vertical" size="12" >
+						<translation id="text" translation_id="342017" type="use" value="Awaiting Line Up...[COMMENT: text displayed instead of an empty pitch before the match starts which we're waiting for the team lineups to be submitted]" />
+					</widget>
+
+				</container>
+			</container>
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="subs_bench_panel" id="asub" file="tactics/subs bench panel match preview lineups"/>
+
+				<!--still awaiting lineup text-->
+				<container id="aptx">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<widget class="spacer" height="10" />
+
+					<!--explanatory text-->
+					<widget class="text" alignment="centre" auto_size="vertical" size="12" >
+						<translation id="text" translation_id="342017" type="use" value="Awaiting Line Up...[COMMENT: text displayed instead of an empty pitch before the match starts which we're waiting for the team lineups to be submitted]" />
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+
+</panel>
