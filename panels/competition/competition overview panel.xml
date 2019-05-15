@@ -1,8 +1,9 @@
 <panel>
-	<layout class="arrange_horizontal_attachment" layout="-1,-2" offset="0" />
-	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
+<container>
+<layout class="horizontal_arrange" horizontal_layout="-1,-2" horizontal_gap="0" />
 
-	<container id="cost">
+<container id="cost">
 		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
@@ -166,5 +167,6 @@
 				</record>
 			</container>
 		</container>
+	</container>
 	</container>
 </panel>
