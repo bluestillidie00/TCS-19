@@ -11,7 +11,10 @@
 	<container class="client_object_viewer_xml_panel" id="tcs"  late_loading="false" file="player/wannachup player selector/player overview panel">
 		<translation id="title" type="use" value="TCS"/>
 	</container>
-	<container class="client_object_viewer_xml_panel" id="evo "  late_loading="false" file="player/wannachup player selector/wts player overview panel">
+	<container class="client_object_viewer_xml_panel" id="tcsalt"  late_loading="false" file="player/wannachup player selector/alt player overview panel">
+		<translation id="title" type="use" value="TCS alt"/>
+	</container>
+	<container class="client_object_viewer_xml_panel" id="tcswts"  late_loading="false" file="player/wannachup player selector/wts player overview panel">
 		<translation id="title" type="use" value="TCS WorkTheSpace Edition"/>
 	</container>
 

@@ -43,40 +43,41 @@
 
 			<container default_width="-1" minimum_width="1000" priority="1" >
 				<layout class="horizontal_arrange" horizontal_layout="-5,-2" horizontal_gap="0"/>
-				
+
 				<container class="bordered_box" appearance="boxes/bordered/no margin/left/paper" >
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-		<container class="horizontal_adaptive_container"  offset="0" inset="0" mode="distribute_equally" >
-			<record id="default_properties" file="player/tcs/player overview big selector panel" save_session_state="true" />
+					
+					<container class="horizontal_adaptive_container"  offset="0" inset="0" mode="distribute_equally" >
+						<record id="default_properties" file="player/tcs/player overview big selector panel" save_session_state="true" />
 
-			<container class="client_object_viewer_selector_panel" id="cos1" minimum_width="640" default_width="-2" priority="2">
-				<widget class="player_attributes_panel" file="player/tcs/player attributes panel" id="patt" late_loading="true">
-					<translation id="title" translation_id="229822" type="use" value="Attributes" />
-				</widget>
-				<!-- PLAYER INJURY HISTORY  FROM  MEDICAL REPORT ~ EDITED TO FIT BETTER-->
-				<widget class="player_injury_panel" file="player/tcs/tcs player injury panel" id="IPrw" late_loading="true">
-					<translation id="title" translation_id="447586" type="use" value="Medical Report" />
-				</widget>
-				<integer id="default_for_unemployed_managers" value="pat1"/>
-				<integer id="default_for_international_managers_other_team" value="pat1"/>
-				<integer id="default_for_everyone_else" value="pat1"/>
-				<integer id="default_for_versus_mode" value="pat1"/>
-			</container>
-			<!-- Default: Biography -->
-			<container class="client_object_viewer_selector_panel" id="cos2" minimum_width="330" default_width="-1" priority="3">
-				<integer id="default_for_unemployed_managers" value="phb1"/>
-				<integer id="default_for_international_managers_other_team" value="phb1"/>
-				<integer id="default_for_everyone_else" value="phb1"/>
-				<integer id="default_for_versus_mode" value="phb1"/>
-			</container>
-			<!-- Default: Comparison -->
-			<container class="client_object_viewer_selector_panel"  id="cos3" minimum_width="330" default_width="-1" priority="4">
-				<integer id="default_for_unemployed_managers" value="pscR"/>
-				<integer id="default_for_international_managers_other_team" value="pscR"/>
-				<integer id="default_for_everyone_else" value="pscR"/>
-				<integer id="default_for_versus_mode" value="pscR"/>
-			</container>
-		</container>
+						<container class="client_object_viewer_selector_panel" id="cos1" minimum_width="640" default_width="-2" priority="2">
+							<widget class="player_attributes_panel" file="player/tcs/player attributes panel" id="patt" late_loading="true">
+								<translation id="title" translation_id="229822" type="use" value="Attributes" />
+							</widget>
+							<!-- PLAYER INJURY HISTORY  FROM  MEDICAL REPORT ~ EDITED TO FIT BETTER-->
+							<widget class="player_injury_panel" file="player/tcs/tcs player injury panel" id="IPrw" late_loading="true">
+								<translation id="title" translation_id="447586" type="use" value="Medical Report" />
+							</widget>
+							<integer id="default_for_unemployed_managers" value="pat1"/>
+							<integer id="default_for_international_managers_other_team" value="pat1"/>
+							<integer id="default_for_everyone_else" value="pat1"/>
+							<integer id="default_for_versus_mode" value="pat1"/>
+						</container>
+						<!-- Default: Biography -->
+						<container class="client_object_viewer_selector_panel" id="cos2" minimum_width="330" default_width="-1" priority="3">
+							<integer id="default_for_unemployed_managers" value="phb1"/>
+							<integer id="default_for_international_managers_other_team" value="phb1"/>
+							<integer id="default_for_everyone_else" value="phb1"/>
+							<integer id="default_for_versus_mode" value="phb1"/>
+						</container>
+						<!-- Default: Comparison -->
+						<container class="client_object_viewer_selector_panel"  id="cos3" minimum_width="330" default_width="-1" priority="4">
+							<integer id="default_for_unemployed_managers" value="pscR"/>
+							<integer id="default_for_international_managers_other_team" value="pscR"/>
+							<integer id="default_for_everyone_else" value="pscR"/>
+							<integer id="default_for_versus_mode" value="pscR"/>
+						</container>
+					</container>
 				</container>
 
 				<container class="bordered_box" appearance="boxes/bordered/standard/right/paper" red_replacement="tcs_dark_box">
