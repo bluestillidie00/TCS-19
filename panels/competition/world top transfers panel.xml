@@ -1,0 +1,16 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="bordered_box" appearance="boxes/bordered/standard/bottom right/paper" red_replacement="tcs_dark_box" >
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="8" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+		<widget class="label" auto_size="all" font="title" id="titl" colour="accent" />
+
+		<container class="property_list_viewer_xml_panel" id="hilt" file="widgets/world top transfer highlight widget" />
+
+		<widget class="table" id="tabl" mode="fill_rows, stripe_rows" sort_disabled="true" auto_size_rows="false" row_height="70" row_spacing="2" layout="-1" />
+	</container>
+
+</panel>

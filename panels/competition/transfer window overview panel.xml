@@ -1,0 +1,44 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 	
+
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="-1,380" horizontal_gap="0" horizontal_inset="6" vertical_offset="6" />
+
+		<!-- Appearance container -->
+		<container class="bordered_box" appearance="boxes/bordered/standard/left/paper">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="5" />
+				<layout class="stick_to_sides_attachment" alignment="left,top" inset="10,0,0,0" apply_to_children="true"/>
+
+				<!-- selection menu -->
+				<widget class="popup_button" id="filt" fixed="false" select_event="fich" auto_size="all" primary_use_icon_app_rep_colour="false">
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+			</container>
+
+
+			<widget class="competition_transfer_window_panel" id="deta" file="competition/competition transfer window panel for overview" />
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="transfer_deadline_panel" id="tdhr" file="competition/transfer deadline weeks days" height="52" />
+
+			<widget class="world_top_transfers_panel" id="wttp">
+				<translation id="title" translation_id="412444" type="use" value="World Transfers[COMMENT: FR 15125]" />
+
+			</widget>
+
+
+		</container>
+	</container>
+
+
+</panel>
