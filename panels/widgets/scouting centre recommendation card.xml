@@ -6,34 +6,20 @@
 	<container>
 		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
 
-		<!--<container class="bordered_box" appearance="boxes/custom/scouting/heading/paper" height="22" red_replacement="positive">
-			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
-
-			<widget class="text" alignment="centre" height="22" size="small" style="semi_bold">
-				<record id="object_property" get_property="titl" set_property="text" />
-				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
-			</widget>
-
-			<widget class="text" alignment="right,centre_y" height="22" size="small" style="semi_bold" auto_size="horizontal">
-				<record id="object_property" get_property="date" set_property="text" />
-				<layout class="stick_to_sides_attachment" alignment="right" inset="6" />
-			</widget>
-		</container>-->
-
 		<container>
 			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" vertical_inset="4" horizontal_offset="4" horizontal_gap="4"/>
 
 			<container>
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="4" vertical_offset="0" vertical_gap="4" />
 
-				<container class="client_object_viewer_xml_panel" height="52">
+				<container class="client_object_viewer_xml_panel" height="90">
 					<record id="object_property" get_property="Pers" set_property="objt" />
-					<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" vertical_inset="0" />
+					<attachment_group class="horizontal_arrange" horizontal_layout="300,-1" vertical_inset="0" />
 
 					<container>
 						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="2" />
 
-						<widget class="object_portrait_picture" id="ppic" width="45">
+						<widget class="object_portrait_picture" id="ppic" width="80">
 							<boolean id="scale_picture" value="true" />
 							<boolean id="keep_aspect_ratio" value="true" />
 							<flags id="image_alignment" value="centre" />
@@ -98,7 +84,7 @@
 
 							<attachment_group class="horizontal_arrange_autosize_vertical_centre"/>
 
-							<widget class="object_portrait_picture" width="32" height="32">
+							<widget class="object_portrait_picture" width="80" height="80">
 								<boolean id="scale_picture" value="true" />
 								<boolean id="keep_aspect_ratio" value="true" />
 								<flags id="image_alignment" value="centre" />
