@@ -37,7 +37,7 @@
 			<widget class="picture" id="PTas" file="icons/16px/assist"/>
 			<widget class="picture" id="PTrt" file="icons/16px/key player" />
 			<widget class="picture" id="PNba" file="icons/16px/yellow card" />
-			<widget class="picture" id="PHNO" file="icons/16px/debut" />
+			<widget class="picture" id="PHNO" file="icons/16px/debut" red_replacement="white" />
 		</container>
 
 	</container>
