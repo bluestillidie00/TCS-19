@@ -1,0 +1,76 @@
+<panel >
+	<flags id="itns" value="small" />
+	<!-- size of Label i.e. "Wage Budget" -->
+	<flags id="itnc" value="faded text" />
+	<!-- colour of Label i.e. "Wage Budget" -->
+	<flags id="itvs" value="normal" />
+	<!-- size of value i.e. "Â£1.5M p/w" -->
+	<flags id="itvc" value="text" />
+	<!-- colour of value i.e. "Â£1.5M p/w" -->
+	<flags id="tabw" value="295" />
+	<!-- width of a table (Label + Value) -->
+	<flags id="ptbw" value="465" />
+	<!-- width of a table (Label + Value) for promises -->
+
+	<list id="column_table_properties">
+		<record index="0" top="1" bottom="1"/>
+		<record index="1"  />
+	</list>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+	<container class="collapsable_box" appearance="boxes/inner/titled/paper" save_default_state="true" save_session_state="true" collapsed="true">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="32" embed_in_frame="true">
+			<layout class="fit_children_attachment" alignment="horizontal" embed_in_frame="true" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+
+			<layout class="stick_to_sides_attachment" alignment="left,top" embed_in_frame="true" inset="0" />
+
+			<!-- view -->
+			<widget class="tab_strip" id="inft" auto_size="horizontal" select_event="sliv" appearance="tabs/subsection" embed_in_frame="true">
+				<boolean id="use_alt_end_tab_appearances" value="false" />
+				<integer id="selection" value="budg" />
+				<list id="items">
+					<record>
+						<translation id="name" translation_id="383268" type="use" value="Budgets[COMMENT: Finances panel]" />
+						<integer id="id" value="budg" />
+					</record>
+					<record>
+						<translation id="name" translation_id="320154" type="use" value="Promises[COMMENT: player status panel; panel header title for a section listing all promises a manager has made to a player]" />
+						<integer id="id" value="prom" />
+					</record>
+					<record>
+						<translation id="name" translation_id="242350" type="use" value="Other" />
+						<integer id="id" value="othr" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<container height="30" embed_in_frame="true">
+			<layout class="fit_children_attachment" alignment="horizontal" embed_in_frame="true" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="right,vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="3,0,0,30" />
+
+			<widget class="widget_popup_button" id="bact" embed_in_frame="true" auto_size="horizontal" height="30" popup_alignment="right,top" widget_type="client_object_viewer_xml_panel" appearance="buttons/standard/normal/button">
+				<record id="widget_properties" file="club/popup budget adjustment panel" width="500" />
+				<record id="modal_popup_properties" file="modal popup panel auto sized" />
+				<translation id="text" translation_id="256882" type="use" value="Budget Adjustment[COMMENT::dialog title; this will be used on the dialog where the manager will be able to choose how to adjust his financial budget]" />
+			</widget>
+
+		</container>
+
+		<container class="scrolling_box" fit_content_horizontal="true" fit_content_vertical="false" height="114">
+			<container id="mcon">
+				<layout class="arrange_horizontal_attachment" alignment="left" gap="12" offset="2" do_not_size="true" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="12" offset="2" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2,0,0,0"/>
+			</container>
+		</container>
+	</container>
+
+
+
+</panel>
