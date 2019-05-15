@@ -1,7 +1,7 @@
 ﻿<panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-	<container class="plain_box"  appearance="tcs/boxes/backgrounds/70" />
+	<container class="plain_box" appearance="tcs/boxes/backgrounds/70" />
 
 	<container>
 		<layout class="vertical_arrange" vertical_layout="190,-1"/>
@@ -74,45 +74,106 @@
 					<widget class="text" auto_size="vertical" id="jnam" colour="secondary" />
 				</container>
 			</container>
-
 		</container>
 
 		<!-- ANOTHER CONTAINER ADDED DUE TO THE ENTIRE SECOND LEVEL BEING IN IT'S OWN BORDERED BOX -->
 		<container >
-			<!-- SPLITS 2ND LEVEL INTO THREE VERTICAL SECTIONS  // LEFT = STATS AND MILESTONES, MIDDLE TEAM STATS, RIGHT COMP NEWS-->
+			<!-- SPLITS 2ND LEVEL INTO THREE VERTICAL SECTIONS // LEFT = STATS AND MILESTONES, MIDDLE TEAM STATS, RIGHT COMP NEWS-->
 			<layout class="horizontal_arrange" horizontal_layout="-1,1000,-1" horizontal_gap="0" horizontal_inset="6"/>
 
 			<!-- LEFT SIDED PANEL -->
 			<container class="bordered_box" appearance="tcs/match/ibh/left/paper" >
-				<layout class="vertical_arrange" vertical_layout="-1,3,200"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
-				<!-- TEAM STATS -->
-				<container class="subsection_box"  appearance="tcs/match/ibh/transparent/paper">
-					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
-					<translation id="title" type="use" value="Match Stats" />
-
-					<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+				<container class="horizontal_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_width_top="2" min_width_bottom="2" id="left">
+					<!-- DEFAULT PROPERTIES SO WE DON'T HAVE TO USE OBJECT_PROPERTY OVER AND OVER AGAIN -->
+					<record id="default_properties">
 						<record id="object_property">
 							<integer id="get_property" value="objt" />
 							<integer id="set_property" value="objt" />
 						</record>
+					</record>
+
+					<!-- TOP SELECTOR -->
+					<widget class="match_view_selector_panel" default_height="-1" id="seL1" pause_match_on_menu_opening="true" default_item="mtst" file="match/tcs/review/selector">
+						<!-- MATCH STATS -->
+						<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+							<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+						</widget>
+						<!-- MILESTONES -->
+						<widget class="match_preview_milestones_panel" id="mile" miti="1">
+							<translation id="title" translation_id="308471" type="use" value="Milestones" />
+						</widget>
+						<!-- BEST PEFORMERS -->
+						<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/tcs/full time/tcs match analysis">
+							<translation id="title" translation_id="441061" type="use" value="Best Peformers" />
+						</widget>
+						<!-- ASSMAN FEEDBACK -->
+						<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+							<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+						</widget>
+						<!-- MATCH REPORT -->
+						<widget class="match_report_panel" id="mtrp" file="match/match report small">
+							<translation id="title" translation_id="248079" type="use" value="Report" />
+						</widget>
+						<!-- LATEST SCORES -->
+						<widget class="match_latest_scores_panel" id="mlsp" file="match/tcs/full time/tcs latest scores" save_session_state="true">
+							<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+						</widget>
+						<!-- LATEST EVENTS -->
+						<widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+							<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+						</widget>
+						<!-- LEAGUE TABLE -->
+						<widget class="match_league_table_panel" id="mltp" MLTs="true">
+							<translation id="title" translation_id="248082" type="use" value="League Table" />
+						</widget>
+						<!-- HEATMAPS -->
+						<widget class="match_analysis_panel" file="match/tcs/full time/team heatmap" id="tthm" >
+							<translation id="title" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+						</widget>
+					</widget>
+
+					<!-- BOTTOM SELECTOR -->
+					<widget class="match_view_selector_panel" default_height="-1" id="seL2" pause_match_on_menu_opening="true" default_item="mile" file="match/tcs/review/selector">
+						<!-- MATCH STATS -->
+						<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+							<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+						</widget>
+						<!-- MILESTONES -->
+						<widget class="match_preview_milestones_panel" id="mile" miti="1">
+							<translation id="title" translation_id="308471" type="use" value="Milestones" />
+						</widget>
+						<!-- BEST PEFORMERS -->
+						<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/tcs/full time/tcs match analysis">
+							<translation id="title" translation_id="441061" type="use" value="Best Peformers" />
+						</widget>
+						<!-- ASSMAN FEEDBACK -->
+						<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+							<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+						</widget>
+						<!-- MATCH REPORT -->
+						<widget class="match_report_panel" id="mtrp" file="match/match report small">
+							<translation id="title" translation_id="248079" type="use" value="Report" />
+						</widget>
+						<!-- LATEST SCORES -->
+						<widget class="match_latest_scores_panel" id="mlsp" file="match/tcs/full time/tcs latest scores" save_session_state="true">
+							<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+						</widget>
+						<!-- LATEST EVENTS -->
+						<widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+							<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+						</widget>
+						<!-- LEAGUE TABLE -->
+						<widget class="match_league_table_panel" id="mltp" MLTs="true">
+							<translation id="title" translation_id="248082" type="use" value="League Table" />
+						</widget>
+						<!-- HEATMAPS -->
+						<widget class="match_analysis_panel" file="match/tcs/full time/team heatmap" id="tthm" >
+							<translation id="title" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+						</widget>
 					</widget>
 				</container>
-
-				<!-- DIVIDER -->
-				<widget class="horizontal_divider" />
-
-				<!-- MILESTONES -->
-				<container class="subsection_box" appearance="tcs/match/ibh/transparent/paper" >
-					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
-					<translation id="title" type="use" value="Milestones" />
-					<widget class="match_preview_milestones_panel" id="mile" miti="1">
-						<record id="object_property">
-							<integer id="get_property" value="objt" />
-							<integer id="set_property" value="objt" />
-						</record>
-					</widget>
-				</container>		
 			</container>
 
 			<!-- MIDDLE CONTAINER -->
@@ -140,129 +201,187 @@
 				</container>
 
 				<!-- 2ND LEVEL -->			
-				<container >
-					<layout class="horizontal_arrange" horizontal_layout="-5,3,-3,-3"/>
+				<container class="vertical_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="2" min_height_bottom="2" id="midbot">
+					<!-- DEFAULT PROPERTIES SO WE DON'T HAVE TO USE OBJECT_PROPERTY OVER AND OVER AGAIN -->
+					<record id="default_properties">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</record>
 
-					<!-- BEST/WORST PEFORMERS -->
-					<container class="bordered_box"  appearance="tcs/match/ibh/transparent/paper" >
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+					<widget class="match_view_selector_panel" id="seML1" pause_match_on_menu_opening="true" default_item="Anal" file="match/tcs/review/selector">
+						<!-- MATCH STATS -->
+						<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+							<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+						</widget>
+						<!-- MILESTONES -->
+						<widget class="match_preview_milestones_panel" id="mile" miti="1">
+							<translation id="title" translation_id="308471" type="use" value="Milestones" />
+						</widget>
+						<!-- BEST PEFORMERS -->
 						<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/tcs/full time/tcs match analysis">
-							<record id="object_property">
-								<integer id="get_property" value="objt" />
-								<integer id="set_property" value="objt" />
-							</record>
+							<translation id="title" translation_id="441061" type="use" value="Best Peformers" />
 						</widget>
-					</container>				
-
-					<widget class="vertical_divider" width="3"/> 
-
-
-					<container>
-						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-
-						<container>
-							<layout class="arrange_vertical_attachment" alignment="top" gap="0" />
-							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
-
-							<!--team name-->
-							<widget class="text" id="hTEN" auto_size="vertical" alignment="centre" >
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-							</widget>
-
-							<!--formation text-->
-							<widget class="link_button_title" id="hFOR" section="bmfs" colour="text" red_replacement="text" blue_replacement="text">
-								<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
-								<record id="auto_size_restrictions">
-									<string id="type" value="widget" />
-									<flags id="target" value="prnt" />
-									<string id="limit_type" value="maximum" />
-									<string id="orientation" value="horizontal" />
-								</record>
-							</widget>
-						</container>
-
-						<!--heat map-->
-						<widget class="preselected_match_chalkboard_panel" id="pmcH" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">
-							<record id="object_property" get_property="objt" set_property="objt" />
-							<list id="chalkboard_events_to_display">
-								<!-- Heatmap -->
-								<integer value="43" />
-								<integer value="65" />
-							</list>
+						<!-- ASSMAN FEEDBACK -->
+						<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+							<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
 						</widget>
-					</container>
-
-
-					<!--away heat map-->
-					<container>
-						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-
-						<container>
-							<layout class="arrange_vertical_attachment" alignment="top" gap="0"/>
-							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
-
-							<!--team name-->
-							<widget class="text" id="aTEN" auto_size="vertical" alignment="centre">
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-							</widget>
-
-							<!--formation text-->
-							<widget class="link_button_title" id="aFOR" section="bmfs" colour="text" red_replacement="text" blue_replacement="text">
-								<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
-								<record id="auto_size_restrictions">
-									<string id="type" value="widget" />
-									<flags id="target" value="prnt" />
-									<string id="limit_type" value="maximum" />
-									<string id="orientation" value="horizontal" />
-								</record>
-							</widget>
-						</container>
-
-						<!--heat map-->
-						<widget class="preselected_match_chalkboard_panel" id="pmcA" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false"  wants_global_events="false"  enable_popup="false">
-							<record id="object_property" get_property="objt" set_property="objt" />
-							<list id="chalkboard_events_to_display">
-								<!-- Heatmap -->
-								<integer value="43" />
-								<integer value="65" />
-							</list>
+						<!-- MATCH REPORT -->
+						<widget class="match_report_panel" id="mtrp" file="match/match report small">
+							<translation id="title" translation_id="248079" type="use" value="Report" />
 						</widget>
-					</container>
+						<!-- LATEST SCORES -->
+						<widget class="match_latest_scores_panel" id="mlsp" file="match/tcs/full time/tcs latest scores" save_session_state="true">
+							<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+						</widget>
+						<!-- LATEST EVENTS -->
+						<widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+							<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+						</widget>
+						<!-- LEAGUE TABLE -->
+						<widget class="match_league_table_panel" id="mltp" MLTs="true">
+							<translation id="title" translation_id="248082" type="use" value="League Table" />
+						</widget>
+						<!-- HEATMAPS -->
+						<widget class="match_analysis_panel" file="match/tcs/full time/team heatmap" id="tthm" >
+							<translation id="title" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+						</widget>
+					</widget>
+
+					<widget class="match_view_selector_panel" id="seML2" pause_match_on_menu_opening="true" default_item="tthm" file="match/tcs/review/selector">
+						<!-- MATCH STATS -->
+						<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+							<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+						</widget>
+						<!-- MILESTONES -->
+						<widget class="match_preview_milestones_panel" id="mile" miti="1">
+							<translation id="title" translation_id="308471" type="use" value="Milestones" />
+						</widget>
+						<!-- BEST PEFORMERS -->
+						<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/tcs/full time/tcs match analysis">
+							<translation id="title" translation_id="441061" type="use" value="Best Peformers" />
+						</widget>
+						<!-- ASSMAN FEEDBACK -->
+						<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+							<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+						</widget>
+						<!-- MATCH REPORT -->
+						<widget class="match_report_panel" id="mtrp" file="match/match report small">
+							<translation id="title" translation_id="248079" type="use" value="Report" />
+						</widget>
+						<!-- LATEST SCORES -->
+						<widget class="match_latest_scores_panel" id="mlsp" file="match/tcs/full time/tcs latest scores" save_session_state="true">
+							<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+						</widget>
+						<!-- LATEST EVENTS -->
+						<widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+							<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+						</widget>
+						<!-- LEAGUE TABLE -->
+						<widget class="match_league_table_panel" id="mltp" MLTs="true">
+							<translation id="title" translation_id="248082" type="use" value="League Table" />
+						</widget>
+						<!-- HEATMAPS -->
+						<widget class="match_analysis_panel" file="match/tcs/full time/team heatmap" id="tthm" >
+							<translation id="title" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+						</widget>
+					</widget>
 				</container>	
 			</container>	
 
 			<!-- RIGHT SECTION -->
 			<container class="bordered_box" appearance="tcs/match/ibh/right/paper" >
-				<layout class="vertical_arrange" vertical_layout="-1,3,-1"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-				<!-- LEAGUE TABLE -->
-				<container class="subsection_box"  appearance="tcs/match/ibh/transparent/paper" >
-					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
-					<translation id="title" type="use" value="League Table" />
-					<widget class="match_league_table_panel" id="mltp" MLTs="true">
+				<container class="horizontal_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_width_top="2" min_width_bottom="2" id="left">
+					<!-- DEFAULT PROPERTIES SO WE DON'T HAVE TO USE OBJECT_PROPERTY OVER AND OVER AGAIN -->
+					<record id="default_properties">
 						<record id="object_property">
 							<integer id="get_property" value="objt" />
 							<integer id="set_property" value="objt" />
 						</record>
+					</record>
+
+					<!-- TOP SELECTOR -->
+					<widget class="match_view_selector_panel" default_height="-1" id="seR1" pause_match_on_menu_opening="true" default_item="mltp" file="match/tcs/review/selector">
+						<!-- MATCH STATS -->
+						<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+							<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+						</widget>
+						<!-- MILESTONES -->
+						<widget class="match_preview_milestones_panel" id="mile" miti="1">
+							<translation id="title" translation_id="308471" type="use" value="Milestones" />
+						</widget>
+						<!-- BEST PEFORMERS -->
+						<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/tcs/full time/tcs match analysis">
+							<translation id="title" translation_id="441061" type="use" value="Best Peformers" />
+						</widget>
+						<!-- ASSMAN FEEDBACK -->
+						<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+							<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+						</widget>
+						<!-- MATCH REPORT -->
+						<widget class="match_report_panel" id="mtrp" file="match/match report small">
+							<translation id="title" translation_id="248079" type="use" value="Report" />
+						</widget>
+						<!-- LATEST SCORES -->
+						<widget class="match_latest_scores_panel" id="mlsp" file="match/tcs/full time/tcs latest scores" save_session_state="true">
+							<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+						</widget>
+						<!-- LATEST EVENTS -->
+						<widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+							<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+						</widget>
+						<!-- LEAGUE TABLE -->
+						<widget class="match_league_table_panel" id="mltp" MLTs="true">
+							<translation id="title" translation_id="248082" type="use" value="League Table" />
+						</widget>
+						<!-- HEATMAPS -->
+						<widget class="match_analysis_panel" file="match/tcs/full time/team heatmap" id="tthm" >
+							<translation id="title" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+						</widget>
 					</widget>
-				</container>		
 
-				<!-- DIVIDER -->
-				<widget class="horizontal_divider" />
-
-				<!-- LATEST SCORES -->
-				<container class="subsection_box"  appearance="tcs/match/ibh/transparent/paper" >
-					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
-					<translation id="title" type="use" value="Latest Scores" />
-
-					<widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
-						<record id="object_property">
-							<integer id="get_property" value="objt" />
-							<integer id="set_property" value="objt" />
-						</record>
-					</widget>				
+					<!-- BOTTOM SELECTOR -->
+					<widget class="match_view_selector_panel" default_height="-1" id="seR2" pause_match_on_menu_opening="true" default_item="mlsp" file="match/tcs/review/selector">
+						<!-- MATCH STATS -->
+						<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+							<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+						</widget>
+						<!-- MILESTONES -->
+						<widget class="match_preview_milestones_panel" id="mile" miti="1">
+							<translation id="title" translation_id="308471" type="use" value="Milestones" />
+						</widget>
+						<!-- BEST PEFORMERS -->
+						<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/tcs/full time/tcs match analysis">
+							<translation id="title" translation_id="441061" type="use" value="Best Peformers" />
+						</widget>
+						<!-- ASSMAN FEEDBACK -->
+						<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+							<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+						</widget>
+						<!-- MATCH REPORT -->
+						<widget class="match_report_panel" id="mtrp" file="match/match report small">
+							<translation id="title" translation_id="248079" type="use" value="Report" />
+						</widget>
+						<!-- LATEST SCORES -->
+						<widget class="match_latest_scores_panel" id="mlsp" file="match/tcs/full time/tcs latest scores" save_session_state="true">
+							<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+						</widget>
+						<!-- LATEST EVENTS -->
+						<widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+							<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+						</widget>
+						<!-- LEAGUE TABLE -->
+						<widget class="match_league_table_panel" id="mltp" MLTs="true">
+							<translation id="title" translation_id="248082" type="use" value="League Table" />
+						</widget>
+						<!-- HEATMAPS -->
+						<widget class="match_analysis_panel" file="match/tcs/full time/team heatmap" id="tthm" >
+							<translation id="title" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+						</widget>
+					</widget>
 				</container>
 			</container>
 		</container>
