@@ -8,7 +8,7 @@
 		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" >
 
 			<!-- PLAYER INFORMATION -->
-			<container class="bordered_box" appearance="tcs/boxes/header/paper" default_width="-1" minimum_width="820" priority="1">
+			<container class="bordered_box" appearance="tcs/boxes/header/paper" default_width="-1" minimum_width="750" priority="1">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 				<widget class="player_personal_details_panel" file="player/tcs/training/personal details" id="ppdp">
 					<record id="object_property" get_property="objt" set_property="objt"/>
@@ -17,7 +17,7 @@
 			
 			
 						<!-- TRAINING PERFORMANCE -->
-			<container class="bordered_box" default_width="300" minimum_width="251" priority="2">
+			<container class="bordered_box" default_width="350" minimum_width="120" priority="2">
 <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 				<widget class="player_training_performance_panel" file="player/wannachup/wannachup player attribute analyser panel" id="paAn">
@@ -27,7 +27,7 @@
 			</container>
 
 			<!-- TRAINING PERFORMANCE -->
-			<container class="bordered_box" default_width="300" minimum_width="251" priority="1">
+			<container class="bordered_box" default_width="350" minimum_width="120" priority="1">
 				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 				<widget class="player_training_performance_panel" file="player/tcs/training/training performance" id="ptpp">

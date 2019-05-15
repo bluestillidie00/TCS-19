@@ -120,7 +120,7 @@
 		<widget class="vertical_divider" width="3"/> 
 
 		<!-- PLAYER TRAITS -->
-		<container id="botc" default_width="150" minimum_width="150" priority="1" >
+		<container id="botc" default_width="-1" minimum_width="150" priority="1" >
 			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-2" />
 			<record id="default_properties" auto_size="vertical" colour="secondary"/>
 			<widget class="label" font="title1">
@@ -132,25 +132,7 @@
 				</widget>
 			</container>
 		</container>
-		
-		<widget class="vertical_divider" width="3"/> 
-		
-		<!-- PLAYER SCOUT REPORT -->
-		<container class="player_scout_reports_panel" file="none" default_width="-1">
 
-			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
-			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
-			<record id="object_property" get_property="objt" set_property="objt" />
-
-			<!-- PROS AND CONS -->
-			<container >
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
-
-				<widget class="player_scout_reports_panel" id="tcspc" file="player/tcs/training/tcs pros cons">
-				</widget> 
-			</container>			
-		</container>
 
 	</container>
 </panel>

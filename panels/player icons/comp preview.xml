@@ -13,9 +13,9 @@
 	<container>
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
+			<!-- PLAYER PICTURE 
 		<container>
 			<layout class="stick_to_sides_attachment" alignment="all" inset="18" apply_to_children="true"/>
-			<!-- PLAYER PICTURE -->
 			<widget class="object_portrait_picture" id="pict" scale_picture="true" >
 				<layout class="stick_to_sides_attachment" alignment="bottom,right" inset="0,22" />
 				<record id="object_property">
@@ -23,7 +23,7 @@
 					<integer id="set_property" value="objt"/>
 				</record>
 			</widget>
-		</container>
+		</container> -->
 
 		<!-- ICONS (INJURY, STAR PLAYER ETC) -->
 		<container id="icoC" height="16" width="16" >

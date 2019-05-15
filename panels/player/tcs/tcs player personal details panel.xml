@@ -41,7 +41,7 @@
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
 		<!-- LAYOUT / USE A,B,C,D, ETC NAMING -->
-		<layout class="arrange_horizontal_attachment" layout="190,3,190,3,190,3,-1" offset="0" gap="5" />	
+		<layout class="arrange_horizontal_attachment" layout="180,3,180,3,180,3,-1" offset="0" gap="5" />	
 
 		<container >
 			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
