@@ -98,11 +98,6 @@
 	<!-- TCS Sky Sports -->
 	<colour name="sky sports blue" red="5" green="15" blue="200" />
 
-	<!-- CAPTION -->
-	<colour name="match caption background" red="55" green="0" blue="60"/>
-	<colour name="match caption border" red="0" green="255" blue="135"/>
-	
-
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 	<!-- misc properties -->
