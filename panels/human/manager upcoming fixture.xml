@@ -120,11 +120,11 @@
 			<widget class="text" id="nmpl" auto_size="vertical" alignment="centre" size="8"/>
 
 			<!--buttons to arrange a friendly-->
-			<widget class="link_appearance_button" id="arcf">
+			<widget class="link_appearance_button" red_replacement="secondary" id="arcf">
 				<translation id="text" translation_id="296343" type="use" value="Arrange Club Friendly" />
 				<layout class="centre_in_parent_attachment" alignment="horizontal" />
 			</widget>
-			<widget class="link_appearance_button" id="arnf">
+			<widget class="link_appearance_button" red_replacement="secondary" id="arnf">
 				<translation id="text" translation_id="296344" type="use" value="Arrange National Friendly" />
 				<layout class="centre_in_parent_attachment" alignment="horizontal" />
 			</widget>
