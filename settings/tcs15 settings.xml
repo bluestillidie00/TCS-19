@@ -23,7 +23,7 @@
 	<colour name="dark_box_background" value="tcs_dark_box"/>
 	<colour name="dark_box_border" value="fm purple"/>
 	<colour name="dark_box_shadow" red="0" green="0" blue="0"/>
-	<colour name="subtle_box_background" value="tcs_dark_box"/>
+	<colour name="subtle_box_background" value="tcs_light_box_alt"/>
 	<colour name="subtle_box_border" red="0" green="0" blue="0" alpha="255"/>
 	<colour name="popup_box_background" value="tcs_dark_box"/>
 
