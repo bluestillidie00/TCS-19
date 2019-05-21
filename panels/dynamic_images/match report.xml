@@ -69,7 +69,7 @@
 				<record id="object_property" get_property="Ttea" set_property="objt"/>
 			</widget>
 			<widget class="spacer" />
-			<widget class="text" id="goal" alignment="centre,auto_fit" colour="white" font="match report score">
+			<widget class="text" id="goal" alignment="centre,auto_fit" style="bold" colour="white" >
 				<colour id="link_colour" red="0" green="0" blue="0" alpha="1"/>
 				<record id="object_property">
 					<list id="get_properties">

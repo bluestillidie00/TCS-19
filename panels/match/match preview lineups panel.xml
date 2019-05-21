@@ -130,7 +130,8 @@
 						<container />
 
 						<!-- MANAGER -->
-						<container height="200">
+				<!-- MANAGER -->
+						<container height="180">
 							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 							<!-- LABEL -->
@@ -139,10 +140,9 @@
 							</widget>
 
 							<!-- MANAGER FACE -->
-							<container height="200">
+							<container height="160" class="client_object_viewer_xml_panel">
 								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
-								<container class="client_object_viewer_xml_panel" height="180">
 									<record id="object_property">
 										<integer id="get_property" value="home" />
 										<integer id="set_property" value="objt" />
@@ -155,15 +155,8 @@
 											<integer id="get_property" value="TMnR" />
 											<integer id="set_property" value="objt" />
 										</record>
-									</widget>
-								</container>
-
-								<widget class="person_button" id="pers1" alignment="centre" style="semi_bold" >
-									<record id="object_property">
-										<integer id="get_property" value="TMnR" />
-										<integer id="set_property" value="valu" />
-									</record>
 								</widget>
+	
 							</container>
 						</container>	
 					</container>	
@@ -396,7 +389,7 @@
 						<container />
 
 						<!-- MANAGER -->
-						<container height="200">
+						<container height="180">
 							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 							<!-- LABEL -->
@@ -405,10 +398,9 @@
 							</widget>
 
 							<!-- MANAGER FACE -->
-							<container height="200">
+							<container height="160" class="client_object_viewer_xml_panel">
 								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
-								<container class="client_object_viewer_xml_panel" height="180">
 									<record id="object_property">
 										<integer id="get_property" value="away" />
 										<integer id="set_property" value="objt" />
@@ -421,15 +413,8 @@
 											<integer id="get_property" value="TMnR" />
 											<integer id="set_property" value="objt" />
 										</record>
-									</widget>
-								</container>
-
-								<widget class="person_button" id="pers" alignment="centre" style="semi_bold" >
-									<record id="object_property">
-										<integer id="get_property" value="TMnR" />
-										<integer id="set_property" value="valu" />
-									</record>
 								</widget>
+	
 							</container>
 						</container>	
 					</container>	
