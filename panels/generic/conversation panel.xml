@@ -1,0 +1,46 @@
+<panel >
+<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
+	<boolean id="save_immediate_state" value="true"/>
+
+	<container id="Mnbx">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<container class="bordered_box" appearance="boxes/bordered/standard/top/paper" red_replacement="tcs_dark_box" id="TtBx" height="80">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="15" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="140" apply_to_children="true"/>
+
+				<widget class="text" id="cont" auto_size="vertical" alignment="left,centre_y" font="label" />
+				<widget class="text" id="cnvh" auto_size="vertical" font="title" alignment="left,centre_y" size="xlarge"/>
+			</container>
+
+			<container width="34">
+				<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="10"/>
+
+				<widget class="icon_button" id="bkBt" click_event="bclk" icon="icons/16px/up" disabled="true" appearance="none"/>
+				<widget class="icon_button" id="frWr" click_event="fclk" icon="icons/16px/down" disabled="true" appearance="none"/>
+			</container>
+		</container>
+
+		<container class="bordered_box" appearance="boxes/bordered/standard/bottom/paper" id="celB">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<!-- Conversation cells are created here. -->
+		</container>
+	</container>
+	
+	<container class="empty_state" id="nVcC" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all"/>
+		
+		<widget class="label" id="nVcv" hidden="true" alignment="centre" size="large">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="10"/>
+		</widget>
+	</container>
+</panel>
