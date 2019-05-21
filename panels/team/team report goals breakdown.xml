@@ -1,0 +1,76 @@
+<!-- THIS IS THE WIDGET THAT SHOWS ON THE LEFT OF THE FORMATION ANALYSIS SCREEN -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- MAIN CONTAINER -->
+	<container id="main" >
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" vertical_gap="0"/>
+
+		<!-- TOP BIT (PITCH AND AGAINST RATING TEAMS -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0" vertical_offset="0"/>
+
+			<!-- TITLE AND PITCH -->
+			<container height="270" class="bordered_box" red_replacement="pitch_box_background" appearance="boxes/bordered/standard/top left/paper" >
+				<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_gap="0" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- FORMATION -->
+				<widget class="label" id="titl" size="xlarge" font="title" colour="accent" />
+
+				<!-- MINUTES USED -->
+				<widget class="label" id="mins" auto_size="vertical" colour="faded text" />
+
+				<!-- PITCH -->
+				<widget class="pitch_with_tactics" height="200" id="pitc" vertical="false" icon_flags="dont_fade_icons, dont_use_player_instructions_menu" pitch_is_read_only="true" allow_y_score_adjustment_for_roles="false" pitch_override_icon_size="3" pitch_dont_draw_indicators="true" pitch_alignment="centre" line_width="1" pitch_line_colour="text" pitch_base_appearance="" pitch_draw_grass="true" pitch_pattern="tcs_h">
+				</widget>
+			</container>
+			
+			<container class="bordered_box" red_replacement="tcs_dark_box" appearance="boxes/bordered/standard/bottom left/paper">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"  vertical_offset="0" />
+
+			<container>
+				<translation id="title" translation_id="389412" type="use" value="Chances Breakdown[COMMENT: team report; box title for aspect of statistical report Fr 7894, displays a visual breakdown of how/where goalscoring chances were created]" />
+
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="hihr" alignment="left,centre_y" font="label">
+					<translation id="text" translation_id="316716" type="use" value="Higher rated teams[COMMENT: team report goals breakdown; label text for comparable teams in regards this statistic]" />
+				</widget>
+				<widget class="horizontal_bar_display" id="barh" />
+
+				<widget class="label" id="same" alignment="left,centre_y" font="label">
+					<translation id="text" translation_id="316717" type="use" value="Similar rated teams[COMMENT: team report goals breakdown; label text for comparable teams in regards this statistic]" />
+				</widget>
+				<widget class="horizontal_bar_display" id="bars" />
+
+				<widget class="label" id="lowr" alignment="left,centre_y" font="label">
+					<translation id="text" translation_id="463512" type="use" value="Lower rated teams[COMMENT: team report goals breakdown; label text for comparable teams in regards this statistic, revision to ID 316718]" />
+				</widget>
+				<widget class="horizontal_bar_display" id="barl" />
+			</container>
+
+	
+		<container class="bordered_box" appearance="boxes/bordered/transparent/paper" id="cnCN">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" vertical_offset="0" />
+
+			<widget class="text" font="title" auto_size="vertical" colour="text">
+				<translation id="text" translation_id="466539" type="use" value="Chances For/Against[COMMENT: tactics analysis panel, overall difference in chances between the user's team and the opposition team in chances created]" />
+				<translation id="hint" translation_id="466540" type="use" value="The overall difference between chances created in attack and chances conceded in defence while using this tactic.[COMMENT: tactics analysis panel, overall difference in chances between the user's team and the opposition team in chances created]" />
+			</widget>
+
+			<widget class="text" size="18" style="bold" id="dFGL" auto_size="vertical" />
+
+			<widget class="label" id="gsrl" auto_size="vertical" colour="faded text" />
+			<widget class="label" id="gcrl" auto_size="vertical" colour="faded text" />
+
+
+		</container>
+
+
+
+	</container>
+
+
+	</container>
+	</container>
+</panel>

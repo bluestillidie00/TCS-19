@@ -1,0 +1,65 @@
+<!-- THIS IS THE SEASON STATS PANEL THAT SHOWS ON THE PLAYER ATTRIBUTE SELECTOR -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="3" apply_to_children="true"/> 
+
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="-1,300" horizontal_gap="0" />
+
+		<container class="bordered_box">
+		</container>
+
+		<!-- PER 90 MINUTES SECTION-->
+		<container >
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<!-- TITLE SECTION -->
+			<container >
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--PER 90 MINUTES SECTION -->
+				<widget class="text" font="title" alignment="centre" colour="text" auto_size="vertical">
+					<translation id="text" translation_id="382745" type="use" value="Per 90 Minutes[COMMENT: section title; displayed stats that the units are based per 90 minutes]" />
+				</widget>
+
+				<!-- TOTAL MINUTES PLAYED -->
+				<widget class="text" id="tmPl" alignment="centre_x,top" colour="faded text" size="small" auto_size="vertical"/>
+			</container>
+
+			<!-- STATS UNDERNEATH -->
+			<container>
+				<layout class="vertical_arrange" vertical_layout="-1,-1,-1" vertical_gap="0" />
+
+				<!--TOP SECTION -->
+				<container class="bordered_box" red_replacement="tcs_light_box">
+					<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0" />
+					<record id="default_properties" file="player/player additional stats item"  />
+					<!--Dirbbles Made-->
+					<container id="drbV" />
+					<!--Dirbbles Made per 90-->
+					<container id="dr9V" />
+				</container>
+
+				<!-- MIDDLE SECTION -->
+				<container class="bordered_box" red_replacement="tcs_light_box">
+					<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0" />
+					<record id="default_properties" file="player/player additional stats item"  />
+					<!--Fouls Against-->
+					<container id="fouV" />
+					<!--Fouls Against per 90-->
+					<container id="fo9V" />
+				</container>
+
+				<!-- BOTTOM SECTION -->
+				<container class="bordered_box" red_replacement="tcs_light_box">
+					<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0" />
+					<record id="default_properties" file="player/player additional stats item"  />
+					<!--Fouls-->
+					<container id="FouV" />
+					<!--Per 90 Minutes-->
+					<container id="Fo9V" />
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

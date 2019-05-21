@@ -1,7 +1,7 @@
 <panel>
   <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-  <container class="bordered_box" red_replacement="tcs_dark_box" appearance="boxes/bordered/standard/right/paper">
+  <container class="bordered_box" red_replacement="tcs_dark_box" appearance="boxes/bordered/standard/left/paper">
     <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
     <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 

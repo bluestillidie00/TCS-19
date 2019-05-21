@@ -1,591 +1,591 @@
 <panel>
-<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
-<container>
-	<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
-	<layout class="horizontal_arrange" horizontal_layout="1105,-1" horizontal_gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
 
-	<!-- IMPORTANT Need to keep this synced up with number of panels or we won't fill them all, we use this to minimise the amount of data the panel needs to request -->
-	<integer id="number_of_stories_to_request" value="75" />
-	<boolean id="show_daily_news_request" value="true" />
-	<boolean id="show_related_news" value="true" />
-	<boolean id="save_session_state" value="true" />
+	<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" >
 
-	<!-- COLOUR DECLARATIONS ~ USED TO AVOID HAVING TO ADD TO SETTINGS.XML-->
-	<colour name="light_bg" red="206" green="204" blue="204" />
-	<colour name="epl_light" red="250" green="255" blue="255" />
-	<colour name="epl_dark" red="32" green="34" blue="36" />
-	<colour name="epl_pur" red="56" green="0" blue="60" />
-	<colour name="epl_pin" red="233" green="0" blue="82" />
+		<!-- IMPORTANT Need to keep this synced up with number of panels or we won't fill them all, we use this to minimise the amount of data the panel needs to request -->
+		<integer id="number_of_stories_to_request" value="75" />
+		<boolean id="show_daily_news_request" value="true" />
+		<boolean id="show_related_news" value="true" />
+		<boolean id="save_session_state" value="true" />
 
-	<!-- START OF WEBSITE -->
-	<container class="tabbed_container" id="tabs" default_item="ssDa"  save_session_state="true" save_default_state="true">	
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<!-- COLOUR DECLARATIONS ~ USED TO AVOID HAVING TO ADD TO SETTINGS.XML-->
+		<colour name="light_bg" red="206" green="204" blue="204" />
+		<colour name="epl_light" red="250" green="255" blue="255" />
+		<colour name="epl_dark" red="32" green="34" blue="36" />
+		<colour name="epl_pur" red="56" green="0" blue="60" />
+		<colour name="epl_pin" red="233" green="0" blue="82" />
 
-		<container id="ssLi">
-			<translation id="title" type="use" value="Sky Sports Light" />
-			<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
-			<layout class="vertical_arrange" vertical_layout="30,87,-1" vertical_gap="0"/>
+<container default_width="1105" minimum_width="1105" priority="1">
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+		<!-- START OF WEBSITE -->
+		<container class="tabbed_container" id="tabs" default_item="ssDa"  save_session_state="true" save_default_state="true" >	
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
-			<!-- SPACER ~ ADDED TO SLIGHTLY INCREASE GAP BETWEEN TAB AND NEWSPAPER-->
-			<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
-				<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
-					<translation id="text" type="use" value="Sky Sports: " />
-				</widget>
-			</container>
+			<container id="ssLi">
+				<translation id="title" type="use" value="Sky Sports Light" />
+				<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
+				<layout class="vertical_arrange" vertical_layout="30,87,-1" vertical_gap="0"/>
 
-			<!-- SKY SPORTS HEADER -->
-			<container class="plain_box" appearance="tcs/sky sports/header" />
-
-			<!-- CONTAINER HOLDING WEBSITE -->
-			<container class="bordered_box" appearance="tcs/sky sports/website" red_replacement="light_bg" >
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-
-				<!-- SCROLLING BOX -->
-				<container class="scrolling_box">
-					<flags id="scroll_bar_class" value="scroll_bar_vertical_inbox" />
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-
-					<!-- ACTUAL WEBSITE -->
-					<container>
-						<!-- ARRANGES CONTENT OF CONATINER VERTICALLY -->
-						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" horizontal_inset="0" />
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="0" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="1" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="2" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="3" />
-						</container>
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="4" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="5" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="6" />
-						</container>	
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="7" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="8" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="9" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="10" />
-						</container>
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="11" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="12" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="13" />
-						</container>
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="14" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="15" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="16" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="17" />
-						</container>
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="18" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="19" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="20" />
-						</container>
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="21" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="22" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="23" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="24" />
-						</container>
-					</container>
-				</container>
-			</container>
-		</container>
-
-		<container id="ssDa">
-			<translation id="title" type="use" value="Sky Sports Dark" />
-			<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
-			<layout class="vertical_arrange" vertical_layout="30,87,-1" vertical_gap="0"/>
-
-			<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
-				<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
-					<translation id="text" type="use" value="Sky Sports: " />
-				</widget>
-			</container>
-
-			<!-- SKY SPORTS HEADER -->
-			<container class="plain_box" appearance="tcs/sky sports/header" />
-
-			<!-- CONTAINER HOLDING WEBSITE -->
-			<container class="bordered_box" appearance="tcs/sky sports/website" red_replacement="epl_dark" >
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-
-				<!-- SCROLLING BOX -->
-				<container class="scrolling_box">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-
-					<!-- ACTUAL WEBSITE -->
-					<container>
-						<!-- ARRANGES CONTENT OF CONATINER VERTICALLY -->
-						<attachment_group class="vertical_arrange_autosize" vertical_gap="12" vertical_offset="0" horizontal_inset="0" />
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="0" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="1" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="2" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="3" />
-						</container>
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="4" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="5" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="6" />
-						</container>	
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="7" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="8" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="9" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="10" />
-						</container>
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="11" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="12" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="13" />
-						</container>
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="14" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="15" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="16" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="17" />
-						</container>
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="18" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="19" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="20" />
-						</container>
-
-						<!-- LARGE NEWS CONTAINER -->
-						<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="21" />
-
-						<!-- SMALLER NEWS ITEMS UNDERNEATH -->
-						<container height="260">
-							<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
-
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="22" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="23" />
-							<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="24" />
-						</container>
-					</container>
-				</container>
-			</container>
-		</container>
-
-		<container id="epll">
-			<translation id="title" type="use" value="Premier League" />
-			<layout class="vertical_arrange" vertical_layout="30,110,-1" vertical_gap="0" />
-
-			<!-- TEXT AT TO OF WEBSITE -->
-			<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
-				<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
-					<translation id="text" type="use" value="Premier League: " />
-				</widget>
-			</container>
-
-			<!-- TITLEBAR AND TAB BAR -->
-			<container>
-				<layout class="vertical_arrange" vertical_layout="60,50" vertical_gap="0" />
-
-				<!-- TITLEBAR -->
-				<container>
-					<layout class="horizontal_arrange" horizontal_layout="89,-1" horizontal_gap="0"/>
-					<container class="plain_box" appearance="tcs/websites/epl/header left" red_replacement="epl_light" green_replacement="epl_pur"/>
-					<container class="plain_box" appearance="tcs/websites/epl/header" />
-				</container>
-
-				<!-- TAB BAR -->
-				<container class="bordered_box" appearance="tcs/websites/epl/tab" red_replacement="epl_light">
-					<layout class="horizontal_arrange" horizontal_layout="-1,300,-1" />
-
-					<widget class="spacer" />
-
-					<!-- BUTTON -->
-					<widget class="popup_button"  id="cspb" icon_enabled="true" multiline="false" fixed="false" width="230" height="30" hidden="true">
-						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+				<!-- SPACER ~ ADDED TO SLIGHTLY INCREASE GAP BETWEEN TAB AND NEWSPAPER-->
+				<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+					<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
+						<translation id="text" type="use" value="Sky Sports: " />
 					</widget>
-
-					<widget class="spacer" />
 				</container>
-			</container>
 
-			<!-- CONTAINER HOLDING WEBSITE -->
-			<container class="bordered_box" appearance="tcs/websites/epl/body" red_replacement="epl_light" >
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<!-- SKY SPORTS HEADER -->
+				<container class="plain_box" appearance="tcs/sky sports/header" />
 
-				<!-- SCROLLING BOX -->
-				<container class="scrolling_box">
-					<flags id="scroll_bar_class" value="scroll_bar_vertical_inbox" />
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				<!-- CONTAINER HOLDING WEBSITE -->
+				<container class="bordered_box" appearance="tcs/sky sports/website" red_replacement="light_bg" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-					<!-- ACTUAL WEBSITE -->
-					<container>
-						<!-- ARRANGES CONTENT OF CONTAINER VERTICALLY -->
-						<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="0" />
+					<!-- SCROLLING BOX -->
+					<container class="scrolling_box">
+						<flags id="scroll_bar_class" value="scroll_bar_vertical_inbox" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
-						<!-- MAIN HEADLINE -->
-						<container height="354" class="bordered_box" appearance="tcs/websites/epl/bg" red_replacement="epl_pur" >
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+						<!-- ACTUAL WEBSITE -->
+						<container>
+							<!-- ARRANGES CONTENT OF CONATINER VERTICALLY -->
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" horizontal_inset="0" />
 
-							<!-- PATTERN BEHIND THE ARTICLE -->
-							<container class="plain_box" appearance="tcs/websites/epl/pattern" red_replacement="epl_pin"/>
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="0" />
 
-							<!-- ACTUAL ARTICLE -->
-							<container class="competition_news_item_panel" file="competition/tcs/premier league large l" index="0" />
-						</container>
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-						<!-- SPONSORS UNDERNEATH MAIN ARTICLE -->
-						<container height="110">
-							<layout class="horizontal_arrange" horizontal_layout="-1,900,-1" />
-							<widget class="spacer" />
-							<container class="plain_box" appearance="tcs/websites/epl/sponsors"  />
-							<widget class="spacer" />
-						</container>
-
-						<!-- MORE ARTICLES ~ ANOTHER CONTAINER USED TO CONTROL INSET-->
-						<container >
-							<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="50" />
-
-							<!-- FOUR ARTICLES -->
-							<container height="230">
-								<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="1" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="5" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="3" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="4" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="1" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="2" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="3" />
 							</container>
 
-							<!-- DIVIDER -->
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-							<!-- FIVE ARTICLES -->
-							<container height="380">
-								<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
-								<!-- ARTICLE ON LEFT HAND SIDE -->
-								<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="2" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="4" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="5" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="6" />
+							</container>	
 
-								<!-- ARTICLES ON RIGHT HAND SIDE -->
-								<container >
-									<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="7" />
 
-									<!-- TOP ROW -->
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="6" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="7" />
-									</container>
-									<!-- BOTTOM ROW -->
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="8" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="9" />
-									</container>
-								</container>
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="8" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="9" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="10" />
 							</container>
 
-							<!-- DIVIDER -->
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-							<container height="230">
-								<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="10" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="11" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="12" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="13" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="11" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="12" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="13" />
 							</container>
 
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="14" />
 
-							<container height="380">
-								<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="14" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-								<container >
-									<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
-
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="15" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="16" />
-									</container>
-
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="17" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="18" />
-									</container>
-								</container>
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="15" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="16" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="17" />
 							</container>
 
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-							<container height="230">
-								<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="19" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="20" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="21" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="22" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="18" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="19" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="20" />
+							</container>
+
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large" height="361" index="21" />
+
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="22" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="23" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium" index="24" />
 							</container>
 						</container>
 					</container>
 				</container>
 			</container>
-		</container>
 
-		<container id="epld">
-			<translation id="title" type="use" value="Premier League Dark" />
-			<layout class="vertical_arrange" vertical_layout="30,110,-1" vertical_gap="0" />
+			<container id="ssDa">
+				<translation id="title" type="use" value="Sky Sports Dark" />
+				<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
+				<layout class="vertical_arrange" vertical_layout="30,87,-1" vertical_gap="0"/>
 
-			<!-- TEXT AT TO OF WEBSITE -->
-			<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
-				<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
-					<translation id="text" type="use" value="Premier League: " />
-				</widget>
-			</container>
-
-			<!-- TITLEBAR AND TAB BAR -->
-			<container>
-				<layout class="vertical_arrange" vertical_layout="60,50" vertical_gap="0" />
-
-				<!-- TITLEBAR -->
-				<container>
-					<layout class="horizontal_arrange" horizontal_layout="89,-1" horizontal_gap="0"/>
-					<container class="plain_box" appearance="tcs/websites/epl/header left" red_replacement="epl_light" green_replacement="epl_pur"/>
-					<container class="plain_box" appearance="tcs/websites/epl/header" />
-				</container>
-
-				<!-- TAB BAR -->
-				<container class="bordered_box" appearance="tcs/websites/epl/tab" red_replacement="epl_dark">
-					<layout class="horizontal_arrange" horizontal_layout="300,-1" />
-
-					<!-- BUTTON -->
-					<widget class="popup_button"  id="cspb" icon_enabled="true" multiline="false" fixed="false" width="230" height="30" hidden="true">
-						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+				<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+					<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
+						<translation id="text" type="use" value="Sky Sports: " />
 					</widget>
-
-					<widget class="spacer" />
 				</container>
-			</container>
 
-			<!-- CONTAINER HOLDING WEBSITE -->
-			<container class="bordered_box" appearance="tcs/websites/epl/body" red_replacement="epl_dark" >
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<!-- SKY SPORTS HEADER -->
+				<container class="plain_box" appearance="tcs/sky sports/header" />
 
-				<!-- SCROLLING BOX -->
-				<container class="scrolling_box">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				<!-- CONTAINER HOLDING WEBSITE -->
+				<container class="bordered_box" appearance="tcs/sky sports/website" red_replacement="epl_dark" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-					<!-- ACTUAL WEBSITE -->
-					<container>
-						<!-- ARRANGES CONTENT OF CONTAINER VERTICALLY -->
-						<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="0" />
+					<!-- SCROLLING BOX -->
+					<container class="scrolling_box">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
-						<!-- MAIN HEADLINE -->
-						<container height="354" class="bordered_box" appearance="tcs/websites/epl/bg" red_replacement="epl_pur" >
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+						<!-- ACTUAL WEBSITE -->
+						<container>
+							<!-- ARRANGES CONTENT OF CONATINER VERTICALLY -->
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="12" vertical_offset="0" horizontal_inset="0" />
 
-							<!-- PATTERN BEHIND THE ARTICLE -->
-							<container class="plain_box" appearance="tcs/websites/epl/pattern" red_replacement="epl_pin"/>
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="0" />
 
-							<!-- ACTUAL ARTICLE -->
-							<container class="competition_news_item_panel" file="competition/tcs/premier league large l" index="0" />
-						</container>
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-						<!-- SPONSORS UNDERNEATH MAIN ARTICLE -->
-						<container height="110">
-							<layout class="horizontal_arrange" horizontal_layout="-1,900,-1" />
-							<widget class="spacer" />
-							<container class="plain_box" appearance="tcs/websites/epl/sponsors"  />
-							<widget class="spacer" />
-						</container>
-
-						<!-- MORE ARTICLES ~ ANOTHER CONTAINER USED TO CONTROL INSET-->
-						<container >
-							<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="50" />
-
-							<!-- FOUR ARTICLES -->
-							<container height="230">
-								<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="1" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="5" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="3" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="4" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="1" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="2" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="3" />
 							</container>
 
-							<!-- DIVIDER -->
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-							<!-- FIVE ARTICLES -->
-							<container height="420">
-								<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
-								<!-- ARTICLE ON LEFT HAND SIDE -->
-								<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="2" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="4" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="5" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="6" />
+							</container>	
 
-								<!-- ARTICLES ON RIGHT HAND SIDE -->
-								<container >
-									<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="7" />
 
-									<!-- TOP ROW -->
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="6" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="7" />
-									</container>
-									<!-- BOTTOM ROW -->
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="8" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="9" />
-									</container>
-								</container>
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="8" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="9" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="10" />
 							</container>
 
-							<!-- DIVIDER -->
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-							<container height="230">
-								<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="10" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="11" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="12" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="13" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="11" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="12" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="13" />
 							</container>
 
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="14" />
 
-							<container height="380">
-								<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="14" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-								<container >
-									<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
-
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="15" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="16" />
-									</container>
-
-									<container>
-										<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="17" />
-										<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="18" />
-									</container>
-								</container>
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="15" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="16" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="17" />
 							</container>
 
-							<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
 
-							<container height="230">
-								<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="19" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="20" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="21" />
-								<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="22" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="18" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="19" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="20" />
+							</container>
+
+							<!-- LARGE NEWS CONTAINER -->
+							<container class="competition_news_item_panel" file="competition/tcs/competition news item large dark" height="361" index="21" />
+
+							<!-- SMALLER NEWS ITEMS UNDERNEATH -->
+							<container height="260">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="22" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="23" />
+								<container class="competition_news_item_panel" file="competition/tcs/competition news item medium dark" index="24" />
 							</container>
 						</container>
 					</container>
 				</container>
 			</container>
-		</container>
 
-	</container>
-	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0" />
+			<container id="epll">
+				<translation id="title" type="use" value="Premier League" />
+				<layout class="vertical_arrange" vertical_layout="30,110,-1" vertical_gap="0" />
+
+				<!-- TEXT AT TO OF WEBSITE -->
+				<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+					<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
+						<translation id="text" type="use" value="Premier League: " />
+					</widget>
+				</container>
+
+				<!-- TITLEBAR AND TAB BAR -->
+				<container>
+					<layout class="vertical_arrange" vertical_layout="60,50" vertical_gap="0" />
+
+					<!-- TITLEBAR -->
+					<container>
+						<layout class="horizontal_arrange" horizontal_layout="89,-1" horizontal_gap="0"/>
+						<container class="plain_box" appearance="tcs/websites/epl/header left" red_replacement="epl_light" green_replacement="epl_pur"/>
+						<container class="plain_box" appearance="tcs/websites/epl/header" />
+					</container>
+
+					<!-- TAB BAR -->
+					<container class="bordered_box" appearance="tcs/websites/epl/tab" red_replacement="epl_light">
+						<layout class="horizontal_arrange" horizontal_layout="-1,300,-1" />
+
+						<widget class="spacer" />
+
+						<!-- BUTTON -->
+						<widget class="popup_button"  id="cspb" icon_enabled="true" multiline="false" fixed="false" width="230" height="30" hidden="true">
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+						</widget>
+
+						<widget class="spacer" />
+					</container>
+				</container>
+
+				<!-- CONTAINER HOLDING WEBSITE -->
+				<container class="bordered_box" appearance="tcs/websites/epl/body" red_replacement="epl_light" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<!-- SCROLLING BOX -->
+					<container class="scrolling_box">
+						<flags id="scroll_bar_class" value="scroll_bar_vertical_inbox" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+						<!-- ACTUAL WEBSITE -->
+						<container>
+							<!-- ARRANGES CONTENT OF CONTAINER VERTICALLY -->
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="0" />
+
+							<!-- MAIN HEADLINE -->
+							<container height="354" class="bordered_box" appearance="tcs/websites/epl/bg" red_replacement="epl_pur" >
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+								<!-- PATTERN BEHIND THE ARTICLE -->
+								<container class="plain_box" appearance="tcs/websites/epl/pattern" red_replacement="epl_pin"/>
+
+								<!-- ACTUAL ARTICLE -->
+								<container class="competition_news_item_panel" file="competition/tcs/premier league large l" index="0" />
+							</container>
+
+							<!-- SPONSORS UNDERNEATH MAIN ARTICLE -->
+							<container height="110">
+								<layout class="horizontal_arrange" horizontal_layout="-1,900,-1" />
+								<widget class="spacer" />
+								<container class="plain_box" appearance="tcs/websites/epl/sponsors"  />
+								<widget class="spacer" />
+							</container>
+
+							<!-- MORE ARTICLES ~ ANOTHER CONTAINER USED TO CONTROL INSET-->
+							<container >
+								<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="50" />
+
+								<!-- FOUR ARTICLES -->
+								<container height="230">
+									<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="1" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="5" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="3" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="4" />
+								</container>
+
+								<!-- DIVIDER -->
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<!-- FIVE ARTICLES -->
+								<container height="380">
+									<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
+									<!-- ARTICLE ON LEFT HAND SIDE -->
+									<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="2" />
+
+									<!-- ARTICLES ON RIGHT HAND SIDE -->
+									<container >
+										<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+
+										<!-- TOP ROW -->
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="6" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="7" />
+										</container>
+										<!-- BOTTOM ROW -->
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="8" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="9" />
+										</container>
+									</container>
+								</container>
+
+								<!-- DIVIDER -->
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<container height="230">
+									<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="10" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="11" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="12" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="13" />
+								</container>
+
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<container height="380">
+									<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="14" />
+
+									<container >
+										<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="15" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="16" />
+										</container>
+
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="17" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="18" />
+										</container>
+									</container>
+								</container>
+
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<container height="230">
+									<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="19" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="20" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="21" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small l" index="22" />
+								</container>
+							</container>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container id="epld">
+				<translation id="title" type="use" value="Premier League Dark" />
+				<layout class="vertical_arrange" vertical_layout="30,110,-1" vertical_gap="0" />
+
+				<!-- TEXT AT TO OF WEBSITE -->
+				<container class="bordered_box" appearance="tcs/websites/top" red_replacement="primary">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+					<widget class="text"  alignment="centre_x, centre_y" font="title1" colour="secondary" auto_size="horizontal" >
+						<translation id="text" type="use" value="Premier League: " />
+					</widget>
+				</container>
+
+				<!-- TITLEBAR AND TAB BAR -->
+				<container>
+					<layout class="vertical_arrange" vertical_layout="60,50" vertical_gap="0" />
+
+					<!-- TITLEBAR -->
+					<container>
+						<layout class="horizontal_arrange" horizontal_layout="89,-1" horizontal_gap="0"/>
+						<container class="plain_box" appearance="tcs/websites/epl/header left" red_replacement="epl_light" green_replacement="epl_pur"/>
+						<container class="plain_box" appearance="tcs/websites/epl/header" />
+					</container>
+
+					<!-- TAB BAR -->
+					<container class="bordered_box" appearance="tcs/websites/epl/tab" red_replacement="epl_dark">
+						<layout class="horizontal_arrange" horizontal_layout="300,-1" />
+
+						<!-- BUTTON -->
+						<widget class="popup_button"  id="cspb" icon_enabled="true" multiline="false" fixed="false" width="230" height="30" hidden="true">
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+						</widget>
+
+						<widget class="spacer" />
+					</container>
+				</container>
+
+				<!-- CONTAINER HOLDING WEBSITE -->
+				<container class="bordered_box" appearance="tcs/websites/epl/body" red_replacement="epl_dark" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<!-- SCROLLING BOX -->
+					<container class="scrolling_box">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+						<!-- ACTUAL WEBSITE -->
+						<container>
+							<!-- ARRANGES CONTENT OF CONTAINER VERTICALLY -->
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="0" />
+
+							<!-- MAIN HEADLINE -->
+							<container height="354" class="bordered_box" appearance="tcs/websites/epl/bg" red_replacement="epl_pur" >
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+								<!-- PATTERN BEHIND THE ARTICLE -->
+								<container class="plain_box" appearance="tcs/websites/epl/pattern" red_replacement="epl_pin"/>
+
+								<!-- ACTUAL ARTICLE -->
+								<container class="competition_news_item_panel" file="competition/tcs/premier league large l" index="0" />
+							</container>
+
+							<!-- SPONSORS UNDERNEATH MAIN ARTICLE -->
+							<container height="110">
+								<layout class="horizontal_arrange" horizontal_layout="-1,900,-1" />
+								<widget class="spacer" />
+								<container class="plain_box" appearance="tcs/websites/epl/sponsors"  />
+								<widget class="spacer" />
+							</container>
+
+							<!-- MORE ARTICLES ~ ANOTHER CONTAINER USED TO CONTROL INSET-->
+							<container >
+								<attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="0" horizontal_inset="50" />
+
+								<!-- FOUR ARTICLES -->
+								<container height="230">
+									<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="1" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="5" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="3" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="4" />
+								</container>
+
+								<!-- DIVIDER -->
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<!-- FIVE ARTICLES -->
+								<container height="420">
+									<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
+									<!-- ARTICLE ON LEFT HAND SIDE -->
+									<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="2" />
+
+									<!-- ARTICLES ON RIGHT HAND SIDE -->
+									<container >
+										<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+
+										<!-- TOP ROW -->
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="6" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="7" />
+										</container>
+										<!-- BOTTOM ROW -->
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="8" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="9" />
+										</container>
+									</container>
+								</container>
+
+								<!-- DIVIDER -->
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<container height="230">
+									<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="10" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="11" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="12" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="13" />
+								</container>
+
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<container height="380">
+									<layout class="horizontal_arrange" horizontal_layout="363,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league medium" index="14" />
+
+									<container >
+										<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="15" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="16" />
+										</container>
+
+										<container>
+											<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="17" />
+											<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="18" />
+										</container>
+									</container>
+								</container>
+
+								<container class="plain_box" height="4" appearance="tcs/websites/epl/divider" />
+
+								<container height="230">
+									<layout class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="0"/>
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="19" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="20" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="21" />
+									<container class="competition_news_item_panel" file="competition/tcs/premier league small d" index="22" />
+								</container>
+							</container>
+						</container>
+					</container>
+				</container>
+			</container>
+
+		</container>
+		</container>
 
 		<!-- SIDE PANEL -->
-		<container class="competition_news_side_panel" file="competition/tcs/competition news side panel" id="side" />
+		<container class="competition_news_side_panel" file="competition/tcs/competition news side panel" id="side" default_width="-1" minimum_width="150" priority="3"/>
 
 		<!-- LEAGUES IN FOCUS -->
-		<container class="bordered_box" appearance="boxes/bordered/standard/right/paper" red_replacement="tcs_dark_box" >
+		<container class="bordered_box" red_replacement="tcs_dark_box" default_width="-1" minimum_width="150" priority="2">
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 			<container class="titled_box">
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 				<translation id="title" translation_id="395260" type="use" value="Leagues in Focus[COMMENT: FR 11005; title for panel showing overview of leagues from across the game]" />
 
-					<container class="vertical_adaptive_container" id="ocmp" gap="10" default_width="-1" minimum_width="280" priority="1">
+				<container class="vertical_adaptive_container" id="ocmp" gap="5" default_width="-1" minimum_width="280" priority="1">
 
-						<record id="default_properties" news="false" minimum_height="250" />
+					<record id="default_properties" news="false" minimum_height="220" default_height="-1" />
 
-						<container class="competition_news_league_overview_selector_panel" id="lif1" index="0" priority="1" />
-						<container class="competition_news_league_overview_selector_panel" id="lif2" index="1" priority="2" />
-						<container class="competition_news_league_overview_selector_panel" id="lif3" index="2" priority="3" />
-						<container class="competition_news_league_overview_selector_panel" id="lif4" index="3" priority="4" />
-					</container>
+					<container class="competition_news_league_overview_selector_panel" id="lif1" index="0" priority="1" />
+					<container class="competition_news_league_overview_selector_panel" id="lif2" index="1" priority="2" />
+					<container class="competition_news_league_overview_selector_panel" id="lif3" index="2" priority="3" />
+					<container class="competition_news_league_overview_selector_panel" id="lif4" index="3" priority="4" />
+				</container>
 
-															
+
 
 				<widget class="competition_stage_panel" file="none" id="cosg">
 					<boolean id="overview_version" value="true" />
@@ -637,7 +637,6 @@
 
 			</container>
 		</container>
-	</container>
 	</container>
 
 </panel>

@@ -12,7 +12,7 @@
 		<container>
 			<layout class="horizontal_arrange" horizontal_layout="-3,-2,-3" horizontal_gap="0" />
 
-			<!-- HOME -->
+			<!-- AWAY -->
 			<container id="hpco">
 				<layout class="vertical_arrange" vertical_layout="70,-1,80" vertical_gap="0" />
 
@@ -25,29 +25,148 @@
 				</container>
 
 				<!-- PITCH ~ WEIRD LAYOUT WITH LOADS OF CONTAINERS USED TO MAKE UP FOR LOGO TRANSPARENCY NOT WORKING-->
-				<container>
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<container class="bordered_box" appearance="tcs/match/lineups/botlef" red_replacement="pitch_box_background" >
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
 
-					<!-- LOGO -->
-					<container>
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<!-- INFO ON RIGHT ON THE PITCH -->
+					<container width="200">
+						<layout class="vertical_arrange" vertical_layout="240,-1,180" vertical_gap="0" horizontal_inset="10" vertical_offset="30" />
 
-						<!-- VERTICAL ARRANGE LAYOUT USED TO RESIZE LOGO -->
+						<!-- ACTUAL INFO -->
 						<container>
-							<layout class="vertical_arrange" vertical_layout="-1,190,-1" vertical_gap="0" />
-							<container />
-							<widget class="match_team_logo_picture" id="HtLG" team_index="0" width="80" transparency="0.6">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0" vertical_inset="0" />
+
+							<!-- LEAGUE POSITION -->
+							<container class="match_preview_panel" file="" id="tcslcps" height="40">
+								<attachment_group class="vertical_arrange" vertical_alignment="top" />
 								<record id="object_property">
-									<integer id="get_property" value="objt" />
-									<integer id="set_property" value="objt" />
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</list>
 								</record>
-							</widget>
-							<container />
+
+								<!-- LEAGUE POSITION LABEL -->
+								<widget class="text" id="lpti" alignment="left,bottom" auto_size="vertical" font="title">
+									<translation id="text" translation_id="284395" type="use" value="League Position[COMMENT: French attacking league table; league position heading hint]" />
+								</widget>
+
+								<!-- AWAY POSITION -->
+								<container height="30">
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<widget class="text" id="homl" alignment="left,top" auto_size="horizontal">
+										<string id="format" value="[%number#1-nth]" />
+										<record id="object_property">
+											<integer id="get_property" value="homl" />
+										</record>
+									</widget>
+								</container>
+							</container>
+
+							<!-- RECENT FORM -->
+							<container height="40">
+								<attachment_group class="vertical_arrange" vertical_alignment="top" />
+
+								<!-- RECENT FORM LABEL -->
+								<widget class="text" alignment="left,bottom" auto_size="vertical" font="title">
+									<translation id="text" translation_id="344664" type="use" value="Recent Form" />
+								</widget>
+
+								<!-- AWAY FORM -->
+								<container height="20">
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<!--RECENT FORM -->
+									<widget class="team_recent_form_widget" id="homF" alignment="left,centre_y" show_description_text="true" auto_size="horizontal">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="homF" />
+													<integer id="set_property" value="valu" />
+													<boolean id="dont_set_object" value="true" />
+												</record>
+												<record>
+													<integer id="get_property" value="home" />
+													<integer id="set_property" value="objt" />
+												</record>
+											</list>
+										</record>
+									</widget>
+								</container>
+							</container>
+
+							<!-- ODDS -->
+							<container class="match_preview_panel" file=""  height="40">
+								<layout class="arrange_vertical_attachment" alignment="top" offset="20" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</list>
+								</record>
+
+								<!-- LABEL -->
+								<widget class="text" id="oddp" alignment="left" auto_size="vertical" font="title" />
+
+								<!-- ODDS -->
+								<container height="30">
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<widget class="text" id="oddh" width="60" alignment="left" />
+
+								</container>
+							</container>
 						</container>
 
-						<!-- THIS COVERS THE TEAM LOGO BUT UNDERNEATH THE PITCH TO MAKE IT LOOK MORE TRANSPARENT -->
-						<container class="plain_box" appearance="tcs/match/lineups/botlef" red_replacement="pitch_box_background" />
-					</container>
+						<!-- SPACER -->
+						<container />
+
+						<!-- MANAGER -->
+						<container height="200">
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+							<!-- LABEL -->
+							<widget class="text" alignment="centre" font="title" colour="text" auto_size="vertical" >
+								<translation id="text" translation_id="227981" type="use" value="Manager" />
+							</widget>
+
+							<!-- MANAGER FACE -->
+							<container height="200">
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+								<container class="client_object_viewer_xml_panel" height="180">
+									<record id="object_property">
+										<integer id="get_property" value="home" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20"/>
+
+									<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre_x,bottom" >
+										<record id="object_property">
+											<integer id="get_property" value="TMnR" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</widget>
+								</container>
+
+								<widget class="person_button" id="pers1" alignment="centre" style="semi_bold" >
+									<record id="object_property">
+										<integer id="get_property" value="TMnR" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</widget>
+							</container>
+						</container>	
+					</container>	
 
 					<!-- PITCH -->
 					<widget class="pitch_with_tactics" id="hpwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
@@ -61,13 +180,92 @@
 						<flags id="pitch_alignment" value="centre"/>
 						<real id="maximum_player_size" value="0.2"/>
 					</widget>
+
 				</container>	
 			</container>
 
 			<container class="bordered_box" appearance="tcs/match/lineups/mid">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="10"/>
+
+				<widget class="object_portrait_picture" id="fxCo" scale_picture="true" height="120">
+					<boolean id="keep_aspect_ratio" value="true" />
+					<flags id="image_alignment" value="centre_x,top" />
+					<record id="object_property">
+						<integer id="get_property" value="fxCo" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<container height="300"> 
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+					<widget class="stadium_picture" id="STAp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="-35" apply_to_children="true"/> 
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<container>
+						<layout class="vertical_arrange" vertical_layout="-1,48,15" />
+
+						<widget class="spacer" />
+
+						<container class="bordered_box_no_margin" red_replacement="primary">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="-5"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+
+							<!-- Division -->
+							<widget class="fixture_name_text" id="FxNM" font="title" size="xlarge" auto_size="all" style="shadowed" colour="white">
+								<record id="object_property">
+									<integer id="get_property" value="FxNm" />
+								</record>
+							</widget>
+
+							<!--time/place-->
+							<widget class="match_conditions_panel" file=""  id="matc" >
+								<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+								<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</list>
+								</record>
+
+								<!--time, place-->
+								<widget class="text" id="tipl" alignment="centre_x,centre_y" auto_size="horizontal" colour="white"/>
+							</widget>
+						</container>
+
+						<container />
+
+					</container>
+				</container>
+
+				<container class="subsection_box" id="FxCn" >
+					<translation id="title" translation_id="324243" type="use" value="Today's Fixtures[COMMENT: how to system; help string]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="competition_fixtures_panel" id="fixt" file="competition/competition fixtures match preview" svsl="false">
+						<record id="object_property">
+							<list id="get_properties">
+								<record get_property="cssi" set_property="cssi" dont_set_object="true" />
+								<record get_property="cmsi" set_property="cmsi" dont_set_object="true" />
+								<record get_property="comp" set_property="objt" />
+							</list>
+						</record>
+
+					</widget>
+				</container>
+
 			</container>
 
-	<!-- AWAY -->
+			<!-- AWAY -->
 			<container id="apco">
 				<layout class="vertical_arrange" vertical_layout="70,-1,80" vertical_gap="0" />
 
@@ -80,29 +278,8 @@
 				</container>
 
 				<!-- PITCH ~ WEIRD LAYOUT WITH LOADS OF CONTAINERS USED TO MAKE UP FOR LOGO TRANSPARENCY NOT WORKING-->
-				<container>
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-					<!-- LOGO -->
-					<container>
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-						<!-- VERTICAL ARRANGE LAYOUT USED TO RESIZE LOGO -->
-						<container>
-							<layout class="vertical_arrange" vertical_layout="-1,190,-1" vertical_gap="0" />
-							<container />
-							<widget class="match_team_logo_picture" id="AtLG" team_index="1" width="80" transparency="0.6">
-								<record id="object_property">
-									<integer id="get_property" value="objt" />
-									<integer id="set_property" value="objt" />
-								</record>
-							</widget>
-							<container />
-						</container>
-
-						<!-- THIS COVERS THE TEAM LOGO BUT UNDERNEATH THE PITCH TO MAKE IT LOOK MORE TRANSPARENT -->
-						<container class="plain_box" appearance="tcs/match/lineups/botrig" red_replacement="pitch_box_background" />
-					</container>
+				<container class="bordered_box" appearance="tcs/match/lineups/botrig" red_replacement="pitch_box_background" >
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
 
 					<!-- PITCH -->
 					<widget class="pitch_with_tactics" id="apwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
@@ -116,19 +293,153 @@
 						<flags id="pitch_alignment" value="centre"/>
 						<real id="maximum_player_size" value="0.2"/>
 					</widget>
+
+					<!-- INFO ON RIGHT ON THE PITCH -->
+					<container width="200">
+						<layout class="vertical_arrange" vertical_layout="240,-1,180" vertical_gap="0" horizontal_inset="10" vertical_offset="30" />
+
+						<!-- ACTUAL INFO -->
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0" vertical_inset="0" />
+
+							<!-- LEAGUE POSITION -->
+							<container class="match_preview_panel" file="" id="lpsC" height="40">
+								<attachment_group class="vertical_arrange" vertical_alignment="top" />
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</list>
+								</record>
+
+								<!-- LEAGUE POSITION LABEL -->
+								<widget class="text" id="lpti" alignment="right,bottom" auto_size="vertical" font="title">
+									<translation id="text" translation_id="284395" type="use" value="League Position[COMMENT: French attacking league table; league position heading hint]" />
+								</widget>
+
+								<!-- AWAY POSITION -->
+								<container height="30">
+									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<widget class="text" id="awal" alignment="right,top" auto_size="horizontal">
+										<string id="format" value="[%number#1-nth]" />
+										<record id="object_property">
+											<integer id="get_property" value="awal" />
+										</record>
+									</widget>
+								</container>
+							</container>
+
+							<!-- RECENT FORM -->
+							<container height="40">
+								<attachment_group class="vertical_arrange" vertical_alignment="top" />
+
+								<!-- RECENT FORM LABEL -->
+								<widget class="text" alignment="right,bottom" auto_size="vertical" font="title">
+									<translation id="text" translation_id="344664" type="use" value="Recent Form" />
+								</widget>
+
+								<!-- AWAY FORM -->
+								<container height="20">
+									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<!--RECENT FORM -->
+									<widget class="team_recent_form_widget" id="awaF" alignment="right,centre_y" show_description_text="true" auto_size="horizontal">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="awaF" />
+													<integer id="set_property" value="valu" />
+													<boolean id="dont_set_object" value="true" />
+												</record>
+												<record>
+													<integer id="get_property" value="away" />
+													<integer id="set_property" value="objt" />
+												</record>
+											</list>
+										</record>
+									</widget>
+								</container>
+							</container>
+
+							<!-- ODDS -->
+							<container class="match_preview_panel" file=""  height="40">
+								<layout class="arrange_vertical_attachment" alignment="top" offset="20" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</list>
+								</record>
+
+								<!-- LABEL -->
+								<widget class="text" id="oddp" alignment="right" auto_size="vertical" font="title" />
+
+								<!-- ODDS -->
+								<container height="30">
+									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<widget class="text" id="odda" width="60" alignment="right" />
+
+								</container>
+							</container>
+						</container>
+
+						<!-- SPACER -->
+						<container />
+
+						<!-- MANAGER -->
+						<container height="200">
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+							<!-- LABEL -->
+							<widget class="text" alignment="centre" font="title" colour="text" auto_size="vertical" >
+								<translation id="text" translation_id="227981" type="use" value="Manager" />
+							</widget>
+
+							<!-- MANAGER FACE -->
+							<container height="200">
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+								<container class="client_object_viewer_xml_panel" height="180">
+									<record id="object_property">
+										<integer id="get_property" value="away" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20"/>
+
+									<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre_x,bottom" >
+										<record id="object_property">
+											<integer id="get_property" value="TMnR" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</widget>
+								</container>
+
+								<widget class="person_button" id="pers" alignment="centre" style="semi_bold" >
+									<record id="object_property">
+										<integer id="get_property" value="TMnR" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</widget>
+							</container>
+						</container>	
+					</container>	
 				</container>	
 			</container>
-			
-			
-			
-			
-			
-			
+
+
 		</container>
 
-
-
-
+		<!-- SUBS -->
 		<container height="150">
 			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
 			<layout class="fit_children_attachment" alignment="vertical" offset="0" />

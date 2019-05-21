@@ -6,7 +6,7 @@
 		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" >
 
 			<!-- PLAYER INFORMATION -->
-			<container class="bordered_box" appearance="tcs/boxes/header/paper" minimum_width="1300" default_width="1300"  priority="1">
+			<container class="bordered_box" appearance="tcs/boxes/header/paper" minimum_width="1300" default_width="-1"  priority="1">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 				<widget class="club_overview_details_panel" file="club/tcs/club overview details panel" id="clod">
 					<record id="object_property" get_property="objt" set_property="objt"/>
@@ -14,10 +14,10 @@
 			</container>
 
 			<!-- SMALL PANEL ON TOP  -->
-			<container class="bordered_box" default_width="-1" >
+			<container class="bordered_box" default_width="450" minimum_width="450">
 				<translation id="title" translation_id="319448" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]" />
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-				<widget class="club_overview_kits_panel" id="cloK">
+				<widget class="club_overview_kits_panel" id="tcsK">
 					<record id="object_property">
 						<integer id="get_property" value="objt" />
 						<integer id="set_property" value="objt" />
@@ -43,8 +43,6 @@
 
 			<!-- MIDDLE -->
 			<container class="vertical_adaptive_container" default_width="550">
-
-
 
 				<!-- STADIUM -->
 				<container class="subsection_box" appearance="boxes/subsection/no margin/paper" minimum_height="350" default_height="350" id="Clos" priority="1" >
@@ -83,7 +81,7 @@
 				</container>
 
 				<!-- RESULTS -->
-				<container class="subsection_box" default_height="-3" minimum_height="75"  priority="1">
+				<container class="subsection_box" default_height="-3" minimum_height="200"  priority="1">
 					<translation id="title" translation_id="319447" type="use" value="Results[COMMENT: title for the previous set of first team results on the club overview panel]" />
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 					<widget class="club_overview_team_results_panel" id="cotr">
@@ -95,7 +93,7 @@
 				</container>
 
 				<!-- TROPHIES -->
-				<container class="subsection_box" default_height="-3" minimum_height="75"  priority="2">
+				<container class="subsection_box" default_height="-3" minimum_height="200"  priority="2">
 					<translation id="title" translation_id="232146" type="use" value="Honours" />
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 					<widget class="team_container_honours_panel" file="club/tcs/team container honours panel" id="hons" >
@@ -107,7 +105,7 @@
 				</container>
 			</container>		
 
-			<container default_width="520">
+			<container default_width="450">
 <layout class="vertical_arrange" vertical_layout="-2,-4" vertical_gap="0" />
 				
 				<container class="client_object_viewer_selector_panel" id="cos1" default_height="200" priority="2" minimum_height="150" >
@@ -126,6 +124,9 @@
 					<widget class="team_container_overview_teams_panel" id="tcot">
 						<translation id="title" translation_id="229362" type="use" value="Teams" />
 					</widget>
+					<widget class="club_overview_kits_panel" id="cloK">
+						<translation id="title" translation_id="319448" type="use" value="Kits" />
+					</widget>
 					<widget class="team_transfer_snapshot_panel" id="Tran" valid_for_fmc="false">
 						<translation id="title" translation_id="296337" type="use" value="Pending Transfers" />
 					</widget>
@@ -142,6 +143,9 @@
 					</widget>
 					<widget class="board_confidence_snapshot_panel" id="bfsz">
 						<translation id="title" translation_id="293309" type="use" value="Board Confidence" />
+					</widget>
+										<widget class="club_overview_kits_panel" id="cloK">
+						<translation id="title" translation_id="319448" type="use" value="Kits" />
 					</widget>
 					<widget class="team_snapshot_contract_panel" id="tsco" default_item="true">
 						<translation id="title" translation_id="255039" type="use" value="Contract Expiry Dates[COMMENT: team contract snapshot panel heading]" />
@@ -163,6 +167,9 @@
 				<container class="client_object_viewer_selector_panel" id="cos2" default_height="200" priority="2" minimum_height="150" >
 					<widget class="club_league_history_graph" id="clhg" default_item="true">
 						<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+					</widget>
+										<widget class="club_overview_kits_panel" id="cloK">
+						<translation id="title" translation_id="319448" type="use" value="Kits" />
 					</widget>
 					<widget class="board_confidence_snapshot_panel" id="bfsz">
 						<translation id="title" translation_id="293309" type="use" value="Board Confidence" />

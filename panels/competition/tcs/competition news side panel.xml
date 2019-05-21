@@ -3,7 +3,7 @@
 
 	<boolean id="should_force_refresh" value="true" />
 
-	<container class="bordered_box" appearance="boxes/bordered/standard/left/paper" red_replacement="tcs_accent_light" >
+	<container class="bordered_box" red_replacement="tcs_accent_light" >
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 		<container class="vertical_adaptive_container" id="adpc" inset="0" offset="0" gap="6">

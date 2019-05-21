@@ -15,7 +15,6 @@
 			<container >
 				<layout class="vertical_arrange" vertical_layout="470,-1" vertical_gap="0" />
 
-
 				<container class="bordered_box" appearance="boxes/bordered/standard/top left/paper" id="hmts">
 					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 					<record id="default_properties">
@@ -80,11 +79,14 @@
 								<integer id="get_property" value="objt" />
 								<integer id="set_property" value="objt" />
 							</record>
-							<widget class="match_info_panel" id="ovw3" file="match/tcs/ibh/tcs overview 3">
+							<widget class="match_info_panel" id="ovw1" file="match/tcs/ibh/tcs overview 1">
 								<translation id="title" type="use" value="Overview 1" />
 							</widget>	
+							<widget class="match_info_panel" id="ovw3" file="match/tcs/ibh/tcs overview 3">
+								<translation id="title" type="use" value="Overview 2" />
+							</widget>	
 							<widget class="match_info_panel" id="ovw2" file="match/tcs/ibh/tcs overview 2">
-								<translation id="title" type="use" value="Overview 2"/>
+								<translation id="title" type="use" value="Overview 3"/>
 							</widget>				
 						</widget>
 					</container>

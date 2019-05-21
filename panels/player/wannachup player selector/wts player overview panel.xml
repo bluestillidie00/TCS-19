@@ -1,14 +1,14 @@
 <!-- CHANGES MADE FOR WTS - REMOVED ONE BIG CONTAINER, CHANGED LAYOUTS OF MULTIPLE PANELS -->
 <panel>
-<layout class="vertical_arrange" vertical_layout="190,400,-1" vertical_gap="0" />
-<layout class="stick_to_sides_attachment" alignment="all" inset="6" /> 
+	<layout class="vertical_arrange" vertical_layout="190,400,-1" vertical_gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" /> 
 
 	<!-- Header with portrait & important info
 	<widget class="player_personal_details_panel" id="ppdp">
 		<record id="object_property" get_property="objt" set_property="objt"/>
 	</widget>-->
 
-
+	<!-- TOP -->
 	<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" >
 
 		<!-- PLAYER INFORMATION -->
@@ -20,14 +20,20 @@
 		</container>
 
 		<!-- SMALL PANEL ON TOP  -->
-		<container class="client_object_viewer_selector_panel" id="dua0" file="player/tcs/player overview small selector panel" save_session_state="true" default_width="450" minimum_width="250"   priority="2">
+		<container class="client_object_viewer_selector_panel" id="dua0" file="player/tcs/player overview small selector panel" save_session_state="true" default_width="450" minimum_width="251"  priority="2">
+			<integer id="default_for_unemployed_managers" value="teli"/>
+			<integer id="default_for_international_managers_other_team" value="teli"/>
+			<integer id="default_for_everyone_else" value="teli"/>
+			<integer id="default_for_versus_mode" value="teli"/>
+		</container>
+
+		<container class="client_object_viewer_selector_panel" id="dua1" file="player/tcs/player overview small selector panel" save_session_state="true" default_width="400" minimum_width="320"   priority="3">
 			<integer id="default_for_unemployed_managers" value="teli"/>
 			<integer id="default_for_international_managers_other_team" value="teli"/>
 			<integer id="default_for_everyone_else" value="teli"/>
 			<integer id="default_for_versus_mode" value="teli"/>
 		</container>
 	</container>
-
 	<!-- Middle row of large panels -->
 	<container>
 
@@ -47,6 +53,13 @@
 				<widget class="player_attributes_panel" id="patt" late_loading="true">
 					<translation id="title" translation_id="229822" type="use" value="Attributes" />
 				</widget>
+				<widget class="player_injury_panel" file="player/tcs/tcs player injury panel" id="IPrw" late_loading="true">
+								<translation id="title" translation_id="447586" type="use" value="Medical Report" />
+							</widget>
+							<widget class="player_additional_stats_panel" file="player/tcs/tcs season stats" id="tcsstat" late_loading="true">
+								<translation id="title" translation_id="385617" type="use" value="Season Stats" />
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
 
 				<integer id="default_for_unemployed_managers" value="pat1"/>
 				<integer id="default_for_international_managers_other_team" value="pat1"/>
@@ -69,9 +82,8 @@
 		<!-- Smaller panels -->
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="0" mode="distribute_equally">
 			<!-- 4 small panels -->
-			<container offset="0" inset="0" gap="0" minimum_height="100" priority="3">
-			<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
-<layout class="horizontal_arrange" horizontal_layout="450,-1,-1,450" horizontal_gap="0" horizontal_inset="0" />
+			<container offset="0" inset="0" gap="0" minimum_height="150" priority="3">
+				<layout class="horizontal_arrange" horizontal_layout="450,-1,-1,450" horizontal_gap="0" horizontal_inset="0" />
 
 				<container class="client_object_viewer_selector_panel" id="cos9" file="player/tcs/player overview small selector panel" save_session_state="true"   default_width="450" priority="1">
 					<integer id="default_for_unemployed_managers" value="pscR"/>
@@ -100,12 +112,10 @@
 			</container>
 
 			<!-- 2 small panels and fitness-->
-			<container minimum_height="100" priority="1">
+			<container minimum_height="150" priority="1">
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-				<record id="mask" alignment="vertical, left" top="180" bottom="140" width="200" file="backgrounds/pattern" offset_x="-300" offset_y="50"/>
 
 				<container class="horizontal_adaptive_container" offset="0" gap="0" inset="0"  >
-
 					<container class="client_object_viewer_selector_panel" id="cos7" file="player/tcs/player overview small selector panel" save_session_state="true" minimum_width="310" default_width="450" priority="1" >
 						<integer id="default_for_unemployed_managers" value="Pfor"/>
 						<integer id="default_for_international_managers_other_team" value="Pfor"/>

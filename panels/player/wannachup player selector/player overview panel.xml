@@ -46,7 +46,7 @@
 
 				<container class="bordered_box" appearance="boxes/bordered/no margin/left/paper" >
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-					
+
 					<container class="horizontal_adaptive_container"  offset="0" inset="0" mode="distribute_equally" >
 						<record id="default_properties" file="player/tcs/player overview big selector panel" save_session_state="true" />
 
@@ -57,6 +57,11 @@
 							<!-- PLAYER INJURY HISTORY  FROM  MEDICAL REPORT ~ EDITED TO FIT BETTER-->
 							<widget class="player_injury_panel" file="player/tcs/tcs player injury panel" id="IPrw" late_loading="true">
 								<translation id="title" translation_id="447586" type="use" value="Medical Report" />
+							</widget>
+							<widget class="player_additional_stats_panel" file="player/tcs/tcs season stats" id="tcsstat" late_loading="true">
+								<translation id="title" translation_id="385617" type="use" value="Season Stats" />
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
 							</widget>
 							<integer id="default_for_unemployed_managers" value="pat1"/>
 							<integer id="default_for_international_managers_other_team" value="pat1"/>

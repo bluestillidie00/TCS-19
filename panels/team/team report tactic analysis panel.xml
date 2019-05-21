@@ -1,0 +1,147 @@
+<!-- THIS IS THE PANEL THAT SHOWS ON THE FORMATION ANALYSIS SHOWING CHANCES CREATED -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true" />
+
+	<!-- REQUEST BUTTON -->
+	<widget class="team_report_request_report_panel" id="nort" />
+
+	<!-- IF TEAM HAS DATA -->
+	<container id="sort">
+		<attachment_group class="horizontal_arrange" horizontal_layout="375,-1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" horizontal_gap="0"/>
+
+		<!-- BREAKDOWN -->
+		<widget class="team_report_goals_breakdown_panel" id="trgb" />
+
+		<!-- FORMATION ANALYSIS ON THE RIGHT HAND SIDE -->
+		<container id="main" class="bordered_box" appearance="boxes/bordered/standard/right/paper">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" vertical_gap="5"/>
+
+			<!-- FORMATION ANALYSIS LABEL -->
+			<widget class="label" size="large" font="title" colour="accent">
+				<translation id="text" translation_id="468959" type="use" value="Formation Analysis[COMMENT: team report; formation analysis header text; revision to ID 316744 to change from tactic to formation analysis]" />
+			</widget>
+
+			<!-- FILTERS AT THE TOP -->
+			<container id="sele" height="32">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+				<widget class="popup_button" id="comp" sele="scvw" auto_size="all" auto_tick_exclusive="true" appearance="buttons/standard/split/left/button" />
+				<widget class="popup_button" id="view" auto_size="all" sele="sgav" auto_tick_exclusive="true" appearance="buttons/standard/split/right/button" />
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<!-- TOP -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container class="tabbed_container" id="tabs" default_item="ours" save_session_state="true">
+
+					<!-- FORMATION USED CONTAINER -->
+					<container id="ours">
+						<translation id="title" translation_id="458503" type="use" value="Formations Used[COMMENT - team report strengths weaknesses item header - bug 179435]" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="table" id="tabl" layout="-2,-1,-2,350" mode="fill_rows, stripe_rows,select_rows, dont_allow_empty_selection" auto_size_rows="true" fixed_size_rows="false" select_event="sfit">
+
+							<list id="headings">
+								<record alignment="left,centre_y" column="0">
+									<translation id="text" translation_id="298104" type="use" value="Formation" />
+								</record>
+								<record alignment="centre" column="1">
+									<translation id="text" translation_id="316747" type="use" value="Started[COMMENT: team report, times started]" />
+								</record>
+								<record alignment="centre" column="2">
+									<translation id="text" translation_id="318324" type="use" value="Minutes Used[COMMENT:team report, minutes played]" />
+								</record>
+								<record alignment="left,centre_y" column="3">
+									<translation id="text" translation_id="389413" type="use" value="Chances[COMMENT:team report, Fr 7894, number of chances a team has created over multiple games whilst using a particular tactic]" />
+								</record>
+							</list>
+
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" />
+								<record indx="1" alignment="centre" />
+								<record indx="2" alignment="centre" />
+								<record indx="3" alignment="left,centre_y" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5" />
+								<record indx="1" sort_disabled="true" />
+								<record indx="2" sort_disabled="true" />
+								<record indx="3" sort_disabled="true" right="5" />
+							</list>
+						</widget>
+
+						<record id="shown_event">
+							<flags id="event_id" value="sott" />
+							<flags id="event_target" value="self" />
+						</record>
+					</container>
+
+					<!-- FORMATION FACED -->
+					<container id="oppp">
+						<translation id="title" translation_id="458504" type="use" value="Formations Faced[COMMENT - team report strengths weaknesses item header - bug 179435]" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="table" id="oppo" layout="-2,-1,-2,350" mode="fill_rows, stripe_rows,select_rows, dont_allow_empty_selection" auto_size_rows="true" fixed_size_rows="false" select_event="sfio">
+
+							<list id="headings">
+								<record alignment="left,centre_y" column="0">
+									<translation id="text" translation_id="298104" type="use" value="Formation" />
+								</record>
+								<record alignment="centre" column="1">
+									<translation id="text" translation_id="316747" type="use" value="Started[COMMENT: team report, times started]" />
+								</record>
+								<record alignment="centre" column="2">
+									<translation id="text" translation_id="316750" type="use" value="Minutes Faced[COMMENT:team report, minutes faced]" />
+								</record>
+								<record alignment="left,centre_y" column="3">
+									<translation id="text" translation_id="389413" type="use" value="Chances[COMMENT:team report, Fr 7894, number of chances a team has created over multiple games whilst using a particular tactic]" />
+								</record>
+							</list>
+
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" />
+								<record indx="1" alignment="centre" />
+								<record indx="2" alignment="centre" />
+								<record indx="3" alignment="left,centre_y" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5" />
+								<record indx="1" sort_disabled="true" />
+								<record indx="2" sort_disabled="true" />
+								<record indx="3" sort_disabled="true" top="5" bottom="5" right="5" />
+							</list>
+						</widget>
+
+						<record id="shown_event">
+							<flags id="event_id" value="soot" />
+							<flags id="event_target" value="self" />
+						</record>
+					</container>
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!-- DESCRIPTIVE TEXT AT BOTTOM -->
+				<container height="200">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+					<container class="scrolling_box">
+						<widget class="text" id="desc" auto_size="vertical" />
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- USED IF TEAM HASN'T GOT ANY TACTIC DATA -->
+	<container class="empty_state" id="ntcd" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="text">
+			<translation id="text" translation_id="435253" type="use" value="No match information available.[COMMENT: text explaining lack of info on goal analysis panels]" />
+		</widget>
+	</container>
+
+</panel>
