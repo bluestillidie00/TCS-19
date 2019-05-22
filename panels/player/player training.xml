@@ -14,11 +14,11 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 			</container>
-			
-			
-						<!-- TRAINING PERFORMANCE -->
+
+
+			<!-- TRAINING PERFORMANCE -->
 			<container class="bordered_box" default_width="350" minimum_width="120" priority="2">
-<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 				<widget class="player_training_performance_panel" file="player/wannachup/wannachup player attribute analyser panel" id="paAn">
 					<record id="object_property" get_property="objt" set_property="objt" />
@@ -34,7 +34,7 @@
 					<record id="object_property" get_property="objt" set_property="objt" />
 				</widget>
 
-<!-- BUTTON UNDERNEARTH REPORT -->
+				<!-- BUTTON UNDERNEARTH REPORT -->
 				<container height="30">
 					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
 					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" />
@@ -46,15 +46,12 @@
 					</widget>
 				</container>
 			</container>
-
-
-
 		</container>
 
 		<container>
 			<layout class="horizontal_arrange" horizontal_layout="-1,-2,-1" horizontal_gap="0" />
 
-	<!-- Column Left -->
+			<!-- Column Left -->
 			<container class="vertical_adaptive_container" >
 				<widget class="player_training_information" file="player/wannachup/wannachup player training information" default_height="-1" minimum_height="500" priority="1" id="ptst">
 				</widget>
@@ -63,24 +60,24 @@
 
 			<container class="vertical_adaptive_container" >
 
-					<!--attributes-->
-					<container class="subsection_box" default_height="450" minimum_height="450" priority="1" id="plap">
-						<translation id="title" translation_id="229822" type="use" value="Attributes" />
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-						<widget class="player_attributes_panel" show_attribute_offsets="true" file="player/player attributes training panel" id="patt">
-							<record id="object_property">
-								<list id="get_properties">
-									<record>
-										<integer id="get_property" value="objt" />
-										<integer id="set_property" value="objt" />
-									</record>
-								</list>
-							</record>
-						</widget>
-					</container>
+				<!--attributes-->
+				<container class="subsection_box" default_height="440" minimum_height="450" priority="1" id="plap">
+					<translation id="title" translation_id="229822" type="use" value="Attributes" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<widget class="player_attributes_panel" show_attribute_offsets="true" file="player/player attributes training panel" id="patt">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
 
 				<!-- Season stats-->
-				<container class="bordered_box" default_height="-1" minimum_height="250" priority="2" >
+				<container class="bordered_box" default_height="-1" minimum_height="150" priority="2" >
 					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 					<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
@@ -123,15 +120,15 @@
 				</container>
 				<!-- Medical Report -->
 				<container class="tabbed_container" id="main" appearance="boxes/bordered/standard/paper" minimum_width="500" default_width="800" default_item="tsmr" save_session_state="true" save_default_state="true">
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-		<record id="default_properties" late_loading="true">
-				<record id="object_property">
-					<integer id="get_property" value="objt" />
-					<integer id="set_property" value="objt" />
-				</record>
-			</record>
-				
+					<record id="default_properties" late_loading="true">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</record>
+
 					<widget class="player_training_information" file="player/tcs/training/training report" id="tstr">
 						<translation id="title" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
 					</widget>

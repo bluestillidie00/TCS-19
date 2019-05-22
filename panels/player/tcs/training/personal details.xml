@@ -133,7 +133,7 @@
 			</container>
 		</container>
 
-		<container class="player_scout_reports_panel" file="none" default_width="400" minimum_width="400" priority="2" >
+		<container class="player_scout_reports_panel" file="none" default_width="380" minimum_width="380" priority="2" >
 
 			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />

@@ -20,7 +20,7 @@
 		</container>
 
 		<!-- SMALL PANEL ON TOP  -->
-		<container class="client_object_viewer_selector_panel" id="dua0" file="player/tcs/player overview small selector panel" save_session_state="true" default_width="450" minimum_width="251"  priority="2">
+		<container class="client_object_viewer_selector_panel" id="dua0" file="player/tcs/player overview small selector panel" save_session_state="true" default_width="400" minimum_width="251"  priority="2">
 			<integer id="default_for_unemployed_managers" value="teli"/>
 			<integer id="default_for_international_managers_other_team" value="teli"/>
 			<integer id="default_for_everyone_else" value="teli"/>
