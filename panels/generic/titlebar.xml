@@ -12,7 +12,6 @@
 		<container class="bordered_box" height="55" appearance="chrome/boxes/game bar/paper2">
 			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" />
 
-
 			<!-- Back Button -->
 			<widget class="screen_history_button" id="back" fixed="true" width="60" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre">
 				<attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
