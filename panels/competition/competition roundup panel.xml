@@ -6,32 +6,51 @@
 		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 
 		<!--roundup statement/results-->
-		<container >
-			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
-			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
 
 			<container class="bordered_box" appearance="boxes/bordered/standard/top/paper" red_replacement="tcs_dark_box">
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 				<widget class="text" multiline="false" auto_size="vertical" size="large" font="title" colour="accent">
-					<translation id="text" translation_id="441159" type="use" value="Competition Review[COMMENT: title for competition review panel at the end of the match]" />
+					<translation id="text" translation_id="441159" type="use" value="Competition Review" />
 				</widget>
 
-				<!--comment-->
 				<widget class="text" id="blub" multiline="true" auto_size="vertical"/>
-
-				<!--journalist-->
 				<widget class="text" id="jour" multiline="true" auto_size="vertical" size="small" colour="faded text"/>
 			</container>
 
-			<!--results-->
-		<container class="bordered_box" appearance="boxes/bordered/standard/bottom/paper" >
+			<container>
+				<layout class="vertical_arrange" vertical_layout="-1,200" vertical_gap="0" />
 
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<!--results-->
+				<container class="bordered_box" appearance="boxes/bordered/standard/middle horizontal/paper"  default_height="-1" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-				<widget class="competition_fixtures_panel" id="resu" file="competition/competition fixtures roundup" svsl="false" display_mode="3" popup_parent="popt">
-					<record id="object_property" get_property="objt" set_property="objt" />
-				</widget>
+					<widget class="competition_fixtures_panel" id="resu" file="competition/competition fixtures roundup" svsl="false" display_mode="3" popup_parent="popt">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+
+				<container class="bordered_box" appearance="boxes/bordered/standard/bottom/paper"  default_height="-1" >
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0" />
+
+					<record id="default_properties" file="competition/competition overview player stats panel" maximum_items="3" default_width="-1" minimum_width="220" />
+
+					<!-- CPS_GOALS-->
+					<container class="competition_player_stats_panel" type="2" priority="1">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</container>
+					<!-- CPS_AVERAGE_RATING -->
+					<container class="competition_player_stats_panel" type="27" priority="2">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</container>
+					<container class="competition_player_stats_panel" type="5" priority="3">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</container>
+
+				</container>
+
 			</container>
 		</container>
 
