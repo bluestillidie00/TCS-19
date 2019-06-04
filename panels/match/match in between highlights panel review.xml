@@ -85,6 +85,9 @@
 					<widget class="match_info_panel" id="ovw3" file="match/tcs/review/tcs overview 3">
 						<translation id="title" type="use" value="Overview 3" />
 					</widget>	
+					<widget class="match_info_panel" id="ovwm" file="match/tcs/review/tcs overview mini">
+						<translation id="title" type="use" value="Overview Mini" />
+					</widget>	
 				</widget>
 
 				<widget class="match_view_selector_panel" id="selb" save_session_state="true" save_default_state="true" pause_match_on_menu_opening="true" default_item="mltp" file="match/tcs/review/selector">
@@ -147,7 +150,7 @@
 				</container>
 
 				<!-- TEAM STATS -->
-				<widget class="match_team_stats_panel" id="AMts" file="match/match team stats review" height="390" team_index="0">
+				<widget class="match_team_stats_panel" id="AMts" file="match/match team stats review" height="390" team_index="1">
 				</widget>
 			</container>
 
