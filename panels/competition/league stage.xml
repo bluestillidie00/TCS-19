@@ -26,7 +26,7 @@
 			contextual_handler_column_id="Ttea"
 			auto_size_rows="false"
 			fixed_size_rows="true"
-			row_height="31"
+			row_height="34"
 			heading_class="column_heading"
 				wants_lazy_load="true" />
 

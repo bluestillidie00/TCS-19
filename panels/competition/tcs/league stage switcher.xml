@@ -1,0 +1,18 @@
+<panel>
+	<container class="bordered_box" id="SUBP">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<widget class="popup_button" id="popv"  auto_size="horizontal" height="20" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true" prme="false">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="10"/>
+	</widget>
+
+	<widget class="competition_stage_panel" file="competition/tcs/tcs competition overview stage" id="tcos">
+		<translation id="title" translation_id="248082" type="use" value="League Table" />
+	</widget>
+
+	<widget class="media_predicition_league_table_panel" file="competition/tcs/media prediction">
+		<translation id="title" translation_id="243509" type="use" value="Media Prediction" />
+	</widget>
+</panel>

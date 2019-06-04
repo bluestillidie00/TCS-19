@@ -10,11 +10,11 @@
 
 		<!-- the group box that is the main container for the competition stage panel
 			this container holds whatever league or cup panel we need to create -->
-		<container class="subsection_box" id="stse">
+		<container class="titled_box" id="stse">
 
 			<!-- buttons area -->
 			<container embed_in_frame="true">
-				<attachment_group class="horizontal_arrange_vertical_autosize_centre" embed_in_frame="true" horizontal_alignment="left" horizontal_offset="10" vertical_offset="3" />
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" embed_in_frame="true" horizontal_alignment="left" horizontal_offset="0" vertical_offset="0" />
 				<layout class="stick_to_sides_attachment" alignment="horizontal,top" embed_in_frame="true" inset="0" />
 
 				<widget class="link_button_title" section="cssp"  id="labl" embed_in_frame="true">
