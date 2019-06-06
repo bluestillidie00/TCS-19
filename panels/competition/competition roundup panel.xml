@@ -2,8 +2,7 @@
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6"/>
 
 	<container id="popt">
-		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
-		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0" />
 
 		<!--roundup statement/results-->
 		<container>
@@ -55,7 +54,7 @@
 		</container>
 
 		<!--league table-->
-		<container class="subsection_box" id="leag">
+		<container  id="leag">
 			<translation id="text" translation_id="247175" type="use" value="Stages" />
 
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
