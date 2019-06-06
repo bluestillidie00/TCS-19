@@ -96,7 +96,7 @@
 
 		<!--container shown when there is no next match-->
 		<container class="bordered_box" appearance="tcs/boxes/header/paper" id="nonm" hidden="true">
-			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="3" />
 			<widget class="spacer" height="10" />
 
 			<!--team badge(s)-->
@@ -120,7 +120,7 @@
 			<widget class="text" id="nmpl" auto_size="vertical" alignment="centre" size="8"/>
 
 			<!--buttons to arrange a friendly-->
-			<widget class="link_appearance_button" red_replacement="secondary" id="arcf">
+			<widget class="link_appearance_button" red_replacement="secondary" id="arcf" colour="secondary" >
 				<translation id="text" translation_id="296343" type="use" value="Arrange Club Friendly" />
 				<layout class="centre_in_parent_attachment" alignment="horizontal" />
 			</widget>
