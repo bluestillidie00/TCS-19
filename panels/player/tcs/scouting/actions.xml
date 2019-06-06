@@ -1,0 +1,96 @@
+﻿<!-- THESE ARE THE BUTTONS THAT SHOW AT THE TOP OF THE SCOUT REPORT PANELS IN THE INBOX -->
+<panel>
+	<boolean id="save_immediate_state" value="true" />
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<!--TOP LINE, BUTTONS -->
+	<container class="horizontal_arrange_container" id="actC" alignment="left" offset="0" gap="0" inset="0" wrap="false" auto_size="vertical">
+
+		<!-- DEFAULT PROPERTIES USED SO WE DON'T HAVE TO DEFINE THE ATTRIBUTES EVERY TIME -->
+		<record id="default_properties">
+			<flags id="alignment" value="centre" />
+			<flags id="auto_size" value="all" />
+			<flags id="auto_size_minimum_height" value="30"/>
+			<flags id="icon_alignment" value="left,centre_y" />
+		</record>
+
+		<!-- DISCARD BUTTON -->
+		<widget class="icon_button" id="disc" icon="icons/16px/cross" red_replacement="red 800" blue_replacement="red 800" disabled_colour="faded text">
+			<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1500" set_property="ldis" true_value="true" false_value="false" id="smh1" disabled="true"/>
+			<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false">
+				<event id="action_event" event_id="set_attachment_property_event" attachment_id="smh1" />
+			</attachment>
+		</widget>
+
+		<!-- ACKNOWLDGE -->
+		<widget class="icon_tick_button" id="ackn" red_replacement="blue 700" blue_replacement="blue 700" disabled_colour="faded text">
+			<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false">
+				<event id="action_event" event_id="set_attachment_property_event" attachment_id="smh1" />
+			</attachment>
+		</widget>
+
+		<!-- GET ANAYLST REPORT -->
+		<widget class="icon_button" id="gdar" icon="icons/16px/stats" red_replacement="teal 700" blue_replacement="teal 700" disabled_colour="faded text">
+			<translation id="text" translation_id="447602" type="use" value="Get Analyst Report[COMMENT - Fr 21335 request a player to be analysed and leave it up to the analysts to choose who takes the assignment by assigning them to a 'pool']" />
+			<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1364" set_property="ldis" true_value="true" false_value="false" id="smh1" disabled="true"/>
+			<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false">
+				<event id="action_event" event_id="set_attachment_property_event" attachment_id="smh1" />
+			</attachment>
+		</widget>
+
+		<!-- SCOUT -->
+		<widget class="icon_button" id="ksco" icon="icons/16px/search" red_replacement="teal 700" blue_replacement="teal 700" disabled_colour="faded text">
+			<translation id="text" translation_id="447616" type="use" value="Keep Scouting[COMMENT: Scouting centre action to continue scouting a recommended player]" />
+			<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1200" set_property="ldis" true_value="true" false_value="false" id="smh1" disabled="true"/>
+			<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false">
+				<event id="action_event" event_id="set_attachment_property_event" attachment_id="smh1" />
+			</attachment>
+		</widget>
+
+		<!-- MAKE OFFER -->
+		<widget class="icon_button" id="mkof" red_replacement="green 700" blue_replacement="green 700" disabled_colour="faded text">
+			<translation id="text" translation_id="242212" type="use" value="Make Offer" />
+		</widget>
+
+		<!-- OFFER TRIAL -->
+		<widget class="icon_button" id="otri" red_replacement="green 700" blue_replacement="green 800" disabled_colour="faded text">
+			<translation id="text" translation_id="243344" type="use" value="Offer Trial" />
+		</widget>
+
+		<!-- ADD TO NATIONAL TEAM -->
+		<widget class="icon_tick_button" id="call">
+		</widget>
+
+		<!-- REMOVE FROM NATIONAL TEAM -->
+		<widget class="icon_tick_button" id="RmSq">
+		</widget>
+	</container>
+
+	<!-- CHECK BOXES UNDERNEATH -->
+	<container class="horizontal_arrange_container" alignment="left" offset="0" gap="12" inset="" wrap="false" auto_size="vertical">
+
+		<!-- DEFAULT PROPERTIES USED SO WE DON'T HAVE TO DEFINE THE ATTRIBUTES EVERY TIME -->
+		<record id="default_properties">
+			<flags id="alignment" value="left,centre_y" />
+			<flags id="auto_size" value="all" />
+		</record>
+
+		<!-- ADD / REMOVE TO / FROM SHORTLIST -->
+		<widget class="check_box" id="shtl" >
+		</widget>
+
+		<!-- ADD AS TRANSFER TARGET -->
+		<widget class="check_box" id="addt" >
+			<translation id="text" translation_id="336159" type="use" value="Add as Transfer Target[COMMENT: right click menu item for players, Transfer Target is a new style of shortlist, multiple shortlists encouraged to be used]" />
+		</widget>
+
+		<!-- DECLARE AS TOP TARGET -->
+		<widget class="check_box" id="topt" >
+			<translation id="text" translation_id="447614" type="use" value="Declare as Top Target[COMMENT: Scouting centre action]" />
+		</widget>
+
+		<!-- ADD / REMOVE TO / FROM NATIONAL POOL -->
+		<widget class="check_box" id="pool" >
+		</widget>
+	</container>
+</panel>

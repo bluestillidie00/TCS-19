@@ -1,13 +1,50 @@
-﻿<panel>
+﻿<!-- THIS IS THE PANEL THAT SHOWS ON SCOUTING REPORTS AND PLAYER RECOMMENDATIONS -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
 	<boolean id="save_session_state" value="true" />
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,4,0" />
-
 
 	<container>
-		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+	<!-- BOTTOM, EXTEND ALIGNMENT USED SO WE CAN HAVE THE BUTTONS ON THE BOTTOM -->
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="5" vertical_offset="5" vertical_gap="8" />
 
+		<widget class="player_scouting_centre_actions_panel" id="toto" colour="scout card text" disabled_colour="faded text" file="player/tcs/scouting/actions">
+			<boolean id="save_immediate_state" value="true" />
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="hpla" />
+						<integer id="set_property" value="hidn" />
+					</record>
+					<record>
+						<integer id="get_property" value="Ttea" />
+						<integer id="set_property" value="Ttea" />
+					</record>
+					<record>
+						<integer id="get_property" value="SCei" />
+						<integer id="set_property" value="SCei" />
+					</record>
+					<record>
+						<integer id="get_property" value="fSCe" />
+						<integer id="set_property" value="fSCe" />
+					</record>
+					<record>
+						<integer id="get_property" value="Hhum" />
+						<integer id="set_property" value="Hhum" />
+					</record>
+					<record>
+						<integer id="get_property" value="Pers" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+
+		
+		
+		
 		<container>
-			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" vertical_inset="4" horizontal_offset="4" horizontal_gap="4"/>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-5,3,-6" vertical_inset="4" horizontal_offset="4" horizontal_gap="4"/>
 
 			<container>
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="4" vertical_offset="0" vertical_gap="4" />
@@ -244,7 +281,7 @@
 					</container>
 
 					<!--knowledge level and scout rec-->
-					<widget height="205" class="player_reports_overview_summary_panel" file="player/player reports overview for scouting centre">
+					<widget height="265" class="player_reports_overview_summary_panel" file="player/player reports overview for scouting centre">
 						<record id="object_property">
 							<list id="get_properties">
 
@@ -275,6 +312,8 @@
 
 			</container>
 
+			<widget class="vertical_divider" width="3"/> 
+
 			<container>
 
 				<!-- 
@@ -289,8 +328,7 @@
 				   
 				 - On the inbox panel we will not be enable the show medium horizontal attachments, which will then when processed show/hide the panel
 				   based on the available screen resolution
-				
-				-->
+								-->
 
 				<attachment class="show_medium_horizontal" id="smh1" disabled="true" />
 				<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="shown" skip_if_false="true" />
@@ -301,34 +339,11 @@
 
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-				<container class="contrast_box">
+				<container class="bordered_box" >
 					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-					<container class="tabbed_container" default_item="attr" save_session_state="true" inset="0" offset="0" id="tabc">
+					<container class="tabbed_container" default_item="attr" save_session_state="true" save_default_state="true" inset="0" offset="0" id="tabc">
 
-						<container id="prcn">
-							<!--<record id="object_property" get_property="HSrt" set_property="ithd" />-->
-
-							<translation id="title" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
-
-							<widget class="player_scout_reports_panel" file="player/player scout reports pro con only">
-								<record id="object_property" get_property="Pers" set_property="objt" />
-							</widget>
-
-						</container>
-
-						<container id="pacn">
-							<!--<record id="object_property" get_property="HArt" set_property="ithd" />-->
-
-							<translation id="title" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
-
-							<widget class="player_data_analyst_report_panel" file="player/player analyst reports role analysis only">
-								<record id="object_property" get_property="Pers" set_property="objt" />
-							</widget>
-
-						</container>
 
 						<container id="attr">
 							<translation id="title" translation_id="229822" type="use" value="Attributes" />
@@ -343,17 +358,8 @@
 								<record id="object_property" get_property="Pers" set_property="objt" />
 							</widget>
 						</container>
-						<!-- 
-						<container id="psrl">
-							<translation id="title" translation_id="466570" type="use" value="Position and Role[COMMENT: FR 22655, scouting centre recommendation, section title for part of report that shows a player's position and role]" />
 
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
 
-							<widget class="player_positions_indicator_panel">
-								<record id="object_property" get_property="Pers" set_property="objt" />
-							</widget>
-						</container>
- -->
 						<container id="medi">
 
 							<!--<record id="object_property" get_property="HMdt" set_property="ithd" />-->
@@ -364,6 +370,32 @@
 							</widget>
 						</container>
 
+						<container id="prcn">
+							<translation id="title" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"  vertical_inset="5" />
+
+							<widget class="player_scout_reports_panel" file="player/tcs/scouting/pros and cons" >
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+							<widget class="player_scout_reports_panel" id="pscR" file="player/player scout report comparison small" late_loading="true">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+						</container>
+
+						<container id="pacn">
+							<!--<record id="object_property" get_property="HArt" set_property="ithd" />-->
+
+							<translation id="title" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_data_analyst_report_panel" file="player/player analyst reports role analysis only">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+						</container>
+
+
 					</container>
 
 				</container>
@@ -372,39 +404,7 @@
 
 		</container>
 
-		<widget class="player_scouting_centre_actions_panel" id="toto" colour="scout card text" disabled_colour="faded black">
-			<boolean id="save_immediate_state" value="true" />
-			<record id="object_property">
-				<list id="get_properties">
-					<record>
-						<integer id="get_property" value="hpla" />
-						<integer id="set_property" value="hidn" />
-					</record>
-					<record>
-						<integer id="get_property" value="Ttea" />
-						<integer id="set_property" value="Ttea" />
-					</record>
-					<record>
-						<integer id="get_property" value="SCei" />
-						<integer id="set_property" value="SCei" />
-					</record>
-					<record>
-						<integer id="get_property" value="fSCe" />
-						<integer id="set_property" value="fSCe" />
-					</record>
-					<record>
-						<integer id="get_property" value="Hhum" />
-						<integer id="set_property" value="Hhum" />
-					</record>
-					<record>
-						<integer id="get_property" value="Pers" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</list>
-			</record>
-		</widget>
-
-
+		
 	</container>
 
 
