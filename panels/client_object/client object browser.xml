@@ -76,11 +76,30 @@
 		<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1124" action_event="layD" disable_setting_name="force_small_sidebar"/>
 
 
+								<!-- SIDEBAR --> 
+								<widget class="sidebar_menu_table" id="side" width="160">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="cotO" />
+									</record>
+									<attachment class="test_multiple_globals_attachment" default_value="true">
+										<list id="get_properties">
+											<record get_property="TTyp" test_mode="0" value="1" skip_if_null="false" />
+											<record get_property="FS  " test_mode="0" comparison_mode="1" value="true" skip_if_null="false" />
+											<record get_property="DRpg" test_mode="0" comparison_mode="1" value="true" skip_if_null="false" />
+											<record get_property="AFPw" test_mode="0" comparison_mode="1" value="true" skip_if_null="false" />
+											<record get_property="section" test_mode="0" comparison_mode="1" value="PprC" skip_if_null="false"/>
+										</list>
+										<integer id="set_property" value="FoHi" />
+									</attachment>
+									<attachment class="test_setting_attachment" get_setting="force_small_sidebar" value="true" skip_if_false="true" default_value="false" set_property="widt" true_value="45"/>
+									<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1200" set_property="widt" true_value="45" false_value="160" disable_setting_name="force_small_sidebar"/>
+								</widget>
 
 		<container>
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-			<!-- <widget class="picture" file="boxes/custom/background fade/paper" height="70" /> -->
+			<widget class="picture" file="boxes/custom/background fade/paper" height="70" />
 
 			<container>
 				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
@@ -150,8 +169,8 @@
 							</attachment>
 
 
-							<!-- coloured actions bar image -->
-							<widget class="bordered_box" id="ACTb" appearance="tcs/boxes/tab bar/paper"/>
+							<!-- coloured actions bar image 
+							<widget class="bordered_box" id="ACTb" appearance="tcs/boxes/tab bar/paper" red_replacement="primary"/> -->
 
 							<container>
 								<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="2" offset="8" />
@@ -177,27 +196,6 @@
 							<container id="main">
 								<layout class="arrange_horizontal_attachment" alignment="middle,extend" gap="0" offset="0" />
 								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-
-								<!-- SIDEBAR --> 
-								<widget class="sidebar_menu_table" id="side" width="160">
-									<record id="object_property">
-										<integer id="get_property" value="objt" />
-										<integer id="set_property" value="cotO" />
-									</record>
-									<attachment class="test_multiple_globals_attachment" default_value="true">
-										<list id="get_properties">
-											<record get_property="TTyp" test_mode="0" value="1" skip_if_null="false" />
-											<record get_property="FS  " test_mode="0" comparison_mode="1" value="true" skip_if_null="false" />
-											<record get_property="DRpg" test_mode="0" comparison_mode="1" value="true" skip_if_null="false" />
-											<record get_property="AFPw" test_mode="0" comparison_mode="1" value="true" skip_if_null="false" />
-											<record get_property="section" test_mode="0" comparison_mode="1" value="PprC" skip_if_null="false"/>
-										</list>
-										<integer id="set_property" value="FoHi" />
-									</attachment>
-									<attachment class="test_setting_attachment" get_setting="force_small_sidebar" value="true" skip_if_false="true" default_value="false" set_property="widt" true_value="45"/>
-									<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1200" set_property="widt" true_value="45" false_value="160" disable_setting_name="force_small_sidebar"/>
-								</widget>
-
 
 								<!-- screen content area -->
 								<container id="scca" auto_size="horizontal">
