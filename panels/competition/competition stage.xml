@@ -1,5 +1,5 @@
 <panel save_session_state="true">
-<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 <container>
 		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 

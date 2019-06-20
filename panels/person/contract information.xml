@@ -1,7 +1,7 @@
 <panel save_session_state="true">
 
 	<string id="title" value="Contract Offer Panel" />
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container id="off">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />

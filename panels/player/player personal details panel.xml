@@ -1,0 +1,222 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- LOGO AND KIT ICON -->
+	<container width="280">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+		<!-- CONTAINER HOLDING KIT ICON, USED TO HELP MANOUVER THE KIT ICON -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" offset="0" gap="0" />
+			<!-- KIT ICON -->
+			<widget id="cKit" class="kit_icon" image_alignment="left" height="130" scale_picture="false" kit_zoom_level="2" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="-5" /> 
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Pers" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</list>
+				</record>
+			</widget>
+		</container>
+
+		<!-- PROFILE PICTURE -->
+		<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="right,bottom">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="-15" /> 
+			<record id="object_property">
+				<list id="get_properties">
+					<record get_property="fcgn" />
+					<record get_property="Pfke" />
+					<record get_property="prpc" set_property="valu" />
+				</list>
+			</record>
+		</widget> 
+	</container>
+
+	<!-- GRADIENT PATTERN -->
+	<container class="plain_box" appearance="tcs/player overview" red_replacement="secondary" width="2"/>
+
+	<container class="horizontal_adaptive_container" offset="0" inset="0" gap="8" >
+
+		<!-- LOGOS AND EXTRA DETAILS -->
+		<container default_width="220" priority="1">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="6" horizontal_gap="0" vertical_offset="6" vertical_gap="0"/>	
+			<!-- COUNTRY NATION BADGES-->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0" />
+				<!-- DEFAULT PROPERTIES USED SO WE DON'T HAVE TO DEFINE CERTAIN ATTRIBUTES EVERY TIME -->
+				<record id="default_properties" scale_picture="true" wants_mouse_events="true"/>
+				<!-- NATION LOGO -->
+				<widget class="object_portrait_picture" id="npiB" image_alignment="right" >
+					<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+				</widget>
+				<!-- CLUB LOGO -->
+				<widget class="object_portrait_picture" id="pclB" image_alignment="left" >
+					<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+				</widget>
+			</container>
+
+			<!-- PLAYER EXTRA DETAILS -->
+			<widget class="player_extra_details_text" id="plex" auto_size="vertical" alignment="top,centre_x,can_scale"  size="small" colour="secondary" multiline="false">
+				<record id="object_property" get_property="PExD" />
+			</widget>
+		</container>
+
+		<!-- GRADIENT PATTERN -->
+		<container class="plain_box" appearance="tcs/player overview" red_replacement="secondary" width="2"/>
+
+		<container default_width="160" priority="2">
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_inset="0" />
+
+			<!-- AGE + DOB -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- AGE LABEL-->
+				<widget class="label" auto_size="vertical" font="title1" colour="secondary">
+					<translation id="text" type="use"  translation_id="227770" value="Age" />          
+				</widget>
+
+				<!-- CONTAINER USED TO SET AGE + DOB HORIZONTALLY -->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="1" />
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="2" />
+					<!-- AGE -->
+					<widget class="editable_client_object_property_panel" id="age " height="22" auto_size="horizontal" colour="secondary">
+						<record id="widget_info" class="formatted_label" alignment="left,centre_y" height="22" auto_size="horizontal" size="large" >
+							<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+						</record>
+						<record id="widget_edit_info" width="0" height="0"/>
+						<record id="object_property" get_property="Page" />
+					</widget>
+					<!-- DoB -->
+					<widget class="editable_client_object_property_panel" id="dobl" auto_size="vertical" colour="secondary" size="small">
+						<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="vertical" auto_size_minimum_height="20" format="([%date#1-short])" colour="faded text"/>
+						<record id="widget_properties" height="24"/>
+						<record id="object_property" get_property="Pdob" />
+					</widget>
+					<!-- END OF AGE + DOB -->
+				</container>
+			</container>
+
+			<!-- INTERNATIONAL -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<widget class="label" auto_size="vertical" font="title1" colour="secondary">
+					<translation id="text" translation_id="227820" type="use" value="International" />
+				</widget>
+				<widget class="international_appearances_label" id="inta" alignment="left,can_scale" multiline="false" auto_size="vertical" colour="secondary">
+					<integer id="int_apps_label_format" value="10" />
+					<record id="object_property" dont_set_hint="true" get_property="Pist" />
+				</widget>
+			</container> 
+
+			<!-- PERSONALITY -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<widget class="label" id="PPs:" auto_size="vertical" font="title1" colour="secondary">
+					<record id="object_property" get_property="PPst" name="true" />
+				</widget>
+				<widget class="personality_label" id="PPst" auto_size="vertical" colour="secondary">
+					<record id="object_property" get_property="PPst" />
+				</widget>
+			</container>
+
+			<!-- SQUAD STATUS -->
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" gap="-5" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" auto_size="vertical" font="title1"  colour="secondary">
+					<record id="object_property" get_property="Pfot" name="true" />
+				</widget>
+				<widget class="foot_label" id="Pfot" alignment="left"  auto_size="vertical" colour="secondary">
+					<record id="object_property" get_property="Pfot" />
+				</widget>
+			</container>	
+
+
+		</container>
+
+		<!-- GRADIENT PATTERN -->
+		<container class="plain_box" appearance="tcs/player overview" red_replacement="secondary" width="2"/>
+
+		<!-- E //TRANSFER - CONTRACT -->
+		<container default_width="140" priority="3">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+			<!-- VALUE -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" gap="-5" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="vall" auto_size="vertical" font="title1"  colour="secondary">
+					<translation id="text" translation_id="227806" type="use" value="Value" />
+				</widget>
+				<widget class="value_label" id="valu" alignment="left" auto_size="vertical" colour="secondary">
+					<record id="object_property" get_property="Pdva" />
+				</widget>
+			</container>
+
+			<!-- WAGE -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" gap="-5" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="wglb" auto_size="vertical" font="title1"  colour="secondary">
+					<translation id="text"  type="use"   translation_id="242353" value="Wages" />
+				</widget>
+				<widget class="wage_label" id="wkwg" alignment="left" auto_size="vertical" colour="secondary">
+					<record id="object_property" get_property="Pcww" />
+				</widget>
+			</container>			
+
+			<!-- EXPIRES -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" gap="-5" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="Pcww" auto_size="vertical" font="title1"  colour="secondary">
+					<translation id="text" translation_id="227784"  type="use" value="Expiry Date" />
+				</widget>
+				<widget class="date_cell" id="expd" alignment="left"  auto_size="vertical" colour="secondary">
+					<record id="object_property" get_property="Pcex" />
+				</widget>
+			</container>
+
+			<!-- ASKING PRICE -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" gap="0" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<widget class="label" id="wxyz" auto_size="vertical" font="title1"  colour="secondary">
+					<translation id="text"  type="use"  translation_id="227783"  value="Squad Status" />
+				</widget> 
+				<widget class="squad_status_label" id="Pcex" alignment="left" spec="bold" auto_size="vertical" colour="secondary">
+					<record id="object_property" get_property="Pccs" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- GRADIENT PATTERN -->
+		<container class="plain_box" appearance="tcs/player overview" red_replacement="secondary" width="2"/>
+
+		<container class="player_scout_reports_panel" file="none" default_width="-1" minimum_width="370" priority="1">
+
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+			<record id="object_property" get_property="objt" set_property="objt" />
+
+			<!-- PROS AND CONS -->
+			<container >
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+
+				<widget class="player_scout_reports_panel" id="tcspc" file="player/tcs/pros cons">
+				</widget> 
+			</container>			
+		</container>
+
+	</container>
+
+</panel>

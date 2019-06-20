@@ -1,5 +1,5 @@
 <panel>
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container id="nvab">
 		<layout class="arrange_vertical_attachment" alignment="top" offset="50" gap="0" />

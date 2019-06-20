@@ -1,6 +1,6 @@
 <panel>
 		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
-		<layout class="stick_to_sides_attachment" alignment="all" inset="6" /> 
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" /> 
 
 	<container class="subsection_box">
 		<translation id="title" translation_id="319478" type="use" value="International Instructions[COMMENT: international friendly instructions panel; title text for panel]" />

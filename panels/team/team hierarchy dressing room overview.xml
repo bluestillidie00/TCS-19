@@ -1,5 +1,5 @@
 ﻿<panel>
-	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="6" />
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0" />
 
 	<container class="subsection_box" alignment="left,centre_y">
 		<translation id="text" translation_id="447639" type="use" value="Happiness[COMMENT - team screen section; Dynamics section; Dressing Room happiness Section]" />

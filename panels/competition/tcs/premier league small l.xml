@@ -20,7 +20,7 @@
 		<container >
 			<layout class="fit_children_attachment" alignment="vertical, extend" offset="0" gap="0" />
 			<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
-			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 			<!-- ITEM TITLE-->
 			<widget class="text" id="titl" font="premiersansb" auto_size="vertical" size="12"  colour="tcsbackground" />

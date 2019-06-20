@@ -17,7 +17,7 @@
 
 		<!-- NEWS HEADLINES-->
 		<container>
-			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="3" vertical_gap="4" horizontal_inset="6"/>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="3" vertical_gap="4" horizontal_inset="0"/>
 
 			<!-- ARTICLE CATEGORY -->
 			<widget class="text" id="brif" font="title1" size="small" style="bold" multiline="true" auto_size="vertical" colour="blue 300"/>

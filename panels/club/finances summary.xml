@@ -1,6 +1,6 @@
 <panel>
 	<boolean id="should_force_refresh" value="true" />
-	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 	<!--Main container-->
 	<container>

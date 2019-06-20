@@ -1,6 +1,6 @@
 <panel>
 	<translation id="title" translation_id="308072" type="use" value="Non Player Overview Panel" />
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container class="titled_box" appearance="boxes/subsection/standard/paper">
 		<translation id="title" translation_id="247414" type="use" value="Overview" />

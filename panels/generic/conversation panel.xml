@@ -1,10 +1,10 @@
 <panel >
-<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 	<boolean id="save_immediate_state" value="true"/>
 
 	<container id="Mnbx">
 		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" gap="0"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 
 		<container class="bordered_box" appearance="boxes/bordered/standard/top/paper" red_replacement="tcs_dark_box" id="TtBx" height="80">

@@ -201,7 +201,7 @@
 
 								<!-- screen content area -->
 								<container id="scca" auto_size="horizontal">
-									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
 								</container>
 
 							</container>
@@ -223,7 +223,6 @@
 		<!--replay controls-->
 		<widget class="match_replay_controls_panel" id="mrcp" disable_layout_attachments_when_embedded="true">
 			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="66,273,0,222" />
-
 			<record id="object_property" get_property="objt" set_property="objt" />
 		</widget>
 	</container>

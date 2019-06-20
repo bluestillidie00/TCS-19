@@ -1,7 +1,7 @@
 <panel>
 	<!-- THIS IS THE SOCIAL MEDIA PANEL -->
 	<!-- CODE BELOW ALIGNS THE CONTENT IN THE CENTRE OF THE PAGE -->
-	<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_inset="10" vertical_inset="6" />
+	<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_inset="10" vertical_inset="0" />
 	<boolean id="save_session_state" value="true"/>
 	<boolean id="save_immediate_state" value="false"/>
 	<boolean id="save_default_state" value="true"/>

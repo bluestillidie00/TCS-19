@@ -1,5 +1,5 @@
 <panel>
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container  id="main">
 		<layout class="horizontal_arrange" horizontal_layout="300,-1" horizontal_gap="0" />

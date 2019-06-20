@@ -2,7 +2,7 @@
 	<flags id="rleg" value="tables/custom/league/relegation/row" />
 	<flags id="burc" value="red 500" />
 	<flags id="bucc" value="blue 500" />
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 	<container>
 
 		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
@@ -385,7 +385,7 @@
 			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
 
 			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="6" />
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
 
 				<container>
 					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
@@ -409,7 +409,7 @@
 			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
 			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
 			<layout class="arrange_horizontal_attachment" offset="0" gap="2" alignment="right,extend" />
-			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 
 			<container>
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />

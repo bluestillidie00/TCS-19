@@ -9,7 +9,7 @@
 	<flags id="hida" value="tables/custom/squad/highlight/row" />
 
 		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
-		<layout class="stick_to_sides_attachment" alignment="all" inset="6"/> 
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/> 
 
 
 	<container class="titled_box" id="plti" alignment="left" appearance="boxes/subsection/standard/paper">

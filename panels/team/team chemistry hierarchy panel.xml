@@ -2,7 +2,7 @@
 	<!--The maximum width and height for each player widget within the pyramid-->
 	<integer id="player_widget_max_height" value="120" />
 	<integer id="player_widget_max_width" value="130" />
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container>
 		<container>
@@ -87,7 +87,7 @@
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
 						<container height="55" embed_in_frame="true">
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="8,0" />
 							<widget class="text" id="assF" spec="text" alignment="left,centre_y" font="title" colour="text" red_replacement="text" multiline="true"/>
 						</container>

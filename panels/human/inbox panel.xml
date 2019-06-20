@@ -46,7 +46,7 @@
 	<widget class="transfer_deadline_panel" id="trde" height="45" hidden="true"/>
 
 	<container id="indm" >
-		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6"/>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 		<!-- This extra container layer ('indm') is used for holding a modal_popup_panel. We would prefer to use the 'indp' panel below but cannot due to bug #68215 -->
 
 		<container>

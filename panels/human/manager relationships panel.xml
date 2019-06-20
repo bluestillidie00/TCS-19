@@ -1,7 +1,7 @@
 ﻿<panel>
 	<boolean id="save_session_state" value="true" />
 
-	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="6" />
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0" />
 
 	<container class="subsection_box">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />

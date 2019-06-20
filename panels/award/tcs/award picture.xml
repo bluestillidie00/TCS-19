@@ -1,0 +1,8 @@
+<panel>
+<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0" />
+
+			<widget class="object_portrait_picture" id="left" image_alignment="centre_y,right" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+
+			<widget class="object_portrait_picture" id="rhgt" image_alignment="centre_y,left" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+		
+</panel>

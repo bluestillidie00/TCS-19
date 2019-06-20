@@ -12,7 +12,7 @@
 		<!-- News item -->
 		<container>
 			<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="6" gap="4" />
-			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 			<!-- Main object -->
 			<widget class="text" id="brif" size="10" font="premiersansb" multiline="true" auto_size="vertical" colour="epl_pin"/>

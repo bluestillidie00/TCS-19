@@ -2,7 +2,7 @@
 <panel class="award_winners_panel">
 	<boolean id="should_force_refresh" value="true" />
 	<boolean id="save_session_state" value="true" />
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<flags id="current_view_menu" value="awvw" />
 

@@ -7,7 +7,7 @@
 	<flags id="cncp" value="tables/custom/fixtures/continental/row" />
 	<flags id="cpap" value="tables/custom/fixtures/cup/row" />
 
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container id="fpc1">
 		<layout class="arrange_horizontal_attachment" layout="375,-1" offset="0" gap="0"/>

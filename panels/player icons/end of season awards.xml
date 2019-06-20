@@ -19,7 +19,7 @@
 
 		<!-- ICONS (INJURY, STAR PLAYER ETC) -->
 		<container id="icoC" height="16" width="16" >
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="6" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
 			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="2"/>
 			<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
 

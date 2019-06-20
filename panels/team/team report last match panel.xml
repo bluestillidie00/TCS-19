@@ -1,5 +1,5 @@
 <panel>
-	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 	<widget class="team_report_request_report_panel" id="nort" />
 

@@ -79,7 +79,7 @@
 		<!-- ANOTHER CONTAINER ADDED DUE TO THE ENTIRE SECOND LEVEL BEING IN IT'S OWN BORDERED BOX -->
 		<container >
 			<!-- SPLITS 2ND LEVEL INTO THREE VERTICAL SECTIONS // LEFT = STATS AND MILESTONES, MIDDLE TEAM STATS, RIGHT COMP NEWS-->
-			<layout class="horizontal_arrange" horizontal_layout="-1,1000,-1" horizontal_gap="0" horizontal_inset="6"/>
+			<layout class="horizontal_arrange" horizontal_layout="-1,1000,-1" horizontal_gap="0" horizontal_inset="0"/>
 
 			<!-- LEFT SIDED PANEL -->
 			<container class="bordered_box" appearance="tcs/match/ibh/left/paper" >

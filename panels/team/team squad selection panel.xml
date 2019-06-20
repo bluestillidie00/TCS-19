@@ -1,7 +1,7 @@
 <panel>
 	<boolean id="save_session_state" value="true" />
 	<boolean id="save_default_state" value="true" />
-	<layout class="stick_to_sides_attachment" alignment="all" inset="6"/> 
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/> 
 	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 	
 	<!-- main area -->

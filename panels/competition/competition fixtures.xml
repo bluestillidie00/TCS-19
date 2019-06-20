@@ -4,7 +4,7 @@
 	<boolean id="save_default_state" value="true" />
 
 	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" />
-	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 	<!-- titled box -->
 	<container class="titled_box" id="fxtt" alignment="left" appearance="boxes/subsection/standard/paper">

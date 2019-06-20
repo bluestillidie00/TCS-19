@@ -1,6 +1,6 @@
 <panel>
 	<layout class="vertical_arrange" vertical_layout="120,350,-1" vertical_gap="0" />
-	<layout class="stick_to_sides_attachment" alignment="all" inset="6" /> 
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" /> 
 
 	<!--tactics and tactical data-->
 	<widget class="tactic_slot_tab_container" id="prep" file="team/tcs/training tactic tab" />

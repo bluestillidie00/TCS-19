@@ -1,0 +1,171 @@
+﻿<!-- THIS IS THE PANEL THAT SHOWS ON THE PLAYER > REPORTS > OVERVIEW PANEL -->
+<panel>
+	<!-- THIS LAYOUT ALLOWS US TO DEFINE THE HEIGHT OF THE TOP CONTAINER, THEN NOT HAVE TO DEFINE ANYTHING ELSE -->
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />	
+	<boolean id="should_force_refresh" value="true" />
+	<flags id="cham" value="tables/custom/league/champions/row" />
+
+	<!-- BAR AT THE TOP, THIS WILL DISPLAY VARIOUS BITS OF INFORMATION SUCH AS PRICE AND INTEREST -->
+	<widget class="player_reports_overview_summary_panel" file="player/tcs/scouting/reports overview summary" height="190">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+
+	<!-- CONTAINER HOLDING REST OF THE CONTAINER -->
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="-500,-200" horizontal_gap="0" />
+
+		<!-- LEFT SIDE OF CONTAINER -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />	
+
+			<container >
+				<!-- THIS LAYOUT SPLITS BOTH SIDES INTO TWO -->
+				<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0" />
+
+				<!-- SCOUT REPORTS -->
+				<container class="subsection_box">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+					<!-- SCOUT REPORT LINK TITLE -->
+					<widget class="link_button_title" section="Pssr" embed_in_frame="true">
+						<translation id="text" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+						<layout class="stick_to_sides_attachment" alignment="left,top" embed_in_frame="true" inset="12,10" />
+					</widget>
+
+					<!-- MATCHES WATCHED -->
+					<widget class="text" id="nmwt"  height="26" auto_size="all" alignment="right,centre_y" embed_in_frame="true">
+						<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="12,10" />
+					</widget>
+
+					<!-- PROS AND CONS -->
+					<container class="inner_box" >
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+						<widget class="player_scout_reports_panel" file="player/player scout reports for overview">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+				</container>
+
+				<!-- RIGHT HAND SIDE -->
+				<container >
+					<!-- THIS LAYOUT SPLITS BOTH SIDES INTO TWO -->
+					<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0" />
+
+					<!-- ANALYST REPORT -->
+					<container class="subsection_box">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<!-- ANALYST REPORT LINK TITLE -->
+						<widget class="link_button_title" section="Pdar" embed_in_frame="true">
+							<translation id="text" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+							<layout class="stick_to_sides_attachment" alignment="left,top" embed_in_frame="true" inset="12,10" />
+						</widget>
+
+						<!-- ANALYST REPORT -->
+						<widget class="player_data_analyst_report_panel" file="player/player data analyst report for overview">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+
+					<!-- MEDICAL CENTRE -->
+					<container class="subsection_box">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<!-- MEDICAL CENTRE TITLE LINK -->
+						<widget class="link_button_title" section="PInj" embed_in_frame="true">
+							<translation id="text" translation_id="450760" type="use" value="Medical Centre[COMMENT: Panel title for when viewing medical report, was ID 447586 but we've since been asked to change it to Medical Centre]" />
+							<layout class="stick_to_sides_attachment" alignment="left,top" embed_in_frame="true" inset="12,10" />
+						</widget>
+
+						<!-- INJURY PANEL -->
+						<widget class="player_injury_panel" id="Injp" file="player/player injury panel for overview">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+
+						<!-- N/A LABEL -->
+						<widget class="label" id="Inju" alignment="centre" auto_size="none" style="bold" size="large" multiline="false" hidden="true">
+							<translation id="text" translation_id="227378" type="use" value="Unknown"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<!-- PLAYER STATS -->
+			<container class="bordered_box" height="220">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+					<record id="object_property">
+						<list id="get_properties">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<record id="object_property" get_property="Pila" set_property="hidn"/>
+						</list>
+					</record>
+				</widget>
+				<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+					<record id="object_property">
+						<list id="get_properties">
+							<record id="object_property" get_property="Pila" set_property="Shwn"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</list>
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!-- POSITION AND ROLES -->
+		<container class="subsection_box">
+			<translation id="title" translation_id="447608" type="use" value="Position and Roles[COMMENT: Panel title for when viewing analyst report]" />
+			<layout class="vertical_arrange" vertical_layout="-1,1,-1" vertical_gap="10" />
+
+			<!-- POSITION PITCH AND PLAYING STYLE -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />	
+
+				<!-- PITCH -->
+				<widget class="player_positions_indicator_panel" id="ppos" file="player/tcs/tcs player report pitch">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<!-- PLAYER STYLE LABEL -->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<widget class="text" auto_size="all" colour="faded text">
+						<translation id="text" translation_id="242530" type="use" value="Playing Style" />
+					</widget>
+
+					<widget class="player_style_label" id="pstw" auto_size="all"/>
+				</container>
+			</container>
+
+			<!-- DIVIDER -->
+			<widget class="horizontal_divider" />
+
+			<!-- SQUAD COMPARISON -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" id="sqcw" font="title" colour="faded text" auto_size="vertical"/>
+
+				<container height="4" />
+
+				<!-- Ability list table -->
+				<widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="26,-4,-3">
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" colour="faded text" />
+						<record indx="1" alignment="left,centre_y" />
+						<record indx="2" alignment="left,centre_y" />
+					</list>
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="true" left="5" />
+						<record indx="1" sort_disabled="true" />
+						<record indx="2" sort_disabled="true" />
+					</list>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

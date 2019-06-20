@@ -4,7 +4,7 @@
 
 	<!-- CONTAINER HOLDING THE PITCH ~ DUMMY CONTAINER USED TO ADJUST INSET-->
 	<container class="bordered_box_no_margin" red_replacement="pitch_box_background" height="500">
-		<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 		<!-- CONTAINER SPLIT INTO TWO VERTICAL COLUMNS ~ A 50px HEADER FOR THE TABS AND THE REST FOR THE PITCH -->
 		<container>

@@ -1,5 +1,5 @@
 <panel save_immediate_state="true">
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<!-- panel for no available feeder clubs-->
 	<container class="empty_state" id="nofc" header_widget="BShe" body_widget="BSbo">

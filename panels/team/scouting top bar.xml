@@ -1,4 +1,4 @@
-<panel height="70">
+<panel height="100">
 	<boolean id="should_force_refresh" value="true" />
 	<colour id="budget_info_positive_colour" name="positive" />
 	<colour id="budget_info_zero_colour" name="text" />

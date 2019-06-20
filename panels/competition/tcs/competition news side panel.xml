@@ -16,7 +16,7 @@
 				<container class="property_list_viewer_xml_panel" id="evt2" file="competition/competition news calendar day panel" height="62" />
 
 				<widget class="text" id="noev" alignment="centre" colour="faded text" auto_size="vertical" hidden="true">
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 
 					<translation id="text" translation_id="395280" type="use" value="No events in the near future.[COMMENT: FR 11005; competition news panel; text indicating that there are no interesting events coming up]" />
 				</widget>

@@ -1,9 +1,9 @@
 <panel>
 	<boolean id="save_session_state" value="true" />
-	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 	
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 	
 
 	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-1,380" horizontal_gap="0" horizontal_inset="6" vertical_offset="6" />
+		<layout class="horizontal_arrange" horizontal_layout="-1,380" horizontal_gap="0" horizontal_inset="0" vertical_offset="6" />
 
 		<!-- Appearance container -->
 		<container class="bordered_box" appearance="boxes/bordered/standard/left/paper">

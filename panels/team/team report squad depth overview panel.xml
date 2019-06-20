@@ -1,7 +1,7 @@
 <panel>
 	<boolean id="save_session_state" value="true" />
 	<boolean id="save_default_state" value="true" />
-	<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 	
 	<container id="fAll">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
@@ -204,7 +204,7 @@
 
 					<container>
 						<layout class="arrange_horizontal_attachment" alignment="left" gap="5" offset="0" />
-						<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
 						<container>
 							<layout class="fit_children_attachment" alignment="horizontal" />

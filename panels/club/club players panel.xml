@@ -3,7 +3,7 @@
 	<boolean id="save_default_state" value="true" />
 	<boolean id="should_force_refresh" value="true" />
 
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<!-- main area -->
 	<container id="main">

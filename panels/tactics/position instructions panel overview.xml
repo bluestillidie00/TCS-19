@@ -180,7 +180,7 @@
 					<container id="prTn">
 						<layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="4" />
 						<layout class="fit_children_attachment" alignment="vertical,fill" offset="6" gap="4" />
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
 						<record id="default_properties" colour="white"/>
 

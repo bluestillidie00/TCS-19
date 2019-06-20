@@ -1,5 +1,5 @@
 ﻿<panel>
-<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/> 
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 	<boolean id="should_force_refresh" value="true" />
 	<colour id="minor_issue_colour" name="blue 500" />
 	<colour id="major_issue_colour" name="red 300" />

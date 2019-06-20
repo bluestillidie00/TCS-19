@@ -6,7 +6,7 @@
 
 	<container>
 		<!-- BOTTOM, EXTEND USED SO WE DONT HAVE TO GIVE THE PITCH A HEIGHT ATTRIBUTE ~ INSETS USED FOR CONSISTENCY WITH REST OF SKIN -->
-		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="6" vertical_offset="6"/>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" vertical_offset="6"/>
 
 		<!-- ACTUAL CONTAINER HOLDING INFORMATION -->
 		<container>
