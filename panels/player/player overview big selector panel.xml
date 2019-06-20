@@ -1,49 +1,54 @@
-<panel>
+ <panel>
 	<container class="bordered_box" id="SUBP">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 	</container>
 
 	<widget class="popup_button" id="popv"  auto_size="horizontal" height="20" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true" prme="false">
-		<layout class="stick_to_sides_attachment" alignment="top,right" inset="6"/>
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="6" /> 
 	</widget>
 
 	<widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title" late_loading="true">
 		<translation id="title" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
 	</widget>
-	  <widget class="player_scout_reports_panel" id="pscR" file="player/player scout report comparison small" late_loading="true">
-    <translation id="title" translation_id="248428" type="use" value="Comparison" />
-  </widget>
+	<widget class="player_scout_reports_panel" id="pscR" file="player/player scout report comparison small" late_loading="true">
+		<translation id="title" translation_id="248428" type="use" value="Comparison" />
+	</widget>
 	<widget file="player/tcs/player attribute analyser panel" id="paAn" class="client_object_viewer_xml_panel" late_loading="true">
 		<translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
 	</widget>
-<!-- 	<widget class="person_happiness_panel" id="phap" file="player/tcs/tcs person happiness relationships">
+	<!-- 	<widget class="person_happiness_panel" id="phap" file="player/tcs/tcs person happiness relationships">
 		<translation id="title" type="use" value="Happiness" />
 	</widget> -->
 	<widget class="playing_history_summary_panel" id="tsCS" file="player/wannachup/wannachup playing history summary" late_loading="true">
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
 
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-  <!-- SCOUT REPORTS -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- SCOUT REPORTS -->
 	<widget class="player_scout_reports_panel" id="tcsR" file="player/tcs/player scout reports for overview" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
-    <translation id="title"  type="use" value="Pros and Cons" />
-  </widget>
+		<translation id="title"  type="use" value="Pros and Cons" />
+	</widget>
 	<widget class="player_training_information" file="player/tcs/tcs training focus large" id="tsTR" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
 		<translation id="title"  type="use" value="Training Focus" />
 		<record id="object_property" get_property="objt" set_property="objt"/>
 	</widget>
-<!--   	<widget class="player_scout_reports_panel" id="tcsR" file="player/tcs/player scout reports for overview" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+	<!--   	<widget class="player_scout_reports_panel" id="tcsR" file="player/tcs/player scout reports for overview" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
     <translation id="title"  type="use" value="Pros and Cons" />
   </widget>	   -->
 
-  <!-- INJURY HISTORY
-	<widget class="player_injury_panel" id="tcsF" file="player/tcs/tcs injury history" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
-	<translation id="text" type="use" value="Injury History"/>
-	</widget>	-->
-
-<!-- TACTICAL FAMILIARITY -->
-  <widget class="player_tactical_familiarity_panel" id="tacf" file="player/tcs/tcs tactical familiarity" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+	<!-- INJURY HISTORY -->
+	<widget class="player_injury_panel" file="player/tcs/tcs player injury list" id="IPrw" late_loading="true">
+		<translation id="title" translation_id="450787" type="use" value="Injury History" />
+	</widget>
+	
+	<!-- INJURY HISTORY -->
+	<widget class="player_transfer_interest_panel" id="Pint" file="player/tcs/transfer/transfer interest" late_loading="true">
+		<translation id="title" translation_id="450790" type="use" value="Transfer Interest" />
+	</widget>
+	
+	<!-- TACTICAL FAMILIARITY -->
+	<widget class="player_tactical_familiarity_panel" id="tacf" file="player/tcs/tcs tactical familiarity" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
 		<translation id="title"  type="use" value="Tactical Familiarity" />
 	</widget>
 

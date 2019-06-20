@@ -24,7 +24,7 @@
 	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
-	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true">
+	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true" file="player/tcs/training/medical report">
 		<translation id="title" translation_id="247571" type="use" value="Fitness" />
 	</widget>
 	<widget class="player_scout_reports_panel" id="pscR" file="player/player scout report comparison small" late_loading="true">
@@ -74,6 +74,16 @@
 	<!-- FORM 5 / TAKEN FROM KEYSI SKIN-->
 	<widget class="player_form_summary_panel" id="Pfor" file="player/tcs/player form summary panel profile" late_loading="true">
 		<translation id="title" type="use" value="Form 5[COMMENT: team form 5 games, all competitions, short version]" />
+	</widget>
+
+	<!-- INJURY HISTORY -->
+	<widget class="player_injury_panel" file="player/tcs/tcs player injury list" id="IPrw" late_loading="true">
+		<translation id="title" translation_id="450787" type="use" value="Injury History" />
+	</widget>
+	
+	<!-- TRANSFER INTEREST -->
+	<widget class="player_transfer_interest_panel" id="Pint" file="player/tcs/transfer/transfer interest" late_loading="true">
+		<translation id="title" translation_id="450790" type="use" value="Transfer Interest" />
 	</widget>
 
 	<!-- FORM 20 / TAKEN FROM KEYSI SKIN-->
