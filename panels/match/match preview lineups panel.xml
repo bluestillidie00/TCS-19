@@ -1,8 +1,314 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+	<colour name="intro date" red="55" green="0" blue="60" />
+	<colour name="intro comp" red="5" green="240" blue="254" />
 
-	<!-- BACKGROUND -->
-	<container class="plain_box"  appearance="tcs/boxes/backgrounds/50" />
+	<!-- 1st BOX THAT FLIES ACROSS FROM LEFT TO RIGHT -->
+	<widget class="picture" file="tcs/match/epl/bg" scale_picture="true">
+		<boolean id="keep_aspect_ratio" value="false" />
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+			<!-- STORYBOARD USED TO ANIMATE ACROSS SCREEN -->
+			<list id="storyboard">
+				<!-- 1ST STEP IS TO HAVE IT START OFF THE SCREEN. THE VALUE IS -1 TO MAKE IT START LEFT . VALUES ACT ON A 0-1 SCALE. WITH 0 ACTING AS THE CENTRE, TO MOVE LEFT USE -NUMBERS -->
+				<record id="stop" interval="0" value="-1,0"/>
+				<!-- THE 2ND STEP MOVES THE GRAPHIC ACROSS THE SCREEN ,THE INTERVAL MAKES IT TAKE 1 SECOND, THEN STOP ON THE RIGHT SIDE OF THE SCREEN -->
+				<record id="stop" interval="1" value="0,0"/>
+				<!-- WE THEN HAVE A 2 SECOND DELAY -->
+				<record id="stop" interval="2.0" value="0,0"/>
+				<!-- 3rd STEP IS TO MAKE IT SMALL ON THE RIGHT HAND SIDE -->
+				<record id="stop" interval="3.0" value="0.85,0"/>
+				<!-- 4TH STEP IS A 7 SECOND DELAY, FOR THE COMP LOGO -->
+				<record id="stop" interval="10.0" value="0.85,0"/>
+				<!-- FINAL STEP IS TO MOVE THE GRAPHIC OFF THE SCREEN -->
+				<record id="stop" interval="10.3" value="1,0"/> 
+			</list>
+		</animation>
+	</widget>
+
+	<!-- 2ND BOX THAT FLIES INTO THE SCREEN -->
+	<widget class="picture" file="tcs/match/epl/bg" scale_picture="true">
+		<boolean id="keep_aspect_ratio" value="false" />
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+			<list id="storyboard">
+				<!-- STARTS OFF ON THE LEFT OF THE SCREEN -->
+				<record id="stop" interval="0" value="-1.55,0"/>
+				<record id="stop" interval="2.0" value="-1.55,0"/>
+				<record id="stop" interval="3.0" value="-0.7,0"/>
+				<record id="stop" interval="10.0" value="-0.7,0"/>
+				<record id="stop" interval="10.3" value="-1.55,0"/>
+			</list>
+		</animation>
+	</widget>
+
+	<!-- COMPETITION LOGO -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+			<list id="storyboard">
+				<!-- STARTS OFF THE SCREEN -->
+				<record id="stop" interval="0" value="-1,0"/>
+				<!-- STOPS IT IN THE MIDDLE OF THE SCREEN -->
+				<record id="stop" interval="1.0" value="0,0"/>
+				<!-- HOLDS FOR TWO SECONDS -->
+				<record id="stop" interval="2.0" value="0,0"/>
+				<!-- MOVES TO RIGHT HAND SIDE OF SCREEN -->
+				<record id="stop" interval="3.0" value="0.425,0"/>
+				<!-- STOPS FOR 10 SECONDS -->
+				<record id="stop" interval="10.0" value="0.425,0"/>
+				<!-- MOVES IT OFF SCREEN -->
+				<record id="stop" interval="10.3" value="1,0"/> 
+			</list>
+		</animation>
+		<!-- LION -->
+		<widget class="picture" file="tcs/match/epl/lion" image_alignment="centre"/>
+	</container> 
+
+	<!-- PREMIER TEXT -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+		<!-- TRANSLATE ANIMATION USED TO PUSH IT ONTO THE SCREEN -->
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+			<list id="storyboard">
+				<!-- START OFF THE SCREEN -->
+				<record id="stop" interval="0" value="-1.1,0"/>
+				<!-- MOVES IT NEXT TO THE LION -->		
+				<record id="stop" interval="1.0" value="-0.1,0"/>
+				<!-- HOLDS FOR A SECOND -->
+				<record id="stop" interval="2.0" value="-0.1,0"/>
+				<!-- MOVES IT TO THE RIGHT WITH THE LION -->
+				<record id="stop" interval="3.0" value="0.425,0"/> 
+			</list>
+		</animation>
+
+		<!-- ANIMATION THEN USED TO FADE IT OFF THE SCREEN -->
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="1.0" end_value="0.0" end_mode="hold_end" >
+			<list id="storyboard">
+				<record id="stop" interval="0" value="1.0"/>
+				<record id="stop" interval="2.5" value="1.0"/>
+				<record id="stop" interval="3.0" value="0.0"/>
+			</list>
+		</animation>
+		<!-- PREMIER TEXT -->
+		<widget class="picture" file="tcs/match/epl/premier" image_alignment="centre"/>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 	
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+			<list id="storyboard">
+				<record id="stop" interval="0" value="-0.9,0"/>
+				<record id="stop" interval="1.0" value="0.1,0"/>
+				<record id="stop" interval="2.0" value="0.1,0"/>
+				<record id="stop" interval="3.0" value="0.425,0"/>
+			</list>
+		</animation>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="1.0" end_value="0.0" end_mode="hold_end" >
+			<list id="storyboard">
+				<record id="stop" interval="0" value="1.0"/>
+				<record id="stop" interval="2.5" value="1.0"/>
+				<record id="stop" interval="3.0" value="0.0"/>
+			</list>
+		</animation>
+		<!-- LEAGUE TEXT -->
+		<widget class="picture" file="tcs/match/epl/league" image_alignment="centre"/>   
+	</container> 
+
+
+	<container>
+		<layout class="vertical_arrange" vertical_layout="-1,160,160,-1" vertical_gap="0" />
+
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0.0" end_value="1.0" end_mode="hold_end" >
+			<list id="storyboard">
+				<record id="stop" interval="0" value="1.0"/>
+				<record id="stop" interval="10.0" value="1.0"/>
+				<record id="stop" interval="10.1" value="0.0"/>
+			</list>
+		</animation>
+
+		<widget class="spacer" />
+
+		<!-- TOP LINE AND HOME -->
+		<container>
+			<layout class="vertical_arrange" vertical_layout="40,-1" vertical_gap="0" />
+
+			<!-- USED TO ANIMATE THE COMP NAME ONTO THE SCREEN -->
+			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+				<list id="storyboard">
+					<record id="stop" interval="0" value="-1,0"/>
+					<record id="stop" interval="3.0" value="0.15,0"/>
+				</list>
+			</animation>
+
+			<!-- COMPETITION NAME -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+				<!-- SAME AS OTHER ANIMATIONS, SWIPE INTO SCREEN, THEN SWIPE OUT -->
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+					<list id="storyboard">
+						<record id="stop" interval="0" value="0,-1"/>
+						<record id="stop" interval="4.05" value="0,-1"/>
+						<record id="stop" interval="4.5" value="0,0"/>
+					</list>
+				</animation>
+
+				<!-- BOX HOLDING COMP NAME -->
+				<container class="bordered_box" appearance="tcs/match/epl/comp">
+					<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<!-- 20px BORDER EITHER SIDE OF THE NAME -->
+					<container width="20"/>
+
+					<!-- COMPETITION NAME -->
+					<widget class="fixture_name_text" auto_size="horizontal" size="15" colour="intro comp" icon_enabled="true">
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+						<record id="object_property">
+							<integer id="get_property" value="FxNm" />
+						</record>
+					</widget>
+
+					<!-- 20px BORDER EITHER SIDE OF THE NAME -->
+					<container width="20"/>
+					<!-- END OF COMPEITTION NAME -->
+				</container>
+			</container>
+
+			<!-- HOME TEAM -->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="horizontal" gap="0" offset="0" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!-- home team -->
+				<container>
+					<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+					<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+						<list id="storyboard">
+							<record id="stop" interval="0" value="-1,0"/>
+							<record id="stop" interval="3.1" value="-1,0"/>
+							<record id="stop" interval="3.4" value="0,0"/>
+						</list>
+					</animation>
+
+					<container class="bordered_box" appearance="tcs/match/epl/paper">
+						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+						<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+						<container width="30" />
+
+						<!-- home name -->
+						<widget class="team_button" id="hmTM" icon_enabled="false" mode="1" auto_size="all" size="55" colour="white">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<record id="object_property">
+								<integer id="get_property" value="home"/>
+							</record>
+						</widget>
+
+						<container width="105" />
+
+						<!--home logo-->
+						<widget class="object_portrait_picture" id="htpi" image_alignment="centre_x, centre_y" scale_picture="true" keep_aspect_ratio="true" width="110" height="110">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<record id="object_property">
+								<integer id="get_property" value="home" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+
+						<container width="5" />
+
+					</container>
+				</container>
+			</container>
+			<!-- END OF FIRST HALF -->
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+				<list id="storyboard">
+					<record id="stop" interval="0" value="-1,0"/>
+					<record id="stop" interval="3.0" value="0.23,0"/>
+				</list>
+			</animation>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="horizontal" gap="0" offset="0" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+				<!-- away team -->
+				<container>
+					<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+					<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+						<list id="storyboard">
+							<record id="stop" interval="0" value="0,1"/>
+							<record id="stop" interval="3.5" value="0,1"/>
+							<record id="stop" interval="4.0" value="0,0"/>
+						</list>
+					</animation>
+
+					<container class="bordered_box" appearance="tcs/match/epl/paper">
+						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+						<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+						<container width="30" />
+
+						<!-- away name -->
+						<widget class="team_button" id="awTM" icon_enabled="false" mode="1" auto_size="all" size="55" colour="white">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<record id="object_property">
+								<integer id="get_property" value="away"/>
+							</record>
+						</widget>
+
+						<container width="105" />
+
+						<!--away logo-->
+						<widget class="object_portrait_picture" id="atpi" image_alignment="centre_x, centre_y" scale_picture="true" keep_aspect_ratio="true" width="110" height="110">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<record id="object_property">
+								<integer id="get_property" value="away" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+
+						<container width="5" />
+
+					</container>
+
+				</container>
+
+			</container>
+		</container>
+
+
+		<container />
+
+	</container>
+	
+	<container>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+	
+	        <animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+          <list id="storyboard">
+            <record id="stop" interval="0" value="-1,0"/>
+            <record id="stop" interval="11" value="-1,0"/>
+            <record id="stop" interval="12" value="0,0"/>
+          </list>
+        </animation>
 
 	<container>
 		<!-- BOTTOM, EXTEND USED SO WE DONT HAVE TO GIVE THE PITCH A HEIGHT ATTRIBUTE ~ INSETS USED FOR CONSISTENCY WITH REST OF SKIN -->
@@ -468,6 +774,7 @@
 				</container>
 			</container>
 		</container>
+	</container>
 	</container>
 
 
