@@ -1,0 +1,391 @@
+<panel>
+	<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
+	<layout class="vertical_arrange" vertical_layout="70,-1" vertical_gap="0"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+		<!-- LAYOUT INFORMATION
+	~~~ I'VE HAD TO USE A SLIGHTLY CONFUSING LAYOUT FOR THE PANEL.
+	~~~ THE FIRST LAYOUT CLASS BELOW LETS US PLACE ELEMENTS ON TOP OF OTHERS ~ CODE UNDERNEATH OTHER CODE TAKES PRIORITY.
+	~~~ WE THEN HAVE A CONTAINER WHICH WILL CONTAIN THE TWO TEAM COLOURS, WITH A HORIZONTAL LAYOUT TO SET THEM UP ~~~ AT HALF EACH.
+	~~~ THEN UNDERNEATH WE HAVE THE ACTUAL SCOREBOARD ELEMENTS -->
+
+		<!-- SCOREBOARD BG -->
+		<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="box_background" />
+
+		<!-- TEAM COLOURS -->
+		<container>
+			<!-- THIS CONTAINER HOLDS THE TEAM COLOURS. THE LAYOUT BELOW IS WHAT SEPERATES THE TWO COLOURS INTO HALF AND HALF -->
+			<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0" />
+			<!-- HOME TEAM ~ T1Co IS WHAT MAKES THE GRAPHIC RECOLOUR TO THE TEAM COLOUR. -->
+			<container class="bordered_box" appearance="tcs/match/titlebar/team" id="T1Co" />
+			<!-- AWAY TEAM ~ T2Co IS WHAT MAKES THE GRAPHIC RECOLOUR TO THE TEAM COLOUR.  -->
+			<container class="bordered_box" appearance="tcs/match/titlebar/team" id="T2Co" />
+		</container> 
+
+		<!-- ACUTAL TITLE BAR ELEMENTS -->
+		<container>
+			<!-- ADJUST VERITCAL_INSET TO REDUCE PADDING -->
+			<layout class="horizontal_arrange" horizontal_layout="-1,250,-1" vertical_inset="1"/>
+
+			<!-- HOME TEAM AND MATCH CONTROLS -->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!-- Group of buttons in the top left -->
+				<container class="bordered_box" height="55" appearance="chrome/boxes/game bar/match/paper2">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" />
+
+					<!-- HOME BUTTON -->
+					<widget class="icon_button" id="homb" width="50" appearance="chrome/buttons/items1/button" red_replacement="white" icon="icons/26px/home" icon_alignment="centre">
+						<event id="click_event">
+							<flags id="event_id" value="HOME"/>
+							<flags id="event_target" value="scrC"/>
+						</event>
+						<record id="primary_icon_properties" red_replacement="white"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+
+					<!-- Back Button -->
+					<widget class="screen_history_button" id="back" fixed="true" width="60" appearance="chrome/buttons/items1/button" icon="icons/26px/back" icon_alignment="centre">
+						<attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+						<record id="primary_icon_properties" red_replacement="white" />
+						<record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+						<attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+					</widget>
+
+					<!-- Next Button -->
+					<widget class="screen_history_button" id="forw" fixed="true" width="60" appearance="chrome/buttons/items1/button" icon="icons/26px/forward" icon_alignment="centre">
+						<attachment class="get_global_attachment" get_property="hnit" set_property="itms" />
+						<record id="primary_icon_properties" red_replacement="white" />
+						<record id="click_event" event_id="GOTO" event_target="brow" scin="-2" />
+						<attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+					</widget>			
+
+					<!-- LOGO -->
+					<widget class="picture" id="fxCo" scale_picture="true" keep_aspect_ratio="true" height="40" width="40" image_alignment="left, centre_y">
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+						<record id="object_property">
+							<integer id="get_property" value="mnpc" />
+							<integer id="set_property" value="file" />
+						</record>
+					</widget>
+
+					<!-- FM BUTTON -->
+					<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items1/button" icon="icons/26px/fm" width="64" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_x, centre_y">
+						<event id="click_notification_event" event_id="FM" item="NULL" />
+						<event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
+						<record id="items" file="menus/game" />
+						<translation id="hint" translation_id="292829" type="use" value="Options[COMMENT: menubar game options button]" />
+					</widget>
+
+					<container width="5" />
+				</container>
+
+				<container height="70" >
+					<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="0" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="5" offset="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<!--home team name -->
+						<widget class="text_button" id="T1nm" auto_size="horizontal" size="22" alignment="right,centre_y" click_event="htac" font="tcsfont_u" colour="text">
+						</widget>			
+
+						<!--home aggregate score -->
+						<widget class="text" id="T1as" size="16" auto_size="horizontal" alignment="right,centre_y" font="tcsfont_u" colour="text">
+						</widget>
+					</container>
+
+					<!--home team logo-->
+					<widget class="match_team_logo_picture" id="HtLG" team_index="0" width="80">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget> 
+				</container>
+			</container>
+
+			<!-- ~~~~~~~~~~~~ TRANS GRAPHIC, 80% OPACITY ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DONE 14/03/2019 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+			<container class="bordered_box" appearance="tcs/match/titlebar/score">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle,extend" vertical_offset="0" vertical_alignment="vertical" horizontal_inset="10" />
+
+				<widget class="text" id="T1sc" size="18" auto_size="horizontal" alignment="left,centre_y" font="title" colour="text">
+				</widget>
+
+				<container width="120">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<!--clock-->
+					<container id="ClkC">
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="-2"/>
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="-2"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<widget class="text" id="Mclk" auto_size="vertical" size="20" alignment="centre" style="semi_bold" colour="match scoreboard clock" font="tcsfont"/>
+<!-- 						<widget class="text" id="ClkT" auto_size="vertical" size="12" alignment="centre" font="tcsfont" colour="match scoreboard clock"/>
+						<widget class="text" id="Pent" auto_size="vertical" size="14" alignment="centre" style="semi_bold" colour="match scoreboard clock"/> -->
+					</container>
+
+					<!--injury time indicator-->
+					<container id="MijC" height="16">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+						<widget class="text" id="Mijt" size="10" alignment="centre"  font="tcsfont" colour="match scoreboard clock"/>
+					</container>
+
+				</container>
+
+				<widget class="text" id="T2sc" size="18" auto_size="horizontal" alignment="right,centre_y" font="title" colour="text">
+				</widget>
+
+			</container>
+
+			<container>
+				<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
+				<layout class="horizontal_arrange" horizontal_layout="-1,230" />
+
+				<container height="70" >
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--home team logo-->
+					<widget class="match_team_logo_picture" id="AtLG" team_index="1" width="80">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="5" offset="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<!--home aggregate score -->
+						<widget class="text" id="T2as" size="16" auto_size="horizontal" alignment="left,centre_y" font="tcsfont_u" colour="text">
+						</widget>
+
+						<!--home team name -->
+						<widget class="text_button" id="T2nm" auto_size="horizontal" size="22" alignment="left,centre_y" click_event="atac" font="tcsfont_u" colour="text">
+						</widget>			
+
+					</container>
+
+				</container>
+
+				<!-- CONTINUE -->
+				<container class="bordered_box" height="55" appearance="chrome/boxes/game bar/match/paper">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-17" />
+					<widget class="match_continue_panel" file="match/tcs/titlebar/continue" width="230" id="mcnt">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- BENEATH TWO TEAMS -->
+	<container class="bordered_box" appearance="boxes/custom/match/titlebar/paper">
+		<!-- ARRANGES THE WIDTH OF THE TIMEBAR AND SECTIONS -->
+		<layout class="horizontal_arrange" horizontal_layout="-9,2,-10" />
+
+		<container >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--match timeline-->
+			<container id="mtml">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<attachment class="test_multiple_globals_attachment" default_value="true">
+					<list id="get_properties">
+						<record get_property="TTyp" test_mode="1" value="1" skip_if_null="false"/>
+						<record get_property="dtty" test_mode="1" comparison_mode="1" value="53" skip_if_null="false"/>
+						<record get_property="Tmts" test_mode="1" comparison_mode="1" value="2" skip_if_null="true"/>
+					</list>
+					<integer id="set_property" value="hidn"/>
+				</attachment>
+
+				<widget class="spacer" />
+
+				<container class="match_flow_graphic_panel">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+			</container>
+
+			<!--match time bar-->
+			<widget class="match_time_slider_game_panel" id="mtSL">
+				<!-- slide in from right when shown, out left when hidden-->
+				<animation class="slide_in_left_animation"  trigger_id="hidden" trigger_value="false" end_mode="stop"/>
+				<animation class="slide_in_right_animation" trigger_id="hidden" trigger_value="true" end_mode="hold_end"/>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<attachment class="test_multiple_globals_attachment" default_value="true">
+					<list id="get_properties">
+						<record get_property="TTyp" test_mode="1" value="1" skip_if_null="false"/>
+						<record get_property="dtty" test_mode="1" comparison_mode="1" value="53" skip_if_null="false"/>
+						<record get_property="Tmts" test_mode="1" comparison_mode="1" value="1" skip_if_null="true"/>
+					</list>
+					<integer id="set_property" value="hidn"/>
+				</attachment>
+			</widget>
+
+			<!--captions-->
+			<widget class="match_caption_panel" id="MCap">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+		</container>
+
+		<widget class="vertical_divider" />
+
+		<container>
+			<!-- LAYOUT BELOW ARRANGES PANEL ACROSS THE SCREEN -->
+			<layout class="vertical_arrange" vertical_layout="-1,-1" />
+			<container id="secT">
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="5" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+
+				<attachment class="test_multiple_globals_attachment" default_value="false">
+					<list id="get_properties">
+						<record get_property="section" test_mode="0" value="MRev" skip_if_null="false" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mMMr" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htmt" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atmt" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="hilp" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="TacH" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpT" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpP" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpS" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpR" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpK" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpH" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpN" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpC" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htmt" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="hopi" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="htpF" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="TacA" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpT" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpP" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpS" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpR" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpK" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpH" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpN" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpC" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atmt" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="aopi" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="atpF" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="AnaH" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="AnaA" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="AnaN" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mazp" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mspa" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="matm" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mapl" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mshp" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mhan" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="maan" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="bmfs" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="bmts" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mtst" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="hfms" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="afms" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mtrp" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mgup" skip_if_null="true" />
+						<record get_property="section" test_mode="0" comparison_mode="1" value="mpst" skip_if_null="true" />
+					</list>
+					<integer id="set_property" value="Shwn" />
+				</attachment>
+
+				<!--team switching radio buttons-->
+				<widget class="match_team_selector_panel" id="mtsp">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<!--tab bar-->
+				<widget class="sections_menu_strip_match" id="tree" auto_size="horizontal">
+					<record id="default_properties" colour="text" red_replacement="text"/>
+				</widget>
+			</container>
+
+			<!--tactics buttons/content menu-->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--human tactics popup buttons-->
+				<widget id="Htbu" class="match_console_quick_tactics_panel">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<!--content menu-->
+				<widget class="popup_check_box_button" id="conm" fixed="true" auto_size="horizontal" icon="icons/16px/widget" secondary_icon_enabled="false">
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+					<translation id="hint" translation_id="468964" type="use" value="Select for more match information[COMMENT: hint for the widgets button in the match]" />
+					<attachment class="get_global_attachment" get_property="CMIT" set_property="itms" />
+					<attachment class="get_global_attachment" get_property="CMDI" set_property="disa" />
+					<attachment class="test_multiple_globals_attachment" default_value="false">
+						<list id="get_properties">
+							<record get_property="section" test_mode="0" value="hilp" skip_if_null="false" />
+						</list>
+						<integer id="set_property" value="Shwn" />
+					</attachment>
+				</widget>
+
+				<!--settings/save match-->
+				<container class="match_playback_control_container" id="TopR" file="" hide_past_match_buttons="true">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<record id="object_property" get_property="maCo" set_property="maCo" />
+
+					<!--button to fire up the upload panel-->
+					<widget class="icon_button" id="uplo" click_event="uplo" auto_size="horizontal">
+						<translation id="text" translation_id="441069" type="use" value="Review and Share Highlight Video[COMMENT: FR21694 - button to view the upload highlights panel]" />
+					</widget>
+
+					<!--settings-->
+					<!-- @archie.buck The tutorial relies on this id not changing, if you need to adjust it please also update TUTORIAL_MANAGER -->
+					<widget class="widget_popup_button" id="Sett" width="42" icon="icons/26px/settings" icon_alignment="centre" widget_type="match_settings_panel" mpmF="generic/modal popup panel match" alignment="right,bottom" secondary_icon_enabled="false">
+						<record id="modal_popup_properties">
+							<boolean id="darkened" value="false" />
+						</record>
+						<translation id="hint" translation_id="332230" type="use" value="Click to show the match settings.[COMMENT: hint for a button to toggle showing the match settings panel]" />
+						<record id="primary_icon_properties" red_replacement="white" />
+						<record id="secondary_icon_properties" red_replacement="white" />
+					</widget>
+
+					<!--save match-->
+					<widget class="button" id="svmt" click_event="svmt" appearance="buttons/custom/match/actions/button" auto_size="horizontal">
+						<translation id="text" translation_id="232965" type="use" value="Save Match" />
+					</widget>
+				</container>
+
+			</container>	
+
+		</container>
+
+
+
+	</container>
+</panel>
