@@ -1,781 +1,340 @@
+<!-- TODO -->
+<!-- ANIMATIONS ON PLAYER ICONS -->
+<!-- SWITCHER -->
+<!-- GRAPHIC FOR BACKGROUND -->
+<!-- SUBS -->
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
-	<colour name="intro date" red="55" green="0" blue="60" />
+	<colour name="eplpur" red="62" green="1" blue="94" />
 	<colour name="intro comp" red="5" green="240" blue="254" />
 
-	<!-- 1st BOX THAT FLIES ACROSS FROM LEFT TO RIGHT -->
-	<widget class="picture" file="tcs/match/epl/bg" scale_picture="true">
-		<boolean id="keep_aspect_ratio" value="false" />
-		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-			<!-- STORYBOARD USED TO ANIMATE ACROSS SCREEN -->
-			<list id="storyboard">
-				<!-- 1ST STEP IS TO HAVE IT START OFF THE SCREEN. THE VALUE IS -1 TO MAKE IT START LEFT . VALUES ACT ON A 0-1 SCALE. WITH 0 ACTING AS THE CENTRE, TO MOVE LEFT USE -NUMBERS -->
-				<record id="stop" interval="0" value="-1,0"/>
-				<!-- THE 2ND STEP MOVES THE GRAPHIC ACROSS THE SCREEN ,THE INTERVAL MAKES IT TAKE 1 SECOND, THEN STOP ON THE RIGHT SIDE OF THE SCREEN -->
-				<record id="stop" interval="1" value="0,0"/>
-				<!-- WE THEN HAVE A 2 SECOND DELAY -->
-				<record id="stop" interval="2.0" value="0,0"/>
-				<!-- 3rd STEP IS TO MAKE IT SMALL ON THE RIGHT HAND SIDE -->
-				<record id="stop" interval="3.0" value="0.85,0"/>
-				<!-- 4TH STEP IS A 7 SECOND DELAY, FOR THE COMP LOGO -->
-				<record id="stop" interval="10.0" value="0.85,0"/>
-				<!-- FINAL STEP IS TO MOVE THE GRAPHIC OFF THE SCREEN -->
-				<record id="stop" interval="10.3" value="1,0"/> 
-			</list>
-		</animation>
-	</widget>
+	<!-- <container class="bordered_box" /> -->
 
-	<!-- 2ND BOX THAT FLIES INTO THE SCREEN -->
-	<widget class="picture" file="tcs/match/epl/bg" scale_picture="true">
-		<boolean id="keep_aspect_ratio" value="false" />
-		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-			<list id="storyboard">
-				<!-- STARTS OFF ON THE LEFT OF THE SCREEN -->
-				<record id="stop" interval="0" value="-1.55,0"/>
-				<record id="stop" interval="2.0" value="-1.55,0"/>
-				<record id="stop" interval="3.0" value="-0.7,0"/>
-				<record id="stop" interval="10.0" value="-0.7,0"/>
-				<record id="stop" interval="10.3" value="-1.55,0"/>
-			</list>
-		</animation>
-	</widget>
-
-	<!-- COMPETITION LOGO -->
+	<!-- LINEUPS -->
 	<container>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="14" vertical_inset="25" horizontal_offset="25" />
 
-		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-			<list id="storyboard">
-				<!-- STARTS OFF THE SCREEN -->
-				<record id="stop" interval="0" value="-1,0"/>
-				<!-- STOPS IT IN THE MIDDLE OF THE SCREEN -->
-				<record id="stop" interval="1.0" value="0,0"/>
-				<!-- HOLDS FOR TWO SECONDS -->
-				<record id="stop" interval="2.0" value="0,0"/>
-				<!-- MOVES TO RIGHT HAND SIDE OF SCREEN -->
-				<record id="stop" interval="3.0" value="0.425,0"/>
-				<!-- STOPS FOR 10 SECONDS -->
-				<record id="stop" interval="10.0" value="0.425,0"/>
-				<!-- MOVES IT OFF SCREEN -->
-				<record id="stop" interval="10.3" value="1,0"/> 
-			</list>
-		</animation>
-		<!-- LION -->
-		<widget class="picture" file="tcs/match/epl/lion" image_alignment="centre"/>
-	</container> 
-
-	<!-- PREMIER TEXT -->
-	<container>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
-
-		<!-- TRANSLATE ANIMATION USED TO PUSH IT ONTO THE SCREEN -->
-		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-			<list id="storyboard">
-				<!-- START OFF THE SCREEN -->
-				<record id="stop" interval="0" value="-1.1,0"/>
-				<!-- MOVES IT NEXT TO THE LION -->		
-				<record id="stop" interval="1.0" value="-0.1,0"/>
-				<!-- HOLDS FOR A SECOND -->
-				<record id="stop" interval="2.0" value="-0.1,0"/>
-				<!-- MOVES IT TO THE RIGHT WITH THE LION -->
-				<record id="stop" interval="3.0" value="0.425,0"/> 
-			</list>
-		</animation>
-
-		<!-- ANIMATION THEN USED TO FADE IT OFF THE SCREEN -->
-		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="1.0" end_value="0.0" end_mode="hold_end" >
-			<list id="storyboard">
-				<record id="stop" interval="0" value="1.0"/>
-				<record id="stop" interval="2.5" value="1.0"/>
-				<record id="stop" interval="3.0" value="0.0"/>
-			</list>
-		</animation>
-		<!-- PREMIER TEXT -->
-		<widget class="picture" file="tcs/match/epl/premier" image_alignment="centre"/>
-	</container>
-
-	<container>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 	
-		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-			<list id="storyboard">
-				<record id="stop" interval="0" value="-0.9,0"/>
-				<record id="stop" interval="1.0" value="0.1,0"/>
-				<record id="stop" interval="2.0" value="0.1,0"/>
-				<record id="stop" interval="3.0" value="0.425,0"/>
-			</list>
-		</animation>
-		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="1.0" end_value="0.0" end_mode="hold_end" >
-			<list id="storyboard">
-				<record id="stop" interval="0" value="1.0"/>
-				<record id="stop" interval="2.5" value="1.0"/>
-				<record id="stop" interval="3.0" value="0.0"/>
-			</list>
-		</animation>
-		<!-- LEAGUE TEXT -->
-		<widget class="picture" file="tcs/match/epl/league" image_alignment="centre"/>   
-	</container> 
-
-
-	<container>
-		<layout class="vertical_arrange" vertical_layout="-1,160,160,-1" vertical_gap="0" />
-
-		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0.0" end_value="1.0" end_mode="hold_end" >
-			<list id="storyboard">
-				<record id="stop" interval="0" value="1.0"/>
-				<record id="stop" interval="10.0" value="1.0"/>
-				<record id="stop" interval="10.1" value="0.0"/>
-			</list>
-		</animation>
-
-		<widget class="spacer" />
-
-		<!-- TOP LINE AND HOME -->
+		<!-- HOME TEAM -->
 		<container>
-			<layout class="vertical_arrange" vertical_layout="40,-1" vertical_gap="0" />
+			<layout class="horizontal_arrange" horizontal_layout="250,-1" horizontal_gap="0" />
 
-			<!-- USED TO ANIMATE THE COMP NAME ONTO THE SCREEN -->
-			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-				<list id="storyboard">
-					<record id="stop" interval="0" value="-1,0"/>
-					<record id="stop" interval="3.0" value="0.15,0"/>
-				</list>
-			</animation>
-
-			<!-- COMPETITION NAME -->
+			<!-- LEFT SIDE -->
 			<container>
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+				<layout class="vertical_arrange" vertical_layout="250,300,-1" vertical_gap="0" />
 
-				<!-- SAME AS OTHER ANIMATIONS, SWIPE INTO SCREEN, THEN SWIPE OUT -->
-				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-					<list id="storyboard">
-						<record id="stop" interval="0" value="0,-1"/>
-						<record id="stop" interval="4.05" value="0,-1"/>
-						<record id="stop" interval="4.5" value="0,0"/>
-					</list>
-				</animation>
+				<!-- CONTAINER HOLDING TEAM LOGO AT THE TOP -->
+				<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="white">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true"/> 
 
-				<!-- BOX HOLDING COMP NAME -->
-				<container class="bordered_box" appearance="tcs/match/epl/comp">
-					<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
-					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-
-					<!-- 20px BORDER EITHER SIDE OF THE NAME -->
-					<container width="20"/>
-
-					<!-- COMPETITION NAME -->
-					<widget class="fixture_name_text" auto_size="horizontal" size="15" colour="intro comp" icon_enabled="true">
-						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+					<!-- HOME HOME LOGO -->
+					<widget class="object_portrait_picture" id="htpi" image_alignment="centre_x, centre_y" scale_picture="true" keep_aspect_ratio="true" width="110" height="110">
 						<record id="object_property">
-							<integer id="get_property" value="FxNm" />
+							<integer id="get_property" value="home" />
+							<integer id="set_property" value="objt" />
 						</record>
 					</widget>
-
-					<!-- 20px BORDER EITHER SIDE OF THE NAME -->
-					<container width="20"/>
-					<!-- END OF COMPEITTION NAME -->
 				</container>
-			</container>
 
-			<!-- HOME TEAM -->
-			<container>
-				<layout class="arrange_horizontal_attachment" alignment="horizontal" gap="0" offset="0" />
-				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
-				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-
-				<!-- home team -->
+				<!-- MANAGER -->
 				<container>
-					<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
-					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+					<layout class="vertical_arrange" vertical_layout="50,-13,50" vertical_gap="0" />
 
-					<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-						<list id="storyboard">
-							<record id="stop" interval="0" value="-1,0"/>
-							<record id="stop" interval="3.1" value="-1,0"/>
-							<record id="stop" interval="3.4" value="0,0"/>
-						</list>
-					</animation>
+					<!-- MANAGER LABEL AND NAME -->
+					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
-					<container class="bordered_box" appearance="tcs/match/epl/paper">
-						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
-						<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						<!-- MANAGER LABEL -->
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-						<container width="30" />
+							<!-- ANIMATION USED FOR THE MANAGER LABEL -->
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- START TO LEFT OF SCREEN -->
+									<record id="stop" interval="0" value="-1,0"/>
+									<!-- MOVES IT ONTO THE SCREEN -->
+									<record id="stop" interval="1" value="0"/>
+									<!-- HOLDS THE LABEL FOR 2 SECONDS -->
+									<record id="stop" interval="2.6" value="0"/>
+									<!-- MOVES THE LABEL DOWNWARDS, THE SECOND VALUE AFTER THE COMMA ALLOWS US TO CHANGE THE VERTICAL LOCATION -->
+									<record id="stop" interval="3.4" value="0,1"/>
+								</list>
+							</animation>	
 
-						<!-- home name -->
-						<widget class="team_button" id="hmTM" icon_enabled="false" mode="1" auto_size="all" size="55" colour="white">
-							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<!-- LABEL -->
+							<widget class="label" alignment="centre" size="22" style="semi_bold" colour="white">
+								<translation id="text" translation_id="227981" type="use" value="Manager" />					
+							</widget>
+						</container>
+
+						<!-- MANAGER NAME -->
+						<!-- CLIENT_OBJECT_VIEWER_XML_PANEL USED TO ENABLE US TO ADD THE MANAGER NAME -->
+						<container class="client_object_viewer_xml_panel" >
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 							<record id="object_property">
-								<integer id="get_property" value="home"/>
-							</record>
-						</widget>
+								<integer id="get_property" value="home" />
+								<integer id="set_property" value="objt" />
+							</record>							
 
-						<container width="105" />
+							<widget class="person_button" id="pers" size="18" alignment="centre" enforce_style="true">
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
 
-						<!--home logo-->
-						<widget class="object_portrait_picture" id="htpi" image_alignment="centre_x, centre_y" scale_picture="true" keep_aspect_ratio="true" width="110" height="110">
-							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<!-- ANIMATION USED FOR THE MANAGER NAME -->
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- MANAGER NAME STARTS ABOVE THE BOX -->
+									<record id="stop" interval="0" value="0,-1"/>	
+									<!-- HOLDS IT ABOVE WHILE THE LABEL DISAPPEARS OFF -->									
+									<record id="stop" interval="2.5" value="0,-1"/>
+									<!-- MOVES ONTO SCREEN -->
+									<record id="stop" interval="2.85" value="0"/>
+								</list>
+							</animation>	
+						</container>
+					</container>
+
+					<!-- MANAGER PICTURE -->
+					<container class="bordered_box" appearance="tcs/boxes/backgrounds/70" red_replacement="white">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+						<!-- OBJECT VIEWER LETS US PUT THE MANAGER FACE ON THE PITCH -->
+						<container class="client_object_viewer_xml_panel">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 							<record id="object_property">
 								<integer id="get_property" value="home" />
 								<integer id="set_property" value="objt" />
 							</record>
+
+							<!-- MANAGER PICTURE -->
+							<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre_x,bottom" >
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- START TO LEFT OF SCREEN -->
+									<record id="stop" interval="0" value="-1,0"/>
+									<!-- MOVES IT ONTO THE SCREEN -->
+									<record id="stop" interval="1.3" value="0"/>
+								</list>
+							</animation>	
+						</container>
+					</container>
+
+					<!-- SUBS LABEL -->
+					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+						<widget class="text" spec="text" alignment="left,centre_y" size="14" style="semi_bold">
+							<translation id="text" translation_id="318313" type="use" value="Substitutes[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- START TO LEFT OF SCREEN -->
+									<record id="stop" interval="0" value="-1,0"/>
+									<!-- MOVES IT ONTO THE SCREEN -->
+									<record id="stop" interval="1.4" value="0"/>
+								</list>
+							</animation>	
 						</widget>
-
-						<container width="5" />
-
 					</container>
 				</container>
+
+				<!-- SUBS -->
+				<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="subs_bench_panel" id="hsub" file="match/tcs/lineups/EPL/subs home"/>
+				</container>
 			</container>
-			<!-- END OF FIRST HALF -->
+
+			<!-- RIGHT HAND SIDE -->
+			<container class="bordered_box" appearance="tcs/match/epl/pitch" >
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+				<!-- PITCH -->
+				<widget class="pitch_with_tactics" id="hpwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
+					<string id="pitch_draw_lines" value="false" />
+					<string id="pitch_draw_grass" value="true" />
+					<string id="pitch_base_appearance" value="" />
+					<string id="pitch_pattern" value="" />
+					<integer id="tactics_creator_index" value="2" />
+					<boolean id="pitch_dont_draw_indicators" value="true" />
+					<boolean id="pitch_show_captain" value="true" />
+					<integer id="pitch_vertical_padding" value="-20"/>
+					<flags id="pitch_alignment" value="centre"/>
+				</widget>
+			</container>
 		</container>
 
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- AWAY TEAM -->
 		<container>
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+			<layout class="horizontal_arrange" horizontal_layout="-1,250" horizontal_gap="0" />
 
-			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-				<list id="storyboard">
-					<record id="stop" interval="0" value="-1,0"/>
-					<record id="stop" interval="3.0" value="0.23,0"/>
-				</list>
-			</animation>
+			<!-- LEFT SIDE -->
+			<container class="bordered_box" appearance="tcs/match/epl/pitch">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
+				<!-- PITCH -->
+				<widget class="pitch_with_tactics" id="apwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" line_colour="red">
+					<string id="pitch_draw_lines" value="false" />
+					<string id="pitch_draw_grass" value="true" />
+					<string id="pitch_base_appearance" value="" />
+					<string id="pitch_pattern" value="" />
+					<integer id="tactics_creator_index" value="2" />
+					<boolean id="pitch_dont_draw_indicators" value="true" />
+					<boolean id="pitch_show_captain" value="true" />
+					<integer id="pitch_vertical_padding" value="-20"/>
+					<flags id="pitch_alignment" value="centre"/>
+				</widget>
+			</container>
+
+			<!-- LEFT SIDE -->
 			<container>
-				<layout class="arrange_horizontal_attachment" alignment="horizontal" gap="0" offset="0" />
-				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
-				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="vertical_arrange" vertical_layout="250,300,-1" vertical_gap="0" />
 
+				<!-- CONTAINER HOLDING TEAM LOGO AT THE TOP -->
+				<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="white">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true"/> 
 
-				<!-- away team -->
+					<!-- AWAY HOME LOGO -->
+					<widget class="object_portrait_picture" id="atpi" image_alignment="centre_x, centre_y" scale_picture="true" keep_aspect_ratio="true" width="110" height="110">
+						<record id="object_property">
+							<integer id="get_property" value="away" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+
+				<!-- MANAGER -->
 				<container>
-					<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
-					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+					<layout class="vertical_arrange" vertical_layout="50,-13,50" vertical_gap="0" />
 
-					<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-						<list id="storyboard">
-							<record id="stop" interval="0" value="0,1"/>
-							<record id="stop" interval="3.5" value="0,1"/>
-							<record id="stop" interval="4.0" value="0,0"/>
-						</list>
-					</animation>
+					<!-- MANAGER LABEL AND NAME -->
+					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
-					<container class="bordered_box" appearance="tcs/match/epl/paper">
-						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
-						<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						<!-- MANAGER LABEL -->
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-						<container width="30" />
+							<!-- ANIMATION USED FOR THE MANAGER LABEL -->
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- START TO RIGHT OF SCREEN -->
+									<record id="stop" interval="0" value="1,0"/>
+									<!-- MOVES IT ONTO THE SCREEN -->
+									<record id="stop" interval="1" value="0"/>
+									<!-- HOLDS THE LABEL FOR 2 SECONDS -->
+									<record id="stop" interval="2.6" value="0"/>
+									<!-- MOVES THE LABEL DOWNWARDS, THE SECOND VALUE AFTER THE COMMA ALLOWS US TO CHANGE THE VERTICAL LOCATION -->
+									<record id="stop" interval="3.4" value="0,1"/>
+								</list>
+							</animation>	
 
-						<!-- away name -->
-						<widget class="team_button" id="awTM" icon_enabled="false" mode="1" auto_size="all" size="55" colour="white">
-							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<!-- LABEL -->
+							<widget class="label" alignment="centre" size="22" style="semi_bold" colour="white">
+								<translation id="text" translation_id="227981" type="use" value="Manager" />					
+							</widget>
+						</container>
+
+						<!-- MANAGER NAME -->
+						<!-- CLIENT_OBJECT_VIEWER_XML_PANEL USED TO ENABLE US TO ADD THE MANAGER NAME -->
+						<container class="client_object_viewer_xml_panel" >
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 							<record id="object_property">
-								<integer id="get_property" value="away"/>
-							</record>
-						</widget>
+								<integer id="get_property" value="away" />
+								<integer id="set_property" value="objt" />
+							</record>							
 
-						<container width="105" />
+							<widget class="person_button" id="pers" size="18" alignment="centre" enforce_style="true">
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
 
-						<!--away logo-->
-						<widget class="object_portrait_picture" id="atpi" image_alignment="centre_x, centre_y" scale_picture="true" keep_aspect_ratio="true" width="110" height="110">
-							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+							<!-- ANIMATION USED FOR THE MANAGER NAME -->
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- MANAGER NAME STARTS ABOVE THE BOX -->
+									<record id="stop" interval="0" value="0,-1"/>	
+									<!-- HOLDS IT ABOVE WHILE THE LABEL DISAPPEARS OFF -->									
+									<record id="stop" interval="2.5" value="0,-1"/>
+									<!-- MOVES ONTO SCREEN -->
+									<record id="stop" interval="2.85" value="0"/>
+								</list>
+							</animation>	
+						</container>
+					</container>
+
+					<!-- MANAGER PICTURE -->
+					<container class="bordered_box" appearance="tcs/boxes/backgrounds/70" red_replacement="white">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+						<!-- OBJECT VIEWER LETS US PUT THE MANAGER FACE ON THE PITCH -->
+						<container class="client_object_viewer_xml_panel">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 							<record id="object_property">
 								<integer id="get_property" value="away" />
 								<integer id="set_property" value="objt" />
 							</record>
+
+							<!-- MANAGER PICTURE -->
+							<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre_x,bottom" >
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- START TO RIGHT OF SCREEN -->
+									<record id="stop" interval="0" value="1,0"/>
+									<!-- MOVES IT ONTO THE SCREEN -->
+									<record id="stop" interval="1.3" value="0"/>
+								</list>
+							</animation>	
+						</container>
+					</container>
+
+					<!-- SUBS LABEL -->
+					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+						<widget class="text" spec="text" alignment="right,centre_y" size="14" style="semi_bold">
+							<translation id="text" translation_id="318313" type="use" value="Substitutes[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+
+							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+								<list id="storyboard">
+									<!-- START TO RIGHT OF SCREEN -->
+									<record id="stop" interval="0" value="1,0"/>
+									<!-- MOVES IT ONTO THE SCREEN -->
+									<record id="stop" interval="1.4" value="0"/>
+								</list>
+							</animation>	
 						</widget>
-
-						<container width="5" />
-
-					</container>
-
-				</container>
-
-			</container>
-		</container>
-
-
-		<container />
-
-	</container>
-	
-	<container>
-	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
-	
-	        <animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-          <list id="storyboard">
-            <record id="stop" interval="0" value="-1,0"/>
-            <record id="stop" interval="11" value="-1,0"/>
-            <record id="stop" interval="12" value="0,0"/>
-          </list>
-        </animation>
-
-	<container>
-		<!-- BOTTOM, EXTEND USED SO WE DONT HAVE TO GIVE THE PITCH A HEIGHT ATTRIBUTE ~ INSETS USED FOR CONSISTENCY WITH REST OF SKIN -->
-		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" vertical_offset="6"/>
-
-		<!-- ACTUAL CONTAINER HOLDING INFORMATION -->
-		<container>
-			<layout class="horizontal_arrange" horizontal_layout="-3,-2,-3" horizontal_gap="0" />
-
-			<!-- AWAY -->
-			<container id="hpco">
-				<layout class="vertical_arrange" vertical_layout="70,-1,80" vertical_gap="0" />
-
-				<!-- TEAM NAME -->
-				<container class="home_match_incidents_panel" id="hnkp" file="match/tcs/lineups/home team name" >
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</container>
-
-				<!-- PITCH ~ WEIRD LAYOUT WITH LOADS OF CONTAINERS USED TO MAKE UP FOR LOGO TRANSPARENCY NOT WORKING-->
-				<container class="bordered_box" appearance="tcs/match/lineups/botlef" red_replacement="pitch_box_background" >
-					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
-
-					<!-- INFO ON RIGHT ON THE PITCH -->
-					<container width="200">
-						<layout class="vertical_arrange" vertical_layout="240,-1,180" vertical_gap="0" horizontal_inset="10" vertical_offset="30" />
-
-						<!-- ACTUAL INFO -->
-						<container>
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0" vertical_inset="0" />
-
-							<!-- LEAGUE POSITION -->
-							<container class="match_preview_panel" file="" id="tcslcps" height="40">
-								<attachment_group class="vertical_arrange" vertical_alignment="top" />
-								<record id="object_property">
-									<list id="get_properties">
-										<record>
-											<integer id="get_property" value="objt" />
-											<integer id="set_property" value="objt" />
-										</record>
-									</list>
-								</record>
-
-								<!-- LEAGUE POSITION LABEL -->
-								<widget class="text" id="lpti" alignment="left,bottom" auto_size="vertical" font="title">
-									<translation id="text" translation_id="284395" type="use" value="League Position[COMMENT: French attacking league table; league position heading hint]" />
-								</widget>
-
-								<!-- AWAY POSITION -->
-								<container height="30">
-									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-									<widget class="text" id="homl" alignment="left,top" auto_size="horizontal">
-										<string id="format" value="[%number#1-nth]" />
-										<record id="object_property">
-											<integer id="get_property" value="homl" />
-										</record>
-									</widget>
-								</container>
-							</container>
-
-							<!-- RECENT FORM -->
-							<container height="40">
-								<attachment_group class="vertical_arrange" vertical_alignment="top" />
-
-								<!-- RECENT FORM LABEL -->
-								<widget class="text" alignment="left,bottom" auto_size="vertical" font="title">
-									<translation id="text" translation_id="344664" type="use" value="Recent Form" />
-								</widget>
-
-								<!-- AWAY FORM -->
-								<container height="20">
-									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-
-									<!--RECENT FORM -->
-									<widget class="team_recent_form_widget" id="homF" alignment="left,centre_y" show_description_text="true" auto_size="horizontal">
-										<record id="object_property">
-											<list id="get_properties">
-												<record>
-													<integer id="get_property" value="homF" />
-													<integer id="set_property" value="valu" />
-													<boolean id="dont_set_object" value="true" />
-												</record>
-												<record>
-													<integer id="get_property" value="home" />
-													<integer id="set_property" value="objt" />
-												</record>
-											</list>
-										</record>
-									</widget>
-								</container>
-							</container>
-
-							<!-- ODDS -->
-							<container class="match_preview_panel" file=""  height="40">
-								<layout class="arrange_vertical_attachment" alignment="top" offset="20" gap="1" />
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-								<record id="object_property">
-									<list id="get_properties">
-										<record>
-											<integer id="get_property" value="objt" />
-											<integer id="set_property" value="objt" />
-										</record>
-									</list>
-								</record>
-
-								<!-- LABEL -->
-								<widget class="text" id="oddp" alignment="left" auto_size="vertical" font="title" />
-
-								<!-- ODDS -->
-								<container height="30">
-									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-
-									<widget class="text" id="oddh" width="60" alignment="left" />
-
-								</container>
-							</container>
-						</container>
-
-						<!-- SPACER -->
-						<container />
-
-						<!-- MANAGER -->
-				<!-- MANAGER -->
-						<container height="180">
-							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
-
-							<!-- LABEL -->
-							<widget class="text" alignment="centre" font="title" colour="text" auto_size="vertical" >
-								<translation id="text" translation_id="227981" type="use" value="Manager" />
-							</widget>
-
-							<!-- MANAGER FACE -->
-							<container height="160" class="client_object_viewer_xml_panel">
-								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
-
-									<record id="object_property">
-										<integer id="get_property" value="home" />
-										<integer id="set_property" value="objt" />
-									</record>
-									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20"/>
-
-									<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre_x,bottom" >
-										<record id="object_property">
-											<integer id="get_property" value="TMnR" />
-											<integer id="set_property" value="objt" />
-										</record>
-								</widget>
-	
-							</container>
-						</container>	
-					</container>	
-
-					<!-- PITCH -->
-					<widget class="pitch_with_tactics" id="hpwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
-						<string id="pitch_draw_grass" value="true" />
-						<string id="pitch_base_appearance" value="" />
-						<string id="pitch_pattern" value="tcs" />
-						<integer id="tactics_creator_index" value="2" />
-						<boolean id="pitch_dont_draw_indicators" value="true" />
-						<boolean id="pitch_show_captain" value="true" />
-						<integer id="pitch_vertical_padding" value="0"/>
-						<flags id="pitch_alignment" value="centre"/>
-						<real id="maximum_player_size" value="0.2"/>
-					</widget>
-
-				</container>	
-			</container>
-
-			<container class="bordered_box" appearance="tcs/match/lineups/mid">
-				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="10"/>
-
-				<widget class="object_portrait_picture" id="fxCo" scale_picture="true" height="120">
-					<boolean id="keep_aspect_ratio" value="true" />
-					<flags id="image_alignment" value="centre_x,top" />
-					<record id="object_property">
-						<integer id="get_property" value="fxCo" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</widget>
-
-				<container height="300"> 
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
-					<widget class="stadium_picture" id="STAp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
-						<layout class="stick_to_sides_attachment" alignment="all" inset="-35" apply_to_children="true"/> 
-						<record id="object_property">
-							<integer id="get_property" value="objt" />
-							<integer id="set_property" value="objt" />
-						</record>
-					</widget>
-
-					<container>
-						<layout class="vertical_arrange" vertical_layout="-1,48,15" />
-
-						<widget class="spacer" />
-
-						<container class="bordered_box_no_margin" red_replacement="primary">
-							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="-5"/>
-							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
-
-							<!-- Division -->
-							<widget class="fixture_name_text" id="FxNM" font="title" size="xlarge" auto_size="all" style="shadowed" colour="white">
-								<record id="object_property">
-									<integer id="get_property" value="FxNm" />
-								</record>
-							</widget>
-
-							<!--time/place-->
-							<widget class="match_conditions_panel" file=""  id="matc" >
-								<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
-								<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
-								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-
-								<record id="object_property">
-									<list id="get_properties">
-										<record>
-											<integer id="get_property" value="objt" />
-											<integer id="set_property" value="objt" />
-										</record>
-									</list>
-								</record>
-
-								<!--time, place-->
-								<widget class="text" id="tipl" alignment="centre_x,centre_y" auto_size="horizontal" colour="white"/>
-							</widget>
-						</container>
-
-						<container />
-
 					</container>
 				</container>
 
-				<container class="subsection_box" id="FxCn" >
-					<translation id="title" translation_id="324243" type="use" value="Today's Fixtures[COMMENT: how to system; help string]" />
-					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-
-					<widget class="competition_fixtures_panel" id="fixt" file="competition/competition fixtures match preview" svsl="false">
-						<record id="object_property">
-							<list id="get_properties">
-								<record get_property="cssi" set_property="cssi" dont_set_object="true" />
-								<record get_property="cmsi" set_property="cmsi" dont_set_object="true" />
-								<record get_property="comp" set_property="objt" />
-							</list>
-						</record>
-
-					</widget>
+				<!-- SUBS -->
+				<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="subs_bench_panel" id="asub" file="match/tcs/lineups/EPL/subs away"/>
 				</container>
-
 			</container>
-
-			<!-- AWAY -->
-			<container id="apco">
-				<layout class="vertical_arrange" vertical_layout="70,-1,80" vertical_gap="0" />
-
-				<!-- TEAM NAME -->
-				<container class="away_match_incidents_panel" id="ankp" file="match/tcs/lineups/away team name" >
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</container>
-
-				<!-- PITCH ~ WEIRD LAYOUT WITH LOADS OF CONTAINERS USED TO MAKE UP FOR LOGO TRANSPARENCY NOT WORKING-->
-				<container class="bordered_box" appearance="tcs/match/lineups/botrig" red_replacement="pitch_box_background" >
-					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
-
-					<!-- PITCH -->
-					<widget class="pitch_with_tactics" id="apwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
-						<string id="pitch_draw_grass" value="true" />
-						<string id="pitch_base_appearance" value="" />
-						<string id="pitch_pattern" value="tcs" />
-						<integer id="tactics_creator_index" value="2" />
-						<boolean id="pitch_dont_draw_indicators" value="true" />
-						<boolean id="pitch_show_captain" value="true" />
-						<integer id="pitch_vertical_padding" value="0"/>
-						<flags id="pitch_alignment" value="centre"/>
-						<real id="maximum_player_size" value="0.2"/>
-					</widget>
-
-					<!-- INFO ON RIGHT ON THE PITCH -->
-					<container width="200">
-						<layout class="vertical_arrange" vertical_layout="240,-1,180" vertical_gap="0" horizontal_inset="10" vertical_offset="30" />
-
-						<!-- ACTUAL INFO -->
-						<container>
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0" vertical_inset="0" />
-
-							<!-- LEAGUE POSITION -->
-							<container class="match_preview_panel" file="" id="lpsC" height="40">
-								<attachment_group class="vertical_arrange" vertical_alignment="top" />
-								<record id="object_property">
-									<list id="get_properties">
-										<record>
-											<integer id="get_property" value="objt" />
-											<integer id="set_property" value="objt" />
-										</record>
-									</list>
-								</record>
-
-								<!-- LEAGUE POSITION LABEL -->
-								<widget class="text" id="lpti" alignment="right,bottom" auto_size="vertical" font="title">
-									<translation id="text" translation_id="284395" type="use" value="League Position[COMMENT: French attacking league table; league position heading hint]" />
-								</widget>
-
-								<!-- AWAY POSITION -->
-								<container height="30">
-									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-									<widget class="text" id="awal" alignment="right,top" auto_size="horizontal">
-										<string id="format" value="[%number#1-nth]" />
-										<record id="object_property">
-											<integer id="get_property" value="awal" />
-										</record>
-									</widget>
-								</container>
-							</container>
-
-							<!-- RECENT FORM -->
-							<container height="40">
-								<attachment_group class="vertical_arrange" vertical_alignment="top" />
-
-								<!-- RECENT FORM LABEL -->
-								<widget class="text" alignment="right,bottom" auto_size="vertical" font="title">
-									<translation id="text" translation_id="344664" type="use" value="Recent Form" />
-								</widget>
-
-								<!-- AWAY FORM -->
-								<container height="20">
-									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-
-									<!--RECENT FORM -->
-									<widget class="team_recent_form_widget" id="awaF" alignment="right,centre_y" show_description_text="true" auto_size="horizontal">
-										<record id="object_property">
-											<list id="get_properties">
-												<record>
-													<integer id="get_property" value="awaF" />
-													<integer id="set_property" value="valu" />
-													<boolean id="dont_set_object" value="true" />
-												</record>
-												<record>
-													<integer id="get_property" value="away" />
-													<integer id="set_property" value="objt" />
-												</record>
-											</list>
-										</record>
-									</widget>
-								</container>
-							</container>
-
-							<!-- ODDS -->
-							<container class="match_preview_panel" file=""  height="40">
-								<layout class="arrange_vertical_attachment" alignment="top" offset="20" gap="1" />
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-								<record id="object_property">
-									<list id="get_properties">
-										<record>
-											<integer id="get_property" value="objt" />
-											<integer id="set_property" value="objt" />
-										</record>
-									</list>
-								</record>
-
-								<!-- LABEL -->
-								<widget class="text" id="oddp" alignment="right" auto_size="vertical" font="title" />
-
-								<!-- ODDS -->
-								<container height="30">
-									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-
-									<widget class="text" id="odda" width="60" alignment="right" />
-
-								</container>
-							</container>
-						</container>
-
-						<!-- SPACER -->
-						<container />
-
-						<!-- MANAGER -->
-						<container height="180">
-							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
-
-							<!-- LABEL -->
-							<widget class="text" alignment="centre" font="title" colour="text" auto_size="vertical" >
-								<translation id="text" translation_id="227981" type="use" value="Manager" />
-							</widget>
-
-							<!-- MANAGER FACE -->
-							<container height="160" class="client_object_viewer_xml_panel">
-								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
-
-									<record id="object_property">
-										<integer id="get_property" value="away" />
-										<integer id="set_property" value="objt" />
-									</record>
-									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20"/>
-
-									<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre_x,bottom" >
-										<record id="object_property">
-											<integer id="get_property" value="TMnR" />
-											<integer id="set_property" value="objt" />
-										</record>
-								</widget>
-	
-							</container>
-						</container>	
-					</container>	
-				</container>	
-			</container>
-
 
 		</container>
 
-		<!-- SUBS -->
-		<container height="150">
-			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
-			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
-			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
-			<container>
-				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
-				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
-
-				<widget class="subs_bench_panel" id="hsub" file="tactics/subs bench panel match preview lineups"/>
-
-				<container id="hptx">
-					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal"  />
-
-					<widget class="spacer" height="10" />
-
-					<!--explanatory text-->
-					<widget class="text" alignment="centre" auto_size="vertical" size="12" >
-						<translation id="text" translation_id="342017" type="use" value="Awaiting Line Up...[COMMENT: text displayed instead of an empty pitch before the match starts which we're waiting for the team lineups to be submitted]" />
-					</widget>
-
-				</container>
-			</container>
-			<container>
-				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
-				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
-
-				<widget class="subs_bench_panel" id="asub" file="tactics/subs bench panel match preview lineups"/>
-
-				<!--still awaiting lineup text-->
-				<container id="aptx">
-					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
-					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
-
-					<widget class="spacer" height="10" />
-
-					<!--explanatory text-->
-					<widget class="text" alignment="centre" auto_size="vertical" size="12" >
-						<translation id="text" translation_id="342017" type="use" value="Awaiting Line Up...[COMMENT: text displayed instead of an empty pitch before the match starts which we're waiting for the team lineups to be submitted]" />
-					</widget>
-
-				</container>
-			</container>
-		</container>
 	</container>
-	</container>
-
 
 </panel>
