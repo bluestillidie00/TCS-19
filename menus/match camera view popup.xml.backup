@@ -1,0 +1,83 @@
+<record>
+	<translation id="text" translation_id="306797" type="use" value="Camera[COMMENT: button which offers the user options to change the camera angle]" />
+	<list id="items">
+		<record id="cmfr" name="two_d_classic">
+			<translation id="text" translation_id="289376" type="use" value="2D Classic[COMMENT - match highlight mode]" />
+		</record>
+		<record id="cusd" name="user_sideline">
+			<translation id="text" translation_id="301110" type="use" value="Sideline" />
+		</record>
+		<record id="cusf" name="user_tv">
+			<translation id="text" translation_id="312487" type="use" value="TV[COMMENT - camera]" />
+		</record>
+		<record id="cued" name="user_behind_goal">
+			<translation id="text" translation_id="319434" type="use" value="Behind Goal[COMMENT: match camera view type]" />
+		</record>
+		<record id="cuod" name="user_vertical_scrolling">
+			<translation id="text" translation_id="301107" type="use" value="Vertical Scrolling" />
+		</record>
+		<record id="cush" name="user_data_analyst">
+			<translation id="text" translation_id="412817" type="use" value="Data Analyst[COMMENT: job title; FR 9121]" />
+		</record>
+		<record id="cmbc" name="dir_behind_corner">
+			<string id="text" value="[DIR] Behind Corner" type="use" />
+		</record>
+		<record id="cmbg" name="dir_behind_goal">
+			<string id="text" value="[DIR] Behind Goal" type="use" />
+		</record>
+		<record id="cmbl" name="dir_behind_goal_low">
+			<string id="text" value="[DIR] Behind Goal Low" type="use" />
+		</record>
+		<record id="cmcs" name="dir_close">
+			<string id="text" value="[DIR] Close" type="use" />
+		</record>
+		<record id="cmev" name="dir_elevated">
+			<string id="text" value="[DIR] Elevated" type="use" />
+		</record>
+		<record id="cmst" name="dir_stand">
+			<string id="text" value="[DIR] Main Stand" type="use" />
+		</record>
+		<record id="cmbp" name="dir_data_analyst">
+			<string id="text" value="[DIR] Data Analyst" type="use" />
+		</record>
+		<record id="cmsl" name="dir_sideline">
+			<string id="text" value="[DIR] Sideline" type="use" />
+		</record>
+		<record id="cmtl" name="dir_touchline">
+			<string id="text" value="[DIR] Touchline" type="use" />
+		</record>
+		<record id="cmtv" name="dir_tv">
+			<string id="text" value="[DIR] TV" type="use" />
+		</record>
+		<record id="cmsg" name="dir_scrolling">
+			<string id="text" value="[DIR] Vertical Scrolling" type="use" />
+		</record>
+		<record id="cmsz" name="dir_scrolling_zoomed">
+			<string id="text" value="[DIR] Zoomed Vertical Scrolling" type="use" />
+		</record>
+		<record id="cmfk" name="dir_free_kick">
+			<string id="text" value="[DIR] Free Kick" type="use" />
+		</record>
+		<record id="cmpn" name="dir_penalty">
+			<string id="text" value="[DIR] Penalty" type="use" />
+		</record>
+		<record id="cmfr" name="fly">
+			<string id="text" value="[D] Free" type="use" />
+		</record>
+		<record id="cmmc" name="model">
+			<string id="text" value="[D] Model" type="use" />
+		</record>
+		<record id="cmot" name="object_track">
+			<string id="text" value="[D] Object Track" type="use" />
+		</record>
+		<record id="cmdr" name="director">
+			<translation id="text" translation_id="348811" type="use" value="Director[COMMENT: Match camera type, is the equivalent to the main camera in a real TV match directed by TV Director]" />
+		</record>
+		<record id="cmrd" name="reversed">
+			<translation id="text" translation_id="321098" type="use" value="Reversed[COMMENT - camera type]" />
+		</record>
+		<record id="cmar" name="auto_reverse">
+			<translation id="text" translation_id="447496" type="use" value="Auto-Reversed[COMMENT - camera type, similar to 321098]" />
+		</record>
+	</list>
+</record>
