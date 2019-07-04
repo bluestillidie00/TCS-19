@@ -4,7 +4,7 @@
 
 	<!-- PLAYER KIT -->
 	<container>
-		<!-- WE'VE USED THIS LAYOUT FOR AETHSTETIC REASONS, THE 12px SPACER AT THE BOTTOM OF THE CONTAINER LIFTS THE BOTTOM OF THE KIT UP SO IT DOESN'T HANG BELOW THE PLAYER ROLE CONTAINER -->
+		<!-- WE'VE USED THIS LAYOUT FOR AESTHETIC REASONS, THE 12px SPACER AT THE BOTTOM OF THE CONTAINER LIFTS THE BOTTOM OF THE KIT UP SO IT DOESN'T HANG BELOW THE PLAYER ROLE CONTAINER -->
 		<layout class="vertical_arrange" vertical_layout="-1,12" vertical_gap="0" />
 
 		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_top="0" number_height="80">

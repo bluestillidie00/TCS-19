@@ -6,8 +6,7 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 	<colour name="eplpur" red="62" green="1" blue="94" />
-	<colour name="intro comp" red="5" green="240" blue="254" />
-
+	<colour name="eplgre" red="0" green="254" blue="130" />
 	<!-- <container class="bordered_box" /> -->
 
 	<!-- LINEUPS -->
@@ -19,7 +18,7 @@
 			<layout class="horizontal_arrange" horizontal_layout="250,-1" horizontal_gap="0" />
 
 			<!-- LEFT SIDE -->
-			<container>
+			<container class="bordered_box" appearance="tcs/boxes/backgrounds/70" red_replacement="white">
 				<layout class="vertical_arrange" vertical_layout="250,300,-1" vertical_gap="0" />
 
 				<!-- CONTAINER HOLDING TEAM LOGO AT THE TOP -->
@@ -40,65 +39,79 @@
 					<layout class="vertical_arrange" vertical_layout="50,-13,50" vertical_gap="0" />
 
 					<!-- MANAGER LABEL AND NAME -->
-					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+					<container>
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
-						<!-- MANAGER LABEL -->
-						<container>
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+							<list id="storyboard">
+								<!-- START TO LEFT OF SCREEN -->
+								<record id="stop" interval="0" value="0,-1"/>
+								<record id="stop" interval="1" value="0,-1"/>
+								<!-- MOVES IT ONTO THE SCREEN -->
+								<record id="stop" interval="2" value="0"/>
+							</list>
+						</animation>	
 
-							<!-- ANIMATION USED FOR THE MANAGER LABEL -->
-							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-								<list id="storyboard">
-									<!-- START TO LEFT OF SCREEN -->
-									<record id="stop" interval="0" value="-1,0"/>
-									<!-- MOVES IT ONTO THE SCREEN -->
-									<record id="stop" interval="1" value="0"/>
-									<!-- HOLDS THE LABEL FOR 2 SECONDS -->
-									<record id="stop" interval="2.6" value="0"/>
-									<!-- MOVES THE LABEL DOWNWARDS, THE SECOND VALUE AFTER THE COMMA ALLOWS US TO CHANGE THE VERTICAL LOCATION -->
-									<record id="stop" interval="3.4" value="0,1"/>
-								</list>
-							</animation>	
+						<container background_colour="eplpur">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
-							<!-- LABEL -->
-							<widget class="label" alignment="centre" size="22" style="semi_bold" colour="white">
-								<translation id="text" translation_id="227981" type="use" value="Manager" />					
-							</widget>
-						</container>
+							<!-- MANAGER LABEL -->
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-						<!-- MANAGER NAME -->
-						<!-- CLIENT_OBJECT_VIEWER_XML_PANEL USED TO ENABLE US TO ADD THE MANAGER NAME -->
-						<container class="client_object_viewer_xml_panel" >
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-							<record id="object_property">
-								<integer id="get_property" value="home" />
-								<integer id="set_property" value="objt" />
-							</record>							
+								<!-- ANIMATION USED FOR THE MANAGER LABEL -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+									<list id="storyboard">
+										<!-- START TO LEFT OF SCREEN -->
+										<record id="stop" interval="0" value="-1,0"/>
+										<record id="stop" interval="2" value="-1,0"/>
+										<!-- MOVES IT ONTO THE SCREEN -->
+										<record id="stop" interval="2.7" value="0"/>
+										<!-- HOLDS THE LABEL FOR 2 SECONDS -->
+										<record id="stop" interval="4" value="0"/>
+										<!-- MOVES THE LABEL DOWNWARDS, THE SECOND VALUE AFTER THE COMMA ALLOWS US TO CHANGE THE VERTICAL LOCATION -->
+										<record id="stop" interval="4.8" value="0,1"/>
+									</list>
+								</animation>	
 
-							<widget class="person_button" id="pers" size="18" alignment="centre" enforce_style="true">
+								<!-- LABEL -->
+								<widget class="label" alignment="centre" size="22" style="semi_bold" colour="white">
+									<translation id="text" translation_id="227981" type="use" value="Manager" />					
+								</widget>
+							</container>
+
+							<!-- MANAGER NAME -->
+							<!-- CLIENT_OBJECT_VIEWER_XML_PANEL USED TO ENABLE US TO ADD THE MANAGER NAME -->
+							<container class="client_object_viewer_xml_panel" >
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 								<record id="object_property">
-									<integer id="get_property" value="TMnR" />
-									<integer id="set_property" value="valu" />
-								</record>
-							</widget>
+									<integer id="get_property" value="home" />
+									<integer id="set_property" value="objt" />
+								</record>							
 
-							<!-- ANIMATION USED FOR THE MANAGER NAME -->
-							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-								<list id="storyboard">
-									<!-- MANAGER NAME STARTS ABOVE THE BOX -->
-									<record id="stop" interval="0" value="0,-1"/>	
-									<!-- HOLDS IT ABOVE WHILE THE LABEL DISAPPEARS OFF -->									
-									<record id="stop" interval="2.5" value="0,-1"/>
-									<!-- MOVES ONTO SCREEN -->
-									<record id="stop" interval="2.85" value="0"/>
-								</list>
-							</animation>	
+								<widget class="person_button" id="pers" size="18" alignment="centre" enforce_style="true">
+									<record id="object_property">
+										<integer id="get_property" value="TMnR" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</widget>
+
+								<!-- ANIMATION USED FOR THE MANAGER NAME -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+									<list id="storyboard">
+										<!-- MANAGER NAME STARTS ABOVE THE BOX -->
+										<record id="stop" interval="0" value="0,-1"/>	
+										<!-- HOLDS IT ABOVE WHILE THE LABEL DISAPPEARS OFF -->									
+										<record id="stop" interval="4" value="0,-1"/>
+										<!-- MOVES ONTO SCREEN -->
+										<record id="stop" interval="4.4" value="0"/>
+									</list>
+								</animation>	
+							</container>
 						</container>
 					</container>
-
 					<!-- MANAGER PICTURE -->
-					<container class="bordered_box" appearance="tcs/boxes/backgrounds/70" red_replacement="white">
+					<container>
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 						<!-- OBJECT VIEWER LETS US PUT THE MANAGER FACE ON THE PITCH -->
@@ -121,15 +134,16 @@
 								<list id="storyboard">
 									<!-- START TO LEFT OF SCREEN -->
 									<record id="stop" interval="0" value="-1,0"/>
+									<record id="stop" interval="2" value="-1,0"/>
 									<!-- MOVES IT ONTO THE SCREEN -->
-									<record id="stop" interval="1.3" value="0"/>
+									<record id="stop" interval="2.7" value="0"/>
 								</list>
 							</animation>	
 						</container>
 					</container>
 
 					<!-- SUBS LABEL -->
-					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+<container background_colour="eplpur" >
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 						<widget class="text" spec="text" alignment="left,centre_y" size="14" style="semi_bold">
@@ -159,7 +173,7 @@
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 				<!-- PITCH -->
-				<widget class="pitch_with_tactics" id="hpwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" >
+				<widget class="pitch_with_tactics" id="hpwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,dont_colour_names,dont_colour_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup,drop_initial_if_possible" player_icon_file="player icons/match lineups" >
 					<string id="pitch_draw_lines" value="false" />
 					<string id="pitch_draw_grass" value="true" />
 					<string id="pitch_base_appearance" value="" />
@@ -167,7 +181,6 @@
 					<integer id="tactics_creator_index" value="2" />
 					<boolean id="pitch_dont_draw_indicators" value="true" />
 					<boolean id="pitch_show_captain" value="true" />
-					<integer id="pitch_vertical_padding" value="-20"/>
 					<flags id="pitch_alignment" value="centre"/>
 				</widget>
 			</container>
@@ -175,16 +188,17 @@
 
 		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
+		
 		<!-- AWAY TEAM -->
 		<container>
 			<layout class="horizontal_arrange" horizontal_layout="-1,250" horizontal_gap="0" />
-
-			<!-- LEFT SIDE -->
-			<container class="bordered_box" appearance="tcs/match/epl/pitch">
+			
+				<!-- LEFT HAND SIDE -->
+			<container class="bordered_box" appearance="tcs/match/epl/pitch" >
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 				<!-- PITCH -->
-				<widget class="pitch_with_tactics" id="apwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="player icons/match preview" line_colour="red">
+				<widget class="pitch_with_tactics" id="apwt" vertical="true" icon_flags="use_player_kits_back,show_name,show_number,dont_colour_names,dont_colour_number,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup,drop_initial_if_possible" player_icon_file="player icons/match lineups" >
 					<string id="pitch_draw_lines" value="false" />
 					<string id="pitch_draw_grass" value="true" />
 					<string id="pitch_base_appearance" value="" />
@@ -192,20 +206,19 @@
 					<integer id="tactics_creator_index" value="2" />
 					<boolean id="pitch_dont_draw_indicators" value="true" />
 					<boolean id="pitch_show_captain" value="true" />
-					<integer id="pitch_vertical_padding" value="-20"/>
 					<flags id="pitch_alignment" value="centre"/>
 				</widget>
 			</container>
 
-			<!-- LEFT SIDE -->
-			<container>
+			<!-- RIGHT SIDE -->
+			<container class="bordered_box" appearance="tcs/boxes/backgrounds/70" red_replacement="white">
 				<layout class="vertical_arrange" vertical_layout="250,300,-1" vertical_gap="0" />
 
 				<!-- CONTAINER HOLDING TEAM LOGO AT THE TOP -->
 				<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="white">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true"/> 
 
-					<!-- AWAY HOME LOGO -->
+					<!-- HOME HOME LOGO -->
 					<widget class="object_portrait_picture" id="atpi" image_alignment="centre_x, centre_y" scale_picture="true" keep_aspect_ratio="true" width="110" height="110">
 						<record id="object_property">
 							<integer id="get_property" value="away" />
@@ -219,65 +232,79 @@
 					<layout class="vertical_arrange" vertical_layout="50,-13,50" vertical_gap="0" />
 
 					<!-- MANAGER LABEL AND NAME -->
-					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+					<container>
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
-						<!-- MANAGER LABEL -->
-						<container>
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+							<list id="storyboard">
+								<!-- START TO LEFT OF SCREEN -->
+								<record id="stop" interval="0" value="0,-1"/>
+								<record id="stop" interval="1" value="0,-1"/>
+								<!-- MOVES IT ONTO THE SCREEN -->
+								<record id="stop" interval="2" value="0"/>
+							</list>
+						</animation>	
 
-							<!-- ANIMATION USED FOR THE MANAGER LABEL -->
-							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-								<list id="storyboard">
-									<!-- START TO RIGHT OF SCREEN -->
-									<record id="stop" interval="0" value="1,0"/>
-									<!-- MOVES IT ONTO THE SCREEN -->
-									<record id="stop" interval="1" value="0"/>
-									<!-- HOLDS THE LABEL FOR 2 SECONDS -->
-									<record id="stop" interval="2.6" value="0"/>
-									<!-- MOVES THE LABEL DOWNWARDS, THE SECOND VALUE AFTER THE COMMA ALLOWS US TO CHANGE THE VERTICAL LOCATION -->
-									<record id="stop" interval="3.4" value="0,1"/>
-								</list>
-							</animation>	
+						<container background_colour="eplpur">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
-							<!-- LABEL -->
-							<widget class="label" alignment="centre" size="22" style="semi_bold" colour="white">
-								<translation id="text" translation_id="227981" type="use" value="Manager" />					
-							</widget>
-						</container>
+							<!-- MANAGER LABEL -->
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-						<!-- MANAGER NAME -->
-						<!-- CLIENT_OBJECT_VIEWER_XML_PANEL USED TO ENABLE US TO ADD THE MANAGER NAME -->
-						<container class="client_object_viewer_xml_panel" >
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-							<record id="object_property">
-								<integer id="get_property" value="away" />
-								<integer id="set_property" value="objt" />
-							</record>							
+								<!-- ANIMATION USED FOR THE MANAGER LABEL -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+									<list id="storyboard">
+										<!-- START TO LEFT OF SCREEN -->
+										<record id="stop" interval="0" value="1,0"/>
+										<record id="stop" interval="2" value="1,0"/>
+										<!-- MOVES IT ONTO THE SCREEN -->
+										<record id="stop" interval="2.7" value="0"/>
+										<!-- HOLDS THE LABEL FOR 2 SECONDS -->
+										<record id="stop" interval="4" value="0"/>
+										<!-- MOVES THE LABEL DOWNWARDS, THE SECOND VALUE AFTER THE COMMA ALLOWS US TO CHANGE THE VERTICAL LOCATION -->
+										<record id="stop" interval="4.8" value="0,1"/>
+									</list>
+								</animation>	
 
-							<widget class="person_button" id="pers" size="18" alignment="centre" enforce_style="true">
+								<!-- LABEL -->
+								<widget class="label" alignment="centre" size="22" style="semi_bold" colour="white">
+									<translation id="text" translation_id="227981" type="use" value="Manager" />					
+								</widget>
+							</container>
+
+							<!-- MANAGER NAME -->
+							<!-- CLIENT_OBJECT_VIEWER_XML_PANEL USED TO ENABLE US TO ADD THE MANAGER NAME -->
+							<container class="client_object_viewer_xml_panel" >
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 								<record id="object_property">
-									<integer id="get_property" value="TMnR" />
-									<integer id="set_property" value="valu" />
-								</record>
-							</widget>
+									<integer id="get_property" value="away" />
+									<integer id="set_property" value="objt" />
+								</record>							
 
-							<!-- ANIMATION USED FOR THE MANAGER NAME -->
-							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
-								<list id="storyboard">
-									<!-- MANAGER NAME STARTS ABOVE THE BOX -->
-									<record id="stop" interval="0" value="0,-1"/>	
-									<!-- HOLDS IT ABOVE WHILE THE LABEL DISAPPEARS OFF -->									
-									<record id="stop" interval="2.5" value="0,-1"/>
-									<!-- MOVES ONTO SCREEN -->
-									<record id="stop" interval="2.85" value="0"/>
-								</list>
-							</animation>	
+								<widget class="person_button" id="pers" size="18" alignment="centre" enforce_style="true">
+									<record id="object_property">
+										<integer id="get_property" value="TMnR" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</widget>
+
+								<!-- ANIMATION USED FOR THE MANAGER NAME -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+									<list id="storyboard">
+										<!-- MANAGER NAME STARTS ABOVE THE BOX -->
+										<record id="stop" interval="0" value="0,1"/>	
+										<!-- HOLDS IT ABOVE WHILE THE LABEL DISAPPEARS OFF -->									
+										<record id="stop" interval="4" value="0,1"/>
+										<!-- MOVES ONTO SCREEN -->
+										<record id="stop" interval="4.4" value="0"/>
+									</list>
+								</animation>	
+							</container>
 						</container>
 					</container>
-
 					<!-- MANAGER PICTURE -->
-					<container class="bordered_box" appearance="tcs/boxes/backgrounds/70" red_replacement="white">
+					<container>
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 						<!-- OBJECT VIEWER LETS US PUT THE MANAGER FACE ON THE PITCH -->
@@ -298,17 +325,18 @@
 
 							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
 								<list id="storyboard">
-									<!-- START TO RIGHT OF SCREEN -->
+									<!-- START TO LEFT OF SCREEN -->
 									<record id="stop" interval="0" value="1,0"/>
+									<record id="stop" interval="2" value="1,0"/>
 									<!-- MOVES IT ONTO THE SCREEN -->
-									<record id="stop" interval="1.3" value="0"/>
+									<record id="stop" interval="2.7" value="0"/>
 								</list>
 							</animation>	
 						</container>
 					</container>
 
 					<!-- SUBS LABEL -->
-					<container class="bordered_box" appearance="boxes/bordered/solid/paper" red_replacement="eplpur">
+<container background_colour="eplpur" >
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 						<widget class="text" spec="text" alignment="right,centre_y" size="14" style="semi_bold">
@@ -316,7 +344,7 @@
 
 							<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
 								<list id="storyboard">
-									<!-- START TO RIGHT OF SCREEN -->
+									<!-- START TO LEFT OF SCREEN -->
 									<record id="stop" interval="0" value="1,0"/>
 									<!-- MOVES IT ONTO THE SCREEN -->
 									<record id="stop" interval="1.4" value="0"/>
@@ -333,6 +361,7 @@
 				</container>
 			</container>
 
+		
 		</container>
 
 	</container>

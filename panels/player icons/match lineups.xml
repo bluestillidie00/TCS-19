@@ -1,0 +1,81 @@
+<!-- THIS IS THE PLAYER ICON THAT'S SHOWN ON THE MATCH PREVIEW LINEUPS -->
+<panel>
+	<layout class="vertical_arrange" vertical_layout="-1,24" vertical_gap="0" />
+	<colour name="eplpur" red="62" green="1" blue="94" />
+	<colour name="eplgre" red="0" green="254" blue="130" />
+
+	<!--PLAYER PICTURE & ICONS -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+		<!-- CONTAINER HOLDING PLAYER PICTURE ~ ANOTHER CONTAINER USED IN ORDER TO CONTROL PLAYER PICTURE SIZE -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true"/>
+
+			<!-- PLAYER PICTURE -->
+			<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="centre_x">
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+
+			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+				<list id="storyboard">
+					<!-- START TO LEFT OF SCREEN -->
+					<record id="stop" interval="0" value="0,1"/>
+					<!-- MOVES IT ONTO THE SCREEN -->
+					<record id="stop" interval="1.3" value="0"/>
+				</list>
+			</animation>	
+
+		</container>
+
+		<!-- ICONS (INJURY, STAR PLAYER ETC) -->
+		<container id="icoC" height="16" width="16" >
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="5" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+			<record id="default_properties" image_alignment="centre" hidden="true" width="16" height="16" />
+
+			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+				<list id="storyboard">
+					<!-- START TO LEFT OF SCREEN -->
+					<record id="stop" interval="0" value="0,-1"/>
+					<record id="stop" interval="0.3" value="0,-1"/>
+					<!-- MOVES IT ONTO THE SCREEN -->
+					<record id="stop" interval="2.5" value="0"/>
+					<record id="stop" interval="2.8" value="0,-0.005"/>
+					<record id="stop" interval="3.15" value="0,"/>
+				</list>
+			</animation>	
+
+
+			<widget class="picture" id="PTgs" file="icons/16px/goal" />
+			<widget class="picture" id="PTas" file="icons/16px/assist"/>
+			<widget class="picture" id="PTrt" file="icons/16px/key player" />
+			<widget class="picture" id="PNba" file="icons/16px/yellow card" />
+			<widget class="picture" id="PHNO" file="icons/16px/debut" />
+		</container>
+	</container>
+
+	<!-- NAME AND NUMBER -->
+	<container background_colour="eplpur" >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="2"/>
+
+		<animation class="scale_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_end" >
+			<list id="storyboard">
+				<record id="stop" interval="0" value="0.0"/>
+				<record id="stop" interval="0.4" value="0.0,1.0"/>
+				<record id="stop" interval="0.8" value="1.0"/>
+			</list>
+		</animation>
+
+		<!-- SQUAD NUMBER -->
+		<widget class="text" id="bsnm" alignment="centre_y" colour="faded text" enforce_style="true" size="10" width="24"/>
+
+		<!-- PLAYER NAME -->
+		<widget class="label" id="name" size="12" alignment="left, can_scale"  auto_size="vertical" style="light_bold"/>
+	</container>
+</panel>
