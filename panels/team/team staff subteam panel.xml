@@ -1,0 +1,17 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="middle,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	<container height="281">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+		<widget class="team_staff_subteam_overview_panel" id="ovvw" link="false" />
+		<widget class="team_staff_attributes_details_panel" id="tsad"/>
+		<widget class="team_staff_attributes_comparison_panel" id="tsac"/>
+	</container>
+
+	<widget class="team_container_staff_details_panel" id="deta" />
+
+	<container class="bordered_box" id="btns">
+		<attachment_group class="button_arrangement_right" />
+	</container>
+
+</panel>

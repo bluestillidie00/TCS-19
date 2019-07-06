@@ -1,0 +1,30 @@
+<!-- THIS IS THE LANDING PAGE FOR THE STAFF SHORTCUT ON THE SIDEBAR -->
+<panel>
+	<!-- ARRANGES THE PANEL SO WE CAN GIVE THE BOTTOM A HEIGHT, WHILE THE REST EXTENDS AND FILLS THE SCREEN -->
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container id="ovvw">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0" />
+
+		<!-- COACHING STAFF -->
+		<container class="bordered_box">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+			<widget class="team_staff_subteam_panel" id="soc1" file="team/tcs/staff/team staff subteam vertical"/>
+		</container>
+		<!-- RECRUITMENT TEAM -->
+		<container class="bordered_box">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+			<widget class="team_staff_subteam_panel" id="soc2" file="team/tcs/staff/team staff subteam vertical"/>
+		</container>
+		<!-- MEDICAL -->
+		<container class="bordered_box">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+			<widget class="team_staff_subteam_panel" id="soc3" file="team/tcs/staff/team staff subteam vertical"/>
+		</container>
+	</container>
+
+	<!-- BUTTONS ON THE BOTTOM -->
+	<container id="btns" class="bordered_box">
+		<attachment_group class="button_arrangement_right" />
+	</container>
+</panel>
