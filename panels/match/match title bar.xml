@@ -9,7 +9,7 @@
 			<container width="2"/>
 
 			<container width="200" >
-				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0" />
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="4" />
 
 				<!-- HOME BUTTON -->
 				<widget class="icon_button" id="homb" width="50" appearance="chrome/buttons/items1/button" red_replacement="white" icon="icons/material/home" icon_alignment="centre">
@@ -30,7 +30,7 @@
 				</widget>
 
 				<!-- FM BUTTON -->
-				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items1/button" icon="icons/26px/fm" width="64" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_x, centre_y">
+				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items1/button" icon="icons/material/fm" width="64" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_x, centre_y">
 					<event id="click_notification_event" event_id="FM" item="NULL" />
 					<event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
 					<record id="items" file="menus/game" />
@@ -68,7 +68,7 @@
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
 				<!-- home team -->
-				<container width="60">
+				<container width="52">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 					<!--home team background colour-->
@@ -86,13 +86,13 @@
 				</container>
 
 				<!--scoreboard-->
-				<widget class="text" id="Scor" size="12" width="70" alignment="centre" style="semi_bold" colour="white">
+				<widget class="text" id="Scor" size="14" width="70" alignment="centre" style="semi_bold" colour="white">
 					<layout class="stick_to_sides_attachment" alignment="top" inset="1" />
 				</widget>
 
 
 				<!-- home team -->
-				<container width="60">
+				<container width="52">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 
 					<!--home team background colour-->
@@ -118,9 +118,13 @@
 
 		<!-- end of left side -->
 
+		<container  >
 
 
-		<widget class="match_continue_panel" id="mcnt" width="230">
+
+		</container>
+
+		<widget class="match_continue_panel" id="mcnt" width="210">
 			<record id="object_property">
 				<integer id="get_property" value="objt" />
 				<integer id="set_property" value="objt" />
@@ -132,20 +136,10 @@
 
 
 	<container>
-		<layout class="horizontal_arrange" horizontal_layout="150,-1" horizontal_gap="0" />
+		<layout class="horizontal_arrange" horizontal_layout="80,-1" horizontal_gap="0" />
 
 		<container class="bordered_box" appearance="boxes/bordered/solid/paper" >
-			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0" />
-
-			<widget class="widget_popup_button" id="Sett" width="42" icon="icons/material/settings" icon_alignment="centre" widget_type="match_settings_panel" mpmF="generic/modal popup panel match" alignment="right,bottom" secondary_icon_enabled="false">
-				<record id="modal_popup_properties">
-					<boolean id="darkened" value="false" />
-				</record>
-				<translation id="hint" translation_id="332230" type="use" value="Click to show the match settings.[COMMENT: hint for a button to toggle showing the match settings panel]" />
-				<record id="primary_icon_properties" red_replacement="white" />
-				<record id="secondary_icon_properties" red_replacement="white" />
-			</widget>
-
+<layout class="stick_to_sides_attachment" alignment="all" inset="2" apply_to_children="true"/> 
 			<!-- LOGO -->
 			<widget class="picture" id="fxCo" scale_picture="true" keep_aspect_ratio="true" height="40" width="40" image_alignment="right, centre_y">
 				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
@@ -329,7 +323,14 @@
 
 						<!--settings-->
 						<!-- @archie.buck The tutorial relies on this id not changing, if you need to adjust it please also update TUTORIAL_MANAGER -->
-
+				<widget class="widget_popup_button" id="Sett" width="42" icon="icons/26px/settings" icon_alignment="centre" widget_type="match_settings_panel" mpmF="generic/modal popup panel match" alignment="right,bottom" secondary_icon_enabled="false">
+					<record id="modal_popup_properties">
+						<boolean id="darkened" value="false" />
+					</record>
+					<translation id="hint" translation_id="332230" type="use" value="Click to show the match settings.[COMMENT: hint for a button to toggle showing the match settings panel]" />
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+				</widget>
 
 						<!--save match-->
 						<widget class="button" id="svmt" click_event="svmt" appearance="buttons/custom/match/actions/button" auto_size="horizontal">

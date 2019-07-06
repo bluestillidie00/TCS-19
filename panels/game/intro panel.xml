@@ -1,7 +1,7 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
-	<!-- Style for the FM stripe -->
+	<!-- Style for the FM stripe 
 	<record id="style">
 		<real id="inset" value="320"/>
 		<real id="angle" value="72"/>
@@ -9,7 +9,7 @@
 		<real id="alpha" value="200"/>
 		<string id="foreground_colour" value="box_background"/>
 		<string id="background_colour" value="primary"/>
-	</record>
+	</record>-->
 
 	<container class="add_manager_panel" id="adMP" file="none" manager_appearance_side="left">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
@@ -117,6 +117,8 @@
 
 		</container>
 	</container>
+
+<container class="bordered_box" appearance="tcs/menu" />
 
 	<container id="mIco">
 		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
